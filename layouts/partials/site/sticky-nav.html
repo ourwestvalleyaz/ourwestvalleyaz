@@ -1,0 +1,77 @@
+{{/*
+  Shared OWVAZ sticky navigation.
+
+  Inputs:
+    context
+    title
+    sections:
+      id
+      label
+      name
+*/}}
+
+{{- $context := .context | default "Page" -}}
+{{- $title := .title | default "" -}}
+{{- $sections := .sections | default slice -}}
+
+{{- if gt (len $sections) 0 }}
+<div class="community-sticky-nav owvaz-sticky-nav"
+     data-community-sticky-nav
+     hidden>
+
+  <div class="community-sticky-nav__inner site-shell">
+
+    <div class="community-sticky-nav__context">
+
+      <span class="community-sticky-nav__context-label">
+        {{ $context }}
+      </span>
+
+      <span class="community-sticky-nav__separator"
+            aria-hidden="true">|</span>
+
+      <strong>{{ $title }}</strong>
+
+      <span class="community-sticky-nav__separator"
+            aria-hidden="true">|</span>
+
+      <span class="community-sticky-nav__section-label">
+        Section
+      </span>
+
+      <span class="community-sticky-nav__separator"
+            aria-hidden="true">|</span>
+
+      <span data-community-current-section>
+        {{ (index $sections 0).name }}
+      </span>
+
+    </div>
+
+    <nav class="community-sticky-nav__links"
+         aria-label="{{ $context }} section navigation">
+
+      <span class="community-sticky-nav__jump-label">
+        Jump to
+      </span>
+
+      {{- range $sections }}
+
+        <a href="#{{ .id }}"
+           data-community-section-link="{{ .id }}"
+           data-community-section-name="{{ .name }}">
+          {{ .label }}
+        </a>
+
+      {{- end }}
+
+      <a class="community-sticky-nav__top"
+         href="#top">
+        Top
+      </a>
+
+    </nav>
+
+  </div>
+</div>
+{{- end }}

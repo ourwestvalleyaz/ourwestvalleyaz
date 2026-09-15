@@ -1,0 +1,294 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "avondale",
+  "fiscal_year": "FY2024",
+  "fiscal_period": {
+    "start": "2023-07-01",
+    "end": "2024-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 464896600,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2023",
+    "adopted_budget": 457106600,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 7790000,
+    "percent_change": 1.7,
+    "summary": "FY2024 adopted budget authority increased by $7,790,000 compared with FY2023 adopted/adjusted budgeted expenditures/expenses, an increase of 1.7%."
+  },
+  "spending_by_purpose": {
+    "source_measure": "FY2024 Budget in Brief budget composition",
+    "classification": "Resident-facing presentation categories",
+    "categories": [
+      {
+        "id": "operating",
+        "label": "Operating",
+        "amount": 208600000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 45,
+        "note": null
+      },
+      {
+        "id": "capital-improvement",
+        "label": "Capital Improvement",
+        "amount": 221000000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 48,
+        "note": "Rounded Budget in Brief presentation. The detailed Budget in Brief capital function total is $220.9M and the exact adopted CIP is $220,941,000."
+      },
+      {
+        "id": "debt-service",
+        "label": "Debt Service",
+        "amount": 9300000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 2,
+        "note": null
+      },
+      {
+        "id": "contingency",
+        "label": "Contingency",
+        "amount": 26000000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 5,
+        "note": null
+      }
+    ],
+    "display_percent_total": 100,
+    "rounding_note": "Budget in Brief amounts are rounded resident-facing values and therefore do not reconcile exactly to the adopted total.",
+    "accounting_note": "These Budget in Brief presentation categories are distinct from statutory fund accounting and from the Final Budget object-category capital-outlay measure.",
+    "spending_note": "Budgeted amounts represent budget authority and do not establish actual expenditures."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 181412700,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Funds",
+      "amount": 104102200,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Funds",
+      "amount": 8295000,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Funds",
+      "amount": 30227000,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "trust-agency",
+      "label": "Trust and Agency Fund",
+      "amount": 12050500,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 117845000,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "internal-service",
+      "label": "Internal Service Funds",
+      "amount": 10964200,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 259900000,
+        "measure": "budget_in_brief_projected_revenue",
+        "scope": "resident_facing_projection",
+        "label": "Projected revenue",
+        "note": "FY2024 Budget in Brief projected revenue. The source excludes transfers in, interfund loans, and other financing sources."
+      },
+      {
+        "amount": 251354100,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Exact FY2024 statutory adopted-budget revenue measure."
+      }
+    ],
+    "note": "The Budget in Brief projected revenue and statutory estimated revenues other than property taxes are different measures and are intentionally preserved separately."
+  },
+  "property_tax": {
+    "primary_levy": 3736624,
+    "secondary_levy": 4811641,
+    "total_levy": 8548265,
+    "primary_rate": null,
+    "secondary_rate": null,
+    "combined_rate": null,
+    "rate_basis": "per_100_assessed_value",
+    "note": "Property-tax rates are intentionally deferred. The adopted statutory form reports 0.6373 primary, 0.8222 secondary and 1.4595 combined, while the FY2024 Final Budget reports 0.6373, 0.8206 and 1.4579. Both presentations are internally consistent and have not yet been reconciled."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 221000000,
+        "measure": "budget_in_brief_capital_improvement",
+        "scope": "resident_facing_presentation",
+        "label": "Budget in Brief capital improvement",
+        "note": "Rounded resident-facing presentation shown as $221.0M."
+      },
+      {
+        "amount": 220941000,
+        "measure": "adopted_capital_improvement_plan",
+        "scope": "formal_budget",
+        "label": "Adopted Capital Improvement Plan",
+        "note": "Exact FY2024 adopted CIP and total capital appropriation."
+      },
+      {
+        "amount": 224349400,
+        "measure": "capital_outlay",
+        "scope": "expenditure_object_category",
+        "label": "Capital outlay",
+        "note": "Final Budget expenditure-object category. The City states this differs from the CIP because vehicles may be considered capital while purchased from operating funds."
+      }
+    ],
+    "accounting_note": "Capital Improvement Plan and capital-outlay measures are different accounting presentations and are not interchangeable.",
+    "note": null
+  },
+  "source_ids": [
+    "avondale-fy2024-adopted-budget",
+    "avondale-fy2024-final-budget",
+    "avondale-fy2024-budget-in-brief"
+  ],
+  "sources": [
+    {
+      "id": "avondale-fy2024-adopted-budget",
+      "title": "FY2024 Adopted Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official adopted budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/Adopted-2024.pdf",
+      "supports": [
+        "adopted_budget",
+        "prior_year_comparison",
+        "fund_breakdown",
+        "revenue.measures.statutorily_estimated",
+        "property_tax.levies",
+        "capital.measures.adopted_capital_improvement_plan",
+        "adoption"
+      ],
+      "accessed": null
+    },
+    {
+      "id": "avondale-fy2024-final-budget",
+      "title": "FY2024 Final Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2024-Final-Budget.pdf",
+      "supports": [
+        "adopted_budget",
+        "capital.measures.adopted_capital_improvement_plan",
+        "capital.measures.capital_outlay",
+        "adoption.governing_body"
+      ],
+      "accessed": null
+    },
+    {
+      "id": "avondale-fy2024-budget-in-brief",
+      "title": "FY2024 Budget in Brief",
+      "publisher": "City of Avondale",
+      "document_type": "official budget summary",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2024_BiB-1.pdf",
+      "supports": [
+        "spending_by_purpose",
+        "revenue.measures.projected",
+        "capital.measures.budget_in_brief"
+      ],
+      "accessed": null
+    }
+  ],
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-08",
+    "note": "FY2024 core and approved rich sections were resolved against official adopted budget, Final Budget, and Budget in Brief embedded text. Property-tax rates remain deferred because two official City publications contain different internally consistent rate sets. Major projects and notable spending remain deferred."
+  },
+  "adoption": {
+    "date": "2023-06-05",
+    "authority_type": "resolution",
+    "authority_identifier": "1034-0623",
+    "authority_title": "Resolution No. 1034-0623",
+    "source_ids": [
+      "avondale-fy2024-adopted-budget"
+    ],
+    "governing_body": {
+      "name": "Avondale City Council",
+      "context": "at_final_adoption",
+      "members": [
+        {
+          "name": "Kenneth N. Weise",
+          "role": "mayor"
+        },
+        {
+          "name": "Mike Pineda",
+          "role": "councilmember",
+          "leadership_role": "vice_mayor"
+        },
+        {
+          "name": "Tina Conde",
+          "role": "councilmember"
+        },
+        {
+          "name": "Veronica Malone",
+          "role": "councilmember"
+        },
+        {
+          "name": "Curtis Nielson",
+          "role": "councilmember"
+        },
+        {
+          "name": "Gloria Solorio",
+          "role": "councilmember"
+        },
+        {
+          "name": "Max White",
+          "role": "councilmember"
+        }
+      ],
+      "source_ids": [
+        "avondale-fy2024-final-budget"
+      ]
+    }
+  }
+}

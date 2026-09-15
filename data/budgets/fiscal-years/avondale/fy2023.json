@@ -1,0 +1,292 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "avondale",
+  "fiscal_year": "FY2023",
+  "fiscal_period": {
+    "start": "2022-07-01",
+    "end": "2023-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 457106600,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2022",
+    "adopted_budget": 336147700,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 120958900,
+    "percent_change": 36.0,
+    "summary": "FY2023 adopted budget authority increased by $120,958,900 compared with FY2022 adopted/adjusted budgeted expenditures/expenses, an increase of 36.0%."
+  },
+  "spending_by_purpose": {
+    "source_measure": "FY2023 Budget in Brief budget composition",
+    "classification": "Resident-facing presentation categories",
+    "categories": [
+      {
+        "id": "operating",
+        "label": "Operating",
+        "amount": 191500000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 42,
+        "note": null
+      },
+      {
+        "id": "capital",
+        "label": "Capital",
+        "amount": 228700000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 50,
+        "note": null
+      },
+      {
+        "id": "debt-service",
+        "label": "Debt Service",
+        "amount": 10800000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 2,
+        "note": null
+      },
+      {
+        "id": "contingency",
+        "label": "Contingency",
+        "amount": 26000000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 6,
+        "note": null
+      }
+    ],
+    "display_percent_total": 100,
+    "rounding_note": null,
+    "accounting_note": "These Budget in Brief presentation categories are resident-facing budget composition measures and are distinct from the statutory fund accounting categories.",
+    "spending_note": "Budgeted amounts represent budget authority and do not establish actual expenditures."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 183288700,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Funds",
+      "amount": 105970100,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Funds",
+      "amount": 9866000,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Funds",
+      "amount": 40012000,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "trust-agency",
+      "label": "Trust and Agency Fund",
+      "amount": 10312000,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 97867400,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    },
+    {
+      "id": "internal-service",
+      "label": "Internal Service Funds",
+      "amount": 9790400,
+      "percent_of_measure": null,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group",
+      "note": null
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 225800000,
+        "measure": "budget_in_brief_projected_revenue",
+        "scope": "resident_facing_projection",
+        "label": "Projected revenue",
+        "note": "FY2023 Budget in Brief projected revenue. The source excludes transfers in, interfund loans, and other financing sources."
+      },
+      {
+        "amount": 250614200,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Statutory adopted-budget revenue measure. It is not interchangeable with the Budget in Brief projected revenue figure."
+      }
+    ],
+    "note": "The two revenue figures are different measures and are intentionally preserved separately."
+  },
+  "property_tax": {
+    "primary_levy": 3514575,
+    "secondary_levy": 4925173,
+    "total_levy": 8439748,
+    "primary_rate": 0.6458,
+    "secondary_rate": 0.905,
+    "combined_rate": 1.5508,
+    "rate_basis": "per_100_assessed_value",
+    "note": "These are City of Avondale property-tax levy and rate values. Special assessment districts and other jurisdictions are separate."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 228700000,
+        "measure": "budget_in_brief_capital",
+        "scope": "resident_facing_presentation",
+        "label": "Budget in Brief capital",
+        "note": "Resident-facing Budget in Brief capital presentation."
+      },
+      {
+        "amount": 226612000,
+        "measure": "formal_capital_appropriation",
+        "scope": "formal_budget",
+        "label": "Formal capital appropriation",
+        "note": "Final Budget total capital appropriation including general capital, enterprise fund capital projects, and equipment replacement."
+      },
+      {
+        "amount": 213303000,
+        "measure": "capital_improvement_plan_budget",
+        "scope": "fy2023_cip",
+        "label": "FY2023 Capital Improvement Plan budget",
+        "note": "Detailed FY2023 Capital Improvement Plan budget."
+      }
+    ],
+    "note": "The Budget in Brief capital presentation, formal capital appropriation, and detailed Capital Improvement Plan budget are distinct measures and are not presented as interchangeable."
+  },
+  "source_ids": [
+    "avondale-fy2023-adopted-budget",
+    "avondale-fy2023-final-budget",
+    "avondale-fy2023-budget-in-brief"
+  ],
+  "sources": [
+    {
+      "id": "avondale-fy2023-adopted-budget",
+      "title": "FY2023 Adopted Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official adopted budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/Adopted-2023.pdf",
+      "supports": [
+        "adopted_budget",
+        "prior_year_comparison",
+        "fund_breakdown",
+        "revenue.measures.statutorily_estimated",
+        "property_tax",
+        "adoption"
+      ],
+      "accessed": null
+    },
+    {
+      "id": "avondale-fy2023-final-budget",
+      "title": "FY2023 Final Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2023-Final-Budget.pdf",
+      "supports": [
+        "adopted_budget",
+        "capital.measures.formal_capital_appropriation",
+        "capital.measures.capital_improvement_plan_budget",
+        "adoption.governing_body"
+      ],
+      "accessed": null
+    },
+    {
+      "id": "avondale-fy2023-budget-in-brief",
+      "title": "FY2023 Budget in Brief",
+      "publisher": "City of Avondale",
+      "document_type": "official budget summary",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2023_BiB-1.pdf",
+      "supports": [
+        "spending_by_purpose",
+        "revenue.measures.projected",
+        "capital.measures.budget_in_brief"
+      ],
+      "accessed": null
+    }
+  ],
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-08",
+    "note": "FY2023 core and approved rich sections were resolved against embedded text from the official adopted budget, final budget, and Budget in Brief. Major projects and notable spending remain deferred."
+  },
+  "adoption": {
+    "date": "2022-06-06",
+    "authority_type": "resolution",
+    "authority_identifier": "1044-0622",
+    "authority_title": "Resolution No. 1044-0622",
+    "source_ids": [
+      "avondale-fy2023-adopted-budget"
+    ],
+    "governing_body": {
+      "name": "Avondale City Council",
+      "context": "at_final_adoption",
+      "members": [
+        {
+          "name": "Kenneth N. Weise",
+          "role": "mayor"
+        },
+        {
+          "name": "Veronica Malone",
+          "role": "councilmember",
+          "leadership_role": "vice_mayor"
+        },
+        {
+          "name": "Tina Conde",
+          "role": "councilmember"
+        },
+        {
+          "name": "Gloria Solorio",
+          "role": "councilmember"
+        },
+        {
+          "name": "Bryan Kilgore",
+          "role": "councilmember"
+        },
+        {
+          "name": "Curtis Nielson",
+          "role": "councilmember"
+        },
+        {
+          "name": "Mike Pineda",
+          "role": "councilmember"
+        }
+      ],
+      "source_ids": [
+        "avondale-fy2023-final-budget"
+      ]
+    }
+  }
+}

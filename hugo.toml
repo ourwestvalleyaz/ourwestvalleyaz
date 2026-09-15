@@ -1,0 +1,12 @@
+baseURL = "https://ourwestvalleyaz.org/"
+title = "Our West Valley AZ"
+locale = "en-US"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  slogan = "Neighbors. Information. Community."
+  timezone = "America/Phoenix"
+  description = "Resident-friendly civic information for Arizona's West Valley."

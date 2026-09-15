@@ -1,0 +1,81 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div class="site-shell content-width">
+    <p class="eyebrow">Search</p>
+    <h1>Search Our West Valley AZ</h1>
+
+    <p class="page-summary">
+      Search OWVAZ civic information and official government resources.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="site-shell content-width">
+
+    <div class="city-search"
+         data-city-search
+         data-global-search
+         data-city-name="Our West Valley AZ">
+
+      <div class="city-search__intro">
+        <p>
+          Search budgets, government resources, OWVAZ pages,
+          and other indexed civic information.
+        </p>
+      </div>
+
+      <form class="city-search__form"
+            data-city-search-form
+            role="search">
+
+        <label class="city-search__label"
+               for="site-search">
+          Search the site
+        </label>
+
+        <div class="city-search__controls">
+          <input
+            id="site-search"
+            class="city-search__input"
+            data-city-search-input
+            type="search"
+            name="q"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Try budget, water, council meeting, police..."
+          >
+
+          <button class="button city-search__button"
+                  type="submit">
+            Search
+          </button>
+        </div>
+      </form>
+
+      <p class="city-search__privacy">
+        Searches run locally in your browser. Your search terms are not
+        sent to OWVAZ or a third-party search provider.
+      </p>
+
+      <div class="city-search__status"
+           data-city-search-status
+           aria-live="polite"></div>
+
+      <div class="city-search__results"
+           data-city-search-results></div>
+
+      <noscript>
+        <p class="city-search__noscript">
+          JavaScript is required for local site search.
+          The rest of OWVAZ remains available without JavaScript.
+        </p>
+      </noscript>
+
+    </div>
+
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,68 @@
+{
+  "cities": [
+    {
+      "id": "avondale",
+      "name": "Avondale",
+      "slug": "avondale",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": true
+    },
+    {
+      "id": "buckeye",
+      "name": "Buckeye",
+      "slug": "buckeye",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    },
+    {
+      "id": "glendale",
+      "name": "Glendale",
+      "slug": "glendale",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    },
+    {
+      "id": "goodyear",
+      "name": "Goodyear",
+      "slug": "goodyear",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    },
+    {
+      "id": "litchfield-park",
+      "name": "Litchfield Park",
+      "slug": "litchfield-park",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    },
+    {
+      "id": "peoria",
+      "name": "Peoria",
+      "slug": "peoria",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    },
+    {
+      "id": "surprise",
+      "name": "Surprise",
+      "slug": "surprise",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    },
+    {
+      "id": "tolleson",
+      "name": "Tolleson",
+      "slug": "tolleson",
+      "state": "AZ",
+      "timezone": "America/Phoenix",
+      "published": false
+    }
+  ]
+}

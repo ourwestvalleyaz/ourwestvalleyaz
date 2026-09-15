@@ -1,0 +1,244 @@
+{{- $cityID := .city_id -}}
+{{- $records := slice -}}
+
+{{- with index hugo.Data "local-government" -}}
+  {{- with index . "local-government" -}}
+    {{- with index . "local-government" -}}
+      {{- range . -}}
+        {{- if eq .city_id $cityID -}}
+          {{- $records = $records | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $records = sort $records "sort_order" "asc" -}}
+
+{{- if gt (len $records) 0 -}}
+
+  {{- $lead := index $records 0 -}}
+  {{- $emails := slice -}}
+
+  {{- range $records -}}
+    {{- with .email -}}
+      {{- $emails = $emails | append . -}}
+    {{- end -}}
+  {{- end -}}
+
+  <div class="local-government-summary">
+
+    <div class="local-government-summary__meta">
+      {{- with $lead.government_form }}
+        <strong>{{ . }}</strong>
+      {{- end }}
+
+      {{- with $lead.member_count }}
+        <span>{{ . }}-member council</span>
+      {{- end }}
+
+      {{- with $lead.election_method }}
+        <span>Elected {{ lower . }}</span>
+      {{- end }}
+
+      {{- with $lead.term_length_years }}
+        <span>{{ . }}-year terms</span>
+      {{- end }}
+    </div>
+
+    <div class="local-government-summary__roster">
+
+      {{- range $records }}
+        {{- if eq .role "mayor" }}
+
+          <article class="local-government-summary__mayor">
+
+            {{- with .profile_url }}
+              <a
+                class="local-government-summary__portrait-link"
+                href="{{ . }}"
+                aria-label="View official profile for {{ $.name }}">
+            {{- end }}
+
+            {{- with .image }}
+              <img
+                class="local-government-summary__portrait"
+                src="{{ . }}"
+                alt=""
+                width="72"
+                height="90"
+                loading="lazy">
+            {{- end }}
+
+            {{- with .profile_url }}
+              </a>
+            {{- end }}
+
+            <div class="local-government-summary__person-copy">
+              <p>Mayor</p>
+
+              <h3>
+                {{- if .profile_url -}}
+                  <a href="{{ .profile_url }}">{{ .name }}</a>
+                {{- else -}}
+                  {{ .name }}
+                {{- end -}}
+              </h3>
+
+              {{- if or .current_term_start_year .current_office_election_date .first_elected_year }}
+                <div class="local-government-summary__term-details">
+                  {{- if and .current_term_start_year .current_term_end_year }}
+                    <span>
+                      Current term:
+                      {{ .current_term_start_year }}–{{ .current_term_end_year }}
+                    </span>
+                  {{- end }}
+
+                  {{- with .current_office_election_date }}
+                    <span>
+                      Elected to current term:
+                      {{ time.Format "January 2, 2006" . }}
+                    </span>
+                  {{- end }}
+
+                  {{- with .first_elected_year }}
+                    <span>First elected to council: {{ . }}</span>
+                  {{- end }}
+                </div>
+              {{- end }}
+
+              {{- with .email }}
+                <a
+                  class="local-government-summary__email"
+                  href="mailto:{{ . }}">
+                  Email
+                </a>
+              {{- end }}
+            </div>
+
+          </article>
+
+        {{- end }}
+      {{- end }}
+
+      <div class="local-government-summary__members">
+
+        {{- range $records }}
+          {{- if ne .role "mayor" }}
+
+            <article class="local-government-summary__member">
+
+              {{- with .profile_url }}
+                <a
+                  class="local-government-summary__portrait-link"
+                  href="{{ . }}"
+                  aria-label="View official profile for {{ $.name }}">
+              {{- end }}
+
+              {{- with .image }}
+                <img
+                  class="local-government-summary__portrait"
+                  src="{{ . }}"
+                  alt=""
+                  width="72"
+                  height="90"
+                  loading="lazy">
+              {{- end }}
+
+              {{- with .profile_url }}
+                </a>
+              {{- end }}
+
+              <div class="local-government-summary__person-copy">
+                <p>
+                  {{- if eq .role "vice_mayor" -}}
+                    Vice Mayor
+                  {{- else -}}
+                    Councilmember
+                  {{- end -}}
+                </p>
+
+                <h3>
+                  {{- if .profile_url -}}
+                    <a href="{{ .profile_url }}">{{ .name }}</a>
+                  {{- else -}}
+                    {{ .name }}
+                  {{- end -}}
+                </h3>
+
+                {{- if or .current_term_start_year .current_office_election_date .first_elected_year }}
+                <div class="local-government-summary__term-details">
+                  {{- if and .current_term_start_year .current_term_end_year }}
+                    <span>
+                      Current term:
+                      {{ .current_term_start_year }}–{{ .current_term_end_year }}
+                    </span>
+                  {{- end }}
+
+                  {{- with .current_office_election_date }}
+                    <span>
+                      Elected to current term:
+                      {{ time.Format "January 2, 2006" . }}
+                    </span>
+                  {{- end }}
+
+                  {{- with .first_elected_year }}
+                    <span>First elected to council: {{ . }}</span>
+                  {{- end }}
+                </div>
+              {{- end }}
+
+              {{- with .email }}
+                  <a
+                    class="local-government-summary__email"
+                    href="mailto:{{ . }}">
+                    Email
+                  </a>
+                {{- end }}
+              </div>
+
+            </article>
+
+          {{- end }}
+        {{- end }}
+
+      </div>
+
+    </div>
+
+    {{- if or $lead.official_url $lead.meetings_url }}
+
+      <div class="local-government-summary__actions">
+
+        {{- with $lead.official_url }}
+          <a href="{{ . }}">
+            View Mayor &amp; Council
+          </a>
+        {{- end }}
+
+        {{- with $lead.meetings_url }}
+          <a href="{{ . }}">
+            Public meetings
+          </a>
+        {{- end }}
+
+        {{- if eq (len $emails) (len $records) }}
+          <a href="mailto:{{ delimit $emails "," }}">
+            Email all council members
+          </a>
+        {{- end }}
+
+      </div>
+
+    {{- end }}
+
+  </div>
+
+{{- else }}
+
+  {{ partial "community/empty-state.html"
+    (dict "message"
+      "Verified local-government information will appear here.")
+  }}
+
+{{- end }}

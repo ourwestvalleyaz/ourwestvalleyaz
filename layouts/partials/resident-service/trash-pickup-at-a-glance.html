@@ -1,0 +1,281 @@
+{{- $root := index hugo.Data "resident-services" -}}
+{{- $schedule := index $root "avondale-trash-next" -}}
+
+{{- with $schedule }}
+<section
+  class="trash-service-lookup"
+  id="pickup-schedule"
+  aria-labelledby="trash-pickup-glance-heading"
+>
+
+  <div class="trash-service-lookup__grid">
+
+    <div class="trash-pickup-glance">
+
+      <p class="eyebrow">Collection schedule</p>
+
+      <h2 id="trash-pickup-glance-heading">
+        When is my next pickup?
+      </h2>
+
+      <p class="trash-pickup-glance__intro">
+        Find your zone, then scan across for your regular service day
+        and next pickup.
+      </p>
+
+
+      <div
+        class="trash-pickup-glance__table-wrap"
+        role="region"
+        aria-label="Avondale trash, recycling and bulk pickup by zone"
+        tabindex="0"
+      >
+        <table class="trash-pickup-glance__table">
+          <thead>
+            <tr>
+              <th scope="col">Zone</th>
+              <th scope="col">Trash</th>
+              <th scope="col">Recycling</th>
+              <th scope="col">Bulk</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {{- range .zones }}
+            <tr id="pickup-zone-{{ lower .zone }}">
+              <th scope="row">
+                <span class="trash-pickup-glance__zone">
+                  {{ .zone }}
+                </span>
+              </th>
+
+              <td>
+                <span class="trash-pickup-glance__day">
+                  {{ .trash_day }}
+                </span>
+                <span class="trash-pickup-glance__next">
+                  Next
+                  <strong>
+                    <time datetime="{{ .next_trash }}">
+                      {{ time.Format "Jan 2" (time.AsTime .next_trash) }}
+                    </time>
+                  </strong>
+                </span>
+              </td>
+
+              <td>
+                <span class="trash-pickup-glance__day">
+                  {{ .recycling_day }}
+                </span>
+                <span class="trash-pickup-glance__next">
+                  Next
+                  <strong>
+                    <time datetime="{{ .next_recycling }}">
+                      {{ time.Format "Jan 2" (time.AsTime .next_recycling) }}
+                    </time>
+                  </strong>
+                </span>
+              </td>
+
+              <td>
+                <span class="trash-pickup-glance__day">
+                  {{ .bulk_rule }}
+                </span>
+                <span class="trash-pickup-glance__next">
+                  Next
+                  <strong>
+                    <time datetime="{{ .next_bulk }}">
+                      {{ time.Format "Jan 2" (time.AsTime .next_bulk) }}
+                    </time>
+                  </strong>
+                </span>
+              </td>
+            </tr>
+            {{- end }}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="trash-pickup-glance__footer">
+
+        <div class="trash-pickup-glance__actions">
+
+          <a
+            class="resident-zone-lookup"
+            href="https://gisportal.avondaleaz.gov/portal/apps/instant/lookup/index.html?appid=dac150ffa98f49a3b38d6445b4462a95"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Find your official zone →
+          </a>
+
+          <a
+            class="resident-zone-lookup"
+            href="https://avondaleaz.gov/government/departments/public-works/trash-recycling-services/"
+            rel="external"
+          >
+            City collection information
+          </a>
+
+        </div>
+
+        <p class="trash-pickup-glance__verified">
+          Updated
+          <time datetime="{{ .as_of }}">
+            {{ time.Format "Jan 2, 2006" (time.AsTime .as_of) }}
+          </time>
+        </p>
+
+      </div>
+
+    </div>
+
+    <div
+      id="find-your-collection-schedule"
+      class="trash-service-lookup__map"
+    >
+      <p class="trash-zone-map__mobile-instruction">
+        Tap your zone on the map to see your pickup schedule.
+      </p>
+
+      <figure class="city-zone-map" id="zone-map">
+
+        <div class="trash-zone-map__interactive">
+
+          <img
+            src="/images/avondale/solid-waste-zone-map.png"
+            alt="City of Avondale solid waste zone map showing Zones A, B, C, and D"
+            loading="lazy"
+          >
+
+          <svg
+            class="trash-zone-map__hotspots"
+            viewBox="0 0 787 1038"
+            preserveAspectRatio="none"
+            role="group"
+            aria-label="Select your Avondale solid waste zone"
+          >
+            <a href="#mobile-zone-result"
+               data-mobile-zone="A"
+               aria-label="Show pickup information for Zone A">
+              <rect x="75" y="95" width="640" height="140"></rect>
+            </a>
+
+            <a href="#mobile-zone-result"
+               data-mobile-zone="B"
+               aria-label="Show pickup information for Zone B">
+              <rect x="200" y="230" width="515" height="190"></rect>
+            </a>
+
+            <a href="#mobile-zone-result"
+               data-mobile-zone="C"
+               aria-label="Show pickup information for Zone C">
+              <rect x="105" y="420" width="610" height="205"></rect>
+            </a>
+
+            <a href="#mobile-zone-result"
+               data-mobile-zone="D"
+               aria-label="Show pickup information for Zone D">
+              <rect x="75" y="620" width="640" height="390"></rect>
+            </a>
+          </svg>
+
+        </div>
+
+        <figcaption>
+          Official City of Avondale solid-waste zone map.
+        </figcaption>
+
+      </figure>
+      <div class="trash-service-lookup__map-actions trash-service-lookup__map-actions--mobile">
+
+        <a
+          class="resident-zone-lookup"
+          href="https://gisportal.avondaleaz.gov/portal/apps/instant/lookup/index.html?appid=dac150ffa98f49a3b38d6445b4462a95"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Find your official zone →
+        </a>
+
+        <a
+          class="resident-zone-lookup"
+          href="https://avondaleaz.gov/government/departments/public-works/trash-recycling-services/"
+          rel="external"
+        >
+          City collection information
+        </a>
+
+      </div>
+
+      <div
+        id="mobile-zone-result"
+
+        class="trash-mobile-zone-result"
+        aria-live="polite"
+        hidden
+      >
+        {{- range .zones }}
+        <section
+          class="trash-mobile-zone-result__panel"
+          data-mobile-zone-panel="{{ .zone }}"
+          hidden
+        >
+          <p class="trash-mobile-zone-result__eyebrow">
+            Zone {{ .zone }}
+          </p>
+
+          <div class="trash-mobile-zone-result__services">
+
+            <div>
+              <span>Trash</span>
+              <strong>{{ .trash_day }}</strong>
+              <small>
+                Next
+                <time datetime="{{ .next_trash }}">
+                  {{ time.Format "Jan 2" (time.AsTime .next_trash) }}
+                </time>
+              </small>
+            </div>
+
+            <div>
+              <span>Recycling</span>
+              <strong>{{ .recycling_day }}</strong>
+              <small>
+                Next
+                <time datetime="{{ .next_recycling }}">
+                  {{ time.Format "Jan 2" (time.AsTime .next_recycling) }}
+                </time>
+              </small>
+            </div>
+
+            <div>
+              <span>Bulk</span>
+              <strong>{{ .bulk_rule }}</strong>
+              <small>
+                Next
+                <time datetime="{{ .next_bulk }}">
+                  {{ time.Format "Jan 2" (time.AsTime .next_bulk) }}
+                </time>
+              </small>
+            </div>
+
+          </div>
+        </section>
+        {{- end }}
+      </div>
+
+    </div>
+
+  </div>
+
+  <p class="resident-schedule__setout">
+    <strong>Bulk trash:</strong>
+    Place items at the curb by <strong>5:00 a.m. Monday</strong>
+    of your scheduled service week.
+  </p>
+
+</section>
+
+<script src="/js/trash-zone-map.js" defer></script>
+{{- end }}

@@ -1,0 +1,43 @@
+{
+  "city_id": "avondale",
+  "as_of": "2026-09-11",
+  "source_id": "avondale-trash-recycling",
+  "zones": [
+    {
+      "zone": "A",
+      "trash_day": "Monday",
+      "next_trash": "2026-09-14",
+      "recycling_day": "Wednesday",
+      "next_recycling": "2026-09-16",
+      "bulk_rule": "1st Monday",
+      "next_bulk": "2026-10-05"
+    },
+    {
+      "zone": "B",
+      "trash_day": "Tuesday",
+      "next_trash": "2026-09-15",
+      "recycling_day": "Thursday",
+      "next_recycling": "2026-09-17",
+      "bulk_rule": "2nd Monday",
+      "next_bulk": "2026-09-14"
+    },
+    {
+      "zone": "C",
+      "trash_day": "Wednesday",
+      "next_trash": "2026-09-16",
+      "recycling_day": "Monday",
+      "next_recycling": "2026-09-14",
+      "bulk_rule": "3rd Monday",
+      "next_bulk": "2026-09-21"
+    },
+    {
+      "zone": "D",
+      "trash_day": "Thursday",
+      "next_trash": "2026-09-17",
+      "recycling_day": "Tuesday",
+      "next_recycling": "2026-09-15",
+      "bulk_rule": "4th Monday",
+      "next_bulk": "2026-09-28"
+    }
+  ]
+}

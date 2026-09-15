@@ -1,0 +1,7154 @@
+:root {
+  --font-sans:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  --text: #262421;
+  --text-soft: #686159;
+  --background: #F6F1E8;
+  --background-soft: #ECE4D7;
+  --border: #D7CDBC;
+  --accent: #8A5C3B;
+  --accent-dark: #68432B;
+  --header: #292724;
+  --header-text: #F8F4EC;
+  --focus: #68432B;
+
+  /* Shared Desert Warm surfaces and compatibility aliases */
+  --surface: #FFFDF8;
+  --surface-warm: #ECE4D7;
+  --surface-muted: #ECE4D7;
+  --muted: #686159;
+  --text-muted: #686159;
+  --color-surface: #FFFDF8;
+  --color-surface-soft: #ECE4D7;
+  --color-border: #D7CDBC;
+
+  /* Restrained Arizona identity colors */
+  --az-red: #8A5C3B;
+  --az-blue: #68432B;
+  --az-gold: #8A5C3B;
+  --az-gold-text: #68432B;
+
+  --shell: 76rem;
+  --content: 54rem;
+
+  --space-1: 0.4rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+
+  --radius: 0.35rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.site-shell {
+  width: min(calc(100% - 2rem), var(--shell));
+  margin-inline: auto;
+}
+
+.content-width {
+  max-width: var(--content);
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--background);
+  border: 2px solid var(--text);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 5rem;
+}
+
+.site-brand {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-brand__name,
+.site-brand__slogan {
+  display: block;
+}
+
+.site-brand__name {
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.site-brand__slogan {
+  margin-top: 0.2rem;
+  color: var(--text-soft);
+  font-size: 0.78rem;
+}
+
+.primary-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.primary-nav a {
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35rem;
+}
+
+.primary-nav__search {
+  padding-left: var(--space-4);
+  border-left: 1px solid var(--border);
+}
+
+.hero,
+.page-header {
+  padding-block: var(--space-7);
+}
+
+.hero {
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  max-width: 17ch;
+  margin: 0;
+  font-size: clamp(2.15rem, 7vw, 4.35rem);
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+.page-header h1 {
+  max-width: 24ch;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.hero__summary,
+.page-summary {
+  max-width: 44rem;
+  margin-top: var(--space-4);
+  color: var(--text-soft);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.principle {
+  margin-top: var(--space-5);
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section {
+  padding-block: var(--space-6);
+  scroll-margin-top: 2rem;
+}
+
+.section--soft {
+  background: var(--background-soft);
+}
+
+.section-heading {
+  margin-bottom: var(--space-4);
+}
+
+.section-heading h2 {
+  max-width: 24ch;
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  padding-block: var(--space-3);
+  border-block: 1px solid var(--border);
+}
+
+.section-nav a {
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.community-list,
+.plain-list {
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.community-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.community-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.community-list small {
+  color: var(--text-soft);
+}
+
+/* OWVAZ HOME CITY PICKER */
+.home-city-picker {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 46rem;
+}
+
+.home-city-picker .home-city-picker__item {
+  display: flex;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.home-city-picker .home-city-picker__item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.home-city-picker__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  min-height: 5rem;
+  padding: 1.1rem 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.home-city-picker__city {
+  font-size: 1.05rem;
+  font-weight: 750;
+}
+
+.home-city-picker__action,
+.home-city-picker__status {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.home-city-picker__action {
+  color: var(--accent-dark);
+}
+
+.home-city-picker__link:hover,
+.home-city-picker__link:focus-visible {
+  background: var(--accent-dark);
+  color: var(--surface);
+}
+
+.home-city-picker__link:hover .home-city-picker__action,
+.home-city-picker__link:focus-visible .home-city-picker__action {
+  color: var(--surface);
+}
+
+.home-city-picker__item--pending {
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-height: 5rem;
+  padding: 1.1rem 1.2rem !important;
+  background: var(--surface-muted) !important;
+  color: var(--text-soft);
+}
+
+.home-city-picker__status {
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 40rem) {
+  .home-city-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .home-city-picker__link,
+  .home-city-picker__item--pending {
+    min-height: 4.5rem;
+  }
+}
+/* END OWVAZ HOME CITY PICKER */
+
+.foundation-note,
+.empty-state {
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+}
+
+.foundation-note p:last-child,
+.empty-state {
+  margin-bottom: 0;
+}
+
+.prose {
+  max-width: 46rem;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.site-footer {
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--border);
+}
+
+.site-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.site-footer p {
+  margin: var(--space-1) 0 0;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.site-footer nav {
+  display: flex;
+  gap: var(--space-4);
+}
+
+@media (max-width: 46rem) {
+  .site-header__inner,
+  .site-footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-header__inner {
+    padding-block: var(--space-3);
+  }
+
+  .primary-nav {
+    width: 100%;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .primary-nav__search {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .hero,
+  .page-header {
+    padding-block: var(--space-6);
+  }
+
+  .section {
+    padding-block: var(--space-5);
+  }
+
+  .community-list li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Foundation: persistent footer + mobile navigation
+   ------------------------------------------------------------------ */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  margin-top: auto;
+}
+
+.mobile-actions {
+  display: none;
+}
+
+@media (max-width: 46rem) {
+  .primary-nav--desktop {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: var(--space-4);
+    width: 100%;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--border);
+  }
+
+  .mobile-menu {
+    min-width: 0;
+  }
+
+  .mobile-menu summary,
+  .mobile-search {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .mobile-menu summary {
+    width: max-content;
+    cursor: pointer;
+  }
+
+  .mobile-menu nav {
+    display: grid;
+    gap: 0;
+    margin-top: var(--space-3);
+  }
+
+  .mobile-menu nav a {
+    display: block;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .mobile-menu nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25rem;
+  }
+
+  .mobile-search {
+    text-decoration: none;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Mobile hamburger navigation control
+   ------------------------------------------------------------------ */
+
+@media (max-width: 46rem) {
+  .mobile-menu summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu summary::marker {
+    content: "";
+  }
+
+  .hamburger-icon {
+    display: grid;
+    gap: 0.3rem;
+    width: 1.65rem;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Mobile header action alignment
+   ------------------------------------------------------------------ */
+
+@media (max-width: 46rem) {
+  .mobile-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-4);
+  }
+
+  .mobile-search {
+    order: 1;
+  }
+
+  .mobile-menu {
+    order: 2;
+  }
+
+  .mobile-menu nav {
+    position: absolute;
+    right: 1rem;
+    left: 1rem;
+    z-index: 20;
+    margin-top: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Mobile header-integrated navigation
+   ------------------------------------------------------------------ */
+
+.site-header__brand-row {
+  display: contents;
+}
+
+@media (max-width: 46rem) {
+  .site-header__inner {
+    display: block;
+    padding-block: var(--space-3);
+  }
+
+  .site-header__brand-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    width: 100%;
+  }
+
+  .site-brand {
+    min-width: 0;
+  }
+
+  .mobile-actions,
+  .mobile-search {
+    display: none !important;
+  }
+
+  .mobile-menu {
+    display: block;
+    flex: 0 0 auto;
+  }
+
+  .mobile-menu summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-menu summary::marker {
+    content: "";
+  }
+
+  .hamburger-icon {
+    display: grid;
+    gap: 0.3rem;
+    width: 1.65rem;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 999px;
+  }
+
+  .mobile-menu nav {
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    right: 0;
+    left: 0;
+    z-index: 30;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background);
+  }
+
+  .mobile-menu nav a {
+    display: block;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .mobile-menu nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .mobile-menu nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25rem;
+  }
+}
+
+/* Mobile navigation is hidden completely on desktop. */
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 46rem) {
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Resident Quick Reference
+   ------------------------------------------------------------------ */
+
+.quick-reference-list {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.quick-reference-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-5);
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.quick-reference-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.quick-reference-item h3 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.05rem;
+}
+
+.quick-reference-item p {
+  margin: 0;
+}
+
+.quick-reference-item__category {
+  margin-bottom: var(--space-2) !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.quick-reference-item__note {
+  margin-top: var(--space-2) !important;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.quick-reference-item__provider {
+  margin-top: var(--space-2) !important;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.quick-reference-item__action a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border-strong, var(--border));
+  border-radius: var(--radius);
+  white-space: nowrap;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.quick-reference-item__action a:hover,
+.quick-reference-item__action a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media (max-width: 46rem) {
+  .quick-reference-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .quick-reference-item__action a {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Compact Resident Quick Reference
+   ------------------------------------------------------------------ */
+
+.quick-reference-groups {
+  margin-top: var(--space-4);
+}
+
+.quick-reference-group + .quick-reference-group {
+  margin-top: var(--space-5);
+}
+
+.quick-reference-group > h3 {
+  margin: 0 0 0.35rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.quick-reference-group .quick-reference-list {
+  display: block;
+  margin-top: 0;
+}
+
+.quick-reference-group .quick-reference-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.quick-reference-group .quick-reference-item h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.quick-reference-group .quick-reference-item__body > p {
+  margin: 0.15rem 0 0;
+  line-height: 1.4;
+}
+
+.quick-reference-group .quick-reference-item__note {
+  margin-top: 0.2rem !important;
+  font-size: 0.82rem;
+}
+
+.quick-reference-group .quick-reference-item__provider,
+.quick-reference-group .quick-reference-item__category {
+  display: none;
+}
+
+.quick-reference-group .quick-reference-item__action a {
+  min-height: 2.25rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 46rem) {
+  .quick-reference-group + .quick-reference-group {
+    margin-top: var(--space-4);
+  }
+
+  .quick-reference-group .quick-reference-item {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.65rem;
+    padding: 0.7rem 0;
+  }
+
+  .quick-reference-group .quick-reference-item__action a {
+    width: auto;
+    min-height: 2.5rem;
+    padding: 0.45rem 0.6rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Inline Resident Quick Reference
+   ------------------------------------------------------------------ */
+
+.quick-reference-inline {
+  margin-top: var(--space-4);
+  display: grid;
+  gap: 1rem;
+}
+
+.quick-reference-inline__group {
+  margin: 0;
+  padding: 0;
+}
+
+.quick-reference-inline__group h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.quick-reference-inline__links {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.quick-reference-inline__links a {
+  display: inline;
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: 0.18rem;
+}
+
+.quick-reference-inline__links a:hover,
+.quick-reference-inline__links a:focus-visible {
+  text-decoration: underline;
+}
+
+.quick-reference-inline__separator {
+  display: inline-block;
+  margin: 0 0.45rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+@media (min-width: 52rem) {
+  .quick-reference-inline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+    row-gap: 1.1rem;
+    align-items: start;
+  }
+}
+
+@media (max-width: 46rem) {
+  .quick-reference-inline {
+    gap: 0.9rem;
+  }
+
+  .quick-reference-inline__links {
+    line-height: 1.9;
+  }
+
+  .quick-reference-inline__separator {
+    margin: 0 0.35rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Resident Quick Reference: three-column links within each category
+   ------------------------------------------------------------------ */
+
+.quick-reference-inline__links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.45;
+}
+
+.quick-reference-inline__links li {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-reference-inline__links a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: 0.18rem;
+}
+
+.quick-reference-inline__links a:hover,
+.quick-reference-inline__links a:focus-visible {
+  text-decoration: underline;
+}
+
+.quick-reference-inline__separator {
+  display: none;
+}
+
+@media (max-width: 64rem) {
+  .quick-reference-inline__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 40rem) {
+  .quick-reference-inline__links {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Resident Quick Reference: two-column links within each category
+   ------------------------------------------------------------------ */
+
+.quick-reference-inline__links {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 40rem) {
+  .quick-reference-inline__links {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Resident Quick Reference: action summaries
+   ------------------------------------------------------------------ */
+
+.quick-reference-inline__item {
+  display: block;
+}
+
+.quick-reference-inline__summary {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.quick-reference-inline__links {
+  row-gap: 0.7rem;
+}
+
+/* ------------------------------------------------------------------
+   Resident Quick Reference: keep two item columns on mobile
+   ------------------------------------------------------------------ */
+
+@media (max-width: 40rem) {
+  .quick-reference-inline__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.85rem;
+    row-gap: 0.75rem;
+  }
+
+  .quick-reference-inline__summary {
+    font-size: 0.8rem;
+    line-height: 1.32;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Resident Quick Reference: category panels
+   ------------------------------------------------------------------ */
+
+.quick-reference-inline {
+  gap: 1rem;
+}
+
+.quick-reference-inline__group {
+  margin: 0;
+  padding: 1rem 1.05rem 1.05rem;
+  border: 1px solid var(--border);
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--surface) 94%, var(--surface-warm) 6%);
+}
+
+.quick-reference-inline__group h3 {
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+  line-height: 1.2;
+  font-weight: 750;
+}
+
+.quick-reference-inline__links {
+  margin: 0;
+}
+
+@media (max-width: 40rem) {
+  .quick-reference-inline {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .quick-reference-inline__group {
+    padding: 0.9rem;
+  }
+
+  .quick-reference-inline__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.8rem;
+    row-gap: 0.8rem;
+  }
+}
+
+/* ==================================================================
+   Community Budget Summary — resident snapshot
+   ================================================================== */
+
+.community-budget-summary {
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: var(--surface, #fff);
+}
+
+.community-budget-summary__top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(13rem, .65fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.community-budget-summary__heading-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin-bottom: .35rem;
+}
+
+.community-budget-summary__eyebrow {
+  margin: 0;
+  font-size: .85rem;
+  line-height: 1.2;
+  font-weight: 750;
+  color: var(--muted);
+}
+
+.community-budget-summary__status {
+  display: inline-flex;
+  align-items: center;
+  padding: .18rem .48rem;
+  border-radius: 999px;
+  font-size: .72rem;
+  line-height: 1.2;
+  font-weight: 750;
+  border: 1px solid var(--border);
+}
+
+.community-budget-summary__status--tentative {
+  color: #795314;
+  background: #fff7df;
+  border-color: #e6cf8a;
+}
+
+.community-budget-summary__status--adopted {
+  color: #286039;
+  background: #edf8f0;
+  border-color: #b9d9c2;
+}
+
+.community-budget-summary__amount {
+  margin: .1rem 0 0;
+  font-size: clamp(2.2rem, 5vw, 3.25rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -.035em;
+}
+
+.community-budget-summary__amount span {
+  font-size: .42em;
+  font-weight: 650;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.community-budget-summary__comparison {
+  display: inline-flex;
+  flex-direction: column;
+  gap: .12rem;
+  margin-top: 1rem;
+  padding: .65rem .8rem;
+  border-radius: .42rem;
+  border: 1px solid;
+}
+
+.community-budget-summary__comparison strong {
+  font-size: .98rem;
+  line-height: 1.25;
+}
+
+.community-budget-summary__comparison span {
+  font-size: .8rem;
+  line-height: 1.3;
+}
+
+.community-budget-summary__comparison small {
+  margin-top: .18rem;
+  font-size: .72rem;
+  line-height: 1.35;
+  opacity: .82;
+}
+
+.community-budget-summary__comparison--increase {
+  color: #245c36;
+  background: #edf8f0;
+  border-color: #b9d9c2;
+}
+
+.community-budget-summary__comparison--decrease {
+  color: #8a3434;
+  background: #fff1f1;
+  border-color: #e1bcbc;
+}
+
+.community-budget-summary__comparison--same {
+  color: var(--text);
+  background: #f5f6f7;
+  border-color: var(--border);
+}
+
+.community-budget-summary__comparison--mixed {
+  color: #795314;
+  background: #fff8e6;
+  border-color: #e4cf91;
+}
+
+.community-budget-summary__facts {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem 1.05rem;
+  border-left: 1px solid var(--border);
+}
+
+.community-budget-summary__facts div {
+  margin: 0;
+}
+
+.community-budget-summary__facts dt {
+  margin: 0 0 .25rem;
+  font-size: .75rem;
+  line-height: 1.2;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .035em;
+  color: var(--muted);
+}
+
+.community-budget-summary__facts dd {
+  margin: 0;
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
+.community-budget-summary__facts strong {
+  display: block;
+  margin-top: .15rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.community-budget-summary__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.community-budget-summary__action {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: .48rem .8rem;
+  border: 1px solid var(--border);
+  border-radius: .35rem;
+  text-decoration: none;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.community-budget-summary__action:hover {
+  text-decoration: underline;
+}
+
+.community-budget-summary__action--primary {
+  border-color: currentColor;
+}
+
+@media (max-width: 40rem) {
+
+  .community-budget-summary {
+    padding: 1rem;
+  }
+
+  .community-budget-summary__top {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .community-budget-summary__facts {
+    padding: .9rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .community-budget-summary__amount {
+    font-size: 2.4rem;
+  }
+
+  .community-budget-summary__comparison {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .community-budget-summary__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .community-budget-summary__action {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ==================================================================
+   Community Local Government
+   ================================================================== */
+
+.local-government-summary {
+  padding: 1.3rem;
+  border: 1px solid var(--border);
+  border-radius: .55rem;
+  background: var(--surface, #fff);
+}
+
+.local-government-summary__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .7rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--border);
+  font-size: .78rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.local-government-summary__meta strong {
+  color: var(--text);
+}
+
+.local-government-summary__meta span::before {
+  content: "•";
+  margin-right: .7rem;
+}
+
+.local-government-summary__roster {
+  display: grid;
+  grid-template-columns: minmax(10rem, .7fr) minmax(0, 1.8fr);
+  gap: 1.5rem;
+  padding-top: 1.15rem;
+}
+
+.local-government-summary__mayor p,
+.local-government-summary__member p {
+  margin: 0 0 .18rem;
+  font-size: .7rem;
+  line-height: 1.2;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .035em;
+  color: var(--muted);
+}
+
+.local-government-summary__mayor h3,
+.local-government-summary__member h3 {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.local-government-summary__mayor h3 {
+  font-size: 1.35rem;
+}
+
+.local-government-summary__member h3 {
+  font-size: .98rem;
+}
+
+.local-government-summary__members {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.3rem;
+}
+
+.local-government-summary__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin-top: 1.2rem;
+  padding-top: .9rem;
+  border-top: 1px solid var(--border);
+}
+
+.local-government-summary__actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.3rem;
+  padding: .45rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: .35rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.local-government-summary__actions a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 40rem) {
+
+  .local-government-summary {
+    padding: 1rem;
+  }
+
+  .local-government-summary__meta {
+    display: block;
+  }
+
+  .local-government-summary__meta > * {
+    display: block;
+    margin-bottom: .2rem;
+  }
+
+  .local-government-summary__meta span::before {
+    content: "";
+    margin: 0;
+  }
+
+  .local-government-summary__roster {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .local-government-summary__members {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .9rem;
+  }
+
+  .local-government-summary__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .local-government-summary__actions a {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* LOCAL GOVERNMENT PORTRAITS START */
+
+.local-government-summary__mayor,
+.local-government-summary__member {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.local-government-summary__portrait-link {
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 0.4rem;
+}
+
+.local-government-summary__portrait {
+  display: block;
+  width: 4.5rem;
+  height: 5.625rem;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0.4rem;
+  background: var(--surface-muted, #f3f4f5);
+}
+
+.local-government-summary__person-copy {
+  min-width: 0;
+}
+
+.local-government-summary__person-copy p {
+  margin-top: 0;
+}
+
+.local-government-summary__person-copy h3 a {
+  color: inherit;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+}
+
+@media (max-width: 42rem) {
+  .local-government-summary__portrait {
+    width: 4rem;
+    height: 5rem;
+  }
+}
+
+/* LOCAL GOVERNMENT PORTRAITS END */
+
+
+/* LOCAL GOVERNMENT EMAIL LINKS */
+.local-government-summary__email {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+/* OWVAZ upcoming meetings */
+
+.meetings-summary {
+  display: grid;
+  gap: 1rem;
+}
+
+.meeting-next {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #d8d8d8);
+  border-radius: 0.5rem;
+}
+
+.meeting-next--cancelled {
+  border-width: 2px;
+}
+
+.meeting-next__date {
+  align-self: start;
+  text-align: center;
+  border: 1px solid var(--color-border, #d8d8d8);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+
+.meeting-next__month {
+  display: block;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--color-surface-soft, #f2f2f2);
+}
+
+.meeting-next__day {
+  display: block;
+  padding: 0.35rem;
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.meeting-next__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.meeting-next__label {
+  margin: 0 0 0.2rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.meeting-next__heading h3 {
+  margin: 0;
+}
+
+.meeting-next__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin-top: 0.55rem;
+}
+
+.meeting-next__facts span + span::before {
+  content: "·";
+  margin-right: 1rem;
+}
+
+.meeting-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.meeting-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.meeting-following {
+  padding: 1rem 1.25rem;
+  background: var(--color-surface, #fff);
+  border: 1px solid var(--color-border, #d8d8d8);
+  border-radius: 0.5rem;
+}
+
+.meeting-following h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+}
+
+.meeting-following__list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meeting-following__list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--color-border, #e2e2e2);
+}
+
+.meeting-following__list li:first-child {
+  border-top: 0;
+}
+
+.meeting-following__date {
+  min-width: 3.75rem;
+  font-weight: 700;
+}
+
+.meeting-following__time {
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .meeting-next {
+    grid-template-columns: 4.25rem minmax(0, 1fr);
+    gap: 0.85rem;
+    padding: 1rem;
+  }
+
+  .meeting-next__day {
+    font-size: 1.45rem;
+  }
+
+  .meeting-next__heading {
+    display: block;
+  }
+
+  .meeting-status {
+    margin-top: 0.45rem;
+  }
+
+  .meeting-next__facts {
+    display: grid;
+    gap: 0.2rem;
+  }
+
+  .meeting-next__facts span + span::before {
+    content: none;
+  }
+
+  .meeting-actions {
+    display: grid;
+  }
+
+  .meeting-actions .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ==========================================================
+   OWVAZ SHARED DETAIL PAGE
+   Local Issue presentation follows the established site shell.
+   ========================================================== */
+
+.owvaz-detail-page {
+  padding-block: 2.5rem 4.5rem;
+}
+
+.owvaz-detail-page__back {
+  margin-bottom: 2.25rem;
+  font-size: .9rem;
+}
+
+.owvaz-detail-page__back a,
+.owvaz-detail-page__return a {
+  font-weight: 600;
+}
+
+.owvaz-detail-page__header {
+  max-width: 62rem;
+}
+
+.owvaz-detail-page__eyebrow {
+  margin: 0 0 .7rem;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.owvaz-detail-page__header h1 {
+  margin: 0;
+  line-height: 1.08;
+}
+
+.owvaz-detail-page__lead {
+  max-width: 58rem;
+  margin: 1rem 0 0;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.owvaz-detail-page__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .6rem 1.25rem;
+  margin-top: 1.25rem;
+  font-size: .86rem;
+}
+
+.owvaz-detail-page__status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: .15rem .45rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.owvaz-detail-page__section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 1.1rem;
+  max-width: 62rem;
+  margin: 2.5rem 0 0;
+  padding: .8rem 0;
+  border-top: 1px solid rgba(31, 27, 22, .18);
+  border-bottom: 1px solid rgba(31, 27, 22, .18);
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.owvaz-detail-page__content {
+  max-width: 62rem;
+  padding-top: 2.5rem;
+}
+
+.owvaz-detail-page__content h2 {
+  margin: 3rem 0 1rem;
+}
+
+.owvaz-detail-page__content h2:first-child {
+  margin-top: 0;
+}
+
+.owvaz-detail-page__content h3 {
+  margin: 2rem 0 .75rem;
+}
+
+.owvaz-detail-page__content p,
+.owvaz-detail-page__content li {
+  line-height: 1.72;
+}
+
+.owvaz-detail-page__content ul {
+  padding-left: 1.35rem;
+}
+
+.owvaz-detail-page__sources {
+  max-width: 62rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(31, 27, 22, .2);
+}
+
+.owvaz-detail-page__sources h2 {
+  margin-top: 0;
+}
+
+.owvaz-detail-page__source-intro {
+  max-width: 54rem;
+  line-height: 1.65;
+}
+
+.owvaz-source-list {
+  margin-top: 1.75rem;
+}
+
+.owvaz-source {
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(31, 27, 22, .16);
+}
+
+.owvaz-source:last-child {
+  border-bottom: 1px solid rgba(31, 27, 22, .16);
+}
+
+.owvaz-source__title {
+  margin: 0;
+  font-size: .98rem;
+}
+
+.owvaz-source__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1rem;
+  margin-top: .55rem;
+  font-size: .86rem;
+}
+
+.owvaz-source__availability {
+  margin: .55rem 0 0;
+  font-size: .82rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.owvaz-source__description {
+  max-width: 54rem;
+  margin: .55rem 0 0;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.owvaz-detail-page__return {
+  max-width: 62rem;
+  margin: 3rem 0 0;
+}
+
+@media (max-width: 640px) {
+
+  .owvaz-detail-page {
+    padding-block: 1.6rem 3.5rem;
+  }
+
+  .owvaz-detail-page__back {
+    margin-bottom: 1.75rem;
+  }
+
+  .owvaz-detail-page__lead {
+    font-size: 1rem;
+  }
+
+  .owvaz-detail-page__meta {
+    display: grid;
+    gap: .5rem;
+  }
+
+  .owvaz-detail-page__section-nav {
+    gap: .5rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .owvaz-detail-page__content {
+    padding-top: 2rem;
+  }
+
+  .owvaz-source__actions {
+    display: grid;
+    justify-items: start;
+  }
+
+}
+
+
+/* ==========================================================
+   OWVAZ DETAIL PAGE READABILITY NORMALIZATION
+   Typography and reading rhythm only.
+   Outer page geometry remains owned by site-shell/content-width.
+   ========================================================== */
+
+.owvaz-detail-page__header h1 {
+  max-width: 24ch;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.owvaz-detail-page__lead {
+  max-width: 44rem;
+  margin-top: var(--space-4);
+  color: var(--text-soft);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.owvaz-detail-page__meta {
+  margin-top: var(--space-4);
+}
+
+.owvaz-detail-page__section-nav {
+  margin-top: var(--space-5);
+}
+
+.owvaz-detail-page__content {
+  font-size: 1rem;
+}
+
+.owvaz-detail-page__content > p {
+  margin-block: 0 1.15rem;
+}
+
+.owvaz-detail-page__content > p:first-child {
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.owvaz-detail-page__content h2 {
+  max-width: 24ch;
+  margin-top: 3.75rem;
+  margin-bottom: 1.15rem;
+  font-size: clamp(1.55rem, 4vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.owvaz-detail-page__content h3 {
+  margin-top: 2.35rem;
+  margin-bottom: .8rem;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.owvaz-detail-page__content p,
+.owvaz-detail-page__content li {
+  line-height: 1.72;
+}
+
+.owvaz-detail-page__content li + li {
+  margin-top: .42rem;
+}
+
+
+/* At a glance is a summary treatment, not a generic card system. */
+
+.owvaz-detail-page__content #at-a-glance {
+  max-width: none;
+  margin-bottom: 0;
+  padding: 1.4rem 1.5rem .65rem;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--background);
+  font-size: 1.35rem;
+}
+
+.owvaz-detail-page__content #at-a-glance + ul {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding: .2rem 1.5rem 1.4rem 2.8rem;
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: var(--background);
+}
+
+.owvaz-detail-page__content #at-a-glance + ul li {
+  padding-left: .15rem;
+}
+
+
+/* Timeline remains document content, with more visual separation. */
+
+.owvaz-detail-page__content #timeline {
+  margin-bottom: 1.35rem;
+}
+
+
+/* Evidence limitations intentionally remain visually restrained. */
+
+.owvaz-detail-page__content #public-record-limitations {
+  margin-top: 4rem;
+}
+
+
+/* Sources remain denser than narrative content. */
+
+.owvaz-detail-page__sources {
+  margin-top: 4.5rem;
+}
+
+.owvaz-detail-page__sources > h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.owvaz-source {
+  padding-block: 1.35rem;
+}
+
+.owvaz-source__description {
+  line-height: 1.6;
+}
+
+
+@media (max-width: 46rem) {
+
+  .owvaz-detail-page__content {
+    font-size: 1rem;
+  }
+
+  .owvaz-detail-page__content h2 {
+    margin-top: 3rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 24ch;
+}
+
+  .owvaz-detail-page__content h3 {
+    margin-top: 2rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance {
+    padding: 1.1rem 1rem .55rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul {
+    padding: .15rem 1rem 1.1rem 2.25rem;
+  }
+
+}
+
+/* ==========================================================
+   OWVAZ DETAIL PAGE READING MEASURE
+   Internal long-form reading width only.
+   Outer geometry remains owned by site-shell/content-width.
+   ========================================================== */
+
+.owvaz-detail-page__content > * {
+  max-width: 46rem;
+}
+
+/*
+ * "At a glance" is intentionally allowed to use the available
+ * detail-page content width as the summary treatment.
+ */
+.owvaz-detail-page__content > #at-a-glance,
+.owvaz-detail-page__content > #at-a-glance + ul {
+  max-width: none;
+}
+
+/*
+ * Heading widths continue to follow the hierarchy established
+ * by the readability normalization.
+ */
+.owvaz-detail-page__content > h2 {
+  max-width: 24ch;
+}
+
+/*
+ * On smaller screens the available viewport naturally becomes
+ * narrower than the reading measure, so no separate mobile width
+ * is necessary.
+ */
+
+/* END OWVAZ DETAIL PAGE READING MEASURE */
+
+/* ==========================================================
+   OWVAZ CITY SEARCH v0.1
+   Shared city-scoped search interface.
+   Outer geometry remains owned by site-shell/content-width.
+   ========================================================== */
+
+.city-search {
+  max-width: 58rem;
+}
+
+.city-search__intro {
+  max-width: 46rem;
+}
+
+.city-search__intro p {
+  margin-top: 0;
+  line-height: 1.65;
+}
+
+.city-search__form {
+  margin-top: var(--space-5);
+}
+
+.city-search__label {
+  display: block;
+  margin-bottom: .55rem;
+  font-weight: 700;
+}
+
+.city-search__controls {
+  display: flex;
+  gap: .65rem;
+  align-items: stretch;
+}
+
+.city-search__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 3rem;
+  padding: .75rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  color: inherit;
+  font: inherit;
+}
+
+.city-search__input:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+.city-search__button {
+  flex: 0 0 auto;
+}
+
+.city-search__privacy {
+  margin-top: .7rem;
+  color: var(--text-soft);
+  font-size: .9rem;
+}
+
+.city-search__status {
+  margin-top: var(--space-5);
+  font-weight: 700;
+}
+
+.city-search__status:empty {
+  margin-top: 0;
+}
+
+.city-search__results {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.city-search-result {
+  padding-block: 1.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.city-search-result__meta {
+  margin-bottom: .35rem;
+  color: var(--text-soft);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.city-search-result__title {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+
+.city-search-result__details {
+  margin-top: .35rem;
+  color: var(--text-soft);
+  font-size: .9rem;
+}
+
+.city-search-result__snippet {
+  max-width: 46rem;
+  margin: .6rem 0 0;
+  line-height: 1.6;
+}
+
+.city-search-result__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin-top: .65rem;
+  font-size: .92rem;
+  font-weight: 650;
+}
+
+.city-search__more,
+.city-search__noscript {
+  margin-top: 1rem;
+  color: var(--text-soft);
+  font-size: .92rem;
+}
+
+@media (max-width: 40rem) {
+  .city-search__controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .city-search__button {
+    justify-self: start;
+  }
+}
+
+/* END OWVAZ CITY SEARCH v0.1 */
+
+/* LOCAL GOVERNMENT TERM DETAILS */
+.local-government-summary__term-details {
+  display: grid;
+  gap: 0.12rem;
+  margin-top: 0.35rem;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.local-government-summary__term-details span {
+  display: block;
+}
+
+/* ==========================================================
+   OWVAZ COMMUNITIES NAVIGATION
+   Native details/summary provides keyboard and touch behavior.
+   ========================================================== */
+
+.communities-menu {
+  position: relative;
+}
+
+.communities-menu > summary {
+  color: var(--text);
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.communities-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.communities-menu > summary::marker {
+  content: "";
+}
+
+.communities-menu > summary::after {
+  content: "▾";
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.72em;
+}
+
+.communities-menu[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.communities-menu > summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.communities-menu--current > summary {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35rem;
+}
+
+.communities-menu__panel {
+  display: grid;
+  min-width: 13rem;
+}
+
+.communities-menu--desktop .communities-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  left: 0;
+  z-index: 40;
+  padding: 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--background);
+  box-shadow: 0 0.7rem 1.8rem rgba(31, 27, 22, 0.12);
+}
+
+.communities-menu__panel a,
+.communities-menu__pending {
+  padding: 0.65rem 0.7rem;
+}
+
+.communities-menu__panel a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.communities-menu__panel a:hover,
+.communities-menu__panel a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.communities-menu__pending {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text-soft);
+  cursor: default;
+}
+
+.communities-menu__city {
+  font-weight: 600;
+}
+
+.communities-menu__status {
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 46rem) {
+
+  .mobile-menu nav > .communities-menu {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .mobile-menu nav > .communities-menu > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.8rem 0;
+    font-size: inherit;
+    font-weight: 600;
+  }
+
+  .communities-menu--mobile .communities-menu__panel {
+    padding: 0 0 0.55rem 0.9rem;
+  }
+
+  .mobile-menu nav .communities-menu__panel a {
+    padding: 0.65rem 0;
+    border-bottom: 0;
+  }
+
+  .communities-menu__pending {
+    padding: 0.65rem 0;
+  }
+}
+
+/* END OWVAZ COMMUNITIES NAVIGATION */
+
+/* Shared budget history visualization */
+.budget-history {
+  --budget-accent: var(--accent);
+  --budget-accent-dark: var(--accent-dark);
+  --budget-accent-soft: color-mix(in srgb, var(--accent) 10%, transparent);
+  --budget-grid: rgba(31, 27, 22, 0.14);
+
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(54, 43, 38, 0.14);
+}
+
+.budget-history__heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.budget-history__heading h3 {
+  margin: 0.15rem 0 0.35rem;
+}
+
+.budget-history__summary {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--text-muted, #5f5752);
+}
+
+.budget-history__latest {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.budget-history__latest span,
+.budget-history__latest strong {
+  display: block;
+}
+
+.budget-history__latest span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.budget-history__latest strong {
+  margin-top: 0.15rem;
+  color: var(--budget-accent-dark);
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.budget-history__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.1rem 0 0.6rem;
+}
+
+.budget-history__toggle {
+  appearance: none;
+  padding: 0.46rem 0.82rem;
+  border: 1px solid rgba(84, 65, 56, 0.30);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.budget-history__toggle:hover {
+  border-color: var(--budget-accent);
+}
+
+.budget-history__toggle:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.budget-history__toggle.is-active {
+  border-color: var(--budget-accent);
+  background: var(--budget-accent);
+  color: #fff;
+}
+
+.budget-history__chart-wrap {
+  margin-top: 0.5rem;
+  overflow-x: auto;
+}
+
+.budget-history__chart {
+  min-width: 38rem;
+}
+
+.budget-history__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.budget-history__grid {
+  stroke: var(--budget-grid);
+  stroke-width: 1;
+}
+
+.budget-history__axis-label,
+.budget-history__year-label {
+  fill: currentColor;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.budget-history__year-label {
+  font-weight: 650;
+}
+
+.budget-history__area {
+  fill: var(--budget-accent-soft);
+}
+
+.budget-history__line {
+  stroke: var(--budget-accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.budget-history__point-hit {
+  fill: transparent;
+}
+
+.budget-history__point-dot {
+  fill: #fff;
+  stroke: var(--budget-accent);
+  stroke-width: 4;
+}
+
+.budget-history__point--current
+.budget-history__point-dot {
+  fill: var(--budget-accent);
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.budget-history__table-wrap {
+  margin-top: 1.2rem;
+  overflow-x: auto;
+}
+
+.budget-history__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-history__table caption {
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.budget-history__table th,
+.budget-history__table td {
+  padding: 0.62rem 0.72rem;
+  border-bottom: 1px solid rgba(54, 43, 38, 0.12);
+  text-align: right;
+}
+
+.budget-history__table th:first-child,
+.budget-history__table td:first-child {
+  text-align: left;
+}
+
+.budget-history__note {
+  max-width: 52rem;
+  margin: 0.8rem 0 0;
+  color: var(--text-muted, #5f5752);
+  font-size: 0.88rem;
+}
+
+.budget-archive__years {
+  margin-top: 2.6rem;
+}
+
+.budget-archive__list {
+  border-top: 1px solid rgba(54, 43, 38, 0.14);
+}
+
+.budget-archive__year {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(54, 43, 38, 0.14);
+}
+
+.budget-archive__year h3,
+.budget-archive__year p {
+  margin: 0;
+}
+
+.budget-archive__amount {
+  flex: 0 0 auto;
+  color: var(--accent-dark);
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-year-overview {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(13rem, auto);
+  gap: 1.5rem;
+  align-items: end;
+  padding-bottom: 1.25rem;
+}
+
+.budget-year-overview__amount span,
+.budget-year-overview__comparison span,
+.budget-year-overview__comparison small {
+  display: block;
+}
+
+.budget-year-overview__amount strong {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-year-overview__comparison {
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+.budget-year-overview__comparison strong {
+  display: block;
+  margin: 0.1rem 0;
+  font-size: 1.35rem;
+}
+
+.budget-year-page__archive-link {
+  margin-top: 2rem;
+}
+
+@media (max-width: 700px) {
+
+  .budget-history__heading {
+    display: block;
+  }
+
+  .budget-history__latest {
+    margin-top: 0.85rem;
+    text-align: left;
+  }
+
+  .budget-history__chart {
+    min-width: 34rem;
+  }
+
+  .budget-archive__year {
+    align-items: flex-start;
+  }
+
+  .budget-year-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-year-overview__comparison {
+    padding-top: 0.75rem;
+    padding-left: 0;
+    border-top: 3px solid var(--accent);
+    border-left: 0;
+  }
+}
+
+/* Budget history density refinement.
+   Colors remain provisional pending the later site-wide palette redesign. */
+
+.budget-history__heading {
+  align-items: flex-start;
+}
+
+.budget-history__table-wrap {
+  margin-top: 0.9rem;
+}
+
+.budget-history__table th,
+.budget-history__table td {
+  padding-top: 0.48rem;
+  padding-bottom: 0.48rem;
+}
+
+.budget-history__table thead th {
+  font-size: 0.84rem;
+}
+
+.budget-history__note {
+  margin-top: 0.65rem;
+}
+
+@media (max-width: 700px) {
+  .budget-history__chart {
+    min-width: 32rem;
+  }
+}
+
+
+/* BEGIN OWVAZ ARIZONA IDENTITY REFINEMENT
+   Phase G visual evaluation layer.
+   Warm Desert foundation remains primary.
+   Arizona colors are assigned intentional UI roles. */
+
+/* Structural identity: Arizona blue */
+.site-brand__name,
+.page-header h1,
+.section-heading h2,
+.owvaz-detail-page h1,
+.owvaz-detail-page h2 {
+  color: var(--az-blue);
+}
+
+/* Category and section-detail identity:
+   darker gold shade maintains text contrast on warm surfaces. */
+.eyebrow {
+  color: var(--az-gold-text);
+}
+
+/* Primary site identity gets a restrained Arizona-red edge.
+   Red is decorative here and carries no status meaning. */
+.site-header {
+  border-top: 3px solid var(--az-red);
+}
+
+/* Current navigation remains structural rather than becoming
+   another terracotta action link. */
+.primary-nav a[aria-current="page"] {
+  color: var(--az-blue);
+  text-decoration-color: var(--az-gold-text);
+  text-decoration-thickness: 0.16rem;
+  text-underline-offset: 0.35rem;
+}
+
+/* Search is a functional structural control, giving Arizona blue
+   another useful role without replacing terracotta links. */
+.city-search__button {
+  border-color: var(--az-blue);
+  background: var(--az-blue);
+  color: #fff;
+}
+
+.city-search__button:hover,
+.city-search__button:focus-visible {
+  background: var(--az-blue);
+  color: #fff;
+}
+
+/* Footer reinforces the identity quietly. */
+.site-footer {
+  border-top-color: var(--az-blue);
+}
+
+.site-footer .site-brand__name {
+  color: var(--az-blue);
+}
+
+/* Terracotta remains the primary civic/action accent.
+   Budget History already inherits this through --accent. */
+
+/* END OWVAZ ARIZONA IDENTITY REFINEMENT */
+
+/* BEGIN OWVAZ G8 VISUAL DEPTH REFINEMENT
+   Richer Warm Desert / Arizona identity.
+   Component-specific refinement only. No generic card system.
+   ---------------------------------------------------------- */
+
+/* Shared civic surfaces receive slightly stronger separation without
+   turning the page into a collection of floating cards. */
+
+.quick-reference-inline__group,
+.community-budget-summary,
+.local-government-summary,
+.meeting-next,
+.meeting-following {
+  border-color: color-mix(in srgb, var(--border) 76%, var(--az-gold) 24%);
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--surface) 96%, var(--surface-warm) 4%),
+      var(--surface)
+    );
+}
+
+/* Quick Reference remains compact, but category identity becomes clearer. */
+
+.quick-reference-inline__group {
+  border-top: 3px solid var(--az-gold);
+}
+
+.quick-reference-inline__group h3 {
+  color: var(--az-blue);
+  border-bottom-color:
+    color-mix(in srgb, var(--border) 72%, var(--az-gold) 28%);
+}
+
+.quick-reference-inline__links a {
+  text-decoration-color:
+    color-mix(in srgb, var(--accent) 72%, transparent);
+  text-decoration-thickness: .08em;
+}
+
+.quick-reference-inline__links a:hover,
+.quick-reference-inline__links a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration-thickness: .12em;
+}
+
+/* Budget becomes the strongest data surface on a community page.
+   The gold edge identifies the section while terracotta remains the
+   financial-data accent. */
+
+.community-budget-summary {
+  border-top: 4px solid var(--az-gold);
+}
+
+.community-budget-summary__eyebrow {
+  color: var(--az-gold-text);
+}
+
+.community-budget-summary__amount {
+  color: var(--az-blue);
+}
+
+.community-budget-summary__facts {
+  background:
+    color-mix(in srgb, var(--surface-warm) 44%, transparent);
+  border-left-color:
+    color-mix(in srgb, var(--border) 72%, var(--az-gold) 28%);
+}
+
+.community-budget-summary__action {
+  border-color:
+    color-mix(in srgb, var(--border) 62%, var(--az-blue) 38%);
+  background: var(--surface);
+}
+
+.community-budget-summary__action:hover,
+.community-budget-summary__action:focus-visible {
+  border-color: var(--az-blue);
+}
+
+.community-budget-summary__action--primary {
+  border-color: var(--az-blue);
+  background: var(--az-blue);
+  color: #fff;
+}
+
+.community-budget-summary__action--primary:hover,
+.community-budget-summary__action--primary:focus-visible {
+  background:
+    color-mix(in srgb, var(--az-blue) 88%, #000 12%);
+  color: #fff;
+  text-decoration-color: currentColor;
+}
+
+/* Budget history gets its own contained data region rather than appearing
+   as another loose block of text beneath the current-year summary. */
+
+.budget-history {
+  margin-top: 1.75rem;
+  padding: 1.35rem;
+  border: 1px solid
+    color-mix(in srgb, var(--border) 76%, var(--accent) 24%);
+  border-top: 3px solid var(--accent);
+  border-radius: .5rem;
+  background:
+    color-mix(in srgb, var(--surface) 95%, var(--surface-warm) 5%);
+}
+
+.budget-history__latest {
+  padding: .55rem .7rem;
+  border-left: 3px solid var(--az-gold);
+  background:
+    color-mix(in srgb, var(--surface-warm) 58%, transparent);
+}
+
+.budget-history__latest span {
+  color: var(--az-gold-text);
+}
+
+.budget-history__latest strong {
+  color: var(--az-blue);
+}
+
+.budget-history__chart-wrap {
+  padding: .75rem .65rem .35rem;
+  border: 1px solid
+    color-mix(in srgb, var(--border) 84%, var(--accent) 16%);
+  border-radius: .4rem;
+  background: var(--surface);
+}
+
+.budget-history__table thead th {
+  color: var(--az-blue);
+  background:
+    color-mix(in srgb, var(--surface-warm) 64%, var(--surface) 36%);
+}
+
+/* Government receives structural blue rather than the financial
+   terracotta treatment used by Budget. */
+
+.local-government-summary {
+  border-top: 4px solid var(--az-blue);
+}
+
+.local-government-summary__meta {
+  border-bottom-color:
+    color-mix(in srgb, var(--border) 72%, var(--az-blue) 28%);
+}
+
+.local-government-summary__mayor {
+  padding: .65rem;
+  border-left: 3px solid var(--az-gold);
+  background:
+    color-mix(in srgb, var(--surface-warm) 52%, transparent);
+}
+
+.local-government-summary__actions a {
+  border-color:
+    color-mix(in srgb, var(--border) 62%, var(--az-blue) 38%);
+  background: var(--surface);
+}
+
+.local-government-summary__actions a:hover,
+.local-government-summary__actions a:focus-visible {
+  border-color: var(--az-blue);
+  color: var(--az-blue);
+}
+
+/* The next meeting gets stronger priority than following dates.
+   The date block uses structural blue while gold supplies the civic detail. */
+
+.meeting-next {
+  border-left: 4px solid var(--az-blue);
+}
+
+.meeting-next__date {
+  border-color:
+    color-mix(in srgb, var(--az-blue) 72%, var(--border) 28%);
+  background: var(--surface);
+}
+
+.meeting-next__month {
+  background: var(--az-blue);
+  color: #fff;
+}
+
+.meeting-next__day {
+  color: var(--az-blue);
+  background:
+    color-mix(in srgb, var(--surface) 86%, var(--surface-warm) 14%);
+}
+
+.meeting-next__label {
+  color: var(--az-gold-text);
+}
+
+.meeting-following {
+  border-left: 3px solid var(--az-gold);
+}
+
+/* Status remains semantic and compact. Generic status elements receive
+   enough surface treatment to read as state rather than ordinary text. */
+
+.meeting-status,
+.owvaz-detail-page__status {
+  background:
+    color-mix(in srgb, currentColor 8%, var(--surface) 92%);
+}
+
+/* Search remains a strong structural action and gets a clearer surrounding
+   control relationship without making search results card-heavy. */
+
+.city-search__input {
+  border-color:
+    color-mix(in srgb, var(--border) 66%, var(--az-blue) 34%);
+  background: var(--surface);
+}
+
+.city-search__input:hover {
+  border-color:
+    color-mix(in srgb, var(--az-blue) 62%, var(--border) 38%);
+}
+
+.city-search__input:focus {
+  border-color: var(--az-blue);
+  outline-color: var(--focus);
+}
+
+.city-search__button:hover,
+.city-search__button:focus-visible {
+  background:
+    color-mix(in srgb, var(--az-blue) 88%, #000 12%);
+}
+
+/* Sources stay document-like rather than becoming cards. A restrained
+   gold rule improves scanning while preserving information density. */
+
+.owvaz-source {
+  padding-left: .85rem;
+  border-left: 2px solid
+    color-mix(in srgb, var(--az-gold) 56%, var(--border) 44%);
+}
+
+.owvaz-source__title {
+  color: var(--az-blue);
+}
+
+/* Responsive preservation. */
+
+@media (max-width: 40rem) {
+  .community-budget-summary__facts {
+    background: transparent;
+    border-left: 0;
+  }
+
+  .local-government-summary__mayor {
+    padding: .55rem;
+  }
+
+  .budget-history {
+    padding: 1rem;
+  }
+
+  .budget-history__latest {
+    border-left-width: 3px;
+  }
+}
+
+/* END OWVAZ G8 VISUAL DEPTH REFINEMENT */
+
+/* BEGIN OWVAZ G9 HEADER FOOTER IDENTITY
+   Complete the Arizona-derived visual frame without overpowering
+   the resident-facing content.
+   ------------------------------------------------------------- */
+
+/* Header:
+   warm-blue tint + Arizona red top edge + restrained gold lower edge. */
+
+.site-header {
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 90%,
+      var(--az-blue) 10%
+    );
+  border-top: 3px solid var(--az-red);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--az-gold) 72%, var(--border) 28%);
+}
+
+.site-header .site-brand__name {
+  color: var(--az-blue);
+}
+
+.site-header .site-brand__slogan {
+  color: var(--text-soft);
+}
+
+.site-header .primary-nav a,
+.site-header .communities-menu > summary {
+  color: var(--text);
+}
+
+.site-header .primary-nav a:hover,
+.site-header .primary-nav a:focus-visible,
+.site-header .communities-menu > summary:hover,
+.site-header .communities-menu > summary:focus-visible {
+  color: var(--az-blue);
+}
+
+.site-header .primary-nav a[aria-current="page"] {
+  color: var(--az-blue);
+  text-decoration-color: var(--az-gold-text);
+}
+
+/* Footer:
+   strong Arizona-blue anchor. Warm cream remains the text color;
+   gold is structural/decorative because raw gold is not intended
+   as small body text against this blue. */
+
+.site-footer {
+  background: var(--az-blue);
+  color: var(--background);
+  border-top: 3px solid var(--az-gold);
+}
+
+.site-footer .site-brand__name {
+  color: #fff;
+}
+
+.site-footer .site-brand__slogan {
+  color: var(--surface-warm);
+}
+
+.site-footer a {
+  color: var(--background);
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .1em;
+  text-underline-offset: .22em;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #fff;
+  text-decoration-thickness: .16em;
+}
+
+.site-footer a:focus-visible {
+  outline-color: var(--az-gold);
+}
+
+/* Mobile header inherits the same identity without changing
+   navigation mechanics. */
+
+@media (max-width: 46rem) {
+  .site-header {
+    background:
+      color-mix(
+        in srgb,
+        var(--surface) 88%,
+        var(--az-blue) 12%
+      );
+  }
+}
+
+/* END OWVAZ G9 HEADER FOOTER IDENTITY */
+
+/* BEGIN OWVAZ G10 DESERT WARM HEADER FOOTER
+   Return the site frame to the selected Option 1 Desert Warm language.
+   Arizona colors remain available for restrained content identity.
+   ------------------------------------------------------------------ */
+
+/* Header: quiet warm tint with terracotta identity. */
+
+.site-header {
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 92%,
+      var(--accent) 8%
+    );
+  border-top: 3px solid var(--accent-dark);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--az-gold) 68%, var(--border) 32%);
+}
+
+.site-header .site-brand__name {
+  color: var(--accent-dark);
+}
+
+.site-header .site-brand__slogan {
+  color: var(--text-soft);
+}
+
+.site-header .primary-nav a,
+.site-header .communities-menu > summary {
+  color: var(--text);
+}
+
+.site-header .primary-nav a:hover,
+.site-header .primary-nav a:focus-visible,
+.site-header .communities-menu > summary:hover,
+.site-header .communities-menu > summary:focus-visible {
+  color: var(--accent-dark);
+}
+
+.site-header .primary-nav a[aria-current="page"] {
+  color: var(--accent-dark);
+  text-decoration-color: var(--az-gold-text);
+}
+
+/* Footer: dark terracotta anchors the page in the Option 1 palette. */
+
+.site-footer {
+  background: var(--accent-dark);
+  color: var(--background);
+  border-top: 3px solid var(--az-gold);
+}
+
+.site-footer .site-brand__name {
+  color: #fff;
+}
+
+.site-footer .site-brand__slogan {
+  color: var(--surface-warm);
+}
+
+.site-footer a {
+  color: var(--background);
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .1em;
+  text-underline-offset: .22em;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #fff;
+  text-decoration-thickness: .16em;
+}
+
+.site-footer a:focus-visible {
+  outline-color: var(--az-gold);
+}
+
+@media (max-width: 46rem) {
+  .site-header {
+    background:
+      color-mix(
+        in srgb,
+        var(--surface) 90%,
+        var(--accent) 10%
+      );
+  }
+}
+
+/* END OWVAZ G10 DESERT WARM HEADER FOOTER */
+
+/* BEGIN OWVAZ G11 MATCHED SITE FRAME
+   Header and footer now form one Desert Warm frame.
+   Footer information receives stronger hierarchy and contrast.
+   ----------------------------------------------------------- */
+
+/* HEADER
+   Match the footer rather than using a pale approximation. */
+
+.site-header {
+  background: var(--accent-dark);
+  color: var(--background);
+  border-top: 3px solid var(--az-gold);
+  border-bottom: 3px solid var(--az-gold);
+}
+
+.site-header .site-brand__name {
+  color: #fff;
+}
+
+.site-header .site-brand__slogan {
+  color: var(--surface-warm);
+}
+
+.site-header .primary-nav a,
+.site-header .communities-menu > summary {
+  color: var(--background);
+}
+
+.site-header .primary-nav a:hover,
+.site-header .primary-nav a:focus-visible,
+.site-header .communities-menu > summary:hover,
+.site-header .communities-menu > summary:focus-visible {
+  color: #fff;
+  text-decoration-color: var(--az-gold);
+}
+
+.site-header .primary-nav a[aria-current="page"] {
+  color: #fff;
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .16rem;
+}
+
+/* Ensure the mobile frame remains the same color instead of reverting
+   to the earlier light G10 treatment. */
+
+@media (max-width: 46rem) {
+  .site-header {
+    background: var(--header);
+  }
+}
+
+/* FOOTER
+   Keep the accepted dark terracotta anchor but strengthen the content. */
+
+.site-footer {
+  background: var(--accent-dark);
+  color: #fff;
+  border-top: 3px solid var(--az-gold);
+}
+
+.site-footer .site-brand__name {
+  color: #fff;
+  font-weight: 750;
+}
+
+.site-footer .site-brand__slogan {
+  color: var(--surface-warm);
+  font-weight: 500;
+  opacity: 1;
+}
+
+.site-footer a {
+  color: #fff;
+  font-weight: 650;
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .11em;
+  text-underline-offset: .24em;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #fff;
+  text-decoration-thickness: .17em;
+}
+
+.site-footer__inner {
+  row-gap: .75rem;
+}
+
+/* END OWVAZ G11 MATCHED SITE FRAME */
+
+/* BEGIN OWVAZ G14 COMMUNITY STICKY NAVIGATION
+   Quick links remain part of the normal page flow.
+   Context navigation appears only after the community header
+   leaves the viewport.
+   ---------------------------------------------------------- */
+
+/* Normal community quick links */
+
+.section-nav {
+  display: block;
+}
+
+.section-nav__label {
+  display: block;
+  margin-bottom: .45rem;
+  color: var(--az-gold-text);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.section-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+/* Sticky community context */
+
+.community-sticky-nav[hidden] {
+  display: none;
+}
+
+.community-sticky-nav {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  border-top: 3px solid var(--az-gold);
+  border-bottom: 1px solid
+    color-mix(
+      in srgb,
+      var(--border) 55%,
+      var(--accent-dark) 45%
+    );
+
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 96%,
+      var(--accent) 4%
+    );
+
+  box-shadow:
+    0 .25rem .8rem rgba(31, 27, 22, .14);
+}
+
+.community-sticky-nav__inner {
+  padding-block: .48rem .58rem;
+}
+
+.community-sticky-nav__context {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .25rem .5rem;
+
+  color: var(--text-soft);
+  font-size: .76rem;
+  line-height: 1.35;
+}
+
+.community-sticky-nav__context-label,
+.community-sticky-nav__section-label {
+  color: var(--az-gold-text);
+  font-weight: 750;
+}
+
+.community-sticky-nav__context strong {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.community-sticky-nav__separator {
+  color: var(--border);
+}
+
+/* Sticky jump links */
+
+.community-sticky-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem 1rem;
+
+  margin-top: .28rem;
+  font-size: .82rem;
+}
+
+.community-sticky-nav__jump-label {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.community-sticky-nav__links a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18rem;
+}
+
+.community-sticky-nav__links a:hover,
+.community-sticky-nav__links a:focus-visible {
+  color: var(--accent-dark);
+}
+
+.community-sticky-nav__links a[aria-current="location"] {
+  color: var(--accent-dark);
+  font-weight: 850;
+  text-decoration-color: var(--az-gold-text);
+  text-decoration-thickness: .14em;
+}
+
+/* Anchor targets must clear the fixed navigation. */
+
+#quick-reference,
+#budget,
+#local-government,
+#meetings,
+#local-issues,
+#public-records {
+  scroll-margin-top: 6.5rem;
+}
+
+/* Mobile:
+   do not hide the section links in another menu.
+   Keep them horizontally scrollable instead. */
+
+@media (max-width: 46rem) {
+
+  .community-sticky-nav__inner {
+    padding-block: .4rem .48rem;
+  }
+
+  .community-sticky-nav__context {
+    font-size: .72rem;
+  }
+
+  .community-sticky-nav__links {
+    flex-wrap: nowrap;
+    gap: .85rem;
+
+    overflow-x: auto;
+    padding-bottom: .18rem;
+
+    font-size: .78rem;
+    scrollbar-width: thin;
+  }
+
+  .community-sticky-nav__jump-label,
+  .community-sticky-nav__links a {
+    flex: 0 0 auto;
+  }
+
+  #quick-reference,
+  #budget,
+  #local-government,
+  #meetings,
+  #local-issues,
+  #public-records {
+    scroll-margin-top: 7rem;
+  }
+}
+
+/* END OWVAZ G14 COMMUNITY STICKY NAVIGATION */
+
+/* BEGIN OWVAZ G15 STICKY NAVIGATION REFINEMENT
+   Compact the working G14 navigation, clarify hierarchy,
+   and provide a direct return to the top of the page.
+   ----------------------------------------------------- */
+
+.community-sticky-nav__inner {
+  padding-block: .34rem .4rem;
+}
+
+.community-sticky-nav__context {
+  gap: .18rem .42rem;
+  font-size: .74rem;
+}
+
+.community-sticky-nav__context-label,
+.community-sticky-nav__section-label {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.community-sticky-nav__context strong {
+  color: var(--accent-dark);
+  font-weight: 850;
+}
+
+.community-sticky-nav__separator {
+  color:
+    color-mix(
+      in srgb,
+      var(--text-soft) 62%,
+      var(--border) 38%
+    );
+}
+
+.community-sticky-nav__top {
+  margin-left: auto;
+
+  padding: .2rem .48rem;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--border) 60%,
+      var(--accent) 40%
+    );
+  border-radius: .28rem;
+
+  background: var(--surface);
+
+  color: var(--accent-dark);
+  font-size: .72rem;
+  font-weight: 800;
+  line-height: 1.3;
+
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.community-sticky-nav__top:hover,
+.community-sticky-nav__top:focus-visible {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--az-gold-text);
+  text-underline-offset: .16rem;
+}
+
+.community-sticky-nav__links {
+  gap: .22rem .85rem;
+  margin-top: .18rem;
+  font-size: .79rem;
+}
+
+.community-sticky-nav__jump-label {
+  color: var(--text-soft);
+  font-weight: 750;
+}
+
+.community-sticky-nav__links a {
+  font-weight: 650;
+}
+
+.community-sticky-nav__links a[aria-current="location"] {
+  color: var(--accent-dark);
+  font-weight: 850;
+}
+
+/* Fixed-bar clearance for the page-top target as well as sections. */
+
+#top {
+  scroll-margin-top: 0;
+}
+
+@media (max-width: 46rem) {
+  .community-sticky-nav__inner {
+    padding-block: .3rem .36rem;
+  }
+
+  .community-sticky-nav__context {
+    gap: .15rem .34rem;
+    font-size: .7rem;
+  }
+
+  .community-sticky-nav__top {
+    padding: .18rem .4rem;
+    font-size: .69rem;
+  }
+
+  .community-sticky-nav__links {
+    gap: .7rem;
+    margin-top: .15rem;
+    font-size: .75rem;
+  }
+}
+
+/* END OWVAZ G15 STICKY NAVIGATION REFINEMENT */
+
+/* BEGIN OWVAZ G16 STICKY BACK TO TOP PLACEMENT
+   Back to top now participates in the jump-navigation row.
+   -------------------------------------------------------- */
+
+.community-sticky-nav__top {
+  margin-left: 0;
+  margin-right: .15rem;
+  padding: .15rem .42rem;
+}
+
+.community-sticky-nav__links .community-sticky-nav__top {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 46rem) {
+  .community-sticky-nav__top {
+    margin-right: .05rem;
+  }
+}
+
+/* END OWVAZ G16 STICKY BACK TO TOP PLACEMENT */
+
+/* BEGIN OWVAZ G17 STICKY BACK TO TOP LINK STYLE
+   Back to top now uses the same visual language as the section links.
+   ----------------------------------------------------------------- */
+
+.community-sticky-nav__top {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  color: var(--accent);
+  font-size: inherit;
+  font-weight: 650;
+  line-height: inherit;
+
+  text-decoration: underline;
+  text-decoration-color:
+    color-mix(in srgb, var(--accent) 72%, transparent);
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18rem;
+
+  white-space: nowrap;
+}
+
+.community-sticky-nav__top:hover,
+.community-sticky-nav__top:focus-visible {
+  border: 0;
+  background: transparent;
+
+  color: var(--accent-dark);
+
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: .12em;
+}
+
+.community-sticky-nav__links .community-sticky-nav__top {
+  flex: 0 0 auto;
+}
+
+/* END OWVAZ G17 STICKY BACK TO TOP LINK STYLE */
+
+/* BEGIN OWVAZ G18 FOOTER HEADER COLOR ALIGNMENT
+   Footer uses the same Desert Warm frame language as the header,
+   while retaining stronger information hierarchy at page end.
+   ------------------------------------------------------------- */
+
+.site-footer {
+  border-top: 3px solid var(--az-gold);
+  background: var(--accent-dark);
+  color: #FFFDFC;
+}
+
+.site-footer__inner {
+  color: #FFFDFC;
+}
+
+.site-footer .site-brand__name,
+.site-footer strong {
+  color: #FFFFFF;
+}
+
+.site-footer .site-brand__slogan,
+.site-footer p {
+  color: #F1E8DD;
+}
+
+.site-footer a {
+  color: #FFFDFC;
+  text-decoration-color:
+    color-mix(in srgb, var(--az-gold) 78%, #FFFFFF 22%);
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18rem;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #FFFFFF;
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .12em;
+}
+
+/* END OWVAZ G18 FOOTER HEADER COLOR ALIGNMENT */
+
+/* BEGIN OWVAZ G21 DESERT WARM FRAME DROPDOWN
+   Authoritative visual treatment for the accepted Desert Warm
+   header/footer frame and Communities navigation panel.
+   ----------------------------------------------------------- */
+
+/*
+ * SITE FRAME
+ *
+ * Main block: dark terracotta.
+ * Edge treatment: gold + copper + dark terracotta.
+ *
+ * The gold matches the accepted current-navigation underline.
+ */
+
+.site-header,
+.site-footer {
+  position: relative;
+  background: var(--accent-dark);
+}
+
+/*
+ * Three-color frame.
+ *
+ * Gold is the visible outer highlight.
+ * Copper provides the middle Desert Warm transition.
+ * Dark terracotta ties the rule back into the frame itself.
+ */
+
+.site-header {
+  border-top: 3px solid var(--az-gold);
+  border-bottom: 0;
+  box-shadow:
+    inset 0 -2px 0 var(--accent),
+    0 3px 0 var(--az-gold);
+}
+
+.site-footer {
+  border-top: 3px solid var(--az-gold);
+  box-shadow:
+    inset 0 2px 0 var(--accent),
+    0 -3px 0 var(--accent-dark);
+}
+
+/*
+ * Keep header navigation high contrast against the dark frame.
+ */
+
+.site-header .site-brand__name {
+  color: #FFFFFF;
+}
+
+.site-header .site-brand__slogan {
+  color: var(--surface-warm);
+}
+
+.site-header .primary-nav > a,
+.site-header .communities-menu > summary {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.site-header .primary-nav > a:hover,
+.site-header .primary-nav > a:focus-visible,
+.site-header .communities-menu > summary:hover,
+.site-header .communities-menu > summary:focus-visible {
+  color: #FFFFFF;
+  text-decoration-color: var(--az-gold);
+}
+
+.site-header .primary-nav > a[aria-current="page"],
+.site-header .communities-menu--current > summary {
+  color: #FFFFFF;
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .16rem;
+  text-underline-offset: .35rem;
+}
+
+/*
+ * COMMUNITIES DROPDOWN
+ *
+ * The panel remains light, but its typography and interaction
+ * language now belong to the same navigation system as the header.
+ */
+
+.site-header .communities-menu__panel {
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--border) 72%,
+      var(--accent) 28%
+    );
+
+  background: var(--surface);
+
+  color: var(--text);
+
+  box-shadow:
+    0 .75rem 1.8rem rgba(31, 27, 22, .16);
+}
+
+/* Available community */
+
+.site-header .communities-menu__panel a {
+  color: var(--accent-dark);
+
+  font-family: inherit;
+  font-size: .94rem;
+  font-weight: 700;
+  line-height: 1.35;
+
+  text-decoration: underline;
+  text-decoration-color:
+    color-mix(
+      in srgb,
+      var(--az-gold) 72%,
+      transparent
+    );
+  text-decoration-thickness: .08em;
+  text-underline-offset: .2rem;
+}
+
+.site-header .communities-menu__panel a:hover,
+.site-header .communities-menu__panel a:focus-visible {
+  color: var(--accent-dark);
+
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 91%,
+      var(--az-gold) 9%
+    );
+
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .13em;
+}
+
+/* Current community inside the dropdown */
+
+.site-header .communities-menu__panel a[aria-current="page"] {
+  color: var(--accent-dark);
+  font-weight: 800;
+
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .14em;
+}
+
+/* Pending community */
+
+.site-header .communities-menu__pending {
+  color: var(--text-soft);
+
+  font-family: inherit;
+  font-size: .94rem;
+  line-height: 1.35;
+}
+
+.site-header .communities-menu__city {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.site-header .communities-menu__status {
+  color: var(--text-soft);
+
+  font-family: inherit;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .045em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+/*
+ * Give available and unavailable communities a subtle structural
+ * separation without turning either into a card or badge.
+ */
+
+.site-header .communities-menu__pending {
+  border-top: 1px solid
+    color-mix(
+      in srgb,
+      var(--border) 78%,
+      var(--az-gold) 22%
+    );
+}
+
+/* Footer remains the matching lower frame. */
+
+.site-footer {
+  color: #FFFDFC;
+}
+
+.site-footer .site-brand__name,
+.site-footer strong {
+  color: #FFFFFF;
+}
+
+.site-footer .site-brand__slogan,
+.site-footer p {
+  color: var(--surface-warm);
+}
+
+.site-footer a {
+  color: #FFFFFF;
+  font-weight: 650;
+
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .09em;
+  text-underline-offset: .2rem;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #FFFFFF;
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .14em;
+}
+
+/* Mobile keeps the same frame and dropdown language. */
+
+@media (max-width: 46rem) {
+  .site-header {
+    background: var(--header);
+  }
+
+  .site-header .communities-menu__panel {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .site-header .communities-menu__panel a,
+  .site-header .communities-menu__pending,
+  .site-header .communities-menu__city,
+  .site-header .communities-menu__status {
+    color: var(--surface-warm);
+  }
+
+  .site-header .communities-menu__panel a:hover,
+  .site-header .communities-menu__panel a:focus-visible,
+  .site-header .communities-menu__panel a[aria-current="page"] {
+    color: #FFFFFF;
+    background: transparent;
+  }
+
+  .site-header .communities-menu__pending {
+    border-top-color:
+      color-mix(
+        in srgb,
+        var(--surface-warm) 28%,
+        transparent
+      );
+  }
+}
+
+/* END OWVAZ G21 DESERT WARM FRAME DROPDOWN */
+
+/* BEGIN OWVAZ G22 MATCHED THREE COLOR FRAME
+   One authoritative three-color Desert Warm stripe is used
+   identically by the header and footer.
+   -------------------------------------------------------- */
+
+/*
+ * Visible stripe colors:
+ *   Gold   #B7791F  current Home underline
+ *   Copper #A8592F  primary Desert Warm accent
+ *   Red    #A92B35  restrained warm identity accent
+ *
+ * Dark terracotta remains the header/footer field and is deliberately
+ * not one of the stripe colors because it visually disappeared into
+ * the frame background.
+ */
+
+.site-header,
+.site-footer {
+  position: relative;
+  border: 0;
+  box-shadow: none;
+  background: var(--accent-dark);
+}
+
+/* Header stripe: three stacked 2px bands along the top edge. */
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      var(--az-gold) 0,
+      var(--az-gold) 2px,
+      var(--accent) 2px,
+      var(--accent) 4px,
+      var(--az-red) 4px,
+      var(--az-red) 6px
+    );
+
+  pointer-events: none;
+}
+
+/* Footer stripe: exact same colors, order, and thickness. */
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 6px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      var(--az-gold) 0,
+      var(--az-gold) 2px,
+      var(--accent) 2px,
+      var(--accent) 4px,
+      var(--az-red) 4px,
+      var(--az-red) 6px
+    );
+
+  pointer-events: none;
+}
+
+/*
+ * Earlier experimental footer pseudo-element treatments must not add
+ * another line at the bottom.
+ */
+
+.site-footer::after {
+  content: none;
+}
+
+/* Preserve enough internal clearance for the top stripe. */
+
+.site-header__inner,
+.site-footer__inner {
+  position: relative;
+}
+
+/* END OWVAZ G22 MATCHED THREE COLOR FRAME */
+
+/* BEGIN OWVAZ G23 FOOTER LAYOUT COPYRIGHT
+   Compact the accepted Desert Warm footer and organize the
+   new copyright/source-rights statement as secondary information.
+   ------------------------------------------------------------- */
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: .4rem 2rem;
+
+  padding-top: .8rem;
+  padding-bottom: .45rem;
+}
+
+/* Keep the primary footer navigation visually grouped. */
+
+.site-footer nav {
+  align-self: start;
+}
+
+/* Legal/source-rights row */
+
+.site-footer__legal {
+  padding-top: .42rem;
+  padding-bottom: .65rem;
+
+  border-top: 1px solid
+    color-mix(
+      in srgb,
+      var(--surface-warm) 24%,
+      transparent
+    );
+}
+
+.site-footer__legal p {
+  max-width: 72rem;
+  margin: 0;
+
+  color:
+    color-mix(
+      in srgb,
+      var(--surface-warm) 90%,
+      #FFFFFF 10%
+    );
+
+  font-size: .76rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* Preserve the accepted three-color G22 frame. */
+
+.site-footer::before {
+  height: 6px;
+}
+
+/* Mobile footer stacks without excessive vertical padding. */
+
+@media (max-width: 46rem) {
+  .site-footer__inner {
+    grid-template-columns: 1fr;
+    gap: .65rem;
+
+    padding-top: .75rem;
+    padding-bottom: .4rem;
+  }
+
+  .site-footer__legal {
+    padding-top: .4rem;
+    padding-bottom: .6rem;
+  }
+
+  .site-footer__legal p {
+    font-size: .72rem;
+  }
+}
+
+/* END OWVAZ G23 FOOTER LAYOUT COPYRIGHT */
+
+/* BEGIN OWVAZ G25 HOME HERO TYPOGRAPHY
+   Reduce the Home headline's visual dominance while retaining
+   a clear primary-page hierarchy.
+   --------------------------------------------------------- */
+
+.page-kind-home .hero h1 {
+  max-width: 19ch;
+  font-size: clamp(2.15rem, 5.5vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+/* END OWVAZ G25 HOME HERO TYPOGRAPHY */
+
+/* BEGIN OWVAZ G30 LOCAL GOVERNMENT HIERARCHY
+   Preserve the complete council record while improving hierarchy,
+   breathing room, and scanability.
+   -------------------------------------------------------------- */
+
+.local-government-summary {
+  padding: 1.15rem 1.2rem 1rem;
+}
+
+.local-government-summary__meta {
+  padding-bottom: .7rem;
+  font-size: .76rem;
+}
+
+.local-government-summary__roster {
+  grid-template-columns: minmax(11.5rem, .82fr) minmax(0, 2.18fr);
+  gap: 1.7rem;
+  padding-top: 1rem;
+}
+
+.local-government-summary__mayor {
+  align-self: start;
+  padding: .45rem 0 .45rem .7rem;
+  border-left: 2px solid var(--az-gold);
+  background: transparent;
+}
+
+.local-government-summary__members {
+  gap: 1.15rem 1.55rem;
+}
+
+.local-government-summary__member {
+  align-items: flex-start;
+}
+
+.local-government-summary__portrait {
+  width: 4rem;
+  height: 5rem;
+}
+
+.local-government-summary__mayor p,
+.local-government-summary__member p {
+  margin-bottom: .14rem;
+  color: var(--text-soft);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .045em;
+}
+
+.local-government-summary__mayor h3 {
+  font-size: 1.18rem;
+  line-height: 1.18;
+}
+
+.local-government-summary__member h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.local-government-summary__person-copy h3 a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .16em;
+}
+
+.local-government-summary__term-details {
+  gap: .08rem;
+  margin-top: .3rem;
+  color: var(--text-soft);
+  font-size: .7rem;
+  line-height: 1.32;
+}
+
+.local-government-summary__email {
+  margin-top: .3rem;
+  font-size: .74rem;
+}
+
+.local-government-summary__actions {
+  margin-top: 1rem;
+  padding-top: .75rem;
+}
+
+@media (max-width: 52rem) {
+  .local-government-summary__roster {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .local-government-summary__mayor {
+    max-width: 22rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .local-government-summary {
+    padding: .9rem;
+  }
+
+  .local-government-summary__mayor {
+    max-width: none;
+    padding: .4rem 0 .4rem .6rem;
+  }
+
+  .local-government-summary__members {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .local-government-summary__portrait {
+    width: 3.75rem;
+    height: 4.6875rem;
+  }
+
+  .local-government-summary__actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* END OWVAZ G30 LOCAL GOVERNMENT HIERARCHY */
+
+/* BEGIN OWVAZ G34 COMPONENT COLOR NORMALIZATION
+   Normalize civic component accents around the accepted Desert Warm
+   system. Gold identifies civic information surfaces; terracotta and
+   dark terracotta carry actions/data emphasis. Semantic status colors
+   remain untouched.
+   ------------------------------------------------------------------ */
+
+/* Quick Reference:
+   preserve the accepted boxed treatment and gold category edge. */
+
+.quick-reference-inline__group {
+  border-top-color: var(--az-gold);
+}
+
+/* Budget:
+   gold identifies the outer civic-information surface.
+   Terracotta remains the financial/data accent. */
+
+.community-budget-summary {
+  border-top-color: var(--az-gold);
+}
+
+.community-budget-summary__amount {
+  color: var(--accent-dark);
+}
+
+.community-budget-summary__action {
+  border-color:
+    color-mix(in srgb, var(--border) 58%, var(--accent-dark) 42%);
+}
+
+.community-budget-summary__action:hover,
+.community-budget-summary__action:focus-visible {
+  border-color: var(--accent-dark);
+}
+
+.community-budget-summary__action--primary {
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+  color: #FFFFFF;
+}
+
+.community-budget-summary__action--primary:hover,
+.community-budget-summary__action--primary:focus-visible {
+  background:
+    color-mix(in srgb, var(--accent-dark) 88%, #000 12%);
+  color: #FFFFFF;
+}
+
+.budget-history__latest strong,
+.budget-history__table thead th {
+  color: var(--accent-dark);
+}
+
+/* Local Government:
+   remove the legacy section-specific blue tab.
+   Use the same gold structural edge as other civic information surfaces. */
+
+.local-government-summary {
+  border-top-color: var(--az-gold);
+}
+
+.local-government-summary__meta {
+  border-bottom-color:
+    color-mix(in srgb, var(--border) 72%, var(--az-gold) 28%);
+}
+
+.local-government-summary__actions a {
+  border-color:
+    color-mix(in srgb, var(--border) 58%, var(--accent-dark) 42%);
+}
+
+.local-government-summary__actions a:hover,
+.local-government-summary__actions a:focus-visible {
+  border-color: var(--accent-dark);
+  color: var(--accent-dark);
+}
+
+/* Meetings:
+   gold is the structural civic edge.
+   Dark terracotta gives the calendar block sufficient emphasis
+   without introducing another section-specific color family. */
+
+.meeting-next {
+  border-left-color: var(--az-gold);
+}
+
+.meeting-next__date {
+  border-color:
+    color-mix(in srgb, var(--accent-dark) 58%, var(--border) 42%);
+}
+
+.meeting-next__month {
+  background: var(--accent-dark);
+  color: #FFFFFF;
+}
+
+.meeting-next__day {
+  color: var(--accent-dark);
+}
+
+/* Search:
+   functional controls use the primary Desert Warm action color. */
+
+.city-search__input {
+  border-color:
+    color-mix(in srgb, var(--border) 62%, var(--accent-dark) 38%);
+}
+
+.city-search__input:hover {
+  border-color:
+    color-mix(in srgb, var(--accent-dark) 58%, var(--border) 42%);
+}
+
+.city-search__input:focus {
+  border-color: var(--accent-dark);
+  outline-color: var(--focus);
+}
+
+.city-search__button {
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+  color: #FFFFFF;
+}
+
+.city-search__button:hover,
+.city-search__button:focus-visible {
+  background:
+    color-mix(in srgb, var(--accent-dark) 88%, #000 12%);
+  color: #FFFFFF;
+}
+
+/* END OWVAZ G34 COMPONENT COLOR NORMALIZATION */
+
+/* BEGIN OWVAZ G35 REMOVE MAYOR EMPHASIS
+   Keep the Mayor office label while removing unnecessary decorative
+   hierarchy from the council roster.
+   --------------------------------------------------------------- */
+
+.local-government-summary__mayor {
+  padding-left: 0;
+  border-left: 0;
+}
+
+@media (max-width: 40rem) {
+  .local-government-summary__mayor {
+    padding-left: 0;
+  }
+}
+
+/* END OWVAZ G35 REMOVE MAYOR EMPHASIS */
+
+/* BEGIN OWVAZ G37 LOCAL ISSUES HIERARCHY
+   Keep Local Issues as a lightweight research/navigation section.
+   Issues stack naturally without introducing a card grid.
+   ------------------------------------------------------------- */
+
+.local-issues-summary {
+  display: grid;
+  gap: 0;
+}
+
+.local-issue {
+  max-width: 52rem;
+  padding-block: 0 1.15rem;
+}
+
+.local-issue + .local-issue {
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border);
+}
+
+.local-issue__heading {
+  margin-bottom: .45rem;
+}
+
+.local-issue__heading h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.local-issue__status {
+  margin: .18rem 0 0;
+  color: var(--text-soft);
+  font-size: .76rem;
+  font-weight: 650;
+  letter-spacing: .02em;
+}
+
+.local-issue__summary {
+  max-width: 68ch;
+  margin: 0;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.local-issue__actions {
+  margin-top: .55rem;
+}
+
+.local-issue__actions .button {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: .9rem;
+  font-weight: 650;
+  line-height: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--az-gold);
+  text-decoration-thickness: .1em;
+  text-underline-offset: .18em;
+}
+
+.local-issue__actions .button:hover,
+.local-issue__actions .button:focus-visible {
+  background: transparent;
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent);
+}
+
+@media (max-width: 40rem) {
+  .local-issue {
+    max-width: none;
+  }
+}
+
+/* END OWVAZ G37 LOCAL ISSUES HIERARCHY */
+
+/* BEGIN OWVAZ G39 SEARCH AVONDALE REFINEMENT
+   Keep community search lightweight and integrated with the page.
+   Improve control proportion and spacing without introducing a card.
+   --------------------------------------------------------------- */
+
+.city-search__intro {
+  max-width: 42rem;
+}
+
+.city-search__intro p {
+  margin-bottom: 0;
+}
+
+.city-search__form {
+  max-width: 52rem;
+  margin-top: 1.15rem;
+}
+
+.city-search__label {
+  margin-bottom: .45rem;
+}
+
+.city-search__controls {
+  gap: .5rem;
+}
+
+.city-search__input,
+.city-search__button {
+  min-height: 3rem;
+}
+
+.city-search__input {
+  background: var(--surface);
+}
+
+.city-search__button {
+  min-width: 5.25rem;
+  padding-inline: 1rem;
+  font-weight: 700;
+}
+
+.city-search__privacy {
+  margin-top: .55rem;
+  font-size: .84rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 40rem) {
+  .city-search__controls {
+    gap: .55rem;
+  }
+
+  .city-search__button {
+    min-width: 0;
+    justify-self: start;
+  }
+}
+
+/* END OWVAZ G39 SEARCH AVONDALE REFINEMENT */
+
+/* BEGIN OWVAZ G41 OFFICIAL SOURCES HIERARCHY
+   Keep Official Sources document-like and easy to scan.
+   Source records remain semantic articles without becoming cards.
+   ------------------------------------------------------------- */
+
+#official-sources .owvaz-detail-page__source-intro {
+  max-width: 46rem;
+  margin-bottom: 0;
+}
+
+#official-sources .owvaz-source-list {
+  max-width: 52rem;
+  margin-top: 1.15rem;
+}
+
+#official-sources .owvaz-source {
+  padding: .9rem 0;
+
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--border);
+  border-left: 0;
+}
+
+#official-sources .owvaz-source:first-child {
+  padding-top: .35rem;
+}
+
+#official-sources .owvaz-source:last-child {
+  border-bottom: 0;
+}
+
+#official-sources .owvaz-source__title {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+#official-sources .owvaz-source__actions {
+  gap: .35rem .9rem;
+  margin-top: .35rem;
+
+  font-size: .84rem;
+  line-height: 1.4;
+}
+
+#official-sources .owvaz-source__actions a {
+  color: var(--accent-dark);
+
+  font-weight: 600;
+
+  text-decoration-color:
+    color-mix(in srgb, var(--accent) 72%, transparent);
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18rem;
+}
+
+#official-sources .owvaz-source__actions a:hover,
+#official-sources .owvaz-source__actions a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: .12em;
+}
+
+#official-sources .owvaz-source__availability,
+#official-sources .owvaz-source__description {
+  margin-top: .45rem;
+}
+
+@media (max-width: 40rem) {
+  #official-sources .owvaz-source-list {
+    max-width: none;
+  }
+
+  #official-sources .owvaz-source {
+    padding-block: .8rem;
+  }
+}
+
+/* END OWVAZ G41 OFFICIAL SOURCES HIERARCHY */
+
+
+/* BEGIN OWVAZ G42C OFFICIAL SOURCES BACK TO TOP
+   Reuse the accepted sticky-navigation Back to top link treatment.
+   Only placement is defined here.
+   ------------------------------------------------------------ */
+
+.official-sources__back-to-top {
+  display: flex;
+  justify-content: flex-end;
+
+  max-width: 52rem;
+  margin-top: 1rem;
+  padding-top: .65rem;
+
+  border-top: 1px solid var(--border);
+}
+
+.official-sources__back-to-top .community-sticky-nav__top {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 40rem) {
+  .official-sources__back-to-top {
+    max-width: none;
+  }
+}
+
+/* END OWVAZ G42C OFFICIAL SOURCES BACK TO TOP */
+
+/* BEGIN OWVAZ G42D OFFICIAL SOURCES BACK TO TOP PLACEMENT
+   Position the existing Back to top link as closing navigation for
+   Official Sources. No floating, boxed, or divider treatment.
+   -------------------------------------------------------------- */
+
+.official-sources__back-to-top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  width: 100%;
+  max-width: 52rem;
+
+  margin-top: .85rem;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+}
+
+.official-sources__back-to-top .community-sticky-nav__top {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+  box-shadow: none;
+}
+
+@media (max-width: 40rem) {
+  .official-sources__back-to-top {
+    max-width: none;
+    margin-top: .75rem;
+  }
+}
+
+/* END OWVAZ G42D OFFICIAL SOURCES BACK TO TOP PLACEMENT */
+
+/* BEGIN OWVAZ G44 MOBILE STICKY NAV WRAP
+   Mobile section navigation keeps every destination visible rather
+   than requiring residents to horizontally scroll the sticky bar.
+   -------------------------------------------------------------- */
+
+@media (max-width: 46rem) {
+  .community-sticky-nav__links {
+    flex-wrap: wrap;
+    overflow-x: visible;
+
+    gap: .28rem .8rem;
+    padding-bottom: 0;
+
+    white-space: normal;
+    scrollbar-width: auto;
+  }
+
+  .community-sticky-nav__jump-label,
+  .community-sticky-nav__links a {
+    flex: 0 0 auto;
+  }
+
+  #quick-reference,
+  #budget,
+  #local-government,
+  #meetings,
+  #local-issues,
+  #public-records {
+    scroll-margin-top: 9rem;
+  }
+}
+
+/* END OWVAZ G44 MOBILE STICKY NAV WRAP */
+
+/* BEGIN OWVAZ G46 MOBILE BUDGET CHART FIT
+   Allow the existing responsive SVG budget graph to scale to the
+   available mobile width instead of requiring horizontal scrolling.
+   Desktop and tablet chart sizing remain unchanged.
+   --------------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .budget-history__chart-wrap {
+    overflow-x: visible;
+  }
+
+  .budget-history__chart {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .budget-history__svg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* END OWVAZ G46 MOBILE BUDGET CHART FIT */
+
+/* BEGIN OWVAZ G48 MOBILE HORIZONTAL BUDGET CHART
+   Phones use vertically scalable horizontal bars so additional fiscal
+   years remain readable without horizontal scrolling. Desktop and
+   tablet continue to use the existing line visualization.
+   --------------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .budget-history__mobile-bars {
+    display: grid;
+    gap: .72rem;
+    width: 100%;
+    padding: .15rem 0;
+  }
+
+  .budget-history__mobile-bar-row {
+    display: grid;
+    gap: .28rem;
+    min-width: 0;
+  }
+
+  .budget-history__mobile-bar-labels {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: .75rem;
+    color: var(--text);
+    font-size: .82rem;
+    line-height: 1.25;
+  }
+
+  .budget-history__mobile-bar-year {
+    font-weight: 700;
+  }
+
+  .budget-history__mobile-bar-value {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .budget-history__mobile-bar-track {
+    width: 100%;
+    height: .72rem;
+    overflow: hidden;
+    border-radius: .18rem;
+    background: var(--surface-warm);
+  }
+
+  .budget-history__mobile-bar-fill {
+    height: 100%;
+    min-width: 2px;
+    border-radius: inherit;
+    background: var(--accent);
+  }
+}
+
+/* END OWVAZ G48 MOBILE HORIZONTAL BUDGET CHART */
+
+/* BEGIN OWVAZ G48B DETERMINISTIC RESPONSIVE BUDGET CHART
+   Both visualizations are rendered. CSS alone chooses which one is
+   visible, eliminating viewport-timing and matchMedia initialization
+   failures.
+   ---------------------------------------------------------------- */
+
+.budget-history__desktop-chart {
+  display: block;
+}
+
+.budget-history__mobile-bars {
+  display: none;
+}
+
+@media (max-width: 40rem) {
+  .budget-history__desktop-chart {
+    display: none;
+  }
+
+  .budget-history__mobile-bars {
+    display: grid;
+  }
+}
+
+/* END OWVAZ G48B DETERMINISTIC RESPONSIVE BUDGET CHART */
+
+/* BEGIN OWVAZ G49 MOBILE BUDGET UNIFIED DISPLAY
+   On phones, the horizontal visualization carries the fiscal year,
+   exact adopted amount, and YoY change. The separate table would
+   duplicate the same information, so it remains desktop/tablet only.
+   ---------------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .budget-history__mobile-bar-labels {
+    gap: .6rem;
+  }
+
+  .budget-history__mobile-bar-value {
+    font-size: .79rem;
+    font-weight: 650;
+  }
+
+  .budget-history__mobile-bar-change {
+    margin-top: .08rem;
+
+    color: var(--text-soft);
+
+    font-size: .74rem;
+    font-weight: 650;
+    line-height: 1.25;
+
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .budget-history__table-wrap {
+    display: none;
+  }
+}
+
+/* END OWVAZ G49 MOBILE BUDGET UNIFIED DISPLAY */
+
+/* BEGIN OWVAZ G50 MOBILE BUDGET YOY EMPHASIS
+   Direction is communicated by both sign and color. Color therefore
+   improves scanning without becoming the sole indicator of meaning.
+   ---------------------------------------------------------------- */
+
+@media (max-width: 40rem) {
+  .budget-history__mobile-bar-change--positive {
+    color: #245c36;
+    font-weight: 750;
+  }
+
+  .budget-history__mobile-bar-change--negative {
+    color: #8a3434;
+    font-weight: 750;
+  }
+
+  .budget-history__mobile-bar-change--neutral {
+    color: var(--text-soft);
+  }
+}
+
+/* END OWVAZ G50 MOBILE BUDGET YOY EMPHASIS */
+
+/* ==================================================================
+   G57 MOBILE DROPDOWN DESKTOP-PALETTE ALIGNMENT
+
+   The expanded mobile navigation uses a light panel. Keep the
+   Communities control and its city choices on the same Desert Warm
+   text hierarchy as the accepted desktop Communities dropdown.
+   ================================================================== */
+
+@media (max-width: 40rem) {
+  .site-header .mobile-menu nav > .communities-menu > summary {
+    color: var(--text);
+  }
+
+  .site-header .communities-menu--mobile .communities-menu__panel a {
+    color: var(--accent-dark);
+    text-decoration-color: var(--az-gold-text);
+  }
+
+  .site-header .communities-menu--mobile .communities-menu__panel a:hover,
+  .site-header .communities-menu--mobile .communities-menu__panel a:focus-visible,
+  .site-header .communities-menu--mobile .communities-menu__panel a[aria-current="page"] {
+    color: var(--accent-dark);
+  }
+
+  .site-header .communities-menu--mobile .communities-menu__pending,
+  .site-header .communities-menu--mobile .communities-menu__city {
+    color: var(--text-soft);
+  }
+
+  .site-header .communities-menu--mobile .communities-menu__status {
+    color: var(--text-muted);
+  }
+}
+
+/* ==================================================================
+   FY CANONICAL BUDGET PAGE
+
+   Individual fiscal-year pages answer two questions:
+   what changed from the prior fiscal year, and what the adopted
+   budget contains. Multi-year history remains on the community page.
+   ================================================================== */
+
+.budget-year-page__context {
+  margin: 0 0 1.4rem;
+  font-size: .88rem;
+}
+
+.budget-year-page__context a,
+.budget-year-page__return a {
+  color: var(--accent-dark);
+  font-weight: 650;
+  text-underline-offset: .18rem;
+}
+
+.budget-year-section {
+  max-width: 62rem;
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.budget-year-section__heading {
+  margin-bottom: .9rem;
+}
+
+.budget-year-section__heading .eyebrow {
+  margin-bottom: .25rem;
+}
+
+.budget-year-section__heading h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.budget-year-section__intro {
+  max-width: 50rem;
+  margin: 0 0 1.2rem;
+  line-height: 1.65;
+}
+
+.budget-year-facts,
+.budget-year-measures {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.budget-year-facts > div,
+.budget-year-measures > div {
+  min-width: 0;
+  padding: .95rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: .4rem;
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 94%,
+      var(--surface-warm) 6%
+    );
+}
+
+.budget-year-facts dt,
+.budget-year-measures dt {
+  margin: 0;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.budget-year-facts dd,
+.budget-year-measures dd {
+  margin: .25rem 0 0;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-year-measures p {
+  margin: .5rem 0 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.budget-year-table-wrap {
+  max-width: 58rem;
+  overflow-x: auto;
+}
+
+.budget-year-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-year-table caption {
+  padding: 0 0 .55rem;
+  text-align: left;
+  color: var(--muted);
+  font-size: .84rem;
+  font-weight: 650;
+}
+
+.budget-year-table th,
+.budget-year-table td {
+  padding: .68rem .75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: right;
+  vertical-align: top;
+}
+
+.budget-year-table th:first-child,
+.budget-year-table td:first-child {
+  padding-left: 0;
+  text-align: left;
+}
+
+.budget-year-table th:last-child,
+.budget-year-table td:last-child {
+  padding-right: 0;
+}
+
+.budget-year-table thead th {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 750;
+}
+
+.budget-year-table tbody th {
+  color: var(--text);
+  font-weight: 650;
+}
+
+.budget-year-note {
+  max-width: 50rem;
+  margin: .8rem 0 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.55;
+}
+
+.budget-year-source-list {
+  max-width: 54rem;
+  border-top: 1px solid var(--border);
+}
+
+.budget-year-source {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.budget-year-source h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.budget-year-source h3 a {
+  color: var(--text);
+  text-decoration-color:
+    color-mix(in srgb, var(--accent) 70%, transparent);
+  text-underline-offset: .18rem;
+}
+
+.budget-year-source h3 a:hover,
+.budget-year-source h3 a:focus-visible {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent);
+}
+
+.budget-year-source p {
+  margin: .35rem 0 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.budget-year-source__verified {
+  font-size: .78rem !important;
+}
+
+.budget-year-page__return {
+  max-width: 62rem;
+  margin-top: 2.75rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 40rem) {
+
+  .budget-year-section {
+    margin-top: 2.25rem;
+    padding-top: 1.6rem;
+  }
+
+  .budget-year-facts,
+  .budget-year-measures {
+    grid-template-columns: 1fr;
+    gap: .7rem;
+  }
+
+  .budget-year-table {
+    font-size: .9rem;
+  }
+
+  .budget-year-table th,
+  .budget-year-table td {
+    padding-top: .62rem;
+    padding-bottom: .62rem;
+  }
+
+}
+
+/* ==================================================================
+   OWVAZ FY YOY DIRECTION EMPHASIS
+
+   Matches the accepted budget-history direction language.
+   Direction is communicated by both sign and color.
+   ================================================================== */
+
+.budget-year-overview__comparison--positive {
+  border-left-color: #245c36;
+}
+
+.budget-year-overview__comparison--positive strong {
+  color: #245c36;
+}
+
+.budget-year-overview__comparison--negative {
+  border-left-color: #8a3434;
+}
+
+.budget-year-overview__comparison--negative strong {
+  color: #8a3434;
+}
+
+.budget-year-overview__comparison--neutral {
+  border-left-color: var(--border);
+}
+
+.budget-year-overview__comparison--neutral strong {
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+
+  .budget-year-overview__comparison--positive {
+    border-top-color: #245c36;
+  }
+
+  .budget-year-overview__comparison--negative {
+    border-top-color: #8a3434;
+  }
+
+  .budget-year-overview__comparison--neutral {
+    border-top-color: var(--border);
+  }
+
+}
+
+/* ==================================================================
+   OWVAZ FY CAPITAL PROJECT METADATA
+
+   Project identifiers and classifications sit on a distinct secondary
+   line beneath the resident-facing project name.
+   ================================================================== */
+
+.budget-year-project__meta {
+  display: block;
+  margin-top: .18rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+/* FY budget: Mayor and Council at final adoption */
+.budget-year-governance__body {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.7fr) minmax(16rem, 1.8fr);
+  gap: 2rem;
+  margin-top: 1.25rem;
+}
+
+.budget-year-governance__body h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.budget-year-governance__mayor p {
+  margin: 0;
+  font-weight: 650;
+}
+
+.budget-year-governance__council ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.budget-year-governance__council li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: baseline;
+}
+
+.budget-year-governance__role {
+  color: var(--muted);
+  font-size: 0.9em;
+}
+
+.budget-year-governance__role::before {
+  content: "· ";
+}
+
+@media (max-width: 42rem) {
+  .budget-year-governance__body {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .budget-year-governance__council ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   G59 POLICE SURVEILLANCE READABILITY REFINEMENT
+
+   Long-form issue-page reading rhythm.
+   Content remains fully visible and document-like.
+   ========================================================== */
+
+/*
+ * Major sections need stronger separation on long issue pages.
+ * A restrained rule creates landmarks without turning sections
+ * into cards.
+ */
+.owvaz-detail-page__content > h2:not(#at-a-glance):not(:first-child) {
+  padding-top: 2.75rem;
+  border-top: 1px solid var(--border);
+}
+
+/*
+ * At a glance remains one summary region, but individual findings
+ * need enough separation to scan independently on narrow screens.
+ */
+.owvaz-detail-page__content #at-a-glance + ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.owvaz-detail-page__content #at-a-glance + ul > li {
+  position: relative;
+  padding: .8rem 0 .8rem 1.15rem;
+}
+
+.owvaz-detail-page__content #at-a-glance + ul > li + li {
+  margin-top: 0;
+  border-top: 1px solid
+    color-mix(in srgb, var(--border) 72%, transparent 28%);
+}
+
+.owvaz-detail-page__content #at-a-glance + ul > li::before {
+  position: absolute;
+  top: 1.42rem;
+  left: 0;
+  width: .38rem;
+  height: .38rem;
+  border-radius: 50%;
+  background: var(--az-gold);
+  content: "";
+}
+
+/*
+ * Timeline entries are paragraphs beginning with a strong date.
+ * Give each entry breathing room while preserving the Markdown
+ * and chronological document structure.
+ */
+.owvaz-detail-page__content #timeline ~ p:has(strong:first-child) {
+  max-width: 46rem;
+  margin-bottom: 0;
+  padding: 1rem 0 1rem 1rem;
+  border-left: 2px solid
+    color-mix(in srgb, var(--az-gold) 60%, var(--border) 40%);
+}
+
+.owvaz-detail-page__content #timeline ~ p:has(strong:first-child) strong:first-child {
+  color: var(--az-blue);
+}
+
+/*
+ * Keep nested subsection headings visually associated with their
+ * supporting paragraphs rather than competing with major sections.
+ */
+.owvaz-detail-page__content h3 {
+  padding-top: .2rem;
+}
+
+/*
+ * Evidence limitations should read as a distinct final analytical
+ * section without looking like a warning box.
+ */
+.owvaz-detail-page__content #public-record-limitations {
+  padding-top: 2.75rem;
+}
+
+/* Narrow-screen normalization. */
+@media (max-width: 46rem) {
+
+  .owvaz-detail-page__content > h2:not(#at-a-glance):not(:first-child) {
+    margin-top: 2.75rem;
+    padding-top: 2.25rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul {
+    padding-left: 1rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul > li {
+    padding-block: .75rem;
+    padding-left: 1rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul > li::before {
+    top: 1.34rem;
+  }
+
+  .owvaz-detail-page__content #timeline ~ p:has(strong:first-child) {
+    padding: .85rem 0 .85rem .85rem;
+  }
+}
+
+/* ==========================================================
+   G60 HOME NATURAL FOOTER FLOW
+
+   The global site frame keeps the footer at the bottom of short
+   pages. The homepage intentionally uses natural document flow
+   so the footer follows the final content section without a
+   large artificial blank region.
+   ========================================================== */
+
+.page-kind-home #main-content {
+  flex-grow: 0;
+}
+
+/* ==========================================================
+   G60 AT-A-GLANCE COMPACTION
+
+   Preserve all findings while reducing the summary's vertical
+   footprint. This intentionally overrides only the G59 summary
+   treatment and does not alter narrative or source content.
+   ========================================================== */
+
+.owvaz-detail-page__content #at-a-glance {
+  padding: .9rem 1.25rem .4rem;
+}
+
+.owvaz-detail-page__content #at-a-glance + ul {
+  padding-top: .05rem;
+  padding-right: 1.25rem;
+  padding-bottom: .75rem;
+  padding-left: 1.25rem;
+}
+
+.owvaz-detail-page__content #at-a-glance + ul > li {
+  padding-top: .48rem;
+  padding-bottom: .48rem;
+  padding-left: 1rem;
+  line-height: 1.52;
+}
+
+.owvaz-detail-page__content #at-a-glance + ul > li::before {
+  top: 1.08rem;
+}
+
+@media (max-width: 46rem) {
+
+  .owvaz-detail-page__content #at-a-glance {
+    padding: .75rem .9rem .35rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul {
+    padding: .05rem .9rem .65rem;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul > li {
+    padding-top: .42rem;
+    padding-bottom: .42rem;
+    padding-left: .9rem;
+    line-height: 1.48;
+  }
+
+  .owvaz-detail-page__content #at-a-glance + ul > li::before {
+    top: .99rem;
+  }
+}
+
+
+/* ==========================================================
+   G61 SURVEILLANCE KEY NUMBERS
+
+   Compact factual visualization for the Police Surveillance
+   Technology issue page. Existing equipment and proposals are
+   deliberately presented as separate measures.
+   ========================================================== */
+
+.surveillance-stats {
+  max-width: 62rem;
+  margin: 2.25rem 0 2.5rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.surveillance-stats__heading {
+  margin: 0 0 1rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+
+  color: var(--az-blue);
+  font-size: .82rem !important;
+  font-weight: 750;
+  letter-spacing: .075em !important;
+  text-transform: uppercase;
+}
+
+.surveillance-stats__groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.surveillance-stats__group {
+  min-width: 0;
+}
+
+.surveillance-stats__group + .surveillance-stats__group {
+  padding-left: 2.5rem;
+  border-left: 1px solid var(--border);
+}
+
+.surveillance-stats__group-heading {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.surveillance-stats__icon {
+  width: 2.35rem;
+  height: 2.35rem;
+  flex: 0 0 auto;
+
+  fill: none;
+  stroke: var(--az-gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.surveillance-stats__eyebrow {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+}
+
+.surveillance-stats__group-heading h3 {
+  margin: .08rem 0 0 !important;
+  padding: 0 !important;
+
+  color: var(--az-blue);
+  font-size: 1.15rem;
+}
+
+.surveillance-stats__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .85rem 1.5rem;
+  margin: 1rem 0 0;
+}
+
+.surveillance-stats__values > div {
+  min-width: 6.25rem;
+}
+
+.surveillance-stats__values dt {
+  margin: 0 0 .15rem;
+  color: var(--text-soft);
+  font-size: .72rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.surveillance-stats__values dd {
+  margin: 0;
+
+  color: var(--text);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 750;
+  line-height: 1;
+  letter-spacing: -.025em;
+}
+
+.surveillance-stats__note {
+  max-width: 46rem !important;
+  margin: 1.15rem 0 0 !important;
+
+  color: var(--text-soft);
+  font-size: .82rem;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 46rem) {
+
+  .surveillance-stats {
+    margin-block: 1.75rem 2rem;
+    padding-block: 1rem;
+  }
+
+  .surveillance-stats__groups {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .surveillance-stats__group + .surveillance-stats__group {
+    padding-top: 1.25rem;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+
+  .surveillance-stats__values {
+    gap: .8rem 1.25rem;
+  }
+
+  .surveillance-stats__values > div {
+    min-width: 5.5rem;
+  }
+
+}
+
+/* ==========================================================
+   G62 FOOTER NAVIGATION ALIGNMENT
+
+   Keep the footer brand at the left edge of the site shell while
+   bringing the primary footer links inward on desktop.
+   ========================================================== */
+
+@media (min-width: 46.01rem) {
+
+  .site-footer__inner {
+    grid-template-columns:
+      minmax(0, 1.45fr)
+      minmax(22rem, .75fr);
+  }
+
+  .site-footer nav {
+    justify-self: start;
+    justify-content: flex-start;
+  }
+
+}
+
+/* ==========================================================
+   G63 HOME FOOTER NATURAL FLOW
+
+   The global footer uses margin-top:auto so short utility pages
+   remain anchored to the bottom of the viewport. Home is a
+   composed landing page and should instead flow directly from
+   its final content section into the footer.
+   ========================================================== */
+
+.page-kind-home .site-footer {
+  margin-top: 0;
+}
+
+/* ==========================================================
+   BEGIN OWVAZ G66 SITE-WIDE VISUAL CONTRACT
+
+   Shared resident-facing visual foundation.
+
+   Specialized components may retain purpose-specific geometry,
+   but normal page hierarchy, typography, color, and spacing
+   should inherit from this contract.
+   ========================================================== */
+
+:root {
+  --owvaz-type-body: 1rem;
+  --owvaz-type-small: .84rem;
+  --owvaz-type-eyebrow: .78rem;
+  --owvaz-type-h3: 1.05rem;
+  --owvaz-type-h2: clamp(1.5rem, 2.5vw, 1.8rem);
+  --owvaz-type-h1: clamp(2rem, 4vw, 2.8rem);
+  --owvaz-type-lead: clamp(1.05rem, 2vw, 1.25rem);
+
+  --owvaz-leading-body: 1.65;
+  --owvaz-leading-heading: 1.15;
+  --owvaz-leading-title: 1.08;
+
+  --owvaz-reading-width: 46rem;
+  --owvaz-structured-width: 62rem;
+
+  --owvaz-section-gap: 3rem;
+  --owvaz-heading-gap: 1rem;
+
+  --owvaz-component-radius: .4rem;
+}
+
+/* ---------- Page titles ---------- */
+
+.page-header h1,
+.owvaz-detail-page__header h1 {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--az-blue);
+  font-size: var(--owvaz-type-h1);
+  line-height: var(--owvaz-leading-title);
+  letter-spacing: -0.025em;
+}
+
+/* Home remains the intentional H1 exception. */
+
+.page-kind-home .hero h1 {
+  font-size: clamp(2.15rem, 5.5vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  max-width: 19ch;
+}
+
+/* ---------- Major section headings ---------- */
+
+.section-heading h2,
+.budget-year-section__heading h2,
+.owvaz-detail-page__content h2,
+.owvaz-detail-page__sources > h2,
+.surveillance-stats__heading {
+  max-width: 24ch;
+  color: var(--az-blue);
+  font-size: var(--owvaz-type-h2);
+  line-height: var(--owvaz-leading-heading);
+  letter-spacing: -0.02em;
+}
+
+/* ---------- Normal subsection headings ---------- */
+
+.prose h3,
+.owvaz-detail-page__content h3,
+.local-issue__heading h3,
+.budget-year-source h3,
+.budget-year-governance__body h3 {
+  font-size: var(--owvaz-type-h3);
+  line-height: 1.3;
+}
+
+/* ---------- Eyebrows ---------- */
+
+.eyebrow,
+.owvaz-detail-page__eyebrow,
+.community-budget-summary__eyebrow,
+.surveillance-stats__eyebrow {
+  font-size: var(--owvaz-type-eyebrow);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Leads and summaries ---------- */
+
+.hero__summary,
+.page-summary,
+.owvaz-detail-page__lead {
+  max-width: 44rem;
+  font-size: var(--owvaz-type-lead);
+  line-height: 1.6;
+}
+
+/* ---------- Narrative reading rhythm ---------- */
+
+.prose,
+.owvaz-detail-page__content {
+  font-size: var(--owvaz-type-body);
+}
+
+.prose p,
+.prose li,
+.owvaz-detail-page__content p,
+.owvaz-detail-page__content li {
+  line-height: var(--owvaz-leading-body);
+}
+
+/* Long-form prose remains comfortably readable.
+   Structured summaries/tables are intentionally allowed wider. */
+
+.owvaz-detail-page__content > p,
+.owvaz-detail-page__content > ul,
+.owvaz-detail-page__content > ol {
+  max-width: var(--owvaz-reading-width);
+}
+
+/* ---------- Major vertical rhythm ---------- */
+
+.section-heading {
+  margin-bottom: var(--space-4);
+}
+
+.owvaz-detail-page__content > h2:not(:first-child),
+.budget-year-section + .budget-year-section {
+  margin-top: var(--owvaz-section-gap);
+}
+
+.owvaz-detail-page__content h2 {
+  margin-bottom: var(--owvaz-heading-gap);
+}
+
+.owvaz-detail-page__content h3 {
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+}
+
+/* ---------- Shared component geometry ---------- */
+
+.quick-reference-inline,
+.community-budget-summary,
+.local-government-summary,
+.meeting-next,
+.meeting-following,
+.budget-year-overview,
+.budget-year-table-wrap,
+.budget-year-measures > div,
+.budget-year-facts > div {
+  border-radius: var(--owvaz-component-radius);
+}
+
+/* ---------- Shared muted/supporting text ---------- */
+
+.page-summary,
+.city-search__privacy,
+.city-search-result__meta,
+.city-search-result__details,
+.budget-year-note,
+.budget-year-section__intro,
+.owvaz-detail-page__source-intro {
+  color: var(--text-soft);
+}
+
+/* ==========================================================
+   END OWVAZ G66 SITE-WIDE VISUAL CONTRACT
+   ========================================================== */
+
+/* ==========================================================
+   BEGIN OWVAZ G67 ISSUE SUMMARY TIMELINE SCOPE FIX
+
+   G66 establishes the global heading hierarchy. These rules
+   preserve that typography while correcting two issue-page
+   component boundaries:
+
+   1. At-a-glance heading and findings form one full-width
+      summary region.
+   2. Timeline presentation applies only to timeline entries
+      before the next H2 and cannot leak into later sections.
+   ========================================================== */
+
+/* At-a-glance is a full-width summary component, so its H2
+   must share the same width and horizontal geometry as the
+   findings immediately below it. */
+
+.owvaz-detail-page__content > #at-a-glance {
+  max-width: 24ch;
+  margin-top: var(--owvaz-section-gap);
+  margin-bottom: .65rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.owvaz-detail-page__content > #at-a-glance + ul {
+  max-width: var(--owvaz-reading-width);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+/*
+ * Neutralize the historical broad G59 timeline sibling rule.
+ * The old selector can match strong-leading paragraphs in
+ * sections appearing after Timeline.
+ */
+
+.owvaz-detail-page__content #timeline ~ p:has(strong:first-child) {
+  max-width: var(--owvaz-reading-width);
+  margin-bottom: initial;
+  padding: initial;
+  border-left: 0;
+}
+
+.owvaz-detail-page__content #timeline ~ p:has(strong:first-child) strong:first-child {
+  color: inherit;
+}
+
+/*
+ * Reapply timeline treatment only while #timeline is the most
+ * recent H2. :has(~ h2) excludes paragraphs that occur after
+ * another major section heading.
+ */
+
+.owvaz-detail-page__content #timeline ~ p:has(strong:first-child):not(:has(~ h2)) {
+  max-width: var(--owvaz-reading-width);
+  margin-bottom: 0;
+  padding: 1rem 0 1rem 1rem;
+  border-left: 2px solid
+    color-mix(in srgb, var(--az-gold) 60%, var(--border) 40%);
+}
+
+.owvaz-detail-page__content #timeline ~ p:has(strong:first-child):not(:has(~ h2)) strong:first-child {
+  color: var(--az-blue);
+}
+
+@media (max-width: 46rem) {
+  .owvaz-detail-page__content > #at-a-glance {
+    padding: 0;
+  }
+
+  .owvaz-detail-page__content > #at-a-glance + ul {
+    padding: 0;
+  }
+
+  .owvaz-detail-page__content #timeline ~ p:has(strong:first-child):not(:has(~ h2)) {
+    padding: .85rem 0 .85rem .85rem;
+  }
+}
+
+/* ==========================================================
+   
+/*
+ * Align At-a-glance finding text with its H2.
+ * The list receives a marker gutter while each finding's text
+ * begins on the normal issue-page content edge.
+ */
+
+.owvaz-detail-page__content > #at-a-glance + ul {
+  padding-left: 1rem;
+}
+
+.owvaz-detail-page__content > #at-a-glance + ul > li {
+  margin-left: -1rem;
+  padding-left: 1rem;
+}
+
+.owvaz-detail-page__content > #at-a-glance + ul > li::before {
+  left: 0;
+}
+
+END OWVAZ G67 ISSUE SUMMARY TIMELINE SCOPE FIX
+   ========================================================== */
+
+/* ==========================================================
+   BEGIN OWVAZ G68 ISSUE STICKY NAVIGATION
+
+   Long-form issue pages reuse the accepted community sticky
+   navigation language while preserving issue-specific context.
+
+   G66 remains authoritative for the site-wide type scale.
+   ========================================================== */
+
+.issue-sticky-nav .community-sticky-nav__inner {
+  width: min(calc(100% - 2rem), var(--shell));
+}
+
+.issue-sticky-nav .community-sticky-nav__context strong {
+  max-width: 32ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+ * Long-form subsection hierarchy.
+ *
+ * H3 remains subordinate to the standardized G66 H2 scale,
+ * but receives enough weight, color, and spacing to remain
+ * scannable in research-heavy articles.
+ */
+
+.owvaz-detail-page__content h3 {
+  margin-top: 2.15rem;
+  margin-bottom: .7rem;
+  color: var(--az-blue);
+  font-size: var(--owvaz-type-h3);
+  line-height: 1.3;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.owvaz-detail-page__content h2 + h3 {
+  margin-top: 1.35rem;
+}
+
+/*
+ * Anchor targets must clear the fixed navigation when reached
+ * by keyboard, mouse, or copied fragment URL.
+ */
+
+.owvaz-detail-page__content h2[id],
+.owvaz-detail-page__content h3[id],
+.owvaz-detail-page__sources h2[id] {
+  scroll-margin-top: 7rem;
+}
+
+@media (max-width: 46rem) {
+  .issue-sticky-nav .community-sticky-nav__context strong {
+    max-width: 20ch;
+  }
+
+  .issue-sticky-nav .community-sticky-nav__links {
+    gap: .28rem .7rem;
+  }
+
+  .owvaz-detail-page__content h3 {
+    margin-top: 1.9rem;
+  }
+
+  .owvaz-detail-page__content h2 + h3 {
+    margin-top: 1.2rem;
+  }
+}
+
+/* ==========================================================
+   END OWVAZ G68 ISSUE STICKY NAVIGATION
+   ========================================================== */
+
+/* ==========================================================
+   BEGIN OWVAZ G70 SHARED STICKY NAV CONTRACT
+
+   The accepted sticky-navigation treatment is the OWVAZ
+   default wherever in-page sticky navigation is appropriate.
+   ========================================================== */
+
+.owvaz-sticky-nav .community-sticky-nav__inner {
+  width: min(calc(100% - 2rem), var(--shell));
+}
+
+.owvaz-sticky-nav .community-sticky-nav__context strong {
+  max-width: 32ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Anchor targets clear the fixed sticky bar. */
+
+.page-kind-section h2[id],
+.budget-year-page h2[id],
+.owvaz-detail-page h2[id],
+.section[id] {
+  scroll-margin-top: 7rem;
+}
+
+@media (max-width: 46rem) {
+
+  .owvaz-sticky-nav .community-sticky-nav__context strong {
+    max-width: 20ch;
+  }
+
+  .owvaz-sticky-nav [data-community-current-section] {
+    flex: 1 1 10ch;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .owvaz-sticky-nav .community-sticky-nav__links {
+    gap: .28rem .7rem;
+  }
+
+  .page-kind-section h2[id],
+  .budget-year-page h2[id],
+  .owvaz-detail-page h2[id],
+  .section[id] {
+    scroll-margin-top: 9rem;
+  }
+}
+
+/* ==========================================================
+   END OWVAZ G70 SHARED STICKY NAV CONTRACT
+   ========================================================== */
+
+/* ==========================================================
+   BEGIN OWVAZ F FINAL CONTRAST ACCESSIBILITY
+
+   Preserve the accepted Desert Warm palette while ensuring
+   normal-size links and keyboard focus indicators meet their
+   required contrast against the surfaces where they appear.
+   ========================================================== */
+
+/*
+ * Warm sections cannot use the standard terracotta link token
+ * as normal-size text because that pairing falls below 4.5:1.
+ */
+.section--soft a {
+  color: var(--accent-dark);
+}
+
+.section--soft a:hover,
+.section--soft a:focus-visible {
+  color: var(--accent-dark);
+}
+
+/*
+ * The global focus token is designed for light surfaces.
+ * Interactive controls inside the dark site frame need a light
+ * outline that remains clearly distinguishable from terracotta.
+ */
+.site-header a:focus-visible,
+.site-header summary:focus-visible,
+.site-header button:focus-visible,
+.site-footer a:focus-visible,
+.site-footer summary:focus-visible,
+.site-footer button:focus-visible {
+  outline-color: var(--surface);
+}
+
+/* ==========================================================
+   END OWVAZ F FINAL CONTRAST ACCESSIBILITY
+   ========================================================== */
+
+/* OWVAZ BUDGET HISTORY YOY DIRECTION
+   Direction is communicated by both sign and color.
+   Color is limited to the numeric YoY value so the table remains calm. */
+.budget-history__change {
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.budget-history__change--positive {
+  color: #245c36;
+}
+
+.budget-history__change--negative {
+  color: #8a3434;
+}
+
+.budget-history__change--neutral {
+  color: var(--text-soft);
+}
+/* END OWVAZ BUDGET HISTORY YOY DIRECTION */
+
+/* ==========================================================
+   Trash & Recycling responsive collection lookup
+   Desktop: schedule + map. Mobile: map-driven zone lookup.
+   ========================================================== */
+
+.owvaz-detail-page__content > .trash-service-lookup {
+  width: 100%;
+  max-width: var(--owvaz-structured-width);
+}
+
+.trash-service-lookup {
+  margin-bottom: 3rem;
+}
+
+.trash-service-lookup__grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.85fr)
+    minmax(15rem, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  align-items: start;
+}
+
+.trash-pickup-glance {
+  min-width: 0;
+}
+
+.trash-pickup-glance > .eyebrow {
+  margin: 0 0 .3rem;
+}
+
+.trash-pickup-glance h2 {
+  margin: 0 0 .35rem;
+}
+
+.trash-pickup-glance__intro {
+  max-width: 40rem;
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.trash-pickup-glance__verified {
+  margin: .28rem 0 .8rem;
+  color: var(--text-soft);
+  font-size: .78rem;
+}
+
+.trash-pickup-glance__table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-top: 2px solid var(--accent);
+  border-bottom: 1px solid var(--border);
+}
+
+.trash-pickup-glance__table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.trash-pickup-glance__table th,
+.trash-pickup-glance__table td {
+  padding: .64rem .55rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--border);
+}
+
+.trash-pickup-glance__table tbody tr:last-child th,
+.trash-pickup-glance__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.trash-pickup-glance__table thead th {
+  padding-block: .5rem;
+  color: var(--text-soft);
+  font-size: .7rem;
+  font-weight: 750;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.trash-pickup-glance__table th:first-child {
+  width: 3.65rem;
+}
+
+.trash-pickup-glance__zone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent-dark);
+  font-size: .9rem;
+  font-weight: 800;
+}
+
+.trash-pickup-glance__day,
+.trash-pickup-glance__next {
+  display: block;
+}
+
+.trash-pickup-glance__day {
+  font-size: .92rem;
+  font-weight: 750;
+}
+
+.trash-pickup-glance__next {
+  margin-top: .14rem;
+  color: var(--text-soft);
+  font-size: .78rem;
+  line-height: 1.25;
+}
+
+.trash-pickup-glance__next strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.trash-service-lookup__map {
+  min-width: 0;
+  margin-top: 1.7rem;
+}
+
+.trash-service-lookup .city-zone-map {
+  width: 100%;
+  margin: 0;
+}
+
+.trash-zone-map__interactive {
+  position: relative;
+  width: 100%;
+}
+
+.trash-zone-map__mobile-instruction {
+  display: none;
+}
+
+.trash-service-lookup .city-zone-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.trash-service-lookup .city-zone-map figcaption {
+  margin-top: .45rem;
+  color: var(--text-soft);
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.trash-zone-map__hotspots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.trash-zone-map__hotspots rect {
+  fill: transparent;
+  stroke: transparent;
+}
+
+.trash-service-lookup__map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .6rem;
+}
+
+.trash-service-lookup .resident-zone-lookup {
+  display: inline-block;
+  padding: .45rem .62rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.trash-service-lookup .resident-zone-lookup:hover,
+.trash-service-lookup .resident-zone-lookup:focus-visible {
+  background: var(--surface-muted);
+}
+
+.trash-mobile-zone-result {
+  display: none;
+}
+
+.trash-service-lookup .resident-schedule__setout {
+  max-width: none;
+  margin: 1rem 0 0;
+  padding: .68rem .85rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface-muted);
+  font-size: .84rem;
+}
+
+@media (max-width: 700px) {
+  .trash-zone-map__mobile-instruction {
+    display: block;
+    margin: 0 0 .65rem;
+    color: var(--text-soft);
+    font-size: .88rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .trash-service-lookup__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .trash-service-lookup__map {
+    order: 1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .trash-pickup-glance {
+    display: none;
+  }
+
+  .trash-zone-map__hotspots {
+    pointer-events: auto;
+  }
+
+  .trash-zone-map__hotspots a {
+    cursor: pointer;
+  }
+
+  .trash-zone-map__hotspots a:focus-visible rect {
+    fill: rgb(255 255 255 / .14);
+    stroke: #fff;
+    stroke-width: 6;
+  }
+
+  .trash-mobile-zone-result {
+    display: block;
+    margin-top: .8rem;
+  }
+
+  .trash-mobile-zone-result[hidden] {
+    display: none;
+  }
+
+  .trash-mobile-zone-result__panel {
+    padding: .85rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+
+  .trash-mobile-zone-result__panel[hidden] {
+    display: none;
+  }
+
+  .trash-mobile-zone-result__eyebrow {
+    margin: 0 0 .6rem;
+    color: var(--accent-dark);
+    font-weight: 800;
+  }
+
+  .trash-mobile-zone-result__services {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+  }
+
+  .trash-mobile-zone-result__services > div {
+    min-width: 0;
+    padding: .6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface-muted);
+  }
+
+  .trash-mobile-zone-result__services span,
+  .trash-mobile-zone-result__services strong,
+  .trash-mobile-zone-result__services small {
+    display: block;
+  }
+
+  .trash-mobile-zone-result__services span {
+    color: var(--text-soft);
+    font-size: .7rem;
+    font-weight: 750;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .trash-mobile-zone-result__services strong {
+    margin-top: .16rem;
+    font-size: .9rem;
+  }
+
+  .trash-mobile-zone-result__services small {
+    margin-top: .15rem;
+    color: var(--text-soft);
+    font-size: .75rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .trash-mobile-zone-result__panel {
+    padding: .65rem;
+  }
+
+  .trash-mobile-zone-result__services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .35rem;
+  }
+
+  .trash-mobile-zone-result__services > div {
+    padding: .5rem .4rem;
+  }
+
+  .trash-mobile-zone-result__services span {
+    font-size: .62rem;
+    letter-spacing: .025em;
+  }
+
+  .trash-mobile-zone-result__services strong {
+    font-size: .82rem;
+    line-height: 1.2;
+  }
+
+  .trash-mobile-zone-result__services small {
+    font-size: .68rem;
+    line-height: 1.25;
+  }
+}
+
+/* Trash lookup: table footer alignment */
+.trash-pickup-glance__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1rem;
+  margin-top: .65rem;
+}
+
+.trash-pickup-glance__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem;
+}
+
+.trash-pickup-glance__actions .resident-zone-lookup {
+  display: inline-block;
+  padding: .45rem .62rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.trash-pickup-glance__actions .resident-zone-lookup:hover,
+.trash-pickup-glance__actions .resident-zone-lookup:focus-visible {
+  background: var(--surface-muted);
+}
+
+.trash-pickup-glance__footer .trash-pickup-glance__verified {
+  flex: 0 0 auto;
+  margin: 0;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.trash-service-lookup__map-actions--mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .trash-pickup-glance__footer {
+    display: none;
+  }
+
+  .trash-service-lookup__map-actions--mobile {
+    display: flex;
+  }
+}
+
+/* Resident service: what goes where disposal guide */
+.trash-sort-guide {
+  width: 100%;
+  max-width: var(--owvaz-structured-width);
+  margin-block: 2.5rem 3rem;
+}
+
+.trash-sort-guide__header {
+  max-width: 46rem;
+  margin-bottom: 1.15rem;
+}
+
+.trash-sort-guide__header .eyebrow {
+  margin: 0 0 .3rem;
+}
+
+.trash-sort-guide__header h2 {
+  margin: 0 0 .4rem;
+}
+
+.trash-sort-guide__header > p:last-child {
+  margin-bottom: 0;
+  color: var(--text-soft);
+}
+
+.trash-sort-guide__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 2px solid var(--accent);
+  border-bottom: 1px solid var(--border);
+}
+
+.trash-sort-guide__group {
+  min-width: 0;
+  padding: 1rem;
+}
+
+.trash-sort-guide__group + .trash-sort-guide__group {
+  border-left: 1px solid var(--border);
+}
+
+.trash-sort-guide__group h3 {
+  margin: 0 0 .2rem;
+  color: var(--accent-dark);
+  font-size: 1.15rem;
+}
+
+.trash-sort-guide__container {
+  margin: 0 0 .9rem;
+  color: var(--text-soft);
+  font-size: .82rem;
+}
+
+.trash-sort-guide__group h4 {
+  margin: .9rem 0 .3rem;
+  color: var(--text);
+  font-size: .76rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.trash-sort-guide__group ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.trash-sort-guide__group li {
+  margin-block: .22rem;
+  font-size: .86rem;
+  line-height: 1.4;
+}
+
+.trash-sort-guide__note {
+  margin: .9rem 0 .7rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--border);
+  font-size: .8rem;
+}
+
+.trash-sort-guide__source {
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.trash-sort-guide__hhw {
+  margin-top: 1rem;
+  padding: .8rem .9rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface-muted);
+  font-size: .84rem;
+  line-height: 1.45;
+}
+
+.trash-sort-guide__hhw a {
+  font-weight: 700;
+}
+
+.trash-sort-guide__help {
+  margin: .8rem 0 0;
+  font-size: .84rem;
+}
+
+@media (max-width: 780px) {
+  .trash-sort-guide__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trash-sort-guide__group + .trash-sort-guide__group {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+}
+
+/* Trash disposal guide: combined bottom utility strip */
+.trash-sort-guide__utility {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  margin-top: 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface-muted);
+}
+
+.trash-sort-guide__utility .trash-sort-guide__hhw,
+.trash-sort-guide__utility .trash-sort-guide__help {
+  margin: 0;
+  padding: .8rem .9rem;
+  border: 0;
+  background: transparent;
+  font-size: .84rem;
+  line-height: 1.45;
+}
+
+.trash-sort-guide__utility .trash-sort-guide__help {
+  border-left: 1px solid var(--border);
+}
+
+.trash-sort-guide__utility strong,
+.trash-sort-guide__utility span,
+.trash-sort-guide__utility a {
+  display: block;
+}
+
+.trash-sort-guide__utility strong {
+  margin-bottom: .15rem;
+}
+
+.trash-sort-guide__utility a {
+  margin-top: .25rem;
+  font-weight: 700;
+}
+
+.trash-sort-guide__help-actions {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: .25rem .85rem;
+  margin-top: .2rem;
+}
+
+.trash-sort-guide__help-actions a {
+  display: inline-block;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .trash-sort-guide__utility {
+    grid-template-columns: 1fr;
+  }
+
+  .trash-sort-guide__utility .trash-sort-guide__help {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+}
+
+/* BEGIN OWVAZ QUICK REFERENCE INDEPENDENT COLUMN FLOW
+   Allow category panels to pack vertically without shared grid-row
+   heights. The individual category panel treatment is unchanged.
+   Mobile remains a single vertical column.
+   --------------------------------------------------------------- */
+
+@media (min-width: 52rem) {
+  .quick-reference-inline {
+    display: block;
+    columns: 2;
+    column-gap: 2.5rem;
+  }
+
+  .quick-reference-inline__group {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 1rem;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* END OWVAZ QUICK REFERENCE INDEPENDENT COLUMN FLOW */
+
+/* ==========================================================
+   BEGIN OWVAZ POLICE / ISSUE FY PAGE ALIGNMENT
+
+   Long-form issue pages use the same structural presentation
+   language as canonical fiscal-year pages without depending on
+   budget-specific classes.
+
+   Existing issue content, evidence distinctions, specialized
+   components, shared sources, and sticky navigation remain
+   authoritative.
+   ========================================================== */
+
+.issue-page .owvaz-detail-page__inner {
+  padding-top: 0;
+}
+
+.issue-page .owvaz-detail-page__back {
+  display: none;
+}
+
+.issue-page .owvaz-detail-page__header {
+  margin-bottom: 0;
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.issue-page__context {
+  max-width: var(--owvaz-structured-width);
+  margin: 1.4rem 0 0;
+  font-size: .88rem;
+}
+
+.issue-page__context a,
+.issue-page .owvaz-detail-page__return a {
+  color: var(--accent-dark);
+  font-weight: 650;
+  text-underline-offset: .18rem;
+}
+
+/*
+ * Match the FY canonical page's major-section rhythm:
+ * structured width, restrained rule, and deliberate separation.
+ */
+
+.issue-page .owvaz-detail-page__content > h2 {
+  max-width: var(--owvaz-structured-width);
+}
+
+.issue-page .owvaz-detail-page__content > h2:not(:first-child) {
+  max-width: var(--owvaz-structured-width);
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/*
+ * At a glance remains a specialized issue summary, but its
+ * placement follows the same first-section rhythm as FY pages.
+ */
+
+.issue-page .owvaz-detail-page__content > #at-a-glance {
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/*
+ * The opening narrative and normal issue prose retain the shared
+ * reading width rather than expanding to the structured width.
+ */
+
+.issue-page .owvaz-detail-page__content > p,
+.issue-page .owvaz-detail-page__content > ul,
+.issue-page .owvaz-detail-page__content > ol {
+  max-width: var(--owvaz-reading-width);
+}
+
+/*
+ * Key Numbers is the issue equivalent of the FY overview:
+ * prominent structured information immediately before the
+ * detailed sections.
+ */
+
+.issue-page .surveillance-stats {
+  max-width: var(--owvaz-structured-width);
+  margin-top: 2rem;
+  margin-bottom: 0;
+  padding: 1.25rem 0;
+}
+
+/*
+ * Sources and return navigation follow the same closing rhythm
+ * as canonical FY pages.
+ */
+
+.issue-page .owvaz-detail-page__sources {
+  max-width: var(--owvaz-structured-width);
+  margin-top: 2.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.issue-page .owvaz-detail-page__return {
+  max-width: var(--owvaz-structured-width);
+  margin-top: 2.75rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 40rem) {
+
+  .issue-page .owvaz-detail-page__header {
+    padding-top: var(--space-5);
+    padding-bottom: var(--space-5);
+  }
+
+  .issue-page .owvaz-detail-page__content > h2:not(:first-child),
+  .issue-page .owvaz-detail-page__content > #at-a-glance {
+    margin-top: 2.25rem;
+    padding-top: 1.6rem;
+  }
+
+  .issue-page .owvaz-detail-page__sources {
+    margin-top: 2.25rem;
+    padding-top: 1.6rem;
+  }
+
+}
+
+/* ==========================================================
+   END OWVAZ POLICE / ISSUE FY PAGE ALIGNMENT
+   ========================================================== */
+
+
+/* ==========================================================
+   BEGIN OWVAZ POLICE AT-A-GLANCE METRICS
+
+   Structured issue summary using the established FY budget
+   measure-box visual language. Existing equipment, proposals,
+   requests, and adopted-budget status remain distinct.
+   ========================================================== */
+
+.issue-page .surveillance-glance {
+  max-width: var(--owvaz-structured-width);
+  margin-top: 2.75rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.issue-page .surveillance-glance__heading {
+  margin-bottom: 1.5rem;
+}
+
+.issue-page .surveillance-glance__heading .eyebrow,
+.issue-page .surveillance-glance__section-heading .eyebrow {
+  margin: 0 0 .25rem;
+}
+
+.issue-page .surveillance-glance__heading h2 {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--az-blue);
+  font-size: var(--owvaz-type-h2);
+  line-height: var(--owvaz-leading-heading);
+  letter-spacing: -.02em;
+}
+
+.issue-page .surveillance-glance__section {
+  margin-top: 2.35rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--border);
+}
+
+.issue-page .surveillance-glance__section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.issue-page .surveillance-glance__section-heading {
+  margin-bottom: 1rem;
+}
+
+.issue-page .surveillance-glance__section-heading h3 {
+  margin: 0;
+  color: var(--az-blue);
+  font-size: clamp(1.45rem, 2.5vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+}
+
+.issue-page .surveillance-glance__measures {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.issue-page .surveillance-glance__measures > div {
+  min-width: 0;
+  padding: .95rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--owvaz-component-radius);
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 94%,
+      var(--surface-warm) 6%
+    );
+}
+
+.issue-page .surveillance-glance__measures dt {
+  margin: 0;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.issue-page .surveillance-glance__measures dd {
+  margin: .25rem 0 0;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.issue-page .surveillance-glance__measures p {
+  margin: .5rem 0 0;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.issue-page .surveillance-glance__section--status
+.surveillance-glance__measures > div {
+  background:
+    color-mix(
+      in srgb,
+      var(--surface-warm) 72%,
+      var(--surface) 28%
+    );
+}
+
+.issue-page .surveillance-glance__note {
+  max-width: var(--owvaz-reading-width);
+  margin: 1rem 0 0;
+  color: var(--text-soft);
+  font-size: .9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 40rem) {
+
+  .issue-page .surveillance-glance {
+    margin-top: 2.25rem;
+    padding-top: 1.6rem;
+  }
+
+  .issue-page .surveillance-glance__section {
+    margin-top: 1.9rem;
+    padding-top: 1.45rem;
+  }
+
+  .issue-page .surveillance-glance__measures {
+    grid-template-columns: 1fr;
+    gap: .7rem;
+  }
+
+}
+
+/* ==========================================================
+   END OWVAZ POLICE AT-A-GLANCE METRICS
+   ========================================================== */
+
+
+/* ==========================================================
+   POLICE AT-A-GLANCE LEGACY HEADING RESET
+
+   The #at-a-glance anchor predates the structured shortcode.
+   Older issue-page rules attach box styling to that ID.
+   Neutralize only those presentation properties inside the
+   new surveillance-glance component.
+   ========================================================== */
+
+.issue-page .surveillance-glance #at-a-glance {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+
+/* ==========================================================
+   BEGIN OWVAZ POLICE NARRATIVE LIST INDENT DIRECT
+
+   Indent ordinary Markdown lists on the Police Surveillance
+   issue page. Scoping through surveillance-glance keeps this
+   from affecting other issue pages or structured components.
+   ========================================================== */
+
+.issue-page
+.owvaz-detail-page__content:has(.surveillance-glance) > ul,
+.issue-page
+.owvaz-detail-page__content:has(.surveillance-glance) > ol {
+  padding-left: 3rem;
+}
+
+/* ==========================================================
+   END OWVAZ POLICE NARRATIVE LIST INDENT DIRECT
+   ========================================================== */
+
+
+/* ==========================================================
+   BEGIN OWVAZ POLICE VERTICAL TIMELINE
+
+   One-sided vertical chronology keeps the visual timeline
+   treatment while preserving full reading width for detailed
+   civic information.
+   ========================================================== */
+
+.issue-page .surveillance-timeline {
+  max-width: var(--owvaz-reading-width);
+  margin-top: var(--owvaz-section-gap);
+}
+
+.issue-page .surveillance-timeline__heading {
+  max-width: 24ch;
+  margin: 0 0 1.6rem;
+  color: var(--az-blue);
+  font-size: var(--owvaz-type-h2);
+  line-height: var(--owvaz-leading-heading);
+  letter-spacing: -.02em;
+}
+
+.issue-page .surveillance-timeline__list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.issue-page .surveillance-timeline__list::before {
+  content: "";
+  position: absolute;
+  top: .45rem;
+  bottom: .55rem;
+  left: .45rem;
+  width: 2px;
+  background:
+    color-mix(
+      in srgb,
+      var(--az-gold) 62%,
+      var(--border) 38%
+    );
+}
+
+.issue-page .surveillance-timeline__event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  column-gap: 1rem;
+  margin: 0;
+  padding: 0 0 1.65rem;
+}
+
+.issue-page .surveillance-timeline__event:last-child {
+  padding-bottom: 0;
+}
+
+.issue-page .surveillance-timeline__marker {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: .9rem;
+  height: .9rem;
+  margin-top: .22rem;
+  border: 2px solid var(--az-gold);
+  border-radius: 50%;
+  background: var(--background);
+}
+
+.issue-page .surveillance-timeline__body {
+  min-width: 0;
+}
+
+.issue-page .surveillance-timeline__date {
+  margin: 0 0 .3rem;
+  color: var(--accent-dark);
+  font-size: .92rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.issue-page
+.surveillance-timeline__body
+> p:not(.surveillance-timeline__date) {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.issue-page
+.surveillance-timeline__body
+> p:not(.surveillance-timeline__date)
++ p {
+  margin-top: .85rem;
+}
+
+@media (max-width: 40rem) {
+
+  .issue-page .surveillance-timeline {
+    margin-top: 2.25rem;
+  }
+
+  .issue-page .surveillance-timeline__heading {
+    margin-bottom: 1.35rem;
+  }
+
+  .issue-page .surveillance-timeline__event {
+    grid-template-columns: .85rem minmax(0, 1fr);
+    column-gap: .8rem;
+    padding-bottom: 1.4rem;
+  }
+
+  .issue-page .surveillance-timeline__list::before {
+    left: .375rem;
+  }
+
+  .issue-page .surveillance-timeline__marker {
+    width: .75rem;
+    height: .75rem;
+  }
+
+}
+
+/* ==========================================================
+   END OWVAZ POLICE VERTICAL TIMELINE
+   ========================================================== */

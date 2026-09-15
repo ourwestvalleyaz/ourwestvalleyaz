@@ -1,0 +1,177 @@
+{{- $cityID := .city_id -}}
+{{- $records := slice -}}
+
+{{- with hugo.Data.budgets -}}
+  {{- with .budgets -}}
+    {{- with .budgets -}}
+      {{- range . -}}
+        {{- if eq .city_id $cityID -}}
+          {{- $records = $records | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $records = sort $records "fiscal_year" "desc" -}}
+
+{{- if gt (len $records) 0 -}}
+
+  {{- $current := index $records 0 -}}
+  {{- $previous := false -}}
+
+  {{- $currentFYNumber := int (strings.TrimPrefix "FY" $current.fiscal_year) -}}
+  {{- $previousFY := printf "FY%d" (sub $currentFYNumber 1) -}}
+
+  {{- range $records -}}
+    {{- if and
+      (eq .fiscal_year $previousFY)
+      (eq .metric $current.metric)
+    -}}
+      {{- $previous = . -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $statusLabel := title $current.status -}}
+
+  <div class="community-budget-summary">
+
+    <div class="community-budget-summary__top">
+
+      <div class="community-budget-summary__primary">
+
+        <div class="community-budget-summary__heading-row">
+          <p class="community-budget-summary__eyebrow">
+            FY{{ $currentFYNumber }} Budget
+          </p>
+
+          <span class="community-budget-summary__status community-budget-summary__status--{{ $current.status }}">
+            {{ $statusLabel }}
+          </span>
+        </div>
+
+        <p class="community-budget-summary__amount">
+          ${{ div $current.amount 1000000.0 | lang.FormatNumber 1 }}
+          <span>million</span>
+        </p>
+
+        {{- with $previous -}}
+
+          {{- $change := sub $current.amount .amount -}}
+          {{- $changeAbs := $change -}}
+
+          {{- if lt $change 0 -}}
+            {{- $changeAbs = mul $change -1 -}}
+          {{- end -}}
+
+          {{- $previousNumber := int (strings.TrimPrefix "FY" .fiscal_year) -}}
+
+          {{- if eq .status $current.status -}}
+
+            {{- $percent := mul (div (float $change) (float .amount)) 100 -}}
+
+            <div class="community-budget-summary__comparison
+              {{- if gt $change 0 }} community-budget-summary__comparison--increase
+              {{- else if lt $change 0 }} community-budget-summary__comparison--decrease
+              {{- else }} community-budget-summary__comparison--same
+              {{- end }}">
+
+              <strong>
+                {{- if gt $change 0 -}}
+                  +${{ div $changeAbs 1000000.0 | lang.FormatNumber 1 }} million more
+                {{- else if lt $change 0 -}}
+                  −${{ div $changeAbs 1000000.0 | lang.FormatNumber 1 }} million less
+                {{- else -}}
+                  No change
+                {{- end -}}
+              </strong>
+
+              <span>
+                {{- if ne $change 0 -}}
+                  {{ $percent | lang.FormatNumber 1 }}%
+                  {{ if gt $change 0 }}higher{{ else }}lower{{ end }}
+                  than FY{{ $previousNumber }}
+                {{- else -}}
+                  Same as FY{{ $previousNumber }}
+                {{- end -}}
+              </span>
+
+            </div>
+
+          {{- else -}}
+
+            <div class="community-budget-summary__comparison community-budget-summary__comparison--mixed">
+
+              <strong>
+                {{- if gt $change 0 -}}
+                  +${{ div $changeAbs 1000000.0 | lang.FormatNumber 1 }} million higher
+                {{- else if lt $change 0 -}}
+                  −${{ div $changeAbs 1000000.0 | lang.FormatNumber 1 }} million lower
+                {{- else -}}
+                  Same amount
+                {{- end -}}
+              </strong>
+
+              <span>
+                Compared with the FY{{ $previousNumber }}
+                {{ lower .status }} budget
+              </span>
+
+              <small>
+                {{ $statusLabel }} vs. {{ lower .status }}.
+                This is not an adopted-to-adopted comparison.
+              </small>
+
+            </div>
+
+          {{- end -}}
+
+        {{- end -}}
+
+      </div>
+
+      <dl class="community-budget-summary__facts">
+
+        {{- with $previous -}}
+          {{- $previousNumber := int (strings.TrimPrefix "FY" .fiscal_year) -}}
+
+          <div>
+            <dt>Previous budget</dt>
+            <dd>
+              FY{{ $previousNumber }} {{ title .status }}
+              <strong>
+                ${{ div .amount 1000000.0 | lang.FormatNumber 1 }}M
+              </strong>
+            </dd>
+          </div>
+        {{- end -}}
+
+        {{- if and $current.fiscal_period_start $current.fiscal_period_end -}}
+          <div>
+            <dt>Fiscal year</dt>
+            <dd>
+              {{ time.Format "July 2, 2006" $current.fiscal_period_start }}
+              –
+              {{ time.Format "January 2, 2006" $current.fiscal_period_end }}
+            </dd>
+          </div>
+        {{- end -}}
+
+      </dl>
+
+    </div>
+
+    {{ partial "community/budget-history.html"
+      (dict "city_id" $cityID)
+    }}
+
+  </div>
+
+{{- else -}}
+
+  {{ partial "community/empty-state.html"
+    (dict "message"
+      "Verified current-budget information will appear here.")
+  }}
+
+{{- end -}}

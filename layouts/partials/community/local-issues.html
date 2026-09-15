@@ -1,0 +1,53 @@
+{{- $cityID := .city_id -}}
+
+{{- $issueRoot := index hugo.Data "issues" -}}
+{{- $issueFile := index $issueRoot "issues" -}}
+{{- $allIssues := index $issueFile "issues" -}}
+
+{{- $cityIssues := where $allIssues "city_id" $cityID -}}
+
+{{- if gt (len $cityIssues) 0 -}}
+
+  <div class="local-issues-summary">
+
+    {{- range $cityIssues -}}
+      <article class="local-issue">
+        <div class="local-issue__heading">
+          <div>
+            <h3>{{ .title }}</h3>
+
+            {{ with .status }}
+              <p class="local-issue__status">
+                {{ . | humanize }}
+              </p>
+            {{ end }}
+          </div>
+        </div>
+
+        {{ with .summary }}
+          <p class="local-issue__summary">
+            {{ . }}
+          </p>
+        {{ end }}
+
+        <div class="local-issue__actions">
+          <a
+            class="button button--secondary"
+            href="{{ printf "/communities/%s/issues/%s/" $cityID .slug }}"
+          >
+            View issue
+          </a>
+        </div>
+      </article>
+    {{- end -}}
+
+  </div>
+
+{{- else -}}
+
+  {{ partial "community/empty-state.html"
+    (dict "message"
+      "Verified local civic issues will appear here when applicable.")
+  }}
+
+{{- end -}}

@@ -1,0 +1,69 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <div class="site-shell content-width">
+    <p class="eyebrow">Communities</p>
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Description }}
+      <p class="page-summary">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="site-shell content-width">
+    {{ $cities := where hugo.Data.cities.cities.cities "published" true }}
+
+    {{ if hugo.IsDevelopment }}
+      {{ $cities = hugo.Data.cities.cities.cities }}
+    {{ end }}
+
+    {{ if gt (len $cities) 0 }}
+      {{ if hugo.IsDevelopment }}
+        <div class="foundation-note">
+          <strong>Development preview</strong>
+          <p>
+            Unpublished communities are visible here only while the site is
+            running in the development environment.
+          </p>
+        </div>
+      {{ end }}
+
+      <ul class="community-list">
+        {{ range $cities }}
+          {{ $city := . }}
+          {{ $page := site.GetPage (printf "/communities/%s" $city.slug) }}
+
+          <li>
+            <span>
+              {{ with $page }}
+                <a href="{{ .RelPermalink }}">{{ $city.name }}</a>
+              {{ else }}
+                {{ $city.name }}
+              {{ end }}
+            </span>
+
+            {{ if hugo.IsDevelopment }}
+              <small>
+                {{ if $city.published }}
+                  Published
+                {{ else if $page }}
+                  Configured · unpublished
+                {{ else }}
+                  Configured · page pending
+                {{ end }}
+              </small>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="empty-state">
+        Community pages will appear here as they are published.
+      </p>
+    {{ end }}
+  </div>
+</section>
+
+{{ end }}

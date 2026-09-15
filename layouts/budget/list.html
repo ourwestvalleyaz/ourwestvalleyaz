@@ -1,0 +1,89 @@
+{{ define "main" }}
+
+{{- $cityID := .Params.city_id -}}
+{{- $records := slice -}}
+
+{{- with hugo.Data.budgets -}}
+  {{- with .history -}}
+    {{- with .history -}}
+      {{- range . -}}
+        {{- if and
+          (eq .city_id $cityID)
+          (eq .metric "total_budget")
+          (eq .status "adopted")
+          (eq .verification_state "verified")
+        -}}
+          {{- $records = $records | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $records = sort $records "fiscal_year" "desc" -}}
+
+<article class="budget-archive">
+
+  <header class="page-header">
+    <div class="site-shell content-width">
+      <p class="eyebrow">Budget &amp; Spending</p>
+      <h1>{{ .Title }}</h1>
+
+      {{ with .Description }}
+        <p class="page-summary">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="site-shell content-width section">
+
+    {{ partial "community/budget-history.html"
+      (dict
+        "city_id" $cityID
+        "heading_level" 2
+      )
+    }}
+
+    <section class="budget-archive__years">
+
+      <header class="section-heading">
+        <h2>Budget by fiscal year</h2>
+
+        <p>
+          Browse exact adopted totals for each verified fiscal year.
+        </p>
+      </header>
+
+      <div class="budget-archive__list">
+
+        {{- range $records -}}
+
+          <article class="budget-archive__year">
+
+            <div>
+              <p class="eyebrow">{{ .fiscal_year }}</p>
+
+              <h3>
+                <a href="/communities/{{ $cityID }}/budgets/{{ lower .fiscal_year }}/">
+                  {{ .fiscal_year }} adopted budget
+                </a>
+              </h3>
+            </div>
+
+            <strong class="budget-archive__amount">
+              ${{ div .amount 1000000.0 | lang.FormatNumber 1 }}M
+            </strong>
+
+          </article>
+
+        {{- end -}}
+
+      </div>
+
+    </section>
+
+  </div>
+
+</article>
+
+{{ end }}

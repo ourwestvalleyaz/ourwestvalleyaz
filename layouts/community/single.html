@@ -1,0 +1,169 @@
+{{ define "main" }}
+
+{{ $cityID := .Params.city_id }}
+{{ $matches := where hugo.Data.cities.cities.cities "id" $cityID }}
+
+{{ if ne (len $matches) 1 }}
+  {{ errorf "community page %q must resolve exactly one canonical city for city_id %q" .Path $cityID }}
+{{ end }}
+
+{{ $city := index $matches 0 }}
+
+<article class="community-page">
+  <header class="page-header"
+          data-sticky-nav-header>
+    <div class="site-shell content-width">
+      <p class="eyebrow">Community</p>
+      <h1>{{ $city.name }}</h1>
+
+      {{ with .Description }}
+        <p class="page-summary">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  <nav class="section-nav site-shell content-width"
+       aria-label="{{ $city.name }} quick links">
+    <span class="section-nav__label">Quick links</span>
+
+    <div class="section-nav__links">
+      <a href="#quick-reference">Quick Reference</a>
+      <a href="#budget">Budget</a>
+      <a href="#local-government">Local Government</a>
+      <a href="#meetings">Meetings</a>
+      <a href="#local-issues">Local Issues</a>
+      <a href="#public-records">Search {{ $city.name }}</a>
+    </div>
+  </nav>
+
+  
+{{ $stickySections := slice
+  (dict "id" "quick-reference"
+        "label" "Quick Reference"
+        "name" "Resident Quick Reference")
+  (dict "id" "budget"
+        "label" "Budget"
+        "name" "Budget & Spending")
+  (dict "id" "local-government"
+        "label" "Government"
+        "name" "Local Government")
+  (dict "id" "meetings"
+        "label" "Meetings"
+        "name" "Upcoming Meetings")
+  (dict "id" "local-issues"
+        "label" "Issues"
+        "name" "Local Issues")
+  (dict "id" "public-records"
+        "label" "Search"
+        "name" "Search Avondale")
+  (dict "id" "official-sources"
+        "label" "Sources"
+        "name" "Official Sources")
+}}
+
+{{ partial "site/sticky-nav.html" (dict
+  "context" "Community"
+  "title" $city.name
+  "sections" $stickySections
+) }}
+
+
+  <section id="quick-reference" class="section">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>Resident Quick Reference</h2>
+
+  {{ partial "community/quick-reference.html" (dict "city_id" $city.id) }}
+</section>
+
+  <section id="budget" class="section section--soft">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>Budget &amp; Spending</h2>
+      </header>
+
+      {{ partial "community/budget-summary.html"
+        (dict "city_id" $city.id)
+      }}
+    </div>
+  </section>
+
+  <section id="local-government" class="section">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>Local Government</h2>
+      </header>
+
+      {{ partial "community/local-government.html"
+        (dict "city_id" $city.id)
+      }}
+    </div>
+  </section>
+
+  <section id="meetings" class="section section--soft">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>Upcoming Meetings</h2>
+      </header>
+
+      {{ partial "community/upcoming-meetings.html"
+        (dict "city_id" $city.id)
+      }}
+    </div>
+  </section>
+
+  <section id="local-issues" class="section">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>Local Issues</h2>
+      </header>
+
+      {{ partial "community/local-issues.html"
+        (dict "city_id" $city.id)
+      }}
+    </div>
+  </section>
+
+  <section id="public-records" class="section section--soft">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>Search {{ $city.name }}</h2>
+      </header>
+
+      {{ partial "community/city-search.html"
+          (dict
+            "city_id" $city.id
+            "city_name" $city.name
+          )
+      }}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="site-shell content-width">
+      {{ partial "sources/official-sources.html"
+        (dict
+          "source_ids" (slice
+            "avondale-mayor-council"
+            "avondale-public-meetings"
+            "avondale-civicclerk-portal"
+            "avondale-fy2027-final-budget"
+          )
+          "context" "Avondale Community"
+          "intro" "Primary City of Avondale sources supporting the civic information on this page."
+        )
+      }}
+
+      <div class="official-sources__back-to-top">
+        <a class="community-sticky-nav__top"
+           href="#top"
+           aria-label="Back to top of page">
+          <span aria-hidden="true">↑</span>
+          Back to top
+        </a>
+      </div>
+    </div>
+  </section>
+</article>
+
+{{ end }}

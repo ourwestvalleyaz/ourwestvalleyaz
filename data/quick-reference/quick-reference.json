@@ -1,0 +1,388 @@
+{
+  "quick-reference": [
+    {
+      "record_id": "avondale-utility-billing",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Contact Avondale Water & Utility Billing",
+      "summary": "Questions about Avondale water, sewer, refuse service, billing, or an existing utility account.",
+      "action_label": "Utility Billing",
+      "action_url": "https://avondaleaz.gov/government/departments/finance-budget/utility-billing/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-utility-billing"
+      ],
+      "priority": 10
+    },
+    {
+      "record_id": "avondale-start-utilities",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Start Avondale Residential Utility Service",
+      "summary": "Start residential City water, sewer and refuse service for an Avondale address.",
+      "action_label": "Start service",
+      "action_url": "https://avondaleaz.gov/government/departments/finance-budget/utility-billing/start-service-residential-property/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-utility-start-service"
+      ],
+      "priority": 20
+    },
+    {
+      "record_id": "avondale-stop-utilities",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Stop Avondale Utility Service",
+      "summary": "Request closure of an Avondale water, sewer and refuse account.",
+      "action_label": "Stop service",
+      "action_url": "https://avondaleaz.gov/government/departments/finance-budget/utility-billing/stop-utility-services/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-utility-stop-service"
+      ],
+      "priority": 30
+    },
+    {
+      "record_id": "avondale-update-utilities",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Update an Avondale Utility Account",
+      "summary": "Update information associated with an existing City utility account.",
+      "action_label": "Update account",
+      "action_url": "https://avondaleaz.gov/government/departments/finance-budget/utility-billing/update-utility-account-information/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-utility-update-information"
+      ],
+      "priority": 40
+    },
+    {
+      "record_id": "avondale-trash-recycling",
+      "city_id": "avondale",
+      "category": "trash-recycling",
+      "title": "Trash, Recycling & Collection Information",
+      "summary": "Collection schedules, recycling, bulk trash, hazardous waste and service help.",
+      "action_label": "Trash & recycling",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/trash-recycling-services/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-trash-recycling"
+      ],
+      "priority": 60,
+      "internal_path": "/communities/avondale/trash-recycling/"
+    },
+    {
+      "record_id": "avondale-report-city-problem",
+      "city_id": "avondale",
+      "category": "report-a-problem",
+      "title": "Report a City Problem",
+      "summary": "Report non-emergency problems such as potholes, graffiti, clogged storm drains, broken containers and streetlights.",
+      "action_label": "Open AviWise",
+      "action_url": "https://avondaleaz.gov/aviwise-city-services/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-aviwise"
+      ],
+      "priority": 70,
+      "note": "Do not use AviWise for emergencies."
+    },
+    {
+      "record_id": "avondale-streetlight",
+      "city_id": "avondale",
+      "category": "report-a-problem",
+      "title": "Report a Streetlight Problem",
+      "summary": "Find information for reporting a failing streetlight or related traffic issue.",
+      "action_label": "Streetlight information",
+      "action_url": "https://avondaleaz.gov/government/departments/engineering/traffic/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-streetlight-repair"
+      ],
+      "priority": 80,
+      "note": "Streetlight ownership can vary. The City, SRP, APS, an HOA or another entity may be responsible."
+    },
+    {
+      "record_id": "avondale-public-meetings",
+      "city_id": "avondale",
+      "category": "city-meetings",
+      "title": "City Meetings, Agendas & Minutes",
+      "summary": "Find City Council and board or commission meeting information, agendas and minutes.",
+      "action_label": "Public meetings",
+      "action_url": "https://avondaleaz.gov/government/public-meetings/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-public-meetings"
+      ],
+      "priority": 90
+    },
+    {
+      "record_id": "avondale-watch-meeting-live",
+      "city_id": "avondale",
+      "category": "city-meetings",
+      "title": "Watch a Council Meeting Live",
+      "summary": "Watch eligible Avondale City Council and Planning Commission meetings online.",
+      "action_label": "Watch live",
+      "action_url": "https://www.youtube.com/@cityofavondaleaz",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-public-meeting-live-stream"
+      ],
+      "priority": 100
+    },
+    {
+      "record_id": "srp-contact",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Contact SRP",
+      "summary": "Customer service, electric-service questions, outages and other SRP assistance.",
+      "action_label": "Contact SRP",
+      "action_url": "https://www.srpnet.com/customer-service/contact-us",
+      "provider": "Salt River Project",
+      "source_ids": [
+        "srp-contact"
+      ],
+      "priority": 110
+    },
+    {
+      "record_id": "srp-electric-service",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Start, Stop or Transfer SRP Electric Service",
+      "summary": "Manage residential SRP electric service when SRP serves the address.",
+      "action_label": "Manage SRP service",
+      "action_url": "https://myaccount.srpnet.com/power/residentialElectric?vm=r",
+      "provider": "Salt River Project",
+      "source_ids": [
+        "srp-residential-electric-service"
+      ],
+      "priority": 120,
+      "note": "Verify that SRP serves the address."
+    },
+    {
+      "record_id": "aps-contact",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Contact APS",
+      "summary": "Customer service, billing, electric-service questions and outage assistance.",
+      "action_label": "Contact APS",
+      "action_url": "https://www.aps.com/en/Utility/Contact-us",
+      "provider": "Arizona Public Service",
+      "source_ids": [
+        "aps-contact"
+      ],
+      "priority": 130
+    },
+    {
+      "record_id": "aps-electric-service",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Start, Stop or Move APS Electric Service",
+      "summary": "Manage residential APS electric service when APS serves the address.",
+      "action_label": "Manage APS service",
+      "action_url": "https://www.aps.com/en/Residential/Account/Start-Stop-and-Move-Service",
+      "provider": "Arizona Public Service",
+      "source_ids": [
+        "aps-residential-service"
+      ],
+      "priority": 140,
+      "note": "Verify that APS serves the address."
+    },
+    {
+      "record_id": "southwest-gas-service",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Natural Gas Service",
+      "summary": "Contact Southwest Gas for residential natural-gas service.",
+      "action_label": "Southwest Gas",
+      "action_url": "https://www.swgas.com/en/contact-us",
+      "provider": "Southwest Gas",
+      "source_ids": [
+        "southwest-gas-contact"
+      ],
+      "priority": 150,
+      "note": "For a suspected natural-gas leak, leave the area and call 911 and Southwest Gas."
+    },
+    {
+      "record_id": "srp-power-outage",
+      "city_id": "avondale",
+      "category": "safety",
+      "title": "SRP Power Outage",
+      "summary": "View or report an SRP power outage when SRP serves the address.",
+      "action_label": "SRP outages",
+      "action_url": "https://www.srpnet.com/customer-service/safety/outages-storm",
+      "provider": "Salt River Project",
+      "source_ids": [
+        "srp-outages"
+      ],
+      "priority": 160
+    },
+    {
+      "record_id": "aps-power-outage",
+      "city_id": "avondale",
+      "category": "safety",
+      "title": "APS Power Outage",
+      "summary": "View or report an APS power outage when APS serves the address.",
+      "action_label": "APS outages",
+      "action_url": "https://www.aps.com/outagecenter",
+      "provider": "Arizona Public Service",
+      "source_ids": [
+        "aps-outage-center"
+      ],
+      "priority": 170
+    },
+    {
+      "record_id": "avondale-pay-utility-bill",
+      "city_id": "avondale",
+      "category": "utilities",
+      "title": "Pay Avondale Utility Bill",
+      "summary": "View or pay your City of Avondale utility bill.",
+      "action_label": "Pay utility bill",
+      "action_url": "https://avondaleaz.gov/government/departments/finance-budget/utility-billing/pay-my-bill/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-pay-utility-bill"
+      ],
+      "priority": 5
+    },
+    {
+      "record_id": "avondale-water-quality",
+      "city_id": "avondale",
+      "category": "water",
+      "title": "Water Quality",
+      "summary": "Avondale drinking-water quality information and monitoring.",
+      "action_label": "Water quality",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/water-quality/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-water-quality"
+      ],
+      "priority": 180
+    },
+    {
+      "record_id": "avondale-water-conservation",
+      "city_id": "avondale",
+      "category": "water",
+      "title": "Water Conservation",
+      "summary": "Residential water-saving programs, resources and information.",
+      "action_label": "Water conservation",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/water-conservation/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-water-conservation"
+      ],
+      "priority": 190
+    },
+    {
+      "record_id": "avondale-water-resources",
+      "city_id": "avondale",
+      "category": "water",
+      "title": "Water Resources",
+      "summary": "Information about Avondale's water supplies and long-term planning.",
+      "action_label": "Water resources",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/water-resources/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-water-resources"
+      ],
+      "priority": 200
+    },
+    {
+      "record_id": "avondale-transit",
+      "city_id": "avondale",
+      "category": "transportation",
+      "title": "Transit Services",
+      "summary": "Bus, paratransit, microtransit and other Avondale transit services.",
+      "action_label": "Transit",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/transit-services/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-transit"
+      ],
+      "priority": 210
+    },
+    {
+      "record_id": "avondale-weride",
+      "city_id": "avondale",
+      "category": "transportation",
+      "title": "WeRIDE",
+      "summary": "Riders can book trips through the WeRIDE mobile app, online at werideaz.com or by calling 623-777-4330.",
+      "action_label": "WeRIDE",
+      "action_url": "https://werideaz.com/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-weride"
+      ],
+      "priority": 220
+    },
+    {
+      "record_id": "avondale-street-maintenance",
+      "city_id": "avondale",
+      "category": "transportation",
+      "title": "Street Maintenance",
+      "summary": "City roadway, sidewalk and right-of-way maintenance information.",
+      "action_label": "Street maintenance",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/street-maintenance/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-street-maintenance"
+      ],
+      "priority": 230
+    },
+    {
+      "record_id": "avondale-parks-recreation",
+      "city_id": "avondale",
+      "category": "parks-community",
+      "title": "Parks & Recreation",
+      "summary": "Parks, recreation programs, facilities and activities.",
+      "action_label": "Parks & recreation",
+      "action_url": "https://avondaleaz.gov/government/departments/prld/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-parks-recreation"
+      ],
+      "priority": 240
+    },
+    {
+      "record_id": "avondale-aquatic-center",
+      "city_id": "avondale",
+      "category": "parks-community",
+      "title": "Avondale Aquatic Center",
+      "summary": "Pool information, programs, schedules and resident recreation.",
+      "action_label": "Aquatic Center",
+      "action_url": "https://avondaleaz.gov/locations/avondale-aquatic-center/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-aquatic-center"
+      ],
+      "priority": 250
+    },
+    {
+      "record_id": "avondale-city-events",
+      "city_id": "avondale",
+      "category": "parks-community",
+      "title": "City Events",
+      "summary": "Official Avondale community events and activities.",
+      "action_label": "City events",
+      "action_url": "https://avondaleaz.gov/government/departments/prld/events/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-city-events"
+      ],
+      "priority": 260
+    },
+    {
+      "record_id": "avondale-block-party",
+      "city_id": "avondale",
+      "category": "parks-community",
+      "title": "Neighborhood Block Party",
+      "summary": "Information for residents organizing a neighborhood block party.",
+      "action_label": "Block party",
+      "action_url": "https://avondaleaz.gov/government/departments/public-works/neighborhood-block-party/",
+      "provider": "City of Avondale",
+      "source_ids": [
+        "avondale-block-party"
+      ],
+      "priority": 270
+    }
+  ]
+}

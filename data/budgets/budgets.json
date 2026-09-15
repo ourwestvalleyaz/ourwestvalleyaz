@@ -1,0 +1,39 @@
+{
+  "budgets": [
+    {
+      "record_id": "avondale-fy2026-adopted-total-budget",
+      "city_id": "avondale",
+      "fiscal_year": "FY2026",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 486614500,
+      "currency": "USD",
+      "adoption_date": "2025-06-02",
+      "fiscal_period_start": "2025-07-01",
+      "fiscal_period_end": "2026-06-30",
+      "source_ids": [
+        "avondale-fy2026-budget-adoption"
+      ],
+      "last_verified": "2026-09-01",
+      "notes": "Exact adopted FY2026 all-funds total is $486,614,500. The City also describes the adopted budget in rounded resident-facing language as $486.6 million."
+    },
+    {
+      "record_id": "avondale-fy2027-adopted-total-budget",
+      "city_id": "avondale",
+      "fiscal_year": "FY2027",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 514304500,
+      "currency": "USD",
+      "adoption_date": "2026-06-01",
+      "fiscal_period_start": "2026-07-01",
+      "fiscal_period_end": "2027-06-30",
+      "source_ids": [
+        "avondale-fy2027-final-budget",
+        "avondale-fy2027-tentative-budget"
+      ],
+      "last_verified": "2026-09-01",
+      "notes": "City Council adopted the final FY2027 budget on June 1, 2026 through Resolution 1041-0626. The adopted total budget is $514,304,500. The tentative budget remains supporting budget-cycle provenance; the final budget is the authoritative source for adoption."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+<header class="site-header">
+  <div class="site-shell site-header__inner">
+
+    <div class="site-header__brand-row">
+      <a class="site-brand" href="{{ site.Home.RelPermalink }}">
+        <span class="site-brand__name">Our West Valley AZ</span>
+        <span class="site-brand__slogan">{{ site.Params.slogan }}</span>
+      </a>
+
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation menu">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+
+        <nav aria-label="Mobile navigation">
+          <a href="{{ site.Home.RelPermalink }}"
+             {{ if .IsHome }}aria-current="page"{{ end }}>
+            Home
+          </a>
+
+          <details class="communities-menu communities-menu--mobile">
+            <summary>
+              Communities
+            </summary>
+
+            <div class="communities-menu__panel">
+              <a href="/communities/avondale/"
+                 {{ if and
+                      (eq .Section "communities")
+                      (hasPrefix .RelPermalink "/communities/avondale/")
+                 }}aria-current="page"{{ end }}>
+                Avondale
+              </a>
+
+              <div class="communities-menu__pending">
+                <span class="communities-menu__city">
+                  Tolleson
+                </span>
+                <span class="communities-menu__status">
+                  In Progress
+                </span>
+              </div>
+            </div>
+          </details>
+
+
+
+          <a href="/search/">Search</a>
+        </nav>
+      </details>
+    </div>
+
+    <nav class="primary-nav primary-nav--desktop"
+         aria-label="Primary navigation">
+
+      <a href="{{ site.Home.RelPermalink }}"
+         {{ if .IsHome }}aria-current="page"{{ end }}>
+        Home
+      </a>
+
+      <details class="communities-menu communities-menu--desktop
+        {{- if eq .Section "communities" }} communities-menu--current{{ end }}">
+
+        <summary>
+          Communities
+        </summary>
+
+        <div class="communities-menu__panel">
+          <a href="/communities/avondale/"
+             {{ if and
+                  (eq .Section "communities")
+                  (hasPrefix .RelPermalink "/communities/avondale/")
+             }}aria-current="page"{{ end }}>
+            Avondale
+          </a>
+
+          <div class="communities-menu__pending">
+            <span class="communities-menu__city">
+              Tolleson
+            </span>
+            <span class="communities-menu__status">
+              In Progress
+            </span>
+          </div>
+        </div>
+      </details>
+
+
+
+      <a class="primary-nav__search" href="/search/">
+        Search
+      </a>
+    </nav>
+
+  </div>
+</header>

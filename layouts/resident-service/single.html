@@ -1,0 +1,67 @@
+{{ define "main" }}
+<article class="owvaz-detail-page resident-service-page">
+  <div class="site-shell content-width owvaz-detail-page__inner">
+
+    {{- with .Params.city_id }}
+      <p class="owvaz-detail-page__back">
+        <a href="/communities/{{ . }}/">← Back to {{ humanize . }}</a>
+      </p>
+    {{- end }}
+
+    <header class="owvaz-detail-page__header"
+            data-sticky-nav-header>
+      <p class="owvaz-detail-page__eyebrow">
+        Resident information
+      </p>
+
+      <h1>{{ .Title }}</h1>
+
+      {{- with .Description }}
+        <p class="owvaz-detail-page__lead">
+          {{ . }}
+        </p>
+      {{- end }}
+    </header>
+
+    {{ $stickySections := slice
+      (dict "id" "pickup-schedule"
+            "label" "Pickup"
+            "name" "Pickup schedule")
+      (dict "id" "find-your-collection-schedule"
+            "label" "Zone Map"
+            "name" "Collection zone map")
+      (dict "id" "what-goes-where"
+            "label" "Guide"
+            "name" "What goes where?")
+      (dict "id" "official-sources-heading"
+            "label" "Sources"
+            "name" "Official Sources")
+    }}
+
+    {{ partial "site/sticky-nav.html" (dict
+      "context" "Resident Service"
+      "title" .Title
+      "sections" $stickySections
+    ) }}
+
+    <article class="owvaz-detail-page__content">
+      {{ .Content }}
+
+      {{- with .Params.source_ids }}
+        {{ partial "sources/official-sources.html" (dict
+          "context" (printf "Resident service %q" $.Title)
+          "source_ids" .
+          "intro" "These government sources support the information on this page. For current schedules, event dates, service changes and complete disposal requirements, use the official City sources below."
+        ) }}
+      {{- end }}
+    </article>
+
+    {{- with .Params.city_id }}
+      <p class="owvaz-detail-page__return">
+        <a href="/communities/{{ . }}/">← Back to {{ humanize . }}</a>
+      </p>
+    {{- end }}
+
+  </div>
+</article>
+{{ end }}

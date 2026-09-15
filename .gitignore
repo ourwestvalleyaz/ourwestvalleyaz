@@ -1,0 +1,34 @@
+# Hugo output
+/public/
+/resources/_gen/
+
+# Local caches
+.hugo_build.lock
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.DS_Store
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
+
+# Local build artifacts
+.build/
+
+scripts/
+tests/
+docs/
+ARCHITECTURE.md
+schemas/

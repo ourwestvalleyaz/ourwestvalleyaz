@@ -1,0 +1,714 @@
+{{ define "main" }}
+
+{{- $cityID := .Params.city_id -}}
+{{- $fiscalYear := .Params.fiscal_year -}}
+{{- $fiscalKey := lower $fiscalYear -}}
+
+{{- $budgetRoot := index hugo.Data.budgets "fiscal-years" -}}
+
+{{- if not $budgetRoot -}}
+  {{- errorf
+    "budget page %q could not find canonical fiscal-year data root"
+    .Path
+  -}}
+{{- end -}}
+
+{{- $cityBudgets := index $budgetRoot $cityID -}}
+
+{{- if not $cityBudgets -}}
+  {{- errorf
+    "budget page %q could not find canonical budget data for city %s"
+    .Path
+    $cityID
+  -}}
+{{- end -}}
+
+{{- $budget := index $cityBudgets $fiscalKey -}}
+
+{{- if not $budget -}}
+  {{- errorf
+    "budget page %q could not find canonical record for %s %s"
+    .Path
+    $cityID
+    $fiscalYear
+  -}}
+{{- end -}}
+
+{{- if ne $budget.city_id $cityID -}}
+  {{- errorf
+    "budget page %q city_id mismatch: page=%s data=%s"
+    .Path
+    $cityID
+    $budget.city_id
+  -}}
+{{- end -}}
+
+{{- if ne $budget.fiscal_year $fiscalYear -}}
+  {{- errorf
+    "budget page %q fiscal_year mismatch: page=%s data=%s"
+    .Path
+    $fiscalYear
+    $budget.fiscal_year
+  -}}
+{{- end -}}
+
+{{- $comparison := $budget.prior_year_comparison -}}
+
+<article class="budget-year-page">
+
+  <header class="page-header"
+          data-sticky-nav-header>
+    <div class="site-shell content-width">
+
+      <p class="eyebrow">Budget &amp; Spending</p>
+
+      <h1>{{ .Title }}</h1>
+
+      {{ with .Description }}
+        <p class="page-summary">{{ . }}</p>
+      {{ end }}
+
+    </div>
+  </header>
+
+  {{/*
+    Budget navigation mirrors only sections that are actually
+    available in this fiscal-year record.
+  */}}
+
+  {{ $stickySections := slice }}
+
+  {{ $stickySections = $stickySections | append
+      (dict
+        "id" "what-changed"
+        "label" "Changes"
+        "name" "What changed"
+      )
+  }}
+
+  {{ with $budget.spending_by_purpose }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "spending-by-purpose"
+          "label" "Spending"
+          "name" "Where the budget goes"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.fund_breakdown }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "fund-breakdown"
+          "label" "Funds"
+          "name" "Budget by fund"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.revenue }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "revenue"
+          "label" "Revenue"
+          "name" "Revenue measures"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.property_tax }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "property-tax"
+          "label" "Property Tax"
+          "name" "Property tax"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.capital }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "capital"
+          "label" "Capital"
+          "name" "Capital measures"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.capital.projects }}
+    {{ if gt (len .) 0 }}
+      {{ $stickySections = $stickySections | append
+          (dict
+            "id" "major-capital-projects"
+            "label" "Projects"
+            "name" "Major capital projects"
+          )
+      }}
+    {{ end }}
+  {{ end }}
+
+  {{ with $budget.adoption.governing_body }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "governance-at-adoption"
+          "label" "Council"
+          "name" "Mayor and Council at adoption"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.sources }}
+    {{ if gt (len .) 0 }}
+      {{ $stickySections = $stickySections | append
+          (dict
+            "id" "official-sources"
+            "label" "Sources"
+            "name" "Official sources"
+          )
+      }}
+    {{ end }}
+  {{ end }}
+
+  {{ partial "site/sticky-nav.html" (dict
+    "context" "Budget"
+    "title" .Title
+    "sections" $stickySections
+  ) }}
+
+
+  <div class="site-shell content-width section">
+
+    <nav class="budget-year-page__context" aria-label="Budget page context">
+      <a href="/communities/{{ $cityID }}/#budget">
+        Avondale budget overview
+      </a>
+    </nav>
+
+    <section
+      class="budget-year-overview"
+      aria-labelledby="budget-year-overview-heading"
+    >
+
+      <div class="budget-year-overview__amount">
+
+        <span id="budget-year-overview-heading">
+          Adopted all-funds budget
+        </span>
+
+        <strong>
+          ${{ $budget.adopted_budget.amount | lang.FormatNumber 0 }}
+        </strong>
+
+      </div>
+
+      {{- $comparisonClass := "neutral" -}}
+      {{- if gt $comparison.percent_change 0 -}}
+        {{- $comparisonClass = "positive" -}}
+      {{- else if lt $comparison.percent_change 0 -}}
+        {{- $comparisonClass = "negative" -}}
+      {{- end -}}
+
+      <div class="budget-year-overview__comparison budget-year-overview__comparison--{{ $comparisonClass }}">
+
+        <span>
+          Change from {{ $comparison.fiscal_year }}
+        </span>
+
+        <strong>
+          {{- if gt $comparison.percent_change 0 }}+{{ end -}}
+          {{ $comparison.percent_change | lang.FormatNumber 1 }}%
+        </strong>
+
+        <small>
+          {{- if gt $comparison.dollar_change 0 -}}
+            +${{ $comparison.dollar_change | lang.FormatNumber 0 }}
+          {{- else if lt $comparison.dollar_change 0 -}}
+            -${{ math.Abs $comparison.dollar_change | lang.FormatNumber 0 }}
+          {{- else -}}
+            $0
+          {{- end -}}
+        </small>
+
+      </div>
+
+    </section>
+
+    <section class="budget-year-section" aria-labelledby="what-changed">
+
+      <div class="budget-year-section__heading">
+        <p class="eyebrow">Year over year</p>
+        <h2 id="what-changed">What changed</h2>
+      </div>
+
+      {{ with $comparison.summary }}
+        <p class="budget-year-section__intro">{{ . }}</p>
+      {{ else }}
+        <p class="budget-year-section__intro">
+          The {{ $fiscalYear }} adopted all-funds budget was
+          ${{ $budget.adopted_budget.amount | lang.FormatNumber 0 }},
+          compared with
+          ${{ $comparison.adopted_budget | lang.FormatNumber 0 }}
+          in {{ $comparison.fiscal_year }}.
+        </p>
+      {{ end }}
+
+      <dl class="budget-year-facts">
+
+        <div>
+          <dt>{{ $comparison.fiscal_year }} comparison amount</dt>
+          <dd>
+            ${{ $comparison.adopted_budget | lang.FormatNumber 0 }}
+          </dd>
+        </div>
+
+        <div>
+          <dt>Dollar change</dt>
+          <dd>
+            {{- if gt $comparison.dollar_change 0 -}}
+              +${{ $comparison.dollar_change | lang.FormatNumber 0 }}
+            {{- else if lt $comparison.dollar_change 0 -}}
+              -${{ math.Abs $comparison.dollar_change | lang.FormatNumber 0 }}
+            {{- else -}}
+              $0
+            {{- end -}}
+          </dd>
+        </div>
+
+        <div>
+          <dt>Percent change</dt>
+          <dd>
+            {{- if gt $comparison.percent_change 0 }}+{{ end -}}
+            {{ $comparison.percent_change | lang.FormatNumber 1 }}%
+          </dd>
+        </div>
+
+      </dl>
+
+    </section>
+
+    {{ with $budget.spending_by_purpose }}
+      {{ with .categories }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="spending-by-purpose"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Budget composition</p>
+            <h2 id="spending-by-purpose">Where the budget goes</h2>
+          </div>
+
+          <div class="budget-year-table-wrap">
+            <table class="budget-year-table">
+
+              <caption>
+                {{ $fiscalYear }} spending presentation
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Share</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {{ range . }}
+                  <tr>
+                    <th scope="row">{{ .label }}</th>
+                    <td>
+                      ${{ .amount | lang.FormatNumber 0 }}
+                    </td>
+                    <td>
+                      {{ with .display_percent }}
+                        {{ . | lang.FormatNumber 0 }}%
+                      {{ else }}
+                        <span aria-label="Not reported">Not reported</span>
+                      {{ end }}
+                    </td>
+                  </tr>
+                {{ end }}
+              </tbody>
+
+            </table>
+          </div>
+
+          {{ with $budget.spending_by_purpose.rounding_note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+          {{ with $budget.spending_by_purpose.accounting_note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+    {{ with $budget.fund_breakdown }}
+
+      <section
+        class="budget-year-section"
+        aria-labelledby="fund-breakdown"
+      >
+
+        <div class="budget-year-section__heading">
+          <p class="eyebrow">Fund accounting</p>
+          <h2 id="fund-breakdown">Budget by fund</h2>
+        </div>
+
+        <div class="budget-year-table-wrap">
+          <table class="budget-year-table">
+
+            <caption>
+              {{ $fiscalYear }} adopted fund groups
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Fund group</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {{ range . }}
+                <tr>
+                  <th scope="row">{{ .label }}</th>
+                  <td>
+                    ${{ .amount | lang.FormatNumber 0 }}
+                  </td>
+                </tr>
+              {{ end }}
+            </tbody>
+
+          </table>
+        </div>
+
+      </section>
+
+    {{ end }}
+
+    {{ with $budget.revenue }}
+      {{ with .measures }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="revenue"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Revenue</p>
+            <h2 id="revenue">Revenue measures</h2>
+          </div>
+
+          <p class="budget-year-section__intro">
+            These figures use the accounting labels reported by the City.
+            Different revenue measures are shown separately rather than
+            treated as interchangeable.
+          </p>
+
+          <dl class="budget-year-measures">
+
+            {{ range . }}
+              <div>
+                <dt>{{ .label }}</dt>
+                <dd>
+                  ${{ .amount | lang.FormatNumber 0 }}
+                </dd>
+
+                {{ with .note }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </div>
+            {{ end }}
+
+          </dl>
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+    {{ with $budget.property_tax }}
+
+      <section
+        class="budget-year-section"
+        aria-labelledby="property-tax"
+      >
+
+        <div class="budget-year-section__heading">
+          <p class="eyebrow">Property tax</p>
+          <h2 id="property-tax">Property tax</h2>
+        </div>
+
+        <dl class="budget-year-measures">
+
+          {{ with .primary_levy }}
+            <div>
+              <dt>Primary levy</dt>
+              <dd>${{ . | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .secondary_levy }}
+            <div>
+              <dt>Secondary levy</dt>
+              <dd>${{ . | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .total_levy }}
+            <div>
+              <dt>Total levy</dt>
+              <dd>${{ . | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .primary_rate }}
+            <div>
+              <dt>Primary rate</dt>
+              <dd>{{ . | lang.FormatNumber 4 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .secondary_rate }}
+            <div>
+              <dt>Secondary rate</dt>
+              <dd>{{ . | lang.FormatNumber 4 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .combined_rate }}
+            <div>
+              <dt>Combined rate</dt>
+              <dd>{{ . | lang.FormatNumber 4 }}</dd>
+            </div>
+          {{ end }}
+
+        </dl>
+
+        {{ with .rate_basis }}
+          <p class="budget-year-note">
+            Rate basis: {{ . }}
+          </p>
+        {{ end }}
+
+        {{ with .note }}
+          <p class="budget-year-note">{{ . }}</p>
+        {{ end }}
+
+      </section>
+
+    {{ end }}
+
+    {{ with $budget.capital }}
+      {{ with .measures }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="capital"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Capital</p>
+            <h2 id="capital">Capital measures</h2>
+          </div>
+
+          <p class="budget-year-section__intro">
+            Capital figures can describe different accounting measures.
+            OWVAZ keeps those measures separate instead of combining them.
+          </p>
+
+          <dl class="budget-year-measures">
+
+            {{ range . }}
+              <div>
+                <dt>{{ .label }}</dt>
+                <dd>
+                  ${{ .amount | lang.FormatNumber 0 }}
+                </dd>
+
+                {{ with .note }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </div>
+            {{ end }}
+
+          </dl>
+
+          {{ with $budget.capital.accounting_note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+          {{ with $budget.capital.note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+    {{ with $budget.capital }}
+      {{ with .projects }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="major-capital-projects"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Capital projects</p>
+            <h2 id="major-capital-projects">Major capital projects</h2>
+          </div>
+
+          {{ with $budget.capital.selection_definition }}
+            <p class="budget-year-section__intro">{{ . }}</p>
+          {{ end }}
+
+          <div class="budget-year-table-wrap">
+            <table class="budget-year-table">
+              <caption>
+                Selected projects in the adopted {{ $budget.fiscal_year }}
+                Capital Improvement Plan
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Project</th>
+                  <th scope="col">{{ $budget.fiscal_year }} funding</th>
+                  <th scope="col">Carryover</th>
+                  <th scope="col">Total project</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                {{ range . }}
+                  <tr>
+                    <th scope="row">
+                      {{ .name }}
+                      <span class="budget-year-project__meta">
+                        {{ .project_number }} · {{ .project_type }}
+                      </span>
+                    </th>
+                    <td>
+                      ${{ .new_appropriation | lang.FormatNumber 0 }}
+                    </td>
+                    <td>
+                      ${{ .carryover | lang.FormatNumber 0 }}
+                    </td>
+                    <td>
+                      ${{ .total | lang.FormatNumber 0 }}
+                    </td>
+                  </tr>
+                {{ end }}
+
+              </tbody>
+            </table>
+          </div>
+
+          <p class="budget-year-note">
+            Funding shown here is budget authority in the adopted capital
+            plan. It does not by itself establish expenditure, purchase,
+            construction completion, or deployment.
+          </p>
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+    <!-- OWVAZ: budget adoption governance -->
+    {{ with $budget.adoption }}
+      {{ $adoption := . }}
+
+      {{ with .governing_body }}
+
+        <section
+          class="budget-year-section budget-year-governance"
+          aria-labelledby="governance-at-adoption"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Historical context</p>
+            <h2 id="governance-at-adoption">
+              Mayor and Council at adoption
+            </h2>
+          </div>
+
+          <p class="budget-year-section__intro">
+            Final budget adopted
+            <time datetime="{{ $adoption.date }}">
+              {{ time.Format "January 2, 2006" $adoption.date }}
+            </time>
+            {{ with $adoption.authority_identifier }}
+              <span aria-hidden="true"> · </span>
+              Resolution No. {{ . }}
+            {{ end }}
+          </p>
+
+          <div class="budget-year-governance__body">
+
+            {{ range .members }}
+              {{ if eq .role "mayor" }}
+                <div class="budget-year-governance__mayor">
+                  <h3>Mayor</h3>
+                  <p>{{ .name }}</p>
+                </div>
+              {{ end }}
+            {{ end }}
+
+            <div class="budget-year-governance__council">
+              <h3>Councilmembers</h3>
+
+              <ul>
+                {{ range .members }}
+                  {{ if eq .role "councilmember" }}
+                    <li>
+                      <span>{{ .name }}</span>
+
+                      {{ if eq .leadership_role "vice_mayor" }}
+                        <span class="budget-year-governance__role">
+                          Vice Mayor
+                        </span>
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+
+          </div>
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+    {{ partial "sources/official-sources.html"
+      (dict
+        "source_ids" $budget.source_ids
+        "context" (printf "%s %s budget" $cityID $fiscalYear)
+        "heading_id" "official-sources-heading"
+        "intro" "These government sources support the budget figures and historical context on this page. OWVAZ preserves original source addresses even if the City later moves or removes a document."
+      )
+    }}
+
+    <nav
+      class="budget-year-page__return"
+      aria-label="Return to community budget"
+    >
+      <a href="/communities/{{ $cityID }}/#budget">
+        Back to Avondale budget overview
+      </a>
+    </nav>
+
+  </div>
+
+</article>
+
+{{ end }}

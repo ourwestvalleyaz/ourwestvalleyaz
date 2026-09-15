@@ -1,0 +1,399 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "avondale",
+  "fiscal_year": "FY2022",
+  "fiscal_period": {
+    "start": "2021-07-01",
+    "end": "2022-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 336147700,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2021",
+    "adopted_budget": 280109400,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 56038300,
+    "percent_change": 20.0,
+    "summary": "FY2022 adopted budget authority increased by $56,038,300 compared with the FY2021 adopted/adjusted comparison, an increase of 20.0%."
+  },
+  "source_ids": [
+    "avondale-fy2022-adopted-budget",
+    "avondale-fy2022-final-budget",
+    "avondale-fy2022-budget-in-brief"
+  ],
+  "sources": [
+    {
+      "id": "avondale-fy2022-adopted-budget",
+      "title": "FY2022 Adopted Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official adopted budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/Adopted-2022.pdf",
+      "supports": [
+        "adopted_budget",
+        "property_tax",
+        "adoption"
+      ],
+      "accessed": null
+    },
+    {
+      "id": "avondale-fy2022-final-budget",
+      "title": "FY2022 Final Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2022-Final-Budget.pdf",
+      "supports": [
+        "prior_year_comparison",
+        "revenue.measures.statutorily_estimated",
+        "capital.measures.formal_capital_appropriation",
+        "capital.measures.cip_project_record_total",
+        "capital.projects",
+        "adoption.governing_body"
+      ],
+      "accessed": null
+    },
+    {
+      "id": "avondale-fy2022-budget-in-brief",
+      "title": "FY2022 Budget in Brief",
+      "publisher": "City of Avondale",
+      "document_type": "official budget summary",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2022_BiB.pdf",
+      "supports": [
+        "spending_by_purpose",
+        "revenue.measures.projected",
+        "capital.measures.budget_in_brief",
+        "capital.categories"
+      ],
+      "accessed": null
+    }
+  ],
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-08",
+    "note": "FY2022 core and approved rich sections migrated. Fund breakdown remains deferred because the separate reconciliation artifact is ambiguous. Notable spending remains deferred pending separate fact-level classification."
+  },
+  "spending_by_purpose": {
+    "source_measure": "FY2022 Budget in Brief budget composition",
+    "classification": "Resident-facing presentation categories",
+    "categories": [
+      {
+        "id": "operating",
+        "label": "Operating",
+        "amount": 167900000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 50,
+        "note": null
+      },
+      {
+        "id": "capital",
+        "label": "Capital",
+        "amount": 140900000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 42,
+        "note": null
+      },
+      {
+        "id": "debt-service",
+        "label": "Debt Service",
+        "amount": 8600000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 3,
+        "note": null
+      },
+      {
+        "id": "contingency",
+        "label": "Contingency",
+        "amount": 18700000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 6,
+        "note": null
+      }
+    ],
+    "display_percent_total": 101,
+    "rounding_note": "The four displayed percentages total 101% because the source percentages are rounded.",
+    "accounting_note": "These Budget in Brief presentation categories are different from the statutory fund accounting categories and should not be presented as a reconciliation of the seven fund groups.",
+    "spending_note": "Budgeted amounts represent budget authority and do not establish actual expenditures."
+  },
+  "revenue": {
+    "measures": [
+      {
+        "amount": 216300000,
+        "measure": "budget_in_brief_projected_revenue",
+        "scope": "resident_facing_projection",
+        "label": "Projected revenue",
+        "note": "FY2022 Budget in Brief resident-facing projected revenue."
+      },
+      {
+        "amount": 209319000,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Statutory estimated revenue measure. It is not interchangeable with the Budget in Brief projected revenue figure."
+      }
+    ],
+    "note": "The two revenue figures are different measures and are intentionally preserved separately."
+  },
+  "property_tax": {
+    "primary_levy": 3290678,
+    "secondary_levy": 3724510,
+    "total_levy": 7015188,
+    "primary_rate": 0.6672,
+    "secondary_rate": 0.7552,
+    "combined_rate": 1.4224,
+    "rate_basis": "per_100_assessed_value",
+    "note": null
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 140900000,
+        "measure": "budget_in_brief_capital",
+        "scope": "resident_facing_presentation",
+        "label": "Budget in Brief capital",
+        "note": "Rounded resident-facing capital presentation."
+      },
+      {
+        "amount": 140914000,
+        "measure": "formal_capital_appropriation",
+        "scope": "formal_budget",
+        "label": "Formal capital appropriation",
+        "note": null
+      },
+      {
+        "amount": 141058000,
+        "measure": "cip_project_record_total",
+        "scope": "selected_project_records",
+        "label": "CIP project-record total",
+        "note": "Sum of individual FY2022 project-record totals represented in the canonical project dataset."
+      }
+    ],
+    "categories": [
+      {
+        "id": "utilities",
+        "label": "Utilities",
+        "amount": 42600000,
+        "percent_of_measure": null,
+        "measure": "budget_in_brief_capital_function",
+        "scope": "resident_facing_presentation",
+        "note": null
+      },
+      {
+        "id": "public-safety",
+        "label": "Public Safety",
+        "amount": 18100000,
+        "percent_of_measure": null,
+        "measure": "budget_in_brief_capital_function",
+        "scope": "resident_facing_presentation",
+        "note": null
+      },
+      {
+        "id": "general-government",
+        "label": "General Government",
+        "amount": 15000000,
+        "percent_of_measure": null,
+        "measure": "budget_in_brief_capital_function",
+        "scope": "resident_facing_presentation",
+        "note": null
+      },
+      {
+        "id": "streets-transportation",
+        "label": "Streets & Transportation",
+        "amount": 35600000,
+        "percent_of_measure": null,
+        "measure": "budget_in_brief_capital_function",
+        "scope": "resident_facing_presentation",
+        "note": null
+      },
+      {
+        "id": "the-blvd",
+        "label": "The BLVD",
+        "amount": 15200000,
+        "percent_of_measure": null,
+        "measure": "budget_in_brief_capital_function",
+        "scope": "resident_facing_presentation",
+        "note": null
+      },
+      {
+        "id": "community-services",
+        "label": "Community Services",
+        "amount": 14400000,
+        "percent_of_measure": null,
+        "measure": "budget_in_brief_capital_function",
+        "scope": "resident_facing_presentation",
+        "note": null
+      }
+    ],
+    "projects": [
+      {
+        "project_number": "S0146",
+        "name": "Van Buren Street Fire Station #175",
+        "project_type": "Public Safety",
+        "new_appropriation": 0,
+        "carryover": 12425000,
+        "total": 12425000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "B0093",
+        "name": "Parking Garage at BLVD Park and Ride",
+        "project_type": "BLVD",
+        "new_appropriation": 10000000,
+        "carryover": 0,
+        "total": 10000000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "T0091",
+        "name": "Old Town Avondale, Cashion and Las Ligas Improvements",
+        "project_type": "Transportation",
+        "new_appropriation": 6577000,
+        "carryover": 2536000,
+        "total": 9113000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "P0171",
+        "name": "Future Community Park - Alamar Development",
+        "project_type": "Parks and Recreation",
+        "new_appropriation": 4485000,
+        "carryover": 3854000,
+        "total": 8339000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "T0002",
+        "name": "107th Avenue/McDowell Widening",
+        "project_type": "Transportation",
+        "new_appropriation": 0,
+        "carryover": 6217000,
+        "total": 6217000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "U0038",
+        "name": "Distribution Pressure Improvements",
+        "project_type": "Utilities",
+        "new_appropriation": 5000000,
+        "carryover": 340000,
+        "total": 5340000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "A0147",
+        "name": "Vehicle Replacement",
+        "project_type": "Asset Replacement",
+        "new_appropriation": 2274000,
+        "carryover": 2978000,
+        "total": 5252000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "B0130",
+        "name": "The BLVD Water Feature",
+        "project_type": "BLVD",
+        "new_appropriation": 0,
+        "carryover": 4691000,
+        "total": 4691000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "M0025",
+        "name": "Avondale Visitor and Conference Center",
+        "project_type": "General Government",
+        "new_appropriation": 0,
+        "carryover": 4553000,
+        "total": 4553000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      },
+      {
+        "project_number": "T1001",
+        "name": "107th Ave Improvements - Broadway Rd to Roeser Rd",
+        "project_type": "Transportation",
+        "new_appropriation": 4100000,
+        "carryover": 0,
+        "total": 4100000,
+        "measure": "fy2022_project_total",
+        "scope": "cip_project_record",
+        "description": null
+      }
+    ],
+    "selection_method": "Top 10 capital projects ranked by FY2022 Total",
+    "selection_definition": "FY2022 Total equals FY2022 new appropriation plus carryover as presented in the individual Capital Improvement Plan project records.",
+    "accounting_note": "The sum of individual CIP project-record FY2022 totals is $141.058 million, which is $144,000 higher than the formal $140.914 million capital budget. These figures are retained as distinct measures and are not presented as equivalent.",
+    "spending_note": "Budgeted project amounts do not establish that the money was actually spent or that a project was completed.",
+    "note": null
+  },
+  "adoption": {
+    "date": "2021-06-07",
+    "authority_type": "resolution",
+    "authority_identifier": "1047-0621",
+    "authority_title": "Resolution No. 1047-0621",
+    "source_ids": [
+      "avondale-fy2022-adopted-budget"
+    ],
+    "governing_body": {
+      "name": "Avondale City Council",
+      "context": "at_final_adoption",
+      "members": [
+        {
+          "name": "Kenneth N. Weise",
+          "role": "mayor"
+        },
+        {
+          "name": "Veronica Malone",
+          "role": "councilmember",
+          "leadership_role": "vice_mayor"
+        },
+        {
+          "name": "Tina Conde",
+          "role": "councilmember"
+        },
+        {
+          "name": "Pat Dennis",
+          "role": "councilmember"
+        },
+        {
+          "name": "Bryan Kilgore",
+          "role": "councilmember"
+        },
+        {
+          "name": "Curtis Nielson",
+          "role": "councilmember"
+        },
+        {
+          "name": "Mike Pineda",
+          "role": "councilmember"
+        }
+      ],
+      "source_ids": [
+        "avondale-fy2022-final-budget"
+      ]
+    }
+  }
+}

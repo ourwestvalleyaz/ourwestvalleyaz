@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en-US" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    {{- if .IsHome -}}
+      {{ site.Title }}
+    {{- else -}}
+      {{ .Title }} | {{ site.Title }}
+    {{- end -}}
+  </title>
+
+  <meta name="description"
+        content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{ with resources.Get "css/main.css" }}
+    {{ with . | minify | fingerprint }}
+      <link rel="stylesheet"
+            href="{{ .RelPermalink }}"
+            integrity="{{ .Data.Integrity }}">
+    {{ end }}
+  {{ end }}
+</head>
+
+<body id="top" class="page-kind-{{ .Kind }} page-type-{{ .Type | default "default" }}">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  {{ partial "site/header.html" . }}
+
+  <main id="main-content" tabindex="-1">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "site/footer.html" . }}
+  <script src="/js/city-search.js" defer></script>
+  <script src="/js/budget-history.js" defer></script>
+  <script src="/js/community-sticky-nav.js" defer></script>
+</body>
+</html>

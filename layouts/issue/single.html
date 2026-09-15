@@ -1,0 +1,165 @@
+{{ define "main" }}
+
+{{- $issueID := .Params.issue_id -}}
+{{- $cityID := .Params.city_id -}}
+
+{{- $issueRoot := index hugo.Data "issues" -}}
+{{- $issueFile := index $issueRoot "issues" -}}
+{{- $allIssues := index $issueFile "issues" -}}
+{{- $issueMatches := where $allIssues "issue_id" $issueID -}}
+
+{{- if ne (len $issueMatches) 1 -}}
+  {{- errorf
+      "Issue page %q expected exactly one canonical issue record for %q; found %d"
+      .RelPermalink
+      $issueID
+      (len $issueMatches)
+  -}}
+{{- end -}}
+
+{{- $issue := index $issueMatches 0 -}}
+
+
+{{/* Resolve canonical city rather than deriving the display name from slug. */}}
+
+{{- $cityRoot := index hugo.Data "cities" -}}
+{{- $cityFile := index $cityRoot "cities" -}}
+{{- $allCities := index $cityFile "cities" -}}
+{{- $cityMatches := where $allCities "id" $cityID -}}
+
+{{- if ne (len $cityMatches) 1 -}}
+  {{- errorf
+      "Issue page %q expected exactly one canonical city record for %q; found %d"
+      .RelPermalink
+      $cityID
+      (len $cityMatches)
+  -}}
+{{- end -}}
+
+{{- $city := index $cityMatches 0 -}}
+
+
+<article class="owvaz-detail-page issue-page">
+
+  <div class="site-shell content-width owvaz-detail-page__inner">
+
+    <nav
+      class="owvaz-detail-page__back"
+      aria-label="Back to community"
+    >
+      <a href="{{ printf "/communities/%s/" $cityID }}">
+        ← {{ $city.name }}
+      </a>
+    </nav>
+
+
+    <header class="owvaz-detail-page__header"
+            data-sticky-nav-header>
+
+      <p class="owvaz-detail-page__eyebrow">
+        {{ $city.name }} · Local Issue
+      </p>
+
+      <h1>
+        {{ $issue.title }}
+      </h1>
+
+      {{ with $issue.summary }}
+        <p class="owvaz-detail-page__lead">
+          {{ . }}
+        </p>
+      {{ end }}
+
+      <div class="owvaz-detail-page__meta">
+
+        {{ with $issue.status }}
+          <span class="owvaz-detail-page__status">
+            {{ . | humanize }}
+          </span>
+        {{ end }}
+
+        {{ with $issue.last_verified }}
+          <span>
+            Last verified
+            <time datetime="{{ . }}">
+              {{ time.Format "January 2, 2006" . }}
+            </time>
+          </span>
+        {{ end }}
+
+      </div>
+
+    </header>
+
+
+    {{/* Reusable long-form issue sticky navigation.
+         Uses the same behavior contract as community sticky nav.
+         Links intentionally represent major resident destinations,
+         not every heading on the page. */}}
+    
+{{ $stickySections := slice
+  (dict "id" "at-a-glance"
+        "label" "Overview"
+        "name" "At a glance")
+  (dict "id" "license-plate-readers"
+        "label" "LPRs"
+        "name" "License plate readers")
+  (dict "id" "police-drones"
+        "label" "Drones"
+        "name" "Police drones")
+  (dict "id" "regional-and-interagency-data-sharing"
+        "label" "Data Sharing"
+        "name" "Regional and interagency data sharing")
+  (dict "id" "timeline"
+        "label" "Timeline"
+        "name" "Timeline")
+  (dict "id" "what-the-public-record-does-not-yet-show"
+        "label" "What isn't known"
+        "name" "What the public record does not yet show")
+  (dict "id" "official-sources-heading"
+        "label" "Sources"
+        "name" "Official Sources")
+}}
+
+{{ partial "site/sticky-nav.html" (dict
+  "context" "Issue"
+  "title" .Title
+  "sections" $stickySections
+) }}
+
+    <nav
+      class="issue-page__context"
+      aria-label="Issue page context"
+    >
+      <a href="{{ printf "/communities/%s/#local-issues" $cityID }}">
+        {{ $city.name }} local issues
+      </a>
+    </nav>
+
+    <article
+      id="overview"
+      class="owvaz-detail-page__content"
+    >
+
+      {{ .Content }}
+
+    </article>
+
+
+    {{ partial "sources/official-sources.html" (dict
+      "context" (printf "Issue %q" $issueID)
+      "source_ids" $issue.source_ids
+    ) }}
+
+
+    <p class="owvaz-detail-page__return">
+      <a href="{{ printf "/communities/%s/" $cityID }}">
+        ← Back to {{ $city.name }}
+      </a>
+    </p>
+
+  </div>
+
+</article>
+
+{{ end }}

@@ -1,0 +1,291 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "avondale",
+  "fiscal_year": "FY2027",
+  "fiscal_period": {
+    "start": "2026-07-01",
+    "end": "2027-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 514304500,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2026",
+    "adopted_budget": 486614500,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 27690000,
+    "percent_change": 5.7,
+    "summary": "FY2027 adopted budget authority increased by $27,690,000 compared with FY2026 adopted/adjusted budgeted expenditures/expenses, an increase of 5.7%."
+  },
+  "spending_by_purpose": {
+    "source_measure": "Budget in Brief budget by expenditure type",
+    "classification": "resident-facing expenditure type",
+    "categories": [
+      {
+        "id": "operating",
+        "label": "Operating",
+        "amount": 250800000,
+        "measure": "budget_in_brief_operating",
+        "scope": "resident_facing_presentation",
+        "display_percent": 49
+      },
+      {
+        "id": "capital-outlay",
+        "label": "Capital Outlay",
+        "amount": 205900000,
+        "measure": "budget_in_brief_capital_outlay",
+        "scope": "resident_facing_presentation",
+        "display_percent": 40
+      },
+      {
+        "id": "debt-service",
+        "label": "Debt Service",
+        "amount": 20900000,
+        "measure": "budget_in_brief_debt_service",
+        "scope": "resident_facing_presentation",
+        "display_percent": 4
+      },
+      {
+        "id": "contingency",
+        "label": "Contingency",
+        "amount": 36700000,
+        "measure": "budget_in_brief_contingency",
+        "scope": "resident_facing_presentation",
+        "display_percent": 7
+      }
+    ],
+    "display_percent_total": 100,
+    "rounding_note": "Budget in Brief amounts are rounded to the nearest tenth of a million dollars.",
+    "accounting_note": "The $205.9 million Capital Outlay presentation is distinct from the exact $204,783,000 final Capital Improvement Plan project-funding total.",
+    "spending_note": "FY2027 Budget in Brief presentation."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 185626300,
+      "percent_of_measure": 36.1,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Funds",
+      "amount": 93414900,
+      "percent_of_measure": 18.2,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 9352000,
+      "percent_of_measure": 1.8,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 28308000,
+      "percent_of_measure": 5.5,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 166251600,
+      "percent_of_measure": 32.3,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "internal-service",
+      "label": "Internal Service Funds",
+      "amount": 31351700,
+      "percent_of_measure": 6.1,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 296500000,
+        "measure": "budget_in_brief_projected_revenue",
+        "scope": "resident_facing_projection",
+        "label": "Projected revenues",
+        "note": "FY2027 Budget in Brief rounded presentation. Excludes Transfers In, Interfund Loans, and Bond Proceeds."
+      },
+      {
+        "amount": 285166100,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2027 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "The $296.5 million Budget in Brief projected-revenue presentation and the $285,166,100 statutory estimated revenues other than property taxes are distinct measures."
+  },
+  "property_tax": {
+    "primary_levy": 4527130,
+    "secondary_levy": 6837490,
+    "total_levy": 11364620,
+    "primary_rate": 0.5813,
+    "secondary_rate": 0.8779,
+    "combined_rate": 1.4592,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2027 Schedule B. The combined City rate remained 1.4592."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 205900000,
+        "measure": "budget_in_brief_capital_outlay",
+        "scope": "resident_facing_presentation",
+        "label": "Budget in Brief Capital Outlay",
+        "note": "Rounded FY2027 Budget in Brief presentation."
+      },
+      {
+        "amount": 204783000,
+        "measure": "adopted_capital_improvement_plan",
+        "scope": "formal_budget",
+        "label": "Adopted Capital Improvement Plan",
+        "note": "Exact FY2027 project funding from Exhibit D of Resolution 1041-0626."
+      }
+    ],
+    "accounting_note": "The $205.9 million Budget in Brief Capital Outlay presentation and $204,783,000 final CIP project-funding total are distinct measures.",
+    "note": "Final CIP project-type rows reconcile exactly to $204,783,000.",
+    "projects": [
+      {
+        "project_number": "S0013",
+        "name": "Southern Avondale Fire/Police Station",
+        "project_type": "Public Safety",
+        "new_appropriation": 998000,
+        "carryover": 946000,
+        "total": 25000000,
+        "measure": "adopted_capital_improvement_plan",
+        "scope": "FY2027",
+        "description": "The adopted CIP identifies a $25,000,000 total project, $946,000 in carryover, and $998,000 in FY2027 funding. Additional project funding is scheduled in later fiscal years."
+      },
+      {
+        "project_number": "A0518",
+        "name": "Police Asset Replacement Program FY2027",
+        "project_type": "Asset Replacement",
+        "new_appropriation": 212000,
+        "carryover": 0,
+        "total": 212000,
+        "measure": "adopted_capital_improvement_plan",
+        "scope": "FY2027",
+        "description": "The adopted CIP identifies this as a distinct FY2027 Police Asset Replacement project with $212,000 in FY2027 funding and no carryover."
+      }
+    ],
+    "selection_method": "selected_resident_relevant_projects",
+    "selection_definition": "Selected projects from the adopted FY2027 Capital Improvement Plan that provide useful resident context and can be represented without accounting ambiguity. This is not a complete list of FY2027 projects."
+  },
+  "source_ids": [
+    "avondale-fy2027-final-budget",
+    "avondale-fy2027-budget-in-brief",
+    "avondale-council-agenda-2026-04-06"
+  ],
+  "sources": [
+    {
+      "id": "avondale-fy2027-final-budget",
+      "title": "FY2027 Final Budget - Resolution 1041-0626",
+      "publisher": "City of Avondale",
+      "document_type": "final_budget",
+      "url": "https://avondaleaz.gov/app/uploads/2026/06/Final-budget-signed-resolution-RES-1041-0626.pdf",
+      "supports": [
+        "adopted_budget",
+        "prior_year_comparison",
+        "fund_breakdown",
+        "revenue.measures.statutory",
+        "property_tax",
+        "capital.measures.adopted_capital_improvement_plan",
+        "adoption"
+      ],
+      "accessed": "2026-09-08"
+    },
+    {
+      "id": "avondale-fy2027-budget-in-brief",
+      "title": "FY2027 Budget in Brief",
+      "publisher": "City of Avondale",
+      "document_type": "official budget summary",
+      "url": "https://avondaleaz.gov/app/uploads/2026/08/FY2027_BIB.pdf",
+      "supports": [
+        "spending_by_purpose",
+        "revenue.measures.projected",
+        "capital.measures.budget_in_brief"
+      ],
+      "accessed": "2026-09-08"
+    },
+    {
+      "id": "avondale-council-agenda-2026-04-06",
+      "title": "Avondale City Council Meeting Agenda - April 6, 2026",
+      "publisher": "City of Avondale",
+      "document_type": "official city council agenda",
+      "url": "https://www.avondaleaz.gov/home/showpublisheddocument/16712/639106329538096635",
+      "supports": [
+        "adoption.governing_body"
+      ],
+      "accessed": "2026-09-09"
+    }
+  ],
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-08",
+    "note": "FY2027 canonical values reconciled from the signed final budget adopted through Resolution 1041-0626 and the FY2027 Budget in Brief. Final adopted values control where tentative-stage values changed."
+  },
+  "adoption": {
+    "date": "2026-06-01",
+    "authority_type": "resolution",
+    "authority_identifier": "1041-0626",
+    "authority_title": "Resolution No. 1041-0626",
+    "source_ids": [
+      "avondale-fy2027-final-budget"
+    ],
+    "governing_body": {
+      "name": "Avondale City Council",
+      "context": "at_final_adoption",
+      "members": [
+        {
+          "name": "Mike Pineda",
+          "role": "mayor"
+        },
+        {
+          "name": "Curtis Nielson",
+          "role": "councilmember",
+          "leadership_role": "vice_mayor"
+        },
+        {
+          "name": "Tina Conde",
+          "role": "councilmember"
+        },
+        {
+          "name": "Jeannette Garcia",
+          "role": "councilmember"
+        },
+        {
+          "name": "Gloria Solorio",
+          "role": "councilmember"
+        },
+        {
+          "name": "Shari Weise",
+          "role": "councilmember"
+        },
+        {
+          "name": "Max White",
+          "role": "councilmember"
+        }
+      ],
+      "source_ids": [
+        "avondale-council-agenda-2026-04-06"
+      ]
+    }
+  }
+}

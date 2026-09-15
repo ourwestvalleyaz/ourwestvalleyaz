@@ -1,0 +1,298 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "avondale",
+  "fiscal_year": "FY2026",
+  "fiscal_period": {
+    "start": "2025-07-01",
+    "end": "2026-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 486614500,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2025",
+    "adopted_budget": 443221000,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 43393500,
+    "percent_change": 9.8,
+    "summary": "FY2026 adopted budget authority increased by $43,393,500 compared with FY2025 adopted/adjusted budgeted expenditures/expenses, an increase of 9.8%."
+  },
+  "spending_by_purpose": {
+    "source_measure": "Budget in Brief budget by expenditure type",
+    "classification": "resident-facing expenditure type",
+    "categories": [
+      {
+        "id": "operating",
+        "label": "Operating",
+        "amount": 241400000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 50
+      },
+      {
+        "id": "capital-improvement",
+        "label": "Capital Improvement",
+        "amount": 204100000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 42
+      },
+      {
+        "id": "debt-service",
+        "label": "Debt Service",
+        "amount": 9900000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 2
+      },
+      {
+        "id": "contingency",
+        "label": "Contingency",
+        "amount": 31100000,
+        "measure": "budget_in_brief_budget_composition",
+        "scope": "resident_facing_presentation",
+        "display_percent": 6
+      }
+    ],
+    "display_percent_total": 100,
+    "rounding_note": "Budget in Brief expenditure-type amounts are rounded resident-facing figures and are not expected to sum exactly to adopted authority.",
+    "accounting_note": "The expenditure-type capital presentation is distinct from the exact CIP appropriation and capital-outlay object category.",
+    "spending_note": "The FY2026 Budget in Brief presents Operating $241.4M, Capital Improvement $204.1M, Debt Service $9.9M, and Contingency $31.1M."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 152519900,
+      "percent_of_measure": 31.3,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Funds",
+      "amount": 98810200,
+      "percent_of_measure": 20.3,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Funds",
+      "amount": 8896000,
+      "percent_of_measure": 1.8,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Funds",
+      "amount": 81413000,
+      "percent_of_measure": 16.7,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    },
+    {
+      "id": "trust-agency",
+      "label": "Trust and Agency Fund",
+      "amount": 0,
+      "percent_of_measure": 0.0,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 118380200,
+      "percent_of_measure": 24.3,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    },
+    {
+      "id": "internal-service",
+      "label": "Internal Service Funds",
+      "amount": 26595200,
+      "percent_of_measure": 5.5,
+      "measure": "adopted_budgeted_expenditures_expenses",
+      "scope": "statutory_fund_group"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 275900000,
+        "measure": "budget_in_brief_projected_revenue",
+        "scope": "resident_facing_projection",
+        "label": "Projected revenue",
+        "note": "Budget in Brief projected revenue. Excludes transfers in, interfund loans, and other financing sources."
+      },
+      {
+        "amount": 260468900,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Exact FY2025 statutory adopted-budget measure."
+      }
+    ],
+    "note": "Budget in Brief projected revenue and statutory estimated revenues other than property taxes are different measures and remain separate."
+  },
+  "property_tax": {
+    "primary_levy": 4336412,
+    "secondary_levy": 6045322,
+    "total_levy": 10381734,
+    "primary_rate": 0.6095,
+    "secondary_rate": 0.8497,
+    "combined_rate": 1.4592,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "FY2026 current rates are 0.6095 primary and 0.8497 secondary, for a combined rate of 1.4592. A narrative passage in the FY2026 Final Budget repeats FY2025 rates 0.6241 and 0.8351; those prior-year rates are not used as FY2026 current values."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 204200000,
+        "measure": "budget_in_brief_capital_improvement",
+        "scope": "resident_facing_presentation",
+        "label": "Budget in Brief capital improvement",
+        "note": "Budget in Brief capital-budget-by-function presentation, rounded to $204.2 million."
+      },
+      {
+        "amount": 204139000,
+        "measure": "adopted_capital_improvement_plan",
+        "scope": "formal_budget",
+        "label": "Adopted Capital Improvement Plan",
+        "note": "Exact FY2026 adopted Capital Improvement Plan appropriation."
+      },
+      {
+        "amount": 208891200,
+        "measure": "capital_outlay",
+        "scope": "expenditure_object_category",
+        "label": "Capital outlay",
+        "note": "Exact FY2026 capital-outlay object-category budget."
+      }
+    ],
+    "accounting_note": "Capital measures are not interchangeable. The Budget in Brief expenditure-type graphic presents Capital Improvement as $204.1M, the separate capital-budget-by-function presentation rounds to $204.2M, the exact adopted CIP is $204,139,000, and exact capital outlay is $208,891,200.",
+    "note": "The Final Budget explains that CIP differs from capital outlay because vehicles may be considered capital while being purchased from operating funds."
+  },
+  "source_ids": [
+    "avondale-fy2026-adopted-budget",
+    "avondale-fy2026-final-budget",
+    "avondale-fy2026-budget-in-brief",
+    "avondale-fy2026-budget-adoption"
+  ],
+  "sources": [
+    {
+      "id": "avondale-fy2026-adopted-budget",
+      "title": "FY2026 Adopted Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official adopted budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/Adopted-2026.pdf",
+      "supports": [
+        "adopted_budget",
+        "prior_year_comparison",
+        "fund_breakdown",
+        "revenue.measures.statutory",
+        "property_tax",
+        "capital.measures.adopted_capital_improvement_plan"
+      ],
+      "accessed": "2026-09-08"
+    },
+    {
+      "id": "avondale-fy2026-final-budget",
+      "title": "FY2026 Final Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official budget document",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2026-Final-Budget.pdf",
+      "supports": [
+        "adopted_budget",
+        "fund_breakdown",
+        "revenue.measures.statutory",
+        "property_tax",
+        "capital.measures.adopted_capital_improvement_plan",
+        "capital.measures.capital_outlay",
+        "adoption",
+        "adoption.governing_body"
+      ],
+      "accessed": "2026-09-01"
+    },
+    {
+      "id": "avondale-fy2026-budget-in-brief",
+      "title": "FY2026 Budget in Brief",
+      "publisher": "City of Avondale",
+      "document_type": "official budget summary",
+      "url": "https://avondaleaz.gov/app/uploads/2026/04/FY2026_BiB.pdf",
+      "supports": [
+        "spending_by_purpose",
+        "revenue.measures.projected",
+        "capital.measures.budget_in_brief"
+      ],
+      "accessed": "2026-09-08"
+    },
+    {
+      "id": "avondale-fy2026-budget-adoption",
+      "title": "Avondale City Council Approves FY2026 Budget",
+      "publisher": "City of Avondale",
+      "document_type": "official news release",
+      "url": "https://www.avondaleaz.gov/Home/Components/News/News/3778/768",
+      "supports": [
+        "adopted_budget"
+      ],
+      "accessed": "2026-09-01"
+    }
+  ],
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-08",
+    "note": "FY2026 canonical fields reconciled from official adopted budget forms, Final Budget, Budget in Brief, and the City's adoption announcement. Recommended-stage fund values were not used."
+  },
+  "adoption": {
+    "date": "2025-06-02",
+    "authority_type": "resolution",
+    "authority_identifier": "1033-0625",
+    "authority_title": "Resolution No. 1033-0625",
+    "source_ids": [
+      "avondale-fy2026-final-budget"
+    ],
+    "governing_body": {
+      "name": "Avondale City Council",
+      "context": "at_final_adoption",
+      "members": [
+        {
+          "name": "Mike Pineda",
+          "role": "mayor"
+        },
+        {
+          "name": "Curtis Nielson",
+          "role": "councilmember",
+          "leadership_role": "vice_mayor"
+        },
+        {
+          "name": "Tina Conde",
+          "role": "councilmember"
+        },
+        {
+          "name": "Jeannette Garcia",
+          "role": "councilmember"
+        },
+        {
+          "name": "Gloria Solorio",
+          "role": "councilmember"
+        },
+        {
+          "name": "Shari Weise",
+          "role": "councilmember"
+        },
+        {
+          "name": "Max White",
+          "role": "councilmember"
+        }
+      ],
+      "source_ids": [
+        "avondale-fy2026-final-budget"
+      ]
+    }
+  }
+}

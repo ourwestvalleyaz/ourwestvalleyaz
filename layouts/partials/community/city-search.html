@@ -1,0 +1,61 @@
+{{- $cityID := .city_id -}}
+{{- $cityName := .city_name -}}
+
+<div class="city-search"
+     data-city-search
+     data-city-id="{{ $cityID }}"
+     data-city-name="{{ $cityName }}">
+
+  <div class="city-search__intro">
+    <p>
+      Search {{ $cityName }} budgets, meetings, public records,
+      official City resources, and OWVAZ research.
+    </p>
+  </div>
+
+  <form class="city-search__form"
+        data-city-search-form
+        role="search">
+    <label class="city-search__label"
+           for="city-search-{{ $cityID }}">
+      Search {{ $cityName }}
+    </label>
+
+    <div class="city-search__controls">
+      <input
+        id="city-search-{{ $cityID }}"
+        class="city-search__input"
+        data-city-search-input
+        type="search"
+        name="q"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Try budget, water, council meeting, police..."
+      >
+
+      <button class="button city-search__button"
+              type="submit">
+        Search
+      </button>
+    </div>
+  </form>
+
+  <p class="city-search__privacy">
+    Searches run locally in your browser.
+  </p>
+
+  <div class="city-search__status"
+       data-city-search-status
+       aria-live="polite"></div>
+
+  <div class="city-search__results"
+       data-city-search-results></div>
+
+  <noscript>
+    <p class="city-search__noscript">
+      JavaScript is required for local search. The rest of the
+      {{ $cityName }} page remains available without JavaScript.
+    </p>
+  </noscript>
+
+</div>

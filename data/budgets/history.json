@@ -1,0 +1,70 @@
+{
+  "history": [
+    {
+      "city_id": "avondale",
+      "fiscal_year": "FY2022",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 336147700,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "avondale",
+      "fiscal_year": "FY2023",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 457106600,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "avondale",
+      "fiscal_year": "FY2024",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 464896600,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "avondale",
+      "fiscal_year": "FY2025",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 443221000,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "avondale",
+      "fiscal_year": "FY2026",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 486614500,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "avondale",
+      "fiscal_year": "FY2027",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 514304500,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    }
+  ]
+}

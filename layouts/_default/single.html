@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article>
+  <header class="page-header">
+    <div class="site-shell content-width">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-summary">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  <div class="site-shell content-width section prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

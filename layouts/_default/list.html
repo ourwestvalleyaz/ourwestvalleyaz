@@ -1,0 +1,122 @@
+{{ define "main" }}
+<section class="page-header"
+         data-sticky-nav-header>
+  <div class="site-shell content-width">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-summary">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+{{ if in (slice "about" "privacy" "disclaimer") .Section }}
+
+  {{ $stickySections := slice }}
+
+  {{ if eq .Section "about" }}
+
+    {{ $stickySections = slice
+      (dict "id" "why-owvaz-exists"
+            "label" "Purpose"
+            "name" "Why OWVAZ exists")
+      (dict "id" "how-information-is-researched"
+            "label" "Research"
+            "name" "How information is researched")
+      (dict "id" "editorial-independence"
+            "label" "Independence"
+            "name" "Editorial independence")
+      (dict "id" "use-of-artificial-intelligence"
+            "label" "AI"
+            "name" "Use of artificial intelligence")
+      (dict "id" "corrections"
+            "label" "Corrections"
+            "name" "Corrections")
+      (dict "id" "privacy"
+            "label" "Privacy"
+            "name" "Privacy")
+    }}
+
+  {{ else if eq .Section "privacy" }}
+
+    {{ $stickySections = slice
+      (dict "id" "what-owvaz-does-not-use"
+            "label" "Not Used"
+            "name" "What OWVAZ does not use")
+      (dict "id" "cookies-and-browser-storage"
+            "label" "Storage"
+            "name" "Cookies and browser storage")
+      (dict "id" "search-privacy"
+            "label" "Search"
+            "name" "Search privacy")
+      (dict "id" "forms-and-information-residents-submit"
+            "label" "Forms"
+            "name" "Forms and information residents submit")
+      (dict "id" "external-links"
+            "label" "External Links"
+            "name" "External links")
+      (dict "id" "website-requests-and-infrastructure"
+            "label" "Infrastructure"
+            "name" "Website requests and infrastructure")
+      (dict "id" "privacy-by-design"
+            "label" "Design"
+            "name" "Privacy by design")
+      (dict "id" "changes-to-this-privacy-information"
+            "label" "Changes"
+            "name" "Changes to this privacy information")
+    }}
+
+  {{ else if eq .Section "disclaimer" }}
+
+    {{ $stickySections = slice
+      (dict "id" "accuracy-sources-interpretation-and-verification"
+            "label" "Accuracy"
+            "name" "Accuracy, sources, interpretation, and verification")
+      (dict "id" "proposals-budgets-and-public-records"
+            "label" "Records"
+            "name" "Proposals, budgets, and public records")
+      (dict "id" "completeness"
+            "label" "Completeness"
+            "name" "Completeness")
+      (dict "id" "inclusion-does-not-imply-wrongdoing-or-endorsement"
+            "label" "Inclusion"
+            "name" "Inclusion does not imply wrongdoing or endorsement")
+      (dict "id" "external-sources-and-links"
+            "label" "External"
+            "name" "External sources and links")
+      (dict "id" "reliance-professional-information-and-emergencies"
+            "label" "Reliance"
+            "name" "Reliance, professional information, and emergencies")
+      (dict "id" "no-professional-or-official-relationship"
+            "label" "Relationship"
+            "name" "No professional or official relationship")
+      (dict "id" "corrections"
+            "label" "Corrections"
+            "name" "Corrections")
+      (dict "id" "responsibility-for-external-changes-and-consequential-reliance"
+            "label" "Changes"
+            "name" "Responsibility for external changes and consequential reliance")
+    }}
+
+  {{ end }}
+
+  {{ partial "site/sticky-nav.html" (dict
+    "context" "Information"
+    "title" .Title
+    "sections" $stickySections
+  ) }}
+
+{{ end }}
+
+
+<section class="section">
+  <div class="site-shell content-width">
+    {{ .Content }}
+
+    {{ if .Pages }}
+      <ul class="plain-list">
+        {{ range .Pages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

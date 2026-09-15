@@ -1,0 +1,281 @@
+{{- $cityID := .city_id -}}
+{{- $records := slice -}}
+
+{{- with hugo.Data.budgets -}}
+  {{- with .history -}}
+    {{- with .history -}}
+      {{- range . -}}
+        {{- if and
+          (eq .city_id $cityID)
+          (eq .status "adopted")
+          (eq .verification_state "verified")
+        -}}
+          {{- $records = $records | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $records = sort $records "fiscal_year" "asc" -}}
+
+{{- $metricNames := slice -}}
+
+{{- range $records -}}
+  {{- if not (in $metricNames .metric) -}}
+    {{- $metricNames = $metricNames | append .metric -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $usableMetrics := slice -}}
+
+{{- range $metric := $metricNames -}}
+  {{- $rows := where $records "metric" $metric -}}
+
+  {{- if ge (len $rows) 2 -}}
+    {{- $usableMetrics = $usableMetrics | append $metric -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $usableMetrics) 0 -}}
+
+  {{- $defaultMetric := index $usableMetrics 0 -}}
+
+  {{- if in $usableMetrics "total_budget" -}}
+    {{- $defaultMetric = "total_budget" -}}
+  {{- end -}}
+
+  {{- $defaultRows := where $records "metric" $defaultMetric -}}
+  {{- $defaultRows = sort $defaultRows "fiscal_year" "asc" -}}
+
+  {{- $first := index $defaultRows 0 -}}
+  {{- $last := index $defaultRows (sub (len $defaultRows) 1) -}}
+
+  {{- /*
+    The longitudinal history begins at FY2022, but FY2022's canonical
+    fiscal-year record already contains a verified FY2021 adopted-budget
+    comparison. Use that canonical prior amount for the first total-budget
+    row rather than displaying an artificial missing YoY value.
+  */ -}}
+
+  {{- $initialPriorAmount := 0 -}}
+  {{- $fiscalYearRoot := index hugo.Data.budgets "fiscal-years" -}}
+
+  {{- with $fiscalYearRoot -}}
+    {{- $cityFiscalYears := index . $cityID -}}
+
+    {{- with $cityFiscalYears -}}
+      {{- $firstFiscalYearRecord := index . (lower $first.fiscal_year) -}}
+
+      {{- with $firstFiscalYearRecord -}}
+        {{- with .prior_year_comparison -}}
+          {{- with .adopted_budget -}}
+            {{- $initialPriorAmount = int . -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $clientRecords := slice -}}
+  {{- $mayorsAtAdoption := newScratch -}}
+  {{- $cityFiscalYears := index $fiscalYearRoot $cityID -}}
+
+  {{- range $row := $records -}}
+    {{- $fiscalYearRecord := index
+      $cityFiscalYears
+      (lower $row.fiscal_year)
+    -}}
+
+    {{- $mayorName := "" -}}
+    {{- $mayorCount := 0 -}}
+
+    {{- with $fiscalYearRecord.adoption.governing_body.members -}}
+      {{- range . -}}
+        {{- if eq .role "mayor" -}}
+          {{- $mayorName = .name -}}
+          {{- $mayorCount = add $mayorCount 1 -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if ne $mayorCount 1 -}}
+      {{- errorf
+        "budget history: %s %s expected exactly one mayor at adoption; found %d"
+        $cityID
+        $row.fiscal_year
+        $mayorCount
+      -}}
+    {{- end -}}
+
+    {{- $mayorsAtAdoption.Set
+      $row.fiscal_year
+      $mayorName
+    -}}
+
+    {{- $clientRow := merge
+      $row
+      (dict "mayor_at_adoption" $mayorName)
+    -}}
+    {{- if and
+      (eq $row.metric $defaultMetric)
+      (eq $row.fiscal_year $first.fiscal_year)
+      (gt $initialPriorAmount 0)
+    -}}
+      {{- $clientRecords = $clientRecords | append
+        (merge $clientRow (dict "prior_year_amount" $initialPriorAmount))
+      -}}
+    {{- else -}}
+      {{- $clientRecords = $clientRecords | append $clientRow -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $change := sub $last.amount $first.amount -}}
+
+  {{- $percent := mul
+    (div (float $change) (float $first.amount))
+    100
+  -}}
+
+  <section class="budget-history"
+           data-budget-history
+           {{- if gt $initialPriorAmount 0 }}
+           data-budget-history-initial-prior="{{ $initialPriorAmount }}"
+           {{- end }}
+           aria-labelledby="budget-history-title-{{ $cityID }}">
+
+    <div class="budget-history__heading">
+
+      <div>
+        <p class="eyebrow">Budget over time</p>
+
+        {{- if eq (default 3 .heading_level) 2 }}
+        <h2 id="budget-history-title-{{ $cityID }}">
+          How the budget has changed
+        </h2>
+        {{- else }}
+        <h3 id="budget-history-title-{{ $cityID }}">
+          How the budget has changed
+        </h3>
+        {{- end }}
+
+        <p class="budget-history__summary"
+           data-budget-history-summary>
+          From {{ $first.fiscal_year }} to {{ $last.fiscal_year }},
+          the adopted all-funds budget
+          {{ if gt $change 0 }}increased{{ else if lt $change 0 }}decreased{{ else }}did not change{{ end }}
+          {{ math.Abs $percent | lang.FormatNumber 1 }}%.
+        </p>
+      </div>
+
+</div>
+
+    {{- if gt (len $usableMetrics) 1 -}}
+
+    <div class="budget-history__controls"
+         aria-label="Budget measure">
+
+      {{- range $metric := $usableMetrics -}}
+        {{- $metricRows := where $records "metric" $metric -}}
+        {{- $representative := index $metricRows 0 -}}
+
+        <button
+          type="button"
+          class="budget-history__toggle{{ if eq $metric $defaultMetric }} is-active{{ end }}"
+          data-budget-metric="{{ $metric }}"
+          aria-pressed="{{ if eq $metric $defaultMetric }}true{{ else }}false{{ end }}">
+          {{ $representative.metric_label }}
+        </button>
+
+      {{- end -}}
+
+    </div>
+
+    {{- end -}}
+
+    <div class="budget-history__chart-wrap">
+      <div class="budget-history__chart"
+           data-budget-history-chart
+           role="img"
+           aria-label="Adopted budget trend graph">
+      </div>
+    </div>
+
+    <script type="application/json"
+            data-budget-history-data>{{ $clientRecords | jsonify | safeJS }}</script>
+
+    <div class="budget-history__table-wrap">
+
+      <table class="budget-history__table"
+             data-budget-history-table>
+
+        <caption>Adopted budget history</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Fiscal year</th>
+            <th scope="col">Adopted budget</th>
+            <th scope="col">Mayor at adoption</th>
+            <th scope="col">YoY change</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {{- $previous := false -}}
+
+          {{- if gt $initialPriorAmount 0 -}}
+            {{- $previous = dict "amount" $initialPriorAmount -}}
+          {{- end -}}
+
+          {{- range $row := $defaultRows -}}
+            <tr>
+              <th scope="row">
+                <a href="/communities/{{ $cityID }}/budgets/{{ lower $row.fiscal_year }}/">
+                  {{ $row.fiscal_year }}
+                </a>
+              </th>
+
+              <td>
+                ${{ $row.amount | lang.FormatNumber 0 }}
+              </td>
+
+              <td>
+                {{ $mayorsAtAdoption.Get $row.fiscal_year }}
+              </td>
+
+              <td>
+                {{- if $previous -}}
+
+                  {{- $delta := sub $row.amount $previous.amount -}}
+
+                  {{- $pct := mul
+                    (div (float $delta) (float $previous.amount))
+                    100
+                  -}}
+
+                  {{- if gt $pct 0 }}+{{ end -}}
+                  {{ $pct | lang.FormatNumber 1 }}%
+
+                {{- else -}}
+                  —
+                {{- end -}}
+              </td>
+            </tr>
+
+            {{- $previous = $row -}}
+          {{- end -}}
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <p class="budget-history__note">
+      Comparable adopted figures only. Tentative and recommended budgets,
+      actual spending, revenues, tax rates and other measures are kept
+      separate.
+    </p>
+
+  </section>
+
+{{- end -}}

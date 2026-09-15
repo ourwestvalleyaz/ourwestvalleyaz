@@ -1,0 +1,31 @@
+{
+  "issues": [
+    {
+      "issue_id": "avondale-police-surveillance-technology",
+      "city_id": "avondale",
+      "title": "Police Surveillance Technology",
+      "slug": "police-surveillance-technology",
+      "status": "documented",
+      "summary": "City records document Avondale Police Department use and proposed expansion of license plate readers, drones, body-worn cameras, and regional law-enforcement data-sharing systems.",
+      "source_ids": [
+        "avondale-historical-lpr-budget",
+        "avondale-fy2022-final-budget",
+        "avondale-fy2023-final-budget",
+        "avondale-fy2025-final-budget",
+        "avondale-fy2026-final-budget",
+        "avondale-fy2027-recommended-budget",
+        "avondale-fy2027-tentative-budget",
+        "avondale-police-command-staff",
+        "avondale-fy2027-final-budget"
+      ],
+      "last_verified": "2026-09-01",
+      "tags": [
+        "license plate readers",
+        "drones",
+        "body-worn cameras",
+        "data sharing",
+        "police technology"
+      ]
+    }
+  ]
+}

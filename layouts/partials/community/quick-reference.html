@@ -1,0 +1,79 @@
+{{- $cityID := .city_id -}}
+{{- $records := slice -}}
+
+{{- with (index hugo.Data "quick-reference") -}}
+  {{- with (index . "quick-reference") -}}
+    {{- with (index . "quick-reference") -}}
+      {{- range . -}}
+        {{- if eq .city_id $cityID -}}
+          {{- $records = $records | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $records = sort $records "priority" "asc" -}}
+
+{{- $categories := slice
+  (dict "id" "utilities" "label" "Utilities")
+  (dict "id" "trash-recycling" "label" "Trash & Recycling")
+  (dict "id" "report-a-problem" "label" "Report a Problem")
+  (dict "id" "city-meetings" "label" "City Meetings")
+  (dict "id" "safety" "label" "Safety & Outages")
+  (dict "id" "water" "label" "Water")
+  (dict "id" "transportation" "label" "Getting Around")
+  (dict "id" "parks-community" "label" "Parks & Community")
+  (dict "id" "city-services" "label" "City Services")
+-}}
+
+{{- if gt (len $records) 0 }}
+<div class="quick-reference-inline">
+
+  {{- range $category := $categories }}
+    {{- $group := where $records "category" $category.id -}}
+
+    {{- if gt (len $group) 0 }}
+    <section class="quick-reference-inline__group">
+      <h3>{{ $category.label }}</h3>
+
+      <ul class="quick-reference-inline__links">
+        {{- range $item := $group }}
+          <li class="quick-reference-inline__item">
+            {{- $actionHref := $item.action_url -}}
+            {{- $actionExternal := true -}}
+
+            {{- with $item.internal_path -}}
+              {{- $actionHref = . -}}
+              {{- $actionExternal = false -}}
+            {{- end -}}
+
+            <a
+              href="{{ $actionHref }}"
+              {{- if $actionExternal }}
+              target="_blank"
+              rel="noopener noreferrer"
+              {{- end }}
+            >
+              {{ $item.action_label }}
+            </a>
+
+            {{- with $item.summary }}
+              <span class="quick-reference-inline__summary">
+                {{ . }}
+              </span>
+            {{- end }}
+
+          </li>
+        {{- end }}
+      </ul>
+    </section>
+    {{- end }}
+  {{- end }}
+
+</div>
+{{- else }}
+<div class="empty-state">
+  <p>Quick-reference information has not been published yet.</p>
+</div>
+{{- end }}
