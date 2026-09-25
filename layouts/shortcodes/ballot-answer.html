@@ -1,0 +1,8 @@
+<div class="owvaz-ballot-answer">
+  <div class="owvaz-ballot-answer__question">
+    {{ .Get "question" }}
+  </div>
+  <div class="owvaz-ballot-answer__response">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

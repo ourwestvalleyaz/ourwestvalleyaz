@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "avondale-80th-anniversary-2026",
+      "title": "Avondale Celebrates 80 Years",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/news/2026/05/avondale-celebrates-80-years/"
+    },
+    {
+      "source_id": "avondale-agua-fria-district-history",
+      "title": "Our Schools",
+      "issuing_agency": "Agua Fria Union High School District",
+      "official_url": "https://www.aguafria.org/our-schools/our-schools"
+    },
+    {
+      "source_id": "avondale-agua-fria-fsa-camp-history",
+      "title": "Dust Bowl Refuge: The Agua Fria FSA Camp",
+      "issuing_agency": "Three Rivers Historical Society / West Valley historical research",
+      "official_url": "https://pwlhc.org/wp-content/uploads/2024/04/2024-Spring-Newsletter-FINAL-TO-PRINT.pdf"
+    },
+    {
+      "source_id": "avondale-billy-moore-days-history",
+      "title": "Billy Moore Days History",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/government/departments/prld/events/billy-moore-days-parade/history/"
+    },
+    {
+      "source_id": "avondale-census-1950",
+      "title": "1950 Census of Population: Volume 1, Number of Inhabitants",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/library/publications/decennial/1950/population-volume-1/vol-01-06.pdf"
+    },
+    {
+      "source_id": "avondale-census-1980-historical",
+      "title": "1980 Census of Population - Number of Inhabitants",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/prod2/decennial/documents/1980/1980censusofpopu8011uns_bw.pdf"
+    },
+    {
+      "source_id": "avondale-census-1990",
+      "title": "Arizona: 1990 Census of Population",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/library/publications/decennial/1990/cp-2/cp-2-4.pdf"
+    },
+    {
+      "source_id": "avondale-census-2000",
+      "title": "2000 Decennial Profile - Avondale city, Arizona",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/census_2000/datasets/demographic_profile/Arizona/2kh04.pdf"
+    },
+    {
+      "source_id": "avondale-census-population-estimate-2025",
+      "title": "Avondale population estimates, July 1, 2025",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www.census.gov/quickfacts/fact/table/avondalecityarizona/PST045225"
+    },
+    {
+      "source_id": "avondale-census-quickfacts",
+      "title": "QuickFacts - Avondale city, Arizona",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www.census.gov/quickfacts/fact/table/avondalecityarizona/"
+    },
+    {
+      "source_id": "avondale-city-history",
+      "title": "History",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/our-city/history"
+    },
+    {
+      "source_id": "avondale-coldwater-arizona-memory",
+      "title": "Avondale",
+      "issuing_agency": "Arizona State Library, Archives and Public Records",
+      "official_url": "https://azmemory.azlibrary.gov/nodes/view/244146"
+    },
+    {
+      "source_id": "avondale-coldwater-westside-enterprise-1961",
+      "title": "Westside Enterprise - November 16, 1961",
+      "issuing_agency": "Westside Enterprise / Arizona Memory Project",
+      "official_url": "https://azmemory.azlibrary.gov/nodes/view/291645"
+    },
+    {
+      "source_id": "avondale-community-profile-fy2013",
+      "title": "FY2012-2013 Annual Budget and Financial Plan - Community Profile",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/home/showpublisheddocument/1375/636173334836270000"
+    },
+    {
+      "source_id": "avondale-community-profile-fy2023",
+      "title": "FY2022-2023 Annual Budget - Community History",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/home/showpublisheddocument/17125/637980511264030000"
+    },
+    {
+      "source_id": "avondale-fire-history",
+      "title": "Avondale Fire & Medical History",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/government/departments/fire-medical/about-us/history"
+    },
+    {
+      "source_id": "avondale-fsa-camp-directory",
+      "title": "Historical Arizona Directory - Avondale and FSA Migratory Labor Camp",
+      "issuing_agency": "Arizona State Library, Archives and Public Records",
+      "official_url": "https://azmemory.azlibrary.gov/assets/displaypdf/161174"
+    },
+    {
+      "source_id": "avondale-goodyear-farms-cemetery-city",
+      "city_id": "avondale",
+      "issuing_agency": "City of Avondale",
+      "title": "Avondale Highlights Renovations, History of Goodyear Farms Cemetery with Video",
+      "document_type": "official news release and historical preservation material",
+      "official_url": "https://www.avondaleaz.gov/Home/Components/News/News/2330/1100?arch=1&npage=38",
+      "source_role": "primary",
+      "topics": [
+        "Goodyear Farms Historic Cemetery",
+        "1918",
+        "migrant farm workers",
+        "influenza pandemic",
+        "veterans",
+        "cotton agriculture"
+      ],
+      "verification_state": "verified"
+    },
+    {
+      "source_id": "avondale-goodyear-farms-oral-history-azpbs",
+      "title": "Goodyear Farms Historic Cemetery",
+      "issuing_agency": "Arizona PBS",
+      "official_url": "https://azpbs.org/horizonte/2010/09/goodyear-farms-historic-cemetery/"
+    },
+    {
+      "source_id": "avondale-historic-design-guidelines",
+      "title": "Historic Avondale Design & Development Guidelines",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/home/showpublisheddocument/2027/636993835284130000"
+    },
+    {
+      "source_id": "avondale-history-video-2021",
+      "city_id": "avondale",
+      "issuing_agency": "City of Avondale",
+      "title": "The History of the City of Avondale",
+      "document_type": "official historical video",
+      "official_url": "https://www.youtube.com/watch?v=W9dSoledYmQ",
+      "source_role": "primary",
+      "topics": [
+        "city history",
+        "historical timeline",
+        "75th anniversary"
+      ],
+      "verification_state": "verified"
+    },
+    {
+      "source_id": "avondale-marie-lopez-rogers-oral-history",
+      "title": "Marie López Rogers Oral History",
+      "issuing_agency": "Arizona State Library, Archives and Public Records",
+      "official_url": "https://azmemory.azlibrary.gov/nodes/view/159399"
+    },
+    {
+      "source_id": "avondale-monument-hill-nps",
+      "title": "Initial Point of the Gila and Salt River Base Line and Meridian",
+      "issuing_agency": "National Park Service",
+      "official_url": "https://npgallery.nps.gov/AssetDetail/NRIS/02001137"
+    },
+    {
+      "source_id": "avondale-old-town-history-walk",
+      "title": "Old Town Avondale Historical Walk",
+      "issuing_agency": "City of Avondale",
+      "official_url": "https://www.avondaleaz.gov/home/showpublisheddocument/20503/638663237711030000"
+    },
+    {
+      "source_id": "avondale-phoenix-raceway-history",
+      "title": "About Phoenix Raceway - Track History",
+      "issuing_agency": "Phoenix Raceway",
+      "official_url": "https://www.phoenixraceway.com/about-phoenix-raceway/"
+    },
+    {
+      "source_id": "avondale-srpmic-1879-reserve-history",
+      "title": "Establishment of the First Pima-Maricopa Reserve on the Salt River",
+      "issuing_agency": "Salt River Pima-Maricopa Indian Community",
+      "official_url": "https://srpmic-nsn.gov/government/culturalresources/headlines/"
+    },
+    {
+      "source_id": "avondale-srpmic-indigenous-history",
+      "title": "History",
+      "issuing_agency": "Salt River Pima-Maricopa Indian Community",
+      "official_url": "https://www.srpmic-nsn.gov/about/history/"
+    },
+    {
+      "title": "1940 Census of Population, Volume I, Arizona, page 91, Table 5: Population of Incorporated Places, 1940 and 1930",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/library/publications/decennial/1940/population-volume-1/33973538v1ch03.pdf",
+      "source_id": "tolleson-census-1940-arizona-table-5",
+      "city_id": "tolleson"
+    },
+    {
+      "title": "1960 Census of Population, Arizona, printed page 4-9, Table 8: Population of All Incorporated Places, 1940 to 1960",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://azmemory.azlibrary.gov/assets/displaypdf/39750",
+      "source_id": "tolleson-census-1960-arizona-table-8",
+      "city_id": "tolleson"
+    },
+    {
+      "title": "1980 Census of Population and Housing, Advance Reports: Final Population and Housing Unit Counts, Arizona, Table 2: Persons by Race and Spanish Origin and Housing Unit Counts for Places, 1980",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/1980_Census_of_Population_and_Housing.Advance_Reports._Final_Population_and_Housing_Unit_Counts._Arizona_%28IA_1980censusofpopu804unse%29.pdf",
+      "source_id": "tolleson-census-1980-arizona-table-2",
+      "city_id": "tolleson"
+    },
+    {
+      "title": "QuickFacts: Tolleson city, Arizona",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www.census.gov/quickfacts/fact/table/tollesoncityarizona/PST045225",
+      "source_id": "tolleson-census-quickfacts",
+      "city_id": "tolleson"
+    },
+    {
+      "title": "History of Tolleson",
+      "issuing_agency": "City of Tolleson",
+      "official_url": "https://tolleson.az.gov/291/History-of-Tolleson",
+      "source_id": "tolleson-city-history",
+      "city_id": "tolleson"
+    },
+    {
+      "title": "Tolleson Community Profile, Population table; source attribution: U.S. Bureau of the Census, March 2001",
+      "issuing_agency": "City of Tolleson",
+      "official_url": "https://tolleson.az.gov/DocumentCenter/View/2494/Community-Profile?bidId=",
+      "source_id": "tolleson-community-profile-population-2001",
+      "city_id": "tolleson"
+    }
+  ]
+}

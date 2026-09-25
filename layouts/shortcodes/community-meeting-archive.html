@@ -1,0 +1,6 @@
+{{- $cityID := .Get "city_id" -}}
+{{- if not $cityID -}}
+  {{- errorf "community-meeting-archive shortcode requires city_id" -}}
+{{- end -}}
+
+{{ partial "community/meeting-archive-by-year.html" (dict "city_id" $cityID) }}

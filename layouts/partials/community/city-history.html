@@ -1,0 +1,172 @@
+{{- $cityID := .city_id -}}
+{{- $historyCity := false -}}
+
+{{- with (index hugo.Data "history") -}}
+  {{- with (index . "history") -}}
+    {{- with .cities -}}
+      {{- with index . $cityID -}}
+        {{- $historyCity = . -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with $historyCity }}
+  {{- /*
+    Avondale's eight featured milestones are selected by stable event ID.
+    All other events remain in the same chronological list and are revealed
+    in place. Other cities can supply their own featured IDs later.
+  */ -}}
+  {{- $historySources := dict -}}
+  {{- with (index hugo.Data "history") -}}
+    {{- with (index . "history-sources") -}}
+      {{- range .sources -}}
+        {{- $historySources = merge $historySources
+          (dict .source_id .)
+        -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $featuredIDs := slice -}}
+  {{- if eq $cityID "avondale" -}}
+    {{- $featuredIDs = slice
+      "avondale-monument-hill-boundary-survey-1851"
+      "avondale-billy-moore-coldwater-1880"
+      "avondale-town-site-1911"
+      "avondale-incorporation-1946"
+      "avondale-phoenix-raceway-1964"
+      "avondale-nascar-1988"
+      "avondale-monument-hill-national-register-2002"
+      "avondale-80th-anniversary-2026"
+    -}}
+  {{- else if eq $cityID "litchfield-park" -}}
+    {{- $featuredIDs = slice
+      "litchfield-park-kriegbaum-land-claims-1910"
+      "litchfield-park-goodyear-land-purchases-1916"
+      "litchfield-park-rancho-la-loma-1920s"
+      "litchfield-park-community-naming-1926"
+      "litchfield-park-wigwam-public-opening-1929"
+      "litchfield-park-world-war-ii-growth"
+      "litchfield-park-incorporation-1987"
+      "litchfield-park-rancho-la-loma-gift-2009"
+    -}}
+  {{- else if eq $cityID "tolleson" -}}
+    {{- $featuredIDs = slice
+      "tolleson-ranch-purchase-1910"
+      "tolleson-founding-1912"
+      "tolleson-incorporation-1929"
+    -}}
+  {{- end -}}
+
+  {{- $featuredShown := 0 -}}
+  {{- $hiddenCount := 0 -}}
+  {{- range .events -}}
+    {{- if and (in $featuredIDs .record_id) (lt $featuredShown 3) -}}
+      {{- $featuredShown = add $featuredShown 1 -}}
+    {{- else -}}
+      {{- $hiddenCount = add $hiddenCount 1 -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $featuredShown = 0 -}}
+
+  <div class="city-history">
+    {{- with .introduction }}
+      <p class="city-history__intro">{{ . }}</p>
+    {{- end }}
+
+    <ol
+      id="city-history-timeline-{{ $cityID }}"
+      class="city-history__timeline city-history__timeline--unified"
+    >
+      {{- range .events }}
+        {{- $featured := and (in $featuredIDs .record_id) (lt $featuredShown 3) -}}
+        {{- if $featured -}}
+          {{- $featuredShown = add $featuredShown 1 -}}
+        {{- end -}}
+        <li class="city-history__item{{ if $featured }} city-history__item--featured{{ else }} city-history__item--additional{{ end }}"{{ if not $featured }} hidden{{ end }}>
+          <span class="city-history__marker" aria-hidden="true"></span>
+
+          <div class="city-history__body">
+            <p class="city-history__date">
+              {{- with .date_label -}}
+                {{- . -}}
+              {{- else -}}
+                {{- with .date_start -}}
+                  {{- substr . 0 4 -}}
+                {{- end -}}
+              {{- end -}}
+            </p>
+
+            <h3>{{ .title }}</h3>
+            <p>{{ .summary }}</p>
+
+            {{- $eventSources := slice -}}
+            {{- range .source_ids -}}
+              {{- with index $historySources . -}}
+                {{- $eventSources = $eventSources | append . -}}
+              {{- end -}}
+            {{- end -}}
+
+            {{- with $eventSources }}
+              <div class="city-history__sources" aria-label="History sources">
+                <strong class="city-history__sources-label">Source(s):</strong>
+                {{- range . }}
+                  <a href="{{ .official_url }}" rel="noopener noreferrer">
+                    {{ printf "%s | %s" (.issuing_agency | default .title) .title }}
+                  </a>
+                {{- end }}
+              </div>
+            {{- end }}
+
+            {{- if eq .verification_state "disputed" }}
+              <aside class="city-history__dispute" aria-label="Historical source note">
+                <strong>Historical sources differ.</strong>
+                <p>
+                  City of Avondale histories associate Billy Moore with
+                  Coldwater in 1880, while Arizona Memory Project material
+                  gives 1897 for Coldwater's establishment. These may
+                  describe different milestones.
+                </p>
+
+                <div class="city-history__sources"
+                     aria-label="Sources for the historical date discrepancy">
+                  <strong class="city-history__sources-label">Source(s):</strong>
+                  {{- range $eventSources }}
+                    {{- if or
+                      (eq .title "History")
+                      (eq .title "Avondale")
+                    }}
+                      <a href="{{ .official_url }}"
+                         rel="noopener noreferrer">
+                        {{ printf "%s | %s" (.issuing_agency | default .title) .title }}
+                      </a>
+                    {{- end }}
+                  {{- end }}
+                </div>
+              </aside>
+            {{- end }}
+          </div>
+        </li>
+      {{- end }}
+    </ol>
+
+    {{- if gt $hiddenCount 0 }}
+      <button
+        class="city-history__toggle-label home-coming-soon__details"
+        type="button"
+        aria-expanded="false"
+        aria-controls="city-history-timeline-{{ $cityID }}"
+        data-history-toggle
+        data-history-city="{{ $cityID }}"
+      >
+        <span class="city-history__expand-label">
+          Show more history ({{ len .events }})
+        </span>
+        <span class="city-history__collapse-label" hidden>
+          Show less history
+        </span>
+      </button>
+    {{- end }}
+  </div>
+{{- end }}

@@ -1,0 +1,46 @@
+{{- $issues := .issues -}}
+{{- $cityID := .city_id -}}
+
+{{- if gt (len $issues) 0 -}}
+  <section class="local-issue-group">
+    <header class="local-issue-group__header">
+      <h3>{{ .title }}</h3>
+      {{ with .description }}
+        <p>{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="local-issue-group__items">
+      {{- range $issues -}}
+        <article class="local-issue">
+          <div class="local-issue__heading">
+            <div>
+              <h4>{{ .title }}</h4>
+
+              {{ with .status }}
+                <p class="local-issue__status local-issue__status--{{ . }}">
+                  {{ . | humanize }}
+                </p>
+              {{ end }}
+            </div>
+          </div>
+
+          {{ with .summary }}
+            <p class="local-issue__summary">
+              {{ . }}
+            </p>
+          {{ end }}
+
+          <div class="local-issue__actions">
+            <a
+              class="button button--secondary"
+              href="{{ printf "/communities/%s/issues/%s/" $cityID .slug }}"
+            >
+              View topic
+            </a>
+          </div>
+        </article>
+      {{- end -}}
+    </div>
+  </section>
+{{- end -}}

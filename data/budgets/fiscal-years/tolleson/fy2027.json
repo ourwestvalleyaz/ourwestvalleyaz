@@ -1,0 +1,142 @@
+{
+  "city_id": "tolleson",
+  "fiscal_year": "FY2027",
+  "fiscal_period": {
+    "start": "2026-07-01",
+    "end": "2027-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 247153697,
+    "currency": "USD",
+    "scope": "all_funds",
+    "measure": "budgeted_expenditures_expenses"
+  },
+  "adoption": {
+    "date": "2026-06-09",
+    "authority_type": "resolution",
+    "authority_identifier": "2645",
+    "authority_title": "Resolution No. 2645",
+    "governing_body": {
+      "name": "Tolleson City Council",
+      "context": "final adoption",
+      "members": [
+        {
+          "name": "Juan F. Rodriguez",
+          "role": "mayor"
+        }
+      ]
+    }
+  },
+  "source_ids": [
+    "tolleson-fy2027-adopted-budget"
+  ],
+  "source": {
+    "title": "Detailed Adopted Budget FY 2026-2027",
+    "publisher": "City of Tolleson",
+    "document_type": "official adopted budget",
+    "url": "https://www.tolleson.az.gov/DocumentCenter/View/10139/Detailed-Adopted-Budget-FY-2026-2027-PDF",
+    "accessed": "2026-09-15"
+  },
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-17"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2026",
+    "adopted_budget": 233685526,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 13468171,
+    "percent_change": 5.8,
+    "summary": "FY2027 budgeted expenditures/expenses increased by $13,468,171 compared with FY2026 adopted/adjusted budgeted expenditures/expenses, an increase of 5.8%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 89585650,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a",
+      "percent_of_measure": 36.2
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Fund",
+      "amount": 64566846,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a",
+      "percent_of_measure": 26.1
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 4301075,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a",
+      "percent_of_measure": 1.7
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 25300000,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a",
+      "percent_of_measure": 10.2
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 63400126,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a",
+      "percent_of_measure": 25.7
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 148851713,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2027 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "This is the final Schedule A estimate of revenues other than property taxes and is distinct from total financial resources available or total budgeted expenditures/expenses."
+  },
+  "property_tax": {
+    "primary_levy": 5015036,
+    "secondary_levy": 3882000,
+    "total_levy": 8897036,
+    "primary_rate": 1.5204,
+    "secondary_rate": 1.1556,
+    "combined_rate": 2.676,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2027 Schedule B."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 25300000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "final_adopted_schedule_e",
+        "label": "Capital Projects Fund",
+        "note": "FY2027 Schedule E budgeted expenditures/expenses. The Aquatics Center is the sole listed Capital Projects Fund item."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Aquatics Center",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 25300000,
+        "total": 25300000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2027",
+        "description": "Schedule E identifies $25,300,000 in FY2027 budgeted expenditures/expenses for the Aquatics Center under the Capital Projects Fund. This amount represents FY2027 budget authority and should not be interpreted as the total lifetime cost of the project."
+      }
+    ],
+    "selection_method": "complete_capital_projects_fund_schedule_e",
+    "selection_definition": "Schedule E lists one Capital Projects Fund item for FY2027: the Aquatics Center.",
+    "note": "The $25,300,000 capital measure reconciles exactly to the FY2027 Capital Projects Fund amount in Schedule A and Schedule E."
+  }
+}

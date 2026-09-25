@@ -1,0 +1,7 @@
+<div class="owvaz-ballot-date">
+  <dt>{{ .Get "label" }}</dt>
+  <dd>{{ .Get "date" }}</dd>
+  <div class="owvaz-ballot-date__detail">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

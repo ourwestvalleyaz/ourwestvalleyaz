@@ -1,0 +1,11 @@
+<div class="owvaz-ballot-financial-figure">
+  <div class="owvaz-ballot-financial-figure__value">
+    {{ .Get "value" }}
+  </div>
+  <div class="owvaz-ballot-financial-figure__label">
+    {{ .Get "label" }}
+  </div>
+  <div class="owvaz-ballot-financial-figure__detail">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

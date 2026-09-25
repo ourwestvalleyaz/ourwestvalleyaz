@@ -22,25 +22,37 @@
     </div>
   </header>
 
-  <nav class="section-nav site-shell content-width"
-       aria-label="{{ $city.name }} quick links">
-    <span class="section-nav__label">Quick links</span>
+  {{- $hasCityHistory := false -}}
+  {{- with (index hugo.Data "history") -}}
+    {{- with (index . "history") -}}
+      {{- with .cities -}}
+        {{- with index . $city.id -}}
+          {{- $hasCityHistory = true -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 
-    <div class="section-nav__links">
-      <a href="#quick-reference">Quick Reference</a>
-      <a href="#budget">Budget</a>
-      <a href="#local-government">Local Government</a>
-      <a href="#meetings">Meetings</a>
-      <a href="#local-issues">Local Issues</a>
-      <a href="#public-records">Search {{ $city.name }}</a>
-    </div>
-  </nav>
+{{ partial "community/section-nav.html" (dict
+  "city" $city
+  "has_city_history" $hasCityHistory
+) }}
 
-  
 {{ $stickySections := slice
   (dict "id" "quick-reference"
         "label" "Quick Reference"
         "name" "Resident Quick Reference")
+}}
+
+{{ if $hasCityHistory }}
+  {{ $stickySections = $stickySections | append
+    (dict "id" "history"
+          "label" "History"
+          "name" "City History")
+  }}
+{{ end }}
+
+{{ $stickySections = $stickySections | append
   (dict "id" "budget"
         "label" "Budget"
         "name" "Budget & Spending")
@@ -49,13 +61,13 @@
         "name" "Local Government")
   (dict "id" "meetings"
         "label" "Meetings"
-        "name" "Upcoming Meetings")
+        "name" "Meetings")
   (dict "id" "local-issues"
-        "label" "Issues"
-        "name" "Local Issues")
+        "label" "Topics"
+        "name" "Civic Topics")
   (dict "id" "public-records"
         "label" "Search"
-        "name" "Search Avondale")
+        "name" (printf "Search %s" $city.name))
   (dict "id" "official-sources"
         "label" "Sources"
         "name" "Official Sources")
@@ -68,15 +80,30 @@
 ) }}
 
 
-  <section id="quick-reference" class="section">
+  <section id="quick-reference" class="section community-section-band community-section-band--a">
     <div class="site-shell content-width">
       <header class="section-heading">
         <h2>Resident Quick Reference</h2>
 
-  {{ partial "community/quick-reference.html" (dict "city_id" $city.id) }}
+          <p class="quick-reference__intro">Common city services and official links residents may need most often.</p>
+{{ partial "community/quick-reference.html" (dict "city_id" $city.id) }}
 </section>
 
-  <section id="budget" class="section section--soft">
+  {{- if $hasCityHistory }}
+  <section id="history" class="section section--soft community-section-band community-section-band--b">
+    <div class="site-shell content-width">
+      <header class="section-heading">
+        <h2>City History</h2>
+      </header>
+
+      {{ partial "community/city-history.html"
+        (dict "city_id" $city.id)
+      }}
+    </div>
+  </section>
+  {{- end }}
+
+  <section id="budget" class="section section--soft community-section-band community-section-band--a">
     <div class="site-shell content-width">
       <header class="section-heading">
         <h2>Budget &amp; Spending</h2>
@@ -88,7 +115,7 @@
     </div>
   </section>
 
-  <section id="local-government" class="section">
+  <section id="local-government" class="section community-section-band community-section-band--b">
     <div class="site-shell content-width">
       <header class="section-heading">
         <h2>Local Government</h2>
@@ -100,22 +127,26 @@
     </div>
   </section>
 
-  <section id="meetings" class="section section--soft">
+  <section id="meetings" class="section section--soft community-section-band community-section-band--a">
     <div class="site-shell content-width">
       <header class="section-heading">
-        <h2>Upcoming Meetings</h2>
+        <h2>Meetings</h2>
       </header>
 
       {{ partial "community/upcoming-meetings.html"
         (dict "city_id" $city.id)
       }}
+
+      {{ partial "community/meeting-archive.html"
+        (dict "city_id" $city.id)
+      }}
     </div>
   </section>
 
-  <section id="local-issues" class="section">
+  <section id="local-issues" class="section community-section-band community-section-band--b">
     <div class="site-shell content-width">
       <header class="section-heading">
-        <h2>Local Issues</h2>
+        <h2>Civic Topics</h2>
       </header>
 
       {{ partial "community/local-issues.html"
@@ -124,7 +155,7 @@
     </div>
   </section>
 
-  <section id="public-records" class="section section--soft">
+  <section id="public-records" class="section section--soft community-section-band community-section-band--a">
     <div class="site-shell content-width">
       <header class="section-heading">
         <h2>Search {{ $city.name }}</h2>
@@ -139,18 +170,149 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section community-section-band community-section-band--b">
     <div class="site-shell content-width">
+      {{- $officialSourceIDs := slice -}}
+      {{- $officialSourceGroups := slice -}}
+
+      {{- if eq $city.id "avondale" -}}
+        {{- $officialSourceIDs = slice
+          "avondale-mayor-council"
+          "avondale-public-meetings"
+          "avondale-civicclerk-portal"
+          "avondale-fy2027-final-budget"
+        -}}
+      {{- else if eq $city.id "tolleson" -}}
+        {{- $officialSourceIDs = slice
+          "tolleson-current-city-council"
+          "tolleson-city-calendar"
+          "tolleson-civicclerk-portal"
+          "tolleson-city-history"
+          "tolleson-census-1940-arizona-table-5"
+          "tolleson-census-1960-arizona-table-8"
+          "tolleson-census-1980-arizona-table-2"
+          "tolleson-community-profile-population-2001"
+          "tolleson-census-quickfacts"
+          "tolleson-fy2019-adopted-budget"
+          "tolleson-fy2020-adopted-budget"
+          "tolleson-fy2021-adopted-budget"
+          "tolleson-fy2022-adopted-budget"
+          "tolleson-fy2023-adopted-budget"
+          "tolleson-fy2024-adopted-budget"
+          "tolleson-fy2025-adopted-budget"
+          "tolleson-fy2026-adopted-budget"
+          "tolleson-fy2027-adopted-budget"
+          "tolleson-utilities"
+          "tolleson-utility-service"
+          "tolleson-sanitation"
+          "tolleson-city-clerk"
+          "tolleson-code-violation"
+          "tolleson-police-non-emergency"
+          "tolleson-micro-transit"
+          "tolleson-parks-recreation"
+          "tolleson-prop416-amended-call-election"
+          "tolleson-prop416-call-for-arguments"
+          "tolleson-prop416-faq"
+          "tolleson-prop416-permanent-base-adjustment"
+          "tolleson-2020-general-election-propositions"
+          "maricopa-2020-tolleson-proposition-results"
+        -}}
+
+        {{- $governmentMeetingSources := slice
+          "tolleson-current-city-council"
+          "tolleson-city-calendar"
+          "tolleson-civicclerk-portal"
+        -}}
+
+        {{- $historyPopulationSources := slice
+          "tolleson-city-history"
+          "tolleson-census-1940-arizona-table-5"
+          "tolleson-census-1960-arizona-table-8"
+          "tolleson-census-1980-arizona-table-2"
+          "tolleson-community-profile-population-2001"
+          "tolleson-census-quickfacts"
+        -}}
+
+        {{- $budgetSources := slice
+          "tolleson-fy2019-adopted-budget"
+          "tolleson-fy2020-adopted-budget"
+          "tolleson-fy2021-adopted-budget"
+          "tolleson-fy2022-adopted-budget"
+          "tolleson-fy2023-adopted-budget"
+          "tolleson-fy2024-adopted-budget"
+          "tolleson-fy2025-adopted-budget"
+          "tolleson-fy2026-adopted-budget"
+          "tolleson-fy2027-adopted-budget"
+        -}}
+
+        {{- $residentServiceSources := slice
+          "tolleson-utilities"
+          "tolleson-utility-service"
+          "tolleson-sanitation"
+          "tolleson-city-clerk"
+          "tolleson-code-violation"
+          "tolleson-police-non-emergency"
+          "tolleson-micro-transit"
+          "tolleson-parks-recreation"
+        -}}
+
+        {{- $electionCivicSources := slice
+          "tolleson-prop416-amended-call-election"
+          "tolleson-prop416-call-for-arguments"
+          "tolleson-prop416-faq"
+          "tolleson-prop416-permanent-base-adjustment"
+          "tolleson-2020-general-election-propositions"
+          "maricopa-2020-tolleson-proposition-results"
+        -}}
+
+        {{- $governmentMeetingGroup := dict
+          "label" "Government & Meetings"
+          "source_ids" $governmentMeetingSources
+        -}}
+
+        {{- $historyPopulationGroup := dict
+          "label" "City History & Population"
+          "source_ids" $historyPopulationSources
+        -}}
+
+        {{- $budgetGroup := dict
+          "label" "Budgets"
+          "source_ids" $budgetSources
+        -}}
+
+        {{- $residentServiceGroup := dict
+          "label" "Resident Services"
+          "source_ids" $residentServiceSources
+        -}}
+
+        {{- $electionCivicGroup := dict
+          "label" "Elections & Civic Topics"
+          "source_ids" $electionCivicSources
+        -}}
+
+        {{- $officialSourceGroups = slice
+          $governmentMeetingGroup
+          $historyPopulationGroup
+          $budgetGroup
+          $residentServiceGroup
+          $electionCivicGroup
+        -}}
+      {{- else if eq $city.id "litchfield-park" -}}
+        {{- $officialSourceIDs = slice
+          "litchfield-park-mayor-council"
+          "litchfield-park-agendas-minutes"
+          "litchfield-park-city-charter"
+          "litchfield-park-fy2027-city-budget"
+        -}}
+      {{- end -}}
+
       {{ partial "sources/official-sources.html"
         (dict
-          "source_ids" (slice
-            "avondale-mayor-council"
-            "avondale-public-meetings"
-            "avondale-civicclerk-portal"
-            "avondale-fy2027-final-budget"
-          )
-          "context" "Avondale Community"
-          "intro" "Primary City of Avondale sources supporting the civic information on this page."
+          "source_ids" $officialSourceIDs
+          "source_groups" $officialSourceGroups
+          "context" (printf "%s Community" $city.name)
+          "collapsed" true
+          "intro" (printf "Primary City of %s sources supporting the civic information on this page." $city.name)
         )
       }}
 

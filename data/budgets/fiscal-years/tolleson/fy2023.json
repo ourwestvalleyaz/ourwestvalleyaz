@@ -1,0 +1,142 @@
+{
+  "city_id": "tolleson",
+  "fiscal_year": "FY2023",
+  "fiscal_period": {
+    "start": "2022-07-01",
+    "end": "2023-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 165420011,
+    "currency": "USD",
+    "scope": "all_funds",
+    "measure": "budgeted_expenditures_expenses"
+  },
+  "adoption": {
+    "date": "2022-06-14",
+    "authority_type": "resolution",
+    "authority_identifier": "2494",
+    "authority_title": "Resolution No. 2494",
+    "governing_body": {
+      "name": "Tolleson City Council",
+      "context": "final adoption",
+      "members": [
+        {
+          "name": "Juan F. Rodriguez",
+          "role": "mayor"
+        }
+      ]
+    }
+  },
+  "source_ids": [
+    "tolleson-fy2023-adopted-budget"
+  ],
+  "source": {
+    "title": "Detailed Adopted Budget FY 2022-2023",
+    "publisher": "City of Tolleson",
+    "document_type": "official adopted budget",
+    "url": "https://www.tolleson.az.gov/DocumentCenter/View/6799/Detailed-Adopted-Budget-FY-2022-2023-PDF",
+    "accessed": "2026-09-15"
+  },
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-15"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2022",
+    "adopted_budget": 109104059,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 56315952,
+    "percent_change": 51.6,
+    "summary": "FY2023 budgeted expenditures/expenses increased by $56,315,952 compared with FY2022 adopted/adjusted budgeted expenditures/expenses, a increase of 51.6%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 51485750,
+      "percent_of_measure": 31.1,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Fund",
+      "amount": 55358701,
+      "percent_of_measure": 33.5,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 4129932,
+      "percent_of_measure": 2.5,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 21000000,
+      "percent_of_measure": 12.7,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 33445628,
+      "percent_of_measure": 20.2,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 142934900,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2023 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "This is the final Schedule A estimate of revenues other than property taxes and is distinct from total financial resources available or total budgeted expenditures/expenses."
+  },
+  "property_tax": {
+    "primary_levy": 4398457,
+    "secondary_levy": 3017000,
+    "total_levy": 7415457,
+    "primary_rate": 1.5894,
+    "secondary_rate": 1.0902,
+    "combined_rate": 2.6796,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2023 Schedule B."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 21000000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "final_adopted_schedule_e",
+        "label": "Capital Projects Fund",
+        "note": "FY2023 Schedule E budgeted expenditures/expenses."
+      }
+    ],
+    "projects": [
+      {
+        "name": "Aquatics Center",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 21000000,
+        "total": 21000000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2023",
+        "description": "Schedule E identifies $21,000,000 in FY2023 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      }
+    ],
+    "selection_method": "complete_capital_projects_fund_schedule_e",
+    "selection_definition": "All Capital Projects Fund items listed in FY2023 Schedule E.",
+    "note": "The $21,000,000 capital measure reconciles exactly to the Capital Projects Fund amount in the final schedules."
+  }
+}

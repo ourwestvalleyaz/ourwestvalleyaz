@@ -1,0 +1,78 @@
+{{- $cityID := .city_id -}}
+{{- if not $cityID -}}
+  {{- errorf "meeting-archive-by-year partial requires city_id" -}}
+{{- end -}}
+
+{{- $meetingRoot := index hugo.Data "meetings" -}}
+{{- $meetingFile := index $meetingRoot "meetings" -}}
+{{- $allMeetings := index $meetingFile "meetings" -}}
+
+{{- $cityMeetings := where $allMeetings "city_id" $cityID -}}
+{{- $archive := slice -}}
+
+{{- range $cityMeetings -}}
+  {{- if or
+      (eq .status "completed")
+      (eq .status "cancelled")
+      (eq .status "rescheduled")
+  -}}
+    {{- $archive = $archive | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $archive = sort $archive "date" "desc" -}}
+{{- $currentYear := now.Format "2006" -}}
+
+{{- if gt (len $archive) 0 -}}
+  {{- $years := slice -}}
+
+  {{- range $archive -}}
+    {{- $year := time.Format "2006" .date -}}
+    {{- if not (in $years $year) -}}
+      {{- $years = $years | append $year -}}
+    {{- end -}}
+  {{- end -}}
+
+  <div class="meeting-archive-page meeting-archive-page--by-year">
+    {{- range $years -}}
+      {{- $year := . -}}
+      {{- $yearMeetings := slice -}}
+
+      {{- range $archive -}}
+        {{- if eq (time.Format "2006" .date) $year -}}
+          {{- $yearMeetings = $yearMeetings | append . -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- $completedCount := len (where $yearMeetings "status" "completed") -}}
+      {{- $cancelledCount := len (where $yearMeetings "status" "cancelled") -}}
+      {{- $rescheduledCount := len (where $yearMeetings "status" "rescheduled") -}}
+
+      <details class="meeting-year-group"{{ if eq $year $currentYear }} open{{ end }}>
+        <summary class="meeting-year-summary">
+          <span class="meeting-year-summary__title">{{ $year }}</span>
+          <span class="meeting-year-summary__meta">
+            {{ len $yearMeetings }} meeting{{ if ne (len $yearMeetings) 1 }}s{{ end }}
+            <span class="meeting-year-summary__breakdown">
+              {{- if $completedCount -}}{{ $completedCount }} completed{{- end -}}
+              {{- if and $completedCount (or $cancelledCount $rescheduledCount) }} · {{ end -}}
+              {{- if $cancelledCount -}}{{ $cancelledCount }} cancelled{{- end -}}
+              {{- if and $cancelledCount $rescheduledCount }} · {{ end -}}
+              {{- if $rescheduledCount -}}{{ $rescheduledCount }} rescheduled{{- end -}}
+            </span>
+          </span>
+        </summary>
+
+        <ul class="meeting-card-list meeting-archive-page__list meeting-year-group__list">
+          {{- range $yearMeetings -}}
+            <li>
+              {{ partial "community/meeting-card.html" (dict "meeting" .) }}
+            </li>
+          {{- end -}}
+        </ul>
+      </details>
+    {{- end -}}
+  </div>
+{{- else -}}
+  <p>No verified meeting archive records are currently listed.</p>
+{{- end -}}

@@ -1,0 +1,28 @@
+{{- $city := .city -}}
+{{- $cityID := .city_id | default "" -}}
+{{- if and (not $cityID) $city -}}
+  {{- $cityID = $city.id -}}
+{{- end -}}
+{{- $cityName := .city_name | default "" -}}
+{{- if and (not $cityName) $city -}}
+  {{- $cityName = $city.name -}}
+{{- end -}}
+{{- $section := .section | default "" -}}
+{{- $class := .class | default "owvaz-detail-page__return" -}}
+{{- $ariaLabel := .aria_label | default "Back to community" -}}
+{{- $label := .label | default (printf "Back to %s" $cityName) -}}
+
+{{- if and $cityID $cityName -}}
+  {{- $href := printf "/communities/%s/" $cityID -}}
+  {{- if $section -}}
+    {{- $href = printf "/communities/%s/#%s" $cityID $section -}}
+  {{- end -}}
+
+  <nav class="{{ $class }}" aria-label="{{ $ariaLabel }}">
+    <a href="{{ $href }}">
+      ← {{ $label }}
+    </a>
+  </nav>
+{{- else -}}
+  {{- errorf "community/back-to-city.html requires city_id and city_name or a city object" -}}
+{{- end -}}

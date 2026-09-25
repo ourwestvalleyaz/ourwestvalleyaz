@@ -24,117 +24,37 @@
 {{- $upcoming = sort $upcoming "date" "asc" -}}
 
 {{- if gt (len $upcoming) 0 -}}
-
   {{- $next := index $upcoming 0 -}}
 
   <div class="meetings-summary">
+    <h3>Next public meeting</h3>
 
-    <article class="meeting-next{{ if eq $next.status "cancelled" }} meeting-next--cancelled{{ end }}">
-      <div class="meeting-next__date" aria-label="{{ time.Format "January 2, 2006" $next.date }}">
-        <span class="meeting-next__month">
-          {{ time.Format "Jan" $next.date }}
-        </span>
-        <strong class="meeting-next__day">
-          {{ time.Format "2" $next.date }}
-        </strong>
-      </div>
-
-      <div class="meeting-next__body">
-        <div class="meeting-next__heading">
-          <div>
-            <p class="meeting-next__label">Next public meeting</p>
-            <h3>{{ $next.governing_body }}</h3>
-            <p class="meeting-next__meeting-date">
-              {{ time.Format "Monday, January 2, 2006" $next.date }}
-            </p>
-          </div>
-
-          {{ if ne $next.status "scheduled" }}
-            <span class="meeting-status meeting-status--{{ $next.status }}">
-              {{ $next.status | humanize }}
-            </span>
-          {{ end }}
-        </div>
-
-        <div class="meeting-next__facts">
-          {{ with $next.time }}
-            <span>
-              {{ time.Format "3:04 PM" (printf "2000-01-01T%s:00" .) }}
-            </span>
-          {{ end }}
-
-          {{ with $next.location }}
-            <span>{{ . }}</span>
-          {{ end }}
-        </div>
-
-        <div class="meeting-actions">
-          {{ with $next.agenda_url }}
-            <a class="button button--primary" href="{{ . }}">
-              Agenda
-            </a>
-          {{ end }}
-
-          {{ with $next.recording_url }}
-            <a class="button button--secondary" href="{{ . }}">
-              Watch
-            </a>
-          {{ end }}
-
-          {{ with $next.minutes_url }}
-            <a class="button button--secondary" href="{{ . }}">
-              Minutes
-            </a>
-          {{ end }}
-
-          {{ with $next.official_page_url }}
-            <a class="button button--secondary" href="{{ . }}">
-              Meeting details
-            </a>
-          {{ end }}
-        </div>
-      </div>
-    </article>
+    {{ partial "community/meeting-card.html"
+      (dict
+        "meeting" $next
+        "featured" true
+      )
+    }}
 
     {{ if gt (len $upcoming) 1 }}
       <div class="meeting-following">
         <h3>Following meetings</h3>
 
-        <ul class="meeting-following__list">
+        <ul class="meeting-card-list">
           {{ range first 3 (after 1 $upcoming) }}
             <li>
-              <span class="meeting-following__date">
-                {{ time.Format "Jan 2" .date }}
-              </span>
-
-              <span class="meeting-following__body">
-                {{ .governing_body }}
-              </span>
-
-              {{ with .time }}
-                <span class="meeting-following__time">
-                  {{ time.Format "3:04 PM" (printf "2000-01-01T%s:00" .) }}
-                </span>
-              {{ end }}
-
-              {{ if ne .status "scheduled" }}
-                <span class="meeting-status meeting-status--{{ .status }}">
-                  {{ .status | humanize }}
-                </span>
-              {{ end }}
+              {{ partial "community/meeting-card.html"
+                (dict "meeting" .)
+              }}
             </li>
           {{ end }}
         </ul>
       </div>
     {{ end }}
-
   </div>
-
 {{- else -}}
-
   {{ partial "community/empty-state.html"
     (dict "message"
       "No verified upcoming public meetings are currently listed.")
   }}
-
 {{- end -}}

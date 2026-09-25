@@ -38,7 +38,7 @@
       "slug": "litchfield-park",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": true
     },
     {
       "id": "peoria",
@@ -62,7 +62,7 @@
       "slug": "tolleson",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": true
     }
   ]
 }

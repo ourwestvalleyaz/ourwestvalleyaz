@@ -1,0 +1,160 @@
+{
+  "city_id": "tolleson",
+  "fiscal_year": "FY2022",
+  "fiscal_period": {
+    "start": "2021-07-01",
+    "end": "2022-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 109104059,
+    "currency": "USD",
+    "scope": "all_funds",
+    "measure": "budgeted_expenditures_expenses"
+  },
+  "adoption": {
+    "date": "2021-06-08",
+    "authority_type": "resolution",
+    "authority_identifier": "2463",
+    "authority_title": "Resolution No. 2463",
+    "governing_body": {
+      "name": "Tolleson City Council",
+      "context": "final adoption",
+      "members": [
+        {
+          "name": "Juan F. Rodriguez",
+          "role": "mayor"
+        }
+      ]
+    }
+  },
+  "source_ids": [
+    "tolleson-fy2022-adopted-budget"
+  ],
+  "source": {
+    "title": "Detailed Adopted Budget FY 2021-2022",
+    "publisher": "City of Tolleson",
+    "document_type": "official adopted budget",
+    "url": "https://www.tolleson.az.gov/DocumentCenter/View/5940/Detailed-Adopted-Budget-FY-2021-2022-PDF",
+    "accessed": "2026-09-15"
+  },
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-15"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2021",
+    "adopted_budget": 89064984,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 20039075,
+    "percent_change": 22.5,
+    "summary": "FY2022 budgeted expenditures/expenses increased by $20,039,075 compared with FY2021 adopted/adjusted budgeted expenditures/expenses, a increase of 22.5%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 42800905,
+      "percent_of_measure": 39.2,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Fund",
+      "amount": 17516616,
+      "percent_of_measure": 16.1,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 4107136,
+      "percent_of_measure": 3.8,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 19235149,
+      "percent_of_measure": 17.6,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 25444253,
+      "percent_of_measure": 23.3,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 87386731,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2022 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "This is the final Schedule A estimate of revenues other than property taxes and is distinct from total financial resources available or total budgeted expenditures/expenses."
+  },
+  "property_tax": {
+    "primary_levy": 4280110,
+    "secondary_levy": 2825100,
+    "total_levy": 7105210,
+    "primary_rate": 1.6551,
+    "secondary_rate": 1.0925,
+    "combined_rate": 2.7476,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2022 Schedule B."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 19235149,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "final_adopted_schedule_e",
+        "label": "Capital Projects Fund",
+        "note": "FY2022 Schedule E budgeted expenditures/expenses."
+      }
+    ],
+    "projects": [
+      {
+        "name": "City Hall Construction Fund",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 11000000,
+        "total": 11000000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2022",
+        "description": "Schedule E identifies $11,000,000 in FY2022 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      },
+      {
+        "name": "Construction Fund",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 3235149,
+        "total": 3235149,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2022",
+        "description": "Schedule E identifies $3,235,149 in FY2022 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      },
+      {
+        "name": "Construction Fund 2021",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 5000000,
+        "total": 5000000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2022",
+        "description": "Schedule E identifies $5,000,000 in FY2022 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      }
+    ],
+    "selection_method": "complete_capital_projects_fund_schedule_e",
+    "selection_definition": "All Capital Projects Fund items listed in FY2022 Schedule E.",
+    "note": "The $19,235,149 capital measure reconciles exactly to the Capital Projects Fund amount in the final schedules."
+  }
+}

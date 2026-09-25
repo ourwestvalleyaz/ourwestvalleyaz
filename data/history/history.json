@@ -1,0 +1,871 @@
+{
+  "schema_version": 1,
+  "cities": {
+    "tolleson": {
+      "city_id": "tolleson",
+      "title": "City History",
+      "introduction": "Tolleson's history reflects its development from an agricultural settlement into a West Valley city with industrial, distribution, and residential communities.",
+      "chapters": [],
+      "presentation": {},
+      "events": [
+        {
+          "title": "The Tolleson family arrives in Arizona",
+          "date_start": "1908",
+          "category": "settlement",
+          "record_id": "tolleson-family-arrives-1908",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1908",
+          "date_end": null,
+          "summary": "The Tolleson family migrated from South Carolina to Arizona in 1908.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Tolleson family purchases a ranch",
+          "date_start": "1910",
+          "category": "settlement",
+          "record_id": "tolleson-ranch-purchase-1910",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1910",
+          "date_end": null,
+          "summary": "The Tolleson family purchased a 160-acre ranch at the intersection of 91st Avenue and Van Buren Street for $16,000.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Tolleson is founded",
+          "date_start": "1912",
+          "category": "founding",
+          "record_id": "tolleson-founding-1912",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1912",
+          "date_end": null,
+          "summary": "Walter G. and Alethea H. Tolleson founded Tolleson in 1912. The city's history identifies the reopened Ten Mile Store as the nucleus of the new town.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Tolleson incorporates",
+          "date_start": "1929",
+          "category": "government",
+          "record_id": "tolleson-incorporation-1929",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1929",
+          "date_end": null,
+          "summary": "Tolleson incorporated in 1929.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Great Depression affects Tolleson",
+          "date_start": "1930",
+          "category": "economy",
+          "record_id": "tolleson-depression-1930s",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1930s",
+          "date_end": null,
+          "summary": "Tolleson experienced the effects of the Great Depression during the 1930s.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 910 residents",
+          "date_start": "1930",
+          "category": "population",
+          "record_id": "tolleson-population-1930",
+          "source_ids": [
+            "tolleson-census-1940-arizona-table-5"
+          ],
+          "date_label": "1930",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau reports 910 residents in Tolleson in 1930. The figure appears in the 1940 Census of Population, Volume I, Arizona section, printed page 91, Table 5.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Agricultural production recovers",
+          "date_start": "1940",
+          "category": "economy",
+          "record_id": "tolleson-agricultural-recovery-1940s",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1940s",
+          "date_end": null,
+          "summary": "Agriculture in the surrounding area began a recovery in the 1940s, providing an economic boost to Tolleson.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 1,731 residents",
+          "date_start": "1940",
+          "category": "population",
+          "record_id": "tolleson-population-1940",
+          "source_ids": [
+            "tolleson-census-1940-arizona-table-5"
+          ],
+          "date_label": "1940",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau reports 1,731 residents in Tolleson in 1940. The figure appears in the 1940 Census of Population, Volume I, Arizona section, printed page 91, Table 5.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 3,042 residents",
+          "date_start": "1950",
+          "category": "population",
+          "record_id": "tolleson-population-1950",
+          "source_ids": [
+            "tolleson-census-1960-arizona-table-8"
+          ],
+          "date_label": "1950",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau reports 3,042 residents in Tolleson in 1950. The figure appears in the 1960 Census of Population, Arizona section, printed page 4-9, Table 8.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Tolleson becomes known for vegetable production",
+          "date_start": "1950",
+          "category": "economy",
+          "record_id": "tolleson-vegetable-center-1950s",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1950s",
+          "date_end": null,
+          "summary": "By the 1950s, Tolleson had become known as the 'Vegetable Center of the World.'",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Agricultural employment declines",
+          "date_start": "1960",
+          "category": "economy",
+          "record_id": "tolleson-agricultural-transition-1960s",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "Early 1960s",
+          "date_end": null,
+          "summary": "The city's history describes a rapid decline in agribusiness during the early 1960s. Changes in farming machinery, shipping methods, and vegetable acreage reduced the need for packing sheds and associated employment.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 3,886 residents",
+          "date_start": "1960",
+          "category": "population",
+          "record_id": "tolleson-population-1960",
+          "source_ids": [
+            "tolleson-census-1960-arizona-table-8"
+          ],
+          "date_label": "1960",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau reports 3,886 residents in Tolleson in 1960. The figure appears in the 1960 Census of Population, Arizona section, printed page 4-9, Table 8.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Infrastructure investments support development",
+          "date_start": "1970",
+          "category": "infrastructure",
+          "record_id": "tolleson-infrastructure-1970s",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1970s",
+          "date_end": null,
+          "summary": "During the 1970s, city planners developed a master plan, began street beautification projects, encouraged housing development, and built a $2 million sewage treatment plant to support industrial and residential growth.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 3,881 residents",
+          "date_start": "1970",
+          "category": "population",
+          "record_id": "tolleson-population-1970",
+          "source_ids": [
+            "tolleson-census-1980-arizona-table-2"
+          ],
+          "date_label": "1970",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau reports 3,881 residents in Tolleson in 1970. The figure appears in the 1980 Census of Population and Housing, Arizona, Table 2, Tolleson city row.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "Distribution centers reshape the local economy",
+          "date_start": "1980",
+          "category": "economy",
+          "record_id": "tolleson-distribution-centers-1980s",
+          "source_ids": [
+            "tolleson-city-history"
+          ],
+          "date_label": "1980s",
+          "date_end": null,
+          "summary": "Fry's Food and Drug and Albertson's distribution centers arrived during the 1980s. The city's history describes their role in attracting additional industrial development.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 4,433 residents",
+          "date_start": "1980",
+          "category": "population",
+          "record_id": "tolleson-population-1980",
+          "source_ids": [
+            "tolleson-census-1980-arizona-table-2"
+          ],
+          "date_label": "1980",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau reports 4,433 residents in Tolleson in 1980. The figure appears in the 1980 Census of Population and Housing, Arizona, Table 2, Tolleson city row.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 4,434 residents",
+          "date_start": "1990",
+          "category": "population",
+          "record_id": "tolleson-population-1990",
+          "source_ids": [
+            "tolleson-community-profile-population-2001"
+          ],
+          "date_label": "1990",
+          "date_end": null,
+          "summary": "The Tolleson Community Profile reports 4,434 residents in 1990. Its population table attributes the figures to the U.S. Bureau of the Census, March 2001.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 4,974 residents",
+          "date_start": "2000",
+          "category": "population",
+          "record_id": "tolleson-population-2000",
+          "source_ids": [
+            "tolleson-community-profile-population-2001"
+          ],
+          "date_label": "2000",
+          "date_end": null,
+          "summary": "The Tolleson Community Profile reports 4,974 residents in 2000. Its population table attributes the figures to the U.S. Bureau of the Census, March 2001.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 6,545 residents",
+          "date_start": "2010",
+          "category": "population",
+          "record_id": "tolleson-population-2010",
+          "source_ids": [
+            "tolleson-census-quickfacts"
+          ],
+          "date_label": "2010",
+          "date_end": null,
+          "summary": "The 2010 Census counted 6,545 residents in Tolleson on April 1, 2010.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census counts 7,216 residents",
+          "date_start": "2020",
+          "category": "population",
+          "record_id": "tolleson-population-2020",
+          "source_ids": [
+            "tolleson-census-quickfacts"
+          ],
+          "date_label": "2020",
+          "date_end": null,
+          "summary": "The 2020 Census counted 7,216 residents in Tolleson on April 1, 2020.",
+          "verification_state": "verified"
+        },
+        {
+          "title": "The Census Bureau estimates Tolleson's population",
+          "date_start": "2025",
+          "category": "population",
+          "record_id": "tolleson-population-2025-estimate",
+          "source_ids": [
+            "tolleson-census-quickfacts"
+          ],
+          "date_label": "2025 estimate",
+          "date_end": null,
+          "summary": "The U.S. Census Bureau estimated Tolleson's population at 9,224 as of July 1, 2025 (V2025). This is an estimate, not a decennial Census count.",
+          "verification_state": "verified"
+        }
+      ]
+    },
+    "avondale": {
+      "city_id": "avondale",
+      "title": "Avondale History",
+      "introduction": "Explore major chapters in Avondale's history, from the area's deeper Indigenous history and early settlement through incorporation, growth and the modern city. Expand the timeline to view the full researched chronology.",
+      "presentation": {
+        "default_state": "condensed",
+        "expand_label": "Show Full History",
+        "collapse_label": "Show Condensed History",
+        "chapter_count": 8,
+        "event_count": 34
+      },
+      "chapters": [
+        {
+          "chapter_id": "avondale-history-indigenous",
+          "display_order": 10,
+          "date_label": "Before later Euro-American settlement",
+          "title": "Indigenous history predates the modern city",
+          "summary": "Long before Coldwater or the incorporated City of Avondale, O'odham and Piipaash peoples lived throughout and maintained deep relationships with the Salt and Gila river region. Their history and presence form part of the deeper history of the area that became Avondale.",
+          "event_ids": [
+            "avondale-indigenous-regional-history"
+          ]
+        },
+        {
+          "chapter_id": "avondale-history-monument-hill",
+          "display_order": 20,
+          "date_label": "1851–2002",
+          "title": "Monument Hill anchors Arizona's land-surveying history",
+          "summary": "Survey work at Monument Hill in 1851 and 1867 helped establish a reference point for the land-surveying system used across much of Arizona. Its historical importance was formally recognized when the site was added to the National Register of Historic Places in 2002.",
+          "event_ids": [
+            "avondale-monument-hill-boundary-survey-1851",
+            "avondale-monument-hill-survey-system-1867",
+            "avondale-monument-hill-national-register-2002"
+          ]
+        },
+        {
+          "chapter_id": "avondale-history-coldwater-to-avondale",
+          "display_order": 30,
+          "date_label": "1877–1911",
+          "title": "From Coldwater to Avondale",
+          "summary": "Agricultural settlement, Billy Moore's Coldwater community, stage-stop businesses and a changing postal history all contributed to the development of the community that became Avondale. By 1911, City historical material describes the later town site taking shape with a new post office and the Avondale name.",
+          "event_ids": [
+            "avondale-desert-land-act-1877",
+            "avondale-billy-moore-coldwater-1880",
+            "avondale-coldwater-stage-stop",
+            "avondale-post-office-ranch-1896",
+            "avondale-billy-moore-postmaster-1901-1905",
+            "avondale-town-site-1911"
+          ],
+          "has_historical_dispute": true,
+          "dispute_note": "Historical sources differ on part of the early Coldwater chronology. City histories associate Billy Moore and Coldwater with 1880, while Arizona Memory Project material citing Arizona Place Names gives 1897 for establishment of Coldwater. The dates may describe different milestones."
+        },
+        {
+          "chapter_id": "avondale-history-agriculture-community",
+          "display_order": 40,
+          "date_label": "1918–1942",
+          "title": "Agriculture and migration shape the community",
+          "summary": "Agriculture deeply shaped Avondale's early economy and community life. Agricultural families and migrant workers, transportation improvements, schools, New Deal-era projects and federal migrant housing all became part of the developing community during the first half of the twentieth century.",
+          "event_ids": [
+            "avondale-goodyear-farms-cemetery-1918",
+            "avondale-agua-fria-railroad-bridge-1925",
+            "avondale-elementary-school-1937",
+            "avondale-new-deal-road-improvements-1938",
+            "avondale-migrant-agricultural-workers-circa-1940",
+            "avondale-migrant-camp-dysart-van-buren",
+            "avondale-rileys-bar-fire-1942"
+          ]
+        },
+        {
+          "chapter_id": "avondale-history-incorporation",
+          "display_order": 50,
+          "date_label": "1946–1955",
+          "title": "Avondale becomes an incorporated community",
+          "summary": "Avondale incorporated on December 16, 1946. Municipal police and fire services followed, and the postwar years brought continued development of local institutions, schools and community traditions.",
+          "event_ids": [
+            "avondale-incorporation-1946",
+            "avondale-police-fire-established-1947",
+            "avondale-population-1950",
+            "avondale-billy-moore-days-1954",
+            "avondale-agua-fria-high-school-district-1955"
+          ]
+        },
+        {
+          "chapter_id": "avondale-history-raceway",
+          "display_order": 60,
+          "date_label": "1964–1988",
+          "title": "Phoenix Raceway becomes an Avondale landmark",
+          "summary": "Phoenix International Raceway opened in Avondale in 1964 and grew into one of the city's most recognizable landmarks. In 1988, the facility hosted its first NASCAR Cup Series race.",
+          "event_ids": [
+            "avondale-phoenix-raceway-1964",
+            "avondale-nascar-1988"
+          ]
+        },
+        {
+          "chapter_id": "avondale-history-growth",
+          "display_order": 70,
+          "date_label": "1960–2020",
+          "title": "Avondale grows into a major West Valley city",
+          "summary": "Avondale grew from 6,151 residents in 1960 to 89,334 in the 2020 Census. The fastest expansion came during the late twentieth and early twenty-first centuries, transforming the scale of the city while residents continued preserving its community history.",
+          "event_ids": [
+            "avondale-population-1960",
+            "avondale-population-1970",
+            "avondale-population-1980",
+            "avondale-population-1990",
+            "avondale-population-2000",
+            "avondale-population-2010",
+            "avondale-marie-lopez-rogers-oral-history-2014",
+            "avondale-population-2020"
+          ]
+        },
+        {
+          "chapter_id": "avondale-history-80-years",
+          "display_order": 80,
+          "date_label": "2026",
+          "title": "Avondale marks 80 years since incorporation",
+          "summary": "In 2026, Avondale marked eight decades since its December 1946 incorporation, connecting today's city with generations of residents who shaped the community.",
+          "event_ids": [
+            "avondale-80th-anniversary-2026"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "record_id": "avondale-indigenous-regional-history",
+          "category": "indigenous_history",
+          "date_start": null,
+          "date_end": null,
+          "date_label": "Before later Euro-American settlement",
+          "title": "Indigenous history predates the modern city",
+          "summary": "Long before Coldwater or the incorporated City of Avondale, O'odham and Piipaash peoples lived throughout and maintained deep relationships with the Salt and Gila river region. Tribal histories connect their ancestors with the Phoenix Valley and lower Gila River and describe continued O'odham and Piipaash presence into the present.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-srpmic-indigenous-history",
+            "avondale-srpmic-1879-reserve-history",
+            "avondale-community-profile-fy2013"
+          ]
+        },
+        {
+          "record_id": "avondale-monument-hill-boundary-survey-1851",
+          "category": "land_and_survey",
+          "date_start": "1851",
+          "date_end": null,
+          "date_label": "1851",
+          "title": "Boundary survey establishes a monument at Monument Hill",
+          "summary": "A monument was established at Monument Hill during federal boundary-survey work following the Mexican-American War and the Treaty of Guadalupe Hidalgo.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-monument-hill-nps"
+          ]
+        },
+        {
+          "record_id": "avondale-monument-hill-survey-system-1867",
+          "category": "land_and_survey",
+          "date_start": "1867",
+          "date_end": null,
+          "date_label": "1867",
+          "title": "Monument Hill becomes central to Arizona land surveying",
+          "summary": "Monument Hill became associated with the Initial Point of the Gila and Salt River Base Line and Meridian, the surveying framework used for extensive federal land surveys in Arizona.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-monument-hill-nps"
+          ]
+        },
+        {
+          "record_id": "avondale-desert-land-act-1877",
+          "category": "settlement_and_agriculture",
+          "date_start": "1877",
+          "date_end": null,
+          "date_label": "1877",
+          "title": "Federal land policy encourages agricultural settlement",
+          "summary": "City historical material identifies the Desert Land Act of 1877 as part of the context that encouraged agricultural settlement in the area.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-community-profile-fy2013"
+          ]
+        },
+        {
+          "record_id": "avondale-billy-moore-coldwater-1880",
+          "category": "settlement",
+          "date_start": "1880",
+          "date_end": null,
+          "date_label": "1880",
+          "title": "Billy Moore settles near the Agua Fria River",
+          "summary": "City of Avondale histories place William G. \"Billy\" Moore near the Agua Fria River in 1880 and associate his settlement with the name Coldwater. Arizona Memory Project material citing Arizona Place Names instead dates the establishment of Coldwater to 1897.",
+          "verification_state": "disputed",
+          "source_ids": [
+            "avondale-city-history",
+            "avondale-billy-moore-days-history",
+            "avondale-coldwater-arizona-memory"
+          ]
+        },
+        {
+          "record_id": "avondale-coldwater-stage-stop",
+          "category": "transportation_and_commerce",
+          "date_start": "1880",
+          "date_end": null,
+          "date_label": "Late 19th century",
+          "title": "Coldwater develops as a stage stop and trading point",
+          "summary": "Billy Moore operated businesses associated with the Coldwater settlement, including a stage stop, saloon and general store serving travelers through the region.",
+          "verification_state": "corroborated",
+          "source_ids": [
+            "avondale-city-history",
+            "avondale-billy-moore-days-history"
+          ]
+        },
+        {
+          "record_id": "avondale-post-office-ranch-1896",
+          "category": "settlement_and_identity",
+          "date_start": "1896",
+          "date_end": null,
+          "date_label": "1896",
+          "title": "A post office is established near Avondale Ranch",
+          "summary": "City historical material says a post office was established near Avondale Ranch in 1896, introducing the Avondale name into the area's developing postal and settlement history.",
+          "verification_state": "corroborated",
+          "source_ids": [
+            "avondale-city-history",
+            "avondale-coldwater-westside-enterprise-1961",
+            "avondale-coldwater-arizona-memory"
+          ]
+        },
+        {
+          "record_id": "avondale-billy-moore-postmaster-1901-1905",
+          "category": "community",
+          "date_start": "1901",
+          "date_end": "1905",
+          "date_label": "1901–1905",
+          "title": "Billy Moore serves as Coldwater postmaster",
+          "summary": "City historical material identifies Billy Moore as Coldwater's postmaster from 1901 through 1905.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-city-history",
+            "avondale-billy-moore-days-history"
+          ]
+        },
+        {
+          "record_id": "avondale-town-site-1911",
+          "category": "settlement_and_identity",
+          "date_start": "1911",
+          "date_end": null,
+          "date_label": "1911",
+          "title": "Avondale's later town site takes shape",
+          "summary": "City historical planning material says the town site moved twice before settling in 1911 with a new post office and the Avondale name.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-historic-design-guidelines",
+            "avondale-city-history",
+            "avondale-coldwater-arizona-memory"
+          ]
+        },
+        {
+          "record_id": "avondale-goodyear-farms-cemetery-1918",
+          "category": "agriculture_and_community",
+          "date_start": "1918",
+          "date_end": null,
+          "date_label": "1918",
+          "title": "Goodyear Farms Historic Cemetery dates to the agricultural era",
+          "summary": "City historical-preservation material dates Goodyear Farms Historic Cemetery to 1918. The cemetery preserves connections to migrant farm workers, agricultural families, veterans and later generations of the West Valley community.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-goodyear-farms-cemetery-city",
+            "avondale-goodyear-farms-oral-history-azpbs"
+          ]
+        },
+        {
+          "record_id": "avondale-agua-fria-railroad-bridge-1925",
+          "category": "transportation",
+          "date_start": "1925",
+          "date_end": null,
+          "date_label": "1925",
+          "title": "Agua Fria River railroad bridge is built",
+          "summary": "City historical material identifies construction of an Agua Fria River railroad bridge in 1925 as part of Avondale's transportation history.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-community-profile-fy2023"
+          ]
+        },
+        {
+          "record_id": "avondale-elementary-school-1937",
+          "category": "education",
+          "date_start": "1937",
+          "date_end": null,
+          "date_label": "1937",
+          "title": "Avondale Elementary School is established",
+          "summary": "City historical material identifies 1937 as an important milestone in the development of local public education.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-city-history",
+            "avondale-old-town-history-walk"
+          ]
+        },
+        {
+          "record_id": "avondale-new-deal-road-improvements-1938",
+          "category": "infrastructure",
+          "date_start": "1938",
+          "date_end": null,
+          "date_label": "1938",
+          "title": "New Deal-era road improvements reach Avondale",
+          "summary": "City historical material identifies road improvements beginning in 1938 during the New Deal era.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-community-profile-fy2023"
+          ]
+        },
+        {
+          "record_id": "avondale-migrant-agricultural-workers-circa-1940",
+          "category": "agriculture_and_migration",
+          "date_start": "1940",
+          "date_end": null,
+          "date_label": "Around 1940",
+          "title": "Agricultural migration reshapes the community",
+          "summary": "Historical material describes migrant agricultural workers arriving in the Avondale area from Dust Bowl regions, colder Midwestern areas and other communities. Farm labor and the families who performed it became an important part of Avondale's social and economic history.",
+          "verification_state": "corroborated",
+          "source_ids": [
+            "avondale-city-history",
+            "avondale-goodyear-farms-oral-history-azpbs",
+            "avondale-goodyear-farms-cemetery-city"
+          ]
+        },
+        {
+          "record_id": "avondale-migrant-camp-dysart-van-buren",
+          "category": "agriculture_and_migration",
+          "date_start": "1940",
+          "date_end": null,
+          "date_label": "1940",
+          "title": "Agua Fria FSA Migratory Labor Camp opens",
+          "summary": "The Farm Security Administration established the Agua Fria Migratory Labor Camp near Dysart Road and Van Buren Street in 1940 to provide housing and services for migrant families seeking agricultural work during the Depression era.",
+          "verification_state": "corroborated",
+          "source_ids": [
+            "avondale-fsa-camp-directory",
+            "avondale-agua-fria-fsa-camp-history",
+            "avondale-city-history"
+          ]
+        },
+        {
+          "record_id": "avondale-rileys-bar-fire-1942",
+          "category": "government_and_public_safety",
+          "date_start": "1942",
+          "date_end": null,
+          "date_label": "1942",
+          "title": "Riley's Bar fire exposes the need for organized fire protection",
+          "summary": "A major fire at Riley's Bar occurred before Avondale had a formal fire department. Residents fought the blaze, and City fire-department history connects the episode with recognition of the need for incorporation and organized municipal services.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-fire-history"
+          ]
+        },
+        {
+          "record_id": "avondale-incorporation-1946",
+          "category": "government",
+          "date_start": "1946-12-16",
+          "date_end": null,
+          "date_label": "December 16, 1946",
+          "title": "Avondale incorporates",
+          "summary": "Avondale formally incorporated on December 16, 1946, establishing municipal government for a community that had developed from the earlier Coldwater and Avondale settlements.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-80th-anniversary-2026",
+            "avondale-fire-history",
+            "avondale-history-video-2021"
+          ]
+        },
+        {
+          "record_id": "avondale-police-fire-established-1947",
+          "category": "government_and_public_safety",
+          "date_start": "1947",
+          "date_end": null,
+          "date_label": "1947",
+          "title": "Municipal police and fire services take shape",
+          "summary": "Following incorporation, Avondale established municipal public-safety services. The early fire department operated with volunteers, with John Mabis identified by City history as its first fire chief.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-fire-history"
+          ]
+        },
+        {
+          "record_id": "avondale-population-1950",
+          "category": "population_growth",
+          "date_start": "1950",
+          "date_end": null,
+          "date_label": "1950",
+          "title": "Avondale population reaches 2,505",
+          "summary": "Historical population data records 2,505 residents in Avondale in 1950.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-1950"
+          ]
+        },
+        {
+          "record_id": "avondale-billy-moore-days-1954",
+          "category": "culture_and_tradition",
+          "date_start": "1954",
+          "date_end": null,
+          "date_label": "1954",
+          "title": "Billy Moore Days begins",
+          "summary": "The community celebration known as Billy Moore Days began in 1954 and became a recurring tradition connecting modern Avondale with stories about the Coldwater settlement and Billy Moore.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-billy-moore-days-history"
+          ]
+        },
+        {
+          "record_id": "avondale-agua-fria-high-school-district-1955",
+          "category": "education",
+          "date_start": "1955",
+          "date_end": null,
+          "date_label": "1955",
+          "title": "Regional high-school education expands",
+          "summary": "The establishment of the Agua Fria Union High School District and Agua Fria High School became an important postwar educational milestone for Avondale and surrounding communities.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-agua-fria-district-history"
+          ]
+        },
+        {
+          "record_id": "avondale-population-1960",
+          "category": "population_growth",
+          "date_start": "1960",
+          "date_end": null,
+          "date_label": "1960",
+          "title": "Population grows to 6,151",
+          "summary": "Avondale's recorded population reached 6,151 by 1960, more than doubling its 1950 population.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-1980-historical"
+          ]
+        },
+        {
+          "record_id": "avondale-phoenix-raceway-1964",
+          "category": "sports_and_identity",
+          "date_start": "1964",
+          "date_end": null,
+          "date_label": "1964",
+          "title": "Phoenix International Raceway opens",
+          "summary": "Construction of Phoenix Raceway was completed in January 1964, and the Avondale facility held its first race the following month. The track became one of the city's most nationally recognizable landmarks.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-phoenix-raceway-history"
+          ]
+        },
+        {
+          "record_id": "avondale-population-1970",
+          "category": "population_growth",
+          "date_start": "1970",
+          "date_end": null,
+          "date_label": "1970",
+          "title": "Population reaches 6,626",
+          "summary": "Historical population data records 6,626 Avondale residents in 1970.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-1980-historical"
+          ]
+        },
+        {
+          "record_id": "avondale-population-1980",
+          "category": "population_growth",
+          "date_start": "1980",
+          "date_end": null,
+          "date_label": "1980",
+          "title": "Population reaches 8,168",
+          "summary": "Historical population data records 8,168 Avondale residents in 1980.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-1980-historical"
+          ]
+        },
+        {
+          "record_id": "avondale-nascar-1988",
+          "category": "sports_and_identity",
+          "date_start": "1988-11-06",
+          "date_end": null,
+          "date_label": "November 6, 1988",
+          "title": "NASCAR's premier series begins racing at Phoenix Raceway",
+          "summary": "Phoenix Raceway hosted its first NASCAR Cup Series race on November 6, 1988. Alan Kulwicki won the inaugural Cup event.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-phoenix-raceway-history"
+          ]
+        },
+        {
+          "record_id": "avondale-population-1990",
+          "category": "population_growth",
+          "date_start": "1990",
+          "date_end": null,
+          "date_label": "1990",
+          "title": "Population reaches 16,169",
+          "summary": "Avondale's population reached 16,169 by 1990 as the city entered a period of much faster growth.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-1990"
+          ]
+        },
+        {
+          "record_id": "avondale-population-2000",
+          "category": "population_growth",
+          "date_start": "2000",
+          "date_end": null,
+          "date_label": "2000",
+          "title": "Population reaches 35,883",
+          "summary": "Avondale's population reached 35,883 in 2000, more than twice its 1990 population.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-2000"
+          ]
+        },
+        {
+          "record_id": "avondale-monument-hill-national-register-2002",
+          "category": "historic_preservation",
+          "date_start": "2002-10-15",
+          "date_end": null,
+          "date_label": "October 15, 2002",
+          "title": "Monument Hill is listed on the National Register",
+          "summary": "The Initial Point of the Gila and Salt River Base Line and Meridian at Monument Hill was added to the National Register of Historic Places.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-monument-hill-nps"
+          ]
+        },
+        {
+          "record_id": "avondale-population-2010",
+          "category": "population_growth",
+          "date_start": "2010",
+          "date_end": null,
+          "date_label": "2010",
+          "title": "Population reaches 76,238",
+          "summary": "Avondale's population reached 76,238 in 2010, illustrating the scale of the city's late-20th and early-21st-century growth.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-quickfacts"
+          ]
+        },
+        {
+          "record_id": "avondale-marie-lopez-rogers-oral-history-2014",
+          "category": "community_memory",
+          "date_start": "2014",
+          "date_end": null,
+          "date_label": "2014",
+          "title": "Oral history preserves decades of Avondale civic experience",
+          "summary": "An oral-history interview with Marie López Rogers preserves firsthand recollections touching on Avondale community life, government, race and ethnicity, women and civic change over several decades.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-marie-lopez-rogers-oral-history"
+          ]
+        },
+        {
+          "record_id": "avondale-population-2020",
+          "category": "population_growth",
+          "date_start": "2020",
+          "date_end": null,
+          "date_label": "2020",
+          "title": "2020 Census counts 89,334 residents",
+          "summary": "The 2020 Census counted 89,334 residents in Avondale.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-quickfacts"
+          ]
+        },
+        {
+          "record_id": "avondale-population-2025-estimate",
+          "chapter_id": "avondale-growth",
+          "date_start": "2025",
+          "date_end": null,
+          "date_label": "2025",
+          "title": "Avondale surpasses 100,000 residents",
+          "summary": "The U.S. Census Bureau estimates Avondale's population at 100,983 as of July 1, 2025, compared with 89,334 residents counted in the 2020 Census. The 2025 figure is a population estimate, not a census count.",
+          "category": "population",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-population-estimate-2025"
+          ]
+        },
+        {
+          "record_id": "avondale-80th-anniversary-2026",
+          "category": "modern_city",
+          "date_start": "2026",
+          "date_end": null,
+          "date_label": "2026",
+          "title": "Avondale marks 80 years since incorporation",
+          "summary": "Avondale marked its 80th anniversary in 2026, eight decades after incorporation in December 1946.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-80th-anniversary-2026"
+          ]
+        }
+      ]
+    }
+  }
+}

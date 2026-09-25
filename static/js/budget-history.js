@@ -355,10 +355,23 @@
     }
 
     if (summary) {
+      const city = root.dataset.budgetCity;
+      const activeButton = root.querySelector(
+        "[data-budget-metric].is-active"
+      );
+      const measure =
+        activeButton?.textContent.trim() ||
+        first.metric_label ||
+        "all-funds budget";
+
+      const description = measure.toLowerCase().includes("adopted")
+        ? measure.toLowerCase()
+        : `adopted ${measure.toLowerCase()}`;
+
       summary.textContent =
-        `From ${first.fiscal_year} to ${last.fiscal_year}, ` +
-        `this measure ${direction} ` +
-        `${Math.abs(pct).toFixed(1)}%.`;
+        `${city ? `${city}’s ` : ""}${description} ${direction} ` +
+        `${Math.abs(pct).toFixed(1)}% ` +
+        `from ${first.fiscal_year} to ${last.fiscal_year}.`;
     }
 
   }

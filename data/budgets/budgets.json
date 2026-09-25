@@ -34,6 +34,205 @@
       ],
       "last_verified": "2026-09-01",
       "notes": "City Council adopted the final FY2027 budget on June 1, 2026 through Resolution 1041-0626. The adopted total budget is $514,304,500. The tentative budget remains supporting budget-cycle provenance; the final budget is the authoritative source for adoption."
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2019",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 77150947,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2020",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 76796734,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2021",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 89064984,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2022",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 109104059,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2023",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 165420011,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2024",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 188769614,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2025",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 198064114,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2026",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 233685526,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2027",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 247153697,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "record_id": "litchfield-park-fy2019-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2019",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 17868042,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2019-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2020-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2020",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 19026365,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2020-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2021-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2021",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 19743726,
+      "currency": "USD",
+      "adoption_date": "2020-06-17",
+      "source_ids": [
+        "litchfield-park-fy2021-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2022-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2022",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 45233877,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2022-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2023-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2023",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 48665240,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2023-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2024-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2024",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 34676278,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2024-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2025-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2025",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 27242060,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2025-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2026-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2026",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 50385635,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2026-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
+    },
+    {
+      "record_id": "litchfield-park-fy2027-adopted-total-budget",
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2027",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 45354836,
+      "currency": "USD",
+      "source_ids": [
+        "litchfield-park-fy2027-city-budget"
+      ],
+      "notes": "Proposed public budget index record derived from the validated Litchfield Park canonical fiscal-year record."
     }
   ]
 }

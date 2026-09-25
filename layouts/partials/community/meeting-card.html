@@ -1,0 +1,73 @@
+{{- $meeting := .meeting -}}
+{{- $featured := .featured | default false -}}
+{{- $label := .label | default "" -}}
+
+<article class="meeting-card{{ if $featured }} meeting-card--featured{{ end }}{{ if eq $meeting.status "cancelled" }} meeting-card--cancelled{{ end }}">
+  <div class="meeting-card__date" aria-label="{{ time.Format "January 2, 2006" $meeting.date }}">
+    <span class="meeting-card__month">
+      {{ time.Format "Jan" $meeting.date }}
+    </span>
+    <strong class="meeting-card__day">
+      {{ time.Format "2" $meeting.date }}
+    </strong>
+    <span class="meeting-card__year">
+      {{ time.Format "2006" $meeting.date }}
+    </span>
+  </div>
+
+  <div class="meeting-card__body">
+    <div class="meeting-card__title-row">
+      <div>
+        {{ with $label }}
+          <p class="meeting-card__label">{{ . }}</p>
+        {{ end }}
+
+        <h3>{{ $meeting.governing_body }}</h3>
+      </div>
+
+      {{ if ne $meeting.status "scheduled" }}
+        {{ if ne $meeting.status "completed" }}
+          <span class="meeting-status meeting-status--{{ $meeting.status }}">
+            {{ $meeting.status | humanize }}
+          </span>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <p class="meeting-card__meta">
+      {{ time.Format "Monday, January 2, 2006" $meeting.date }}
+      {{ with $meeting.time }}
+        · {{ time.Format "3:04 PM" (printf "2000-01-01T%s:00" .) }}
+      {{ end }}
+      {{ if eq $meeting.meeting_type "city_council_special" }}
+        · Special meeting
+      {{ end }}
+    </p>
+
+    <div class="meeting-actions meeting-card__actions">
+      {{ with $meeting.agenda_url }}
+        <a class="button button--secondary" href="{{ . }}">
+          Agenda
+        </a>
+      {{ end }}
+
+      {{ with $meeting.recording_url }}
+        <a class="button button--secondary" href="{{ . }}">
+          Watch
+        </a>
+      {{ end }}
+
+      {{ with $meeting.minutes_url }}
+        <a class="button button--secondary" href="{{ . }}">
+          Minutes
+        </a>
+      {{ end }}
+
+      {{ with $meeting.official_page_url }}
+        <a class="button button--secondary" href="{{ . }}">
+          Meeting details
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</article>

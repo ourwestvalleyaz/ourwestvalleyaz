@@ -1,0 +1,21 @@
+{{- $city := .city -}}
+{{- $hasCityHistory := .has_city_history -}}
+
+{{- if $city }}
+<nav class="section-nav community-section-nav site-shell content-width"
+     aria-label="{{ $city.name }} quick links">
+  <span class="section-nav__label">Quick links</span>
+
+  <div class="section-nav__links">
+    <a href="#quick-reference">Quick Reference</a>
+    {{- if $hasCityHistory }}
+      <a href="#history">History</a>
+    {{- end }}
+    <a href="#budget">Budget</a>
+    <a href="#local-government">Local Government</a>
+    <a href="#meetings">Meetings</a>
+    <a href="#local-issues">Civic Topics</a>
+    <a href="#public-records">Search {{ $city.name }}</a>
+  </div>
+</nav>
+{{- end }}

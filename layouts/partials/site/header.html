@@ -28,22 +28,36 @@
             </summary>
 
             <div class="communities-menu__panel">
-              <a href="/communities/avondale/"
-                 {{ if and
-                      (eq .Section "communities")
-                      (hasPrefix .RelPermalink "/communities/avondale/")
-                 }}aria-current="page"{{ end }}>
-                Avondale
-              </a>
+              {{ $cities := slice
+                (dict "slug" "avondale" "name" "Avondale" "complete" true)
+                (dict "slug" "tolleson" "name" "Tolleson" "complete" true)
+                (dict "slug" "litchfield-park" "name" "Litchfield Park" "complete" false)
+              }}
 
-              <div class="communities-menu__pending">
-                <span class="communities-menu__city">
-                  Tolleson
-                </span>
-                <span class="communities-menu__status">
-                  In Progress
-                </span>
-              </div>
+              {{ range $cities }}
+                {{ $city := . }}
+                {{ $page := site.GetPage (printf "/communities/%s" $city.slug) }}
+
+                {{ if and $city.complete $page }}
+                  <a href="{{ $page.RelPermalink }}"
+                     {{ if and
+                          (eq $.Section "communities")
+                          (hasPrefix $.RelPermalink $page.RelPermalink)
+                     }}aria-current="page"{{ end }}>
+                    {{ $city.name }}
+                    
+                  </a>
+                {{ else }}
+                  <div class="communities-menu__pending">
+                    <span class="communities-menu__city">
+                      {{ $city.name }}
+                    </span>
+                    <span class="communities-menu__status">
+                      In Progress
+                    </span>
+                  </div>
+                {{ end }}
+              {{ end }}
             </div>
           </details>
 
@@ -70,22 +84,36 @@
         </summary>
 
         <div class="communities-menu__panel">
-          <a href="/communities/avondale/"
-             {{ if and
-                  (eq .Section "communities")
-                  (hasPrefix .RelPermalink "/communities/avondale/")
-             }}aria-current="page"{{ end }}>
-            Avondale
-          </a>
+          {{ $cities := slice
+                (dict "slug" "avondale" "name" "Avondale" "complete" true)
+                (dict "slug" "tolleson" "name" "Tolleson" "complete" true)
+                (dict "slug" "litchfield-park" "name" "Litchfield Park" "complete" false)
+              }}
 
-          <div class="communities-menu__pending">
-            <span class="communities-menu__city">
-              Tolleson
-            </span>
-            <span class="communities-menu__status">
-              In Progress
-            </span>
-          </div>
+          {{ range $cities }}
+            {{ $city := . }}
+            {{ $page := site.GetPage (printf "/communities/%s" $city.slug) }}
+
+            {{ if and $city.complete $page }}
+              <a href="{{ $page.RelPermalink }}"
+                 {{ if and
+                      (eq $.Section "communities")
+                      (hasPrefix $.RelPermalink $page.RelPermalink)
+                 }}aria-current="page"{{ end }}>
+                {{ $city.name }}
+                    
+              </a>
+            {{ else }}
+              <div class="communities-menu__pending">
+                <span class="communities-menu__city">
+                  {{ $city.name }}
+                </span>
+                <span class="communities-menu__status">
+                  In Progress
+                </span>
+              </div>
+            {{ end }}
+          {{ end }}
         </div>
       </details>
 
@@ -98,3 +126,4 @@
 
   </div>
 </header>
+<script defer src="/js/site-header.js"></script>

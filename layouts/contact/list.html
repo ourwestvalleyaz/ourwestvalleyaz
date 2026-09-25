@@ -1,0 +1,110 @@
+{{ define "main" }}
+<article class="owvaz-contact">
+  <header class="page-header">
+    <div class="site-shell content-width">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-summary">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+
+  <div class="site-shell content-width section prose">
+    {{ .Content }}
+
+    <section aria-labelledby="contact-form-heading">
+      <h2 id="contact-form-heading">Send OWVAZ a message</h2>
+      <p>You can send a message without providing your name or email address.</p>
+
+      <form
+      id="owvaz-contact-form"
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      novalidate
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value="{{ getenv "HUGO_WEB3FORMS_ACCESS_KEY" }}"
+      >
+      <input
+        type="hidden"
+        name="subject"
+        value="OWVAZ Contact Form Submission"
+      >
+      <input
+        type="hidden"
+        name="from_name"
+        value="Our West Valley AZ Contact Form"
+      >
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+        style="display: none;"
+      >
+        <p>
+          <label for="contact-topic">What is your message about?</label><br>
+          <select id="contact-topic" name="topic" required>
+            <option value="">Choose a topic</option>
+            <option value="website-issue">Report a website issue</option>
+            <option value="correction">Suggest an information correction</option>
+            <option value="city-request">Request coverage of a city or town</option>
+            <option value="improvement">Suggest a website improvement</option>
+            <option value="question">Ask a general question</option>
+          </select>
+        </p>
+
+        <p id="contact-page-field" hidden>
+          <label for="contact-page">Relevant page address (URL)</label><br>
+          <input id="contact-page" name="page_url" type="url"
+                 maxlength="500" placeholder="https://ourwestvalleyaz.org/...">
+        </p>
+
+        <p id="contact-city-field" hidden>
+          <label for="contact-city">City or town</label><br>
+          <input id="contact-city" name="city" type="text" maxlength="100">
+        </p>
+
+        <div id="contact-message-field" hidden>
+          <label for="contact-message">Your message</label><br>
+          <textarea id="contact-message" name="message" rows="7"
+                    maxlength="4000" aria-describedby="contact-message-help"></textarea>
+          <p id="contact-message-help">
+          Minimum 30 characters. 
+            Describe your issue, correction, suggestion, or question.
+            Include a public source link if it would help us verify a correction.
+            Do not include sensitive personal information.
+          </p>
+        </div>
+
+        <p id="contact-reply-field" hidden>
+          <label>
+            <input id="contact-wants-reply" name="wants_reply" type="checkbox">
+            I would like a response.
+          </label>
+        </p>
+
+        <p id="contact-email-field" hidden>
+          <label for="contact-email">Email address (required for a response)</label><br>
+          <input id="contact-email" name="email" type="email"
+                 autocomplete="email" maxlength="254">
+        </p>
+
+        <p id="contact-form-status" role="status" aria-live="polite">
+          If you would like a response, select that option and provide your email address.
+        </p>
+        <button type="submit">Send message</button>
+            <p
+        id="owvaz-contact-result"
+        class="contact-form-status"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></p>
+    </form>
+    </section>
+  </div>
+</article>
+<script src="/js/contact-form.js" defer></script>
+{{ end }}

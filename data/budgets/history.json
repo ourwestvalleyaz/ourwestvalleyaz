@@ -65,6 +65,186 @@
       "currency": "USD",
       "comparison_class": "adopted_all_funds",
       "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2019",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 77150947,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2020",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 76796734,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2021",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 89064984,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2022",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 109104059,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2023",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 165420011,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2024",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 188769614,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2025",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 198064114,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2026",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 233685526,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "tolleson",
+      "fiscal_year": "FY2027",
+      "status": "adopted",
+      "metric": "total_budget",
+      "amount": 247153697,
+      "currency": "USD",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2019",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 17868042,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2020",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 19026365,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2021",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 19743726,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2022",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 45233877,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2023",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 48665240,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2024",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 34676278,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2025",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 27242060,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2026",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 50385635,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
+    },
+    {
+      "city_id": "litchfield-park",
+      "fiscal_year": "FY2027",
+      "status": "adopted",
+      "metric": "total_budget",
+      "metric_label": "Total budget",
+      "amount": 45354836,
+      "currency": "USD",
+      "comparison_class": "adopted_all_funds",
+      "verification_state": "verified"
     }
   ]
 }

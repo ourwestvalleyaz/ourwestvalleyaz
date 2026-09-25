@@ -1,0 +1,12 @@
+{{- $vote := lower (.Get "vote") -}}
+
+{{- if not (in (slice "yes" "no") $vote) -}}
+  {{- errorf "ballot-choice requires vote=\"yes\" or vote=\"no\": %s" .Position -}}
+{{- end -}}
+
+<section class="owvaz-ballot-choice owvaz-ballot-choice--{{ $vote }}">
+  <h3>{{ upper $vote }}</h3>
+  <div class="owvaz-ballot-choice__content">
+    {{ .Inner | markdownify }}
+  </div>
+</section>

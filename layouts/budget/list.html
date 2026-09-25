@@ -1,6 +1,11 @@
 {{ define "main" }}
 
 {{- $cityID := .Params.city_id -}}
+{{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
+{{- if ne (len $cityMatches) 1 -}}
+  {{- errorf "City return link requires one canonical city for %q" $cityID -}}
+{{- end -}}
+{{- $city := index $cityMatches 0 -}}
 {{- $records := slice -}}
 
 {{- with hugo.Data.budgets -}}
@@ -81,6 +86,12 @@
       </div>
 
     </section>
+
+    <p class="owvaz-detail-page__return">
+  <a href="{{ printf "/communities/%s/" $cityID }}">
+    ← Back to {{ $city.name }}
+  </a>
+</p>
 
   </div>
 

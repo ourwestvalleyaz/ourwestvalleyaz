@@ -1,0 +1,160 @@
+{
+  "city_id": "tolleson",
+  "fiscal_year": "FY2021",
+  "fiscal_period": {
+    "start": "2020-07-01",
+    "end": "2021-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 89064984,
+    "currency": "USD",
+    "scope": "all_funds",
+    "measure": "budgeted_expenditures_expenses"
+  },
+  "adoption": {
+    "date": "2020-06-23",
+    "authority_type": "resolution",
+    "authority_identifier": "2430",
+    "authority_title": "Resolution No. 2430",
+    "governing_body": {
+      "name": "Tolleson City Council",
+      "context": "final adoption",
+      "members": [
+        {
+          "name": "Anna Tovar",
+          "role": "mayor"
+        }
+      ]
+    }
+  },
+  "source_ids": [
+    "tolleson-fy2021-adopted-budget"
+  ],
+  "source": {
+    "title": "Detailed Adopted Budget FY 2020-2021",
+    "publisher": "City of Tolleson",
+    "document_type": "official adopted budget",
+    "url": "https://www.tolleson.az.gov/DocumentCenter/View/5208/Detailed-Adopted-Budget-FY-2020-2021-PDF",
+    "accessed": "2026-09-15"
+  },
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-15"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2020",
+    "adopted_budget": 76796734,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 12268250,
+    "percent_change": 16.0,
+    "summary": "FY2021 budgeted expenditures/expenses increased by $12,268,250 compared with FY2020 adopted/adjusted budgeted expenditures/expenses, a increase of 16.0%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 36373710,
+      "percent_of_measure": 40.8,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Fund",
+      "amount": 5873477,
+      "percent_of_measure": 6.6,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 5139961,
+      "percent_of_measure": 5.8,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 16404291,
+      "percent_of_measure": 18.4,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 25273545,
+      "percent_of_measure": 28.4,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 72694498,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2021 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "This is the final Schedule A estimate of revenues other than property taxes and is distinct from total financial resources available or total budgeted expenditures/expenses."
+  },
+  "property_tax": {
+    "primary_levy": 4096387,
+    "secondary_levy": 4613000,
+    "total_levy": 8709387,
+    "primary_rate": 1.6584,
+    "secondary_rate": 1.8675,
+    "combined_rate": 3.5259,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2021 Schedule B."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 16404291,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "final_adopted_schedule_e",
+        "label": "Capital Projects Fund",
+        "note": "FY2021 Schedule E budgeted expenditures/expenses."
+      }
+    ],
+    "projects": [
+      {
+        "name": "City Hall Construction Fund",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 10500000,
+        "total": 10500000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2021",
+        "description": "Schedule E identifies $10,500,000 in FY2021 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      },
+      {
+        "name": "Construction Fund",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 904291,
+        "total": 904291,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2021",
+        "description": "Schedule E identifies $904,291 in FY2021 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      },
+      {
+        "name": "Construction Fund 2021",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 5000000,
+        "total": 5000000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2021",
+        "description": "Schedule E identifies $5,000,000 in FY2021 budgeted expenditures/expenses for this item under the Capital Projects Fund. This amount represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      }
+    ],
+    "selection_method": "complete_capital_projects_fund_schedule_e",
+    "selection_definition": "All Capital Projects Fund items listed in FY2021 Schedule E.",
+    "note": "The $16,404,291 capital measure reconciles exactly to the Capital Projects Fund amount in the final schedules."
+  }
+}

@@ -26,6 +26,166 @@
         "data sharing",
         "police technology"
       ]
+    },
+    {
+      "issue_id": "tolleson-proposition-416-permanent-base-adjustment",
+      "city_id": "tolleson",
+      "title": "Proposition 416: Permanent Base Adjustment",
+      "slug": "proposition-416-permanent-base-adjustment",
+      "status": "on-ballot",
+      "summary": "Proposition 416 asks Tolleson voters whether to permanently adjust the City's base used to calculate its state constitutional expenditure limitation.",
+      "source_ids": [
+        "tolleson-prop416-amended-call-election",
+        "tolleson-prop416-call-for-arguments",
+        "tolleson-prop416-faq",
+        "tolleson-prop416-permanent-base-adjustment"
+      ],
+      "last_verified": "2026-09-18",
+      "tags": [
+        "Proposition 416",
+        "permanent base adjustment",
+        "expenditure limitation",
+        "election"
+      ]
+    },
+    {
+      "city_id": "litchfield-park",
+      "issue_id": "litchfield-park-police-surveillance-technology",
+      "title": "Police Surveillance Technology",
+      "slug": "police-surveillance-technology",
+      "status": "documented",
+      "last_verified": "2026-09-21",
+      "summary": "Public records document Flock Safety automated license plate reader use in Litchfield Park, including a reported 2021 deployment of 32 cameras and Flock alerts documented in City law-enforcement reports.",
+      "tags": [
+        "license plate readers",
+        "Flock Safety",
+        "automated license plate readers",
+        "police technology",
+        "law enforcement"
+      ],
+      "source_ids": [
+        "litchfield-park-flock-2021-atlas",
+        "litchfield-park-police-february-2025-flock",
+        "litchfield-park-police-department",
+        "litchfield-park-census-2010-2020-2025",
+        "litchfield-park-public-safety-2021",
+        "litchfield-park-fy2024-budget-cameras",
+        "litchfield-park-council-flock-access-2023",
+        "litchfield-park-police-report-january-2022",
+        "litchfield-park-police-report-december-2022",
+        "litchfield-park-police-report-february-2025",
+        "litchfield-park-police-archive",
+        "litchfield-park-police-department-page"
+      ]
+    },
+    {
+      "issue_id": "tolleson-proposition-434-home-rule",
+      "city_id": "tolleson",
+      "title": "Proposition 434: Home Rule Option",
+      "slug": "proposition-434-home-rule",
+      "status": "documented",
+      "summary": "Proposition 434 asked Tolleson voters whether to continue the Home Rule Option, an alternative local expenditure limitation, for four years.",
+      "source_ids": [
+        "tolleson-2020-general-election-propositions",
+        "maricopa-2020-tolleson-proposition-results"
+      ],
+      "last_verified": "2026-09-21",
+      "tags": [
+        "Proposition 434",
+        "Home Rule",
+        "alternative expenditure limitation",
+        "2020 election"
+      ]
+    },
+    {
+      "issue_id": "tolleson-proposition-435-general-obligation-bonds",
+      "city_id": "tolleson",
+      "title": "Proposition 435: General Obligation Bonds",
+      "slug": "proposition-435-general-obligation-bonds",
+      "status": "documented",
+      "summary": "Proposition 435 asked Tolleson voters to authorize $21 million in general obligation bonds for parks and recreation projects, including an aquatic facility.",
+      "source_ids": [
+        "tolleson-2020-general-election-propositions",
+        "maricopa-2020-tolleson-proposition-results"
+      ],
+      "last_verified": "2026-09-21",
+      "tags": [
+        "Proposition 435",
+        "general obligation bonds",
+        "parks and recreation",
+        "2020 election"
+      ]
+    },
+    {
+      "issue_id": "tolleson-proposition-436-southwest-gas-franchise",
+      "city_id": "tolleson",
+      "title": "Proposition 436: Southwest Gas Corporation Franchise",
+      "slug": "proposition-436-southwest-gas-franchise",
+      "status": "documented",
+      "summary": "Proposition 436 asked Tolleson voters to approve a franchise agreement with Southwest Gas Corporation for use of City rights-of-way for gas utility purposes.",
+      "source_ids": [
+        "tolleson-2020-general-election-propositions",
+        "maricopa-2020-tolleson-proposition-results"
+      ],
+      "last_verified": "2026-09-21",
+      "tags": [
+        "Proposition 436",
+        "Southwest Gas",
+        "utility franchise",
+        "2020 election"
+      ]
+    },
+    {
+      "issue_id": "tolleson-police-surveillance-technology",
+      "city_id": "tolleson",
+      "title": "Police Surveillance Technology",
+      "slug": "police-surveillance-technology",
+      "status": "documented",
+      "summary": "City records document FY2020 license plate reader deployment, FY2021–FY2022 ALPR project allocations, and separate drone-related budget entries. Current equipment counts, vendors, and actual spending remain unverified.",
+      "source_ids": [
+        "tolleson-fy2020-cafr",
+        "tolleson-fy2020-adopted-budget",
+        "tolleson-fy2021-adopted-budget",
+        "tolleson-fy2022-adopted-budget",
+        "tolleson-fy2023-adopted-budget",
+        "tolleson-fy2025-adopted-budget",
+        "tolleson-fy2026-adopted-budget",
+        "tolleson-fy2027-adopted-budget"
+      ],
+      "last_verified": "2026-09-22",
+      "tags": [
+        "police surveillance",
+        "automated license plate readers",
+        "ALPR",
+        "drones",
+        "police budget"
+      ]
+    },
+    {
+      "city_id": "avondale",
+      "issue_id": "avondale-proposition-418-public-safety-bond",
+      "title": "Proposition 418: Public Safety Bond",
+      "slug": "proposition-418-public-safety-bond",
+      "summary": "Proposition 418 asks Avondale voters whether to authorize up to $55 million in general obligation bonds for public safety and court-related projects.",
+      "tags": [
+        "Proposition 418",
+        "public safety bond",
+        "general obligation bonds",
+        "election",
+        "ballot",
+        "public safety",
+        "police facilities",
+        "fire facilities"
+      ],
+      "status": "on-ballot",
+      "last_verified": "2026-09-25",
+      "source_ids": [
+        "avondale-prop-418-official-bond-page",
+        "avondale-prop-418-official-bond-documents",
+        "avondale-prop-418-2026-publicity-pamphlet",
+        "avondale-prop-418-sample-ballot",
+        "avondale-police-surveillance-topic"
+      ]
     }
   ]
 }

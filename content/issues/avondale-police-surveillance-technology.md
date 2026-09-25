@@ -6,7 +6,33 @@ city_id: "avondale"
 issue_id: "avondale-police-surveillance-technology"
 url: "/communities/avondale/issues/police-surveillance-technology/"
 draft: false
+sticky_sections:
+  - id: "at-a-glance"
+    label: "Overview"
+    name: "At a glance"
+  - id: "license-plate-readers"
+    label: "LPRs"
+    name: "License plate readers"
+  - id: "police-drones"
+    label: "Drones"
+    name: "Police drones"
+  - id: "regional-and-interagency-data-sharing"
+    label: "Data Sharing"
+    name: "Regional and interagency data sharing"
+  - id: "timeline"
+    label: "Timeline"
+    name: "Timeline"
+  - id: "what-the-public-record-does-not-yet-show"
+    label: "What isn't known"
+    name: "What the public record does not yet show"
+  - id: "official-sources-heading"
+    label: "Sources"
+    name: "Official Sources"
 ---
+
+{{< research-status-note >}}
+OWVAZ is still gathering and verifying surveillance-related records for this city. This page may not yet include newer records from recent fiscal years, contracts, purchases, vendor details, deployment status, or policy documents. It should be read as a working research page, not a complete inventory.
+{{< /research-status-note >}}
 
 Avondale Police Department records document several technologies used to collect, search, share, or review information for law-enforcement purposes. These include license plate reader cameras, police drones, body-worn cameras, and regional data-sharing systems.
 

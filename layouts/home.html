@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="hero">
+<section class="hero home-hero">
   <div class="site-shell content-width">
     <p class="eyebrow">Arizona's West Valley</p>
 
@@ -13,13 +13,14 @@
       simpler resident-facing format.
     </p>
 
-    <p class="principle">
-      <strong>Find it. Understand it. Go to the source if you want more.</strong>
+    <p class="home-hero__next-step">
+      Start with your city. Each page keeps official sources close so you can
+      check the records yourself.
     </p>
   </div>
 </section>
 
-<section class="section">
+<section class="section home-communities">
   <div class="site-shell content-width">
     <header class="section-heading">
       <p class="eyebrow">Communities</p>
@@ -27,24 +28,103 @@
     </header>
 
     <p class="page-summary">
-      OWVAZ adds communities one at a time so information can be
-      researched, verified, and sourced before publication.
+      Find local budgets, meeting records, civic topics, public records,
+      and official City sources.
     </p>
 
-    <ul class="community-list home-city-picker">
-      <li class="home-city-picker__item home-city-picker__item--available">
-        <a class="home-city-picker__link"
-           href="/communities/avondale/">
-          <span class="home-city-picker__city">Avondale</span>
-          <small class="home-city-picker__action">Explore community</small>
-        </a>
-      </li>
+    {{ $homepageCities := slice
+      (dict "slug" "avondale" "name" "Avondale")
+      (dict "slug" "tolleson" "name" "Tolleson")
+    }}
 
-      <li class="home-city-picker__item home-city-picker__item--pending">
-        <span class="home-city-picker__city">Tolleson</span>
-        <small class="home-city-picker__status">In Progress</small>
+    <ul class="community-list home-city-picker home-city-picker--available">
+      {{ range $homepageCities }}
+        {{ $page := site.GetPage (printf "/communities/%s" .slug) }}
+        {{ if not $page }}
+          {{ errorf "Homepage community page missing for %s" .slug }}
+        {{ else }}
+          <li class="home-city-picker__item home-city-picker__item--available">
+            <a class="home-city-picker__link"
+               href="{{ $page.RelPermalink }}">
+              <span class="home-city-picker__city">{{ .name }}</span>
+              <small class="home-city-picker__action">
+                View city page
+              </small>
+            </a>
+          </li>
+        {{ end }}
+      {{ end }}
+
+      <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
+        <div class="home-city-picker__link home-city-picker__link--inactive" aria-disabled="true">
+          <span class="home-city-picker__city">Litchfield Park</span>
+          <small class="home-city-picker__action">
+            In progress
+          </small>
+        </div>
       </li>
     </ul>
+    {{ $futureCities := slice
+      (dict "name" "Buckeye")
+      (dict "name" "Glendale")
+      (dict "name" "Goodyear")
+      (dict "name" "Peoria")
+      (dict "name" "Surprise")
+    }}
+
+    <div class="home-coming-soon home-coming-soon--inline">
+      <p class="home-coming-soon__heading">Coming Soon</p>
+
+      <p class="home-coming-soon__inline-list" aria-label="Future OWVAZ communities">
+        {{ range $index, $city := $futureCities -}}
+          {{- if $index }}, {{ end -}}
+          <span>{{ $city.name }}</span>
+        {{- end }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft home-find">
+  <div class="site-shell content-width">
+    <header class="section-heading">
+      <p class="eyebrow">What you’ll find</p>
+      <h2>Resident-focused pages built from public records.</h2>
+    </header>
+
+    <div class="home-feature-grid" aria-label="What you can find on OWVAZ">
+      <article class="home-feature-card">
+        <h3>Budgets &amp; spending</h3>
+        <p>
+          Year-by-year budget pages, major figures, comparisons, and links to
+          the original budget documents.
+        </p>
+      </article>
+
+      <article class="home-feature-card">
+        <h3>Meetings &amp; agendas</h3>
+        <p>
+          Meeting records, agendas, minutes, recordings when available, and
+          links back to the City’s official systems.
+        </p>
+      </article>
+
+      <article class="home-feature-card">
+        <h3>Civic topics</h3>
+        <p>
+          Local issues such as ballot measures, surveillance technology,
+          public-safety records, and other documented civic topics.
+        </p>
+      </article>
+
+      <article class="home-feature-card">
+        <h3>Official sources</h3>
+        <p>
+          Government links stay visible so residents can verify details,
+          download records, or continue research from the source.
+        </p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -60,7 +140,7 @@
       community updates, and discussion.
     </p>
 
-    <ul class="community-list home-city-picker">
+    <ul class="community-list home-city-picker home-social-picker">
       <li class="home-city-picker__item home-city-picker__item--available">
         <a class="home-city-picker__link"
            href="https://www.facebook.com/groups/2125291671729593/"
@@ -83,22 +163,6 @@
         </a>
       </li>
     </ul>
-  </div>
-</section>
-
-<section class="section section--soft">
-  <div class="site-shell content-width">
-    <header class="section-heading">
-      <p class="eyebrow">How OWVAZ works</p>
-      <h2>One glance for the answer. One click for the details.</h2>
-    </header>
-
-    <div class="prose">
-      <p>
-        OWVAZ organizes information around what residents are trying to find,
-        while keeping authoritative government sources visible and accessible.
-      </p>
-    </div>
   </div>
 </section>
 

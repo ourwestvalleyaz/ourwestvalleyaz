@@ -1,23 +1,3481 @@
 {
   "meetings": [
     {
-      "meeting_id": "civicclerk-1366",
-      "city_id": "avondale",
-      "governing_body": "Avondale Audit Committee",
-      "meeting_type": "audit_committee",
-      "date": "2026-09-03",
-      "time": "10:30",
-      "timezone": "America/Phoenix",
-      "status": "scheduled",
-      "location": "Sonoran Conference Room 11465 West Civic Center Drive Avondale, AZ 85323",
-      "official_page_url": "https://avondaleaz.portal.civicclerk.com/",
-      "agenda_url": null,
-      "recording_url": null,
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/267/files",
+      "status": "completed",
       "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/267/media",
+      "time": "18:00",
+      "date": "2020-03-23",
       "source_ids": [
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-03-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/267/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/269/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/269/media",
+      "time": "18:30",
+      "date": "2020-04-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-04-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/269/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/321/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/321/media",
+      "time": "18:00",
+      "date": "2020-04-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-04-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/321/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/281/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/281/media",
+      "time": "18:00",
+      "date": "2020-04-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-04-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/281/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/282/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/282/media",
+      "time": "18:00",
+      "date": "2020-05-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-05-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/282/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/284/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/284/media",
+      "time": "17:45",
+      "date": "2020-05-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-05-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/284/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/322/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/322/media",
+      "time": "18:00",
+      "date": "2020-05-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-05-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/322/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/323/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/323/media",
+      "time": "18:00",
+      "date": "2020-06-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-06-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/323/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/324/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/324/media",
+      "time": "18:00",
+      "date": "2020-07-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-07-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/324/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/400/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/400/media",
+      "time": "18:30",
+      "date": "2020-07-27",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-work_session-2020-07-27",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/400/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/294/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/294/media",
+      "time": "19:00",
+      "date": "2020-07-27",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-07-27",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/294/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/296/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/296/media",
+      "time": "18:00",
+      "date": "2020-08-10",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-08-10",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/296/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/325/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/325/media",
+      "time": "18:00",
+      "date": "2020-08-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-08-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/325/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/298/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/298/media",
+      "time": "19:00",
+      "date": "2020-08-24",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-08-24",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/298/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/300/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/300/media",
+      "time": "18:00",
+      "date": "2020-09-08",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-09-08",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/300/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/326/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/326/media",
+      "time": "18:00",
+      "date": "2020-09-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-09-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/326/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/299/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/299/media",
+      "time": "18:00",
+      "date": "2020-09-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-09-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/299/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/295/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/295/media",
+      "time": "18:30",
+      "date": "2020-10-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-10-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/295/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/292/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/292/media",
+      "time": "18:30",
+      "date": "2020-10-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-10-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/292/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/327/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/327/media",
+      "time": "18:00",
+      "date": "2020-10-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-10-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/327/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/291/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/291/media",
+      "time": "19:00",
+      "date": "2020-11-02",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-11-02",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/291/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/289/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/289/media",
+      "time": "18:00",
+      "date": "2020-11-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-11-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/289/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/328/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/328/media",
+      "time": "18:00",
+      "date": "2020-11-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-11-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/328/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/285/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/285/media",
+      "time": "18:00",
+      "date": "2020-12-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2020-12-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/285/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/329/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/329/media",
+      "time": "18:00",
+      "date": "2020-12-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2020-12-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/329/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/455/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/455/media",
+      "time": "18:00",
+      "date": "2021-01-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-01-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/455/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/456/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/456/media",
+      "time": "18:30",
+      "date": "2021-01-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-01-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/456/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/371/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/371/media",
+      "time": "18:00",
+      "date": "2021-01-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-01-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/371/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/457/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/457/media",
+      "time": "18:30",
+      "date": "2021-02-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-02-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/457/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/458/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/458/media",
+      "time": "18:30",
+      "date": "2021-02-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-02-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/458/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/372/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/372/media",
+      "time": "18:00",
+      "date": "2021-02-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-02-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/372/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/445/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/445/media",
+      "time": "18:00",
+      "date": "2021-03-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-03-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/445/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/449/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/449/media",
+      "time": "18:30",
+      "date": "2021-03-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-03-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/449/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/446/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/446/media",
+      "time": "18:00",
+      "date": "2021-04-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-04-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/446/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/459/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/459/media",
+      "time": "17:00",
+      "date": "2021-04-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-04-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/459/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/374/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/374/media",
+      "time": "18:00",
+      "date": "2021-04-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-04-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/374/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/447/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/447/media",
+      "time": "18:00",
+      "date": "2021-05-03",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-05-03",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/447/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/460/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/460/media",
+      "time": "18:00",
+      "date": "2021-05-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-05-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/460/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/375/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/375/media",
+      "time": "18:00",
+      "date": "2021-05-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-05-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/375/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/448/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/448/media",
+      "time": "17:45",
+      "date": "2021-06-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-06-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/448/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/376/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/376/media",
+      "time": "18:00",
+      "date": "2021-06-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-06-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/376/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/461/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/461/media",
+      "time": "19:00",
+      "date": "2021-06-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-06-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/461/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/528/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/528/media",
+      "time": "18:30",
+      "date": "2021-07-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-07-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/528/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/377/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/377/media",
+      "time": "18:00",
+      "date": "2021-07-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-07-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/377/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/378/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/378/media",
+      "time": "18:00",
+      "date": "2021-08-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-08-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/378/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/463/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/463/media",
+      "time": "18:00",
+      "date": "2021-08-23",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-08-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/463/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/451/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/451/media",
+      "time": "19:00",
+      "date": "2021-09-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-09-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/451/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/464/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/464/media",
+      "time": "19:00",
+      "date": "2021-09-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-09-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/464/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/452/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/452/media",
+      "time": "18:00",
+      "date": "2021-10-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-10-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/452/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/380/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/380/media",
+      "time": "18:00",
+      "date": "2021-10-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-10-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/380/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/466/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/466/media",
+      "time": "18:00",
+      "date": "2021-10-25",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-10-25",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/466/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/465/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/465/media",
+      "time": "18:30",
+      "date": "2021-11-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-11-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/465/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/381/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/381/media",
+      "time": "18:00",
+      "date": "2021-11-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-11-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/381/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/467/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/467/media",
+      "time": "18:00",
+      "date": "2021-12-13",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2021-12-13",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/467/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/604/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/604/media",
+      "time": "18:00",
+      "date": "2021-12-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2021-12-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/604/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_special",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/613/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/613/media",
+      "time": "14:00",
+      "date": "2021-12-23",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-special-2021-12-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/613/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/571/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/571/media",
+      "time": "18:00",
+      "date": "2022-01-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2022-01-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/571/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/593/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/593/media",
+      "time": "18:00",
+      "date": "2022-02-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2022-02-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/593/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/575/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/575/media",
+      "time": "18:00",
+      "date": "2022-03-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2022-03-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/575/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/594/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/594/media",
+      "time": "18:00",
+      "date": "2022-03-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2022-03-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/594/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/688/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/688/media",
+      "time": "18:00",
+      "date": "2022-04-13",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2022-04-13",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/688/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/595/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/595/media",
+      "time": "18:00",
+      "date": "2022-04-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2022-04-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/595/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/629/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/629/media",
+      "time": "17:30",
+      "date": "2022-06-13",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2022-06-13",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/629/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/597/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/597/media",
+      "time": "18:00",
+      "date": "2022-07-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2022-07-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/597/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/599/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/599/media",
+      "time": "18:00",
+      "date": "2022-09-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-planning-commission-2022-09-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/599/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/600/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/600/media",
+      "time": "18:00",
+      "date": "2022-10-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2022-10-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/600/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/780/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/780/media",
+      "time": "18:00",
+      "date": "2022-11-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2022-11-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/780/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/601/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/601/media",
+      "time": "18:00",
+      "date": "2022-11-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2022-11-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/601/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/602/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/602/media",
+      "time": "18:00",
+      "date": "2022-12-14",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2022-12-14",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/602/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/744/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/744/media",
+      "time": "18:00",
+      "date": "2023-03-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-03-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/744/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/745/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/745/media",
+      "time": "18:00",
+      "date": "2023-04-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-04-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/745/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/758/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/758/media",
+      "time": "17:30",
+      "date": "2023-05-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-05-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/758/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/767/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/767/media",
+      "time": "17:30",
+      "date": "2023-05-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-05-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/767/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/746/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/746/media",
+      "time": "18:00",
+      "date": "2023-05-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-05-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/746/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/759/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/759/media",
+      "time": "17:30",
+      "date": "2023-06-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-06-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/759/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/747/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/747/media",
+      "time": "18:00",
+      "date": "2023-06-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-06-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/747/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/768/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/768/media",
+      "time": "17:30",
+      "date": "2023-06-26",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-06-26",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/768/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/760/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/760/media",
+      "time": "18:00",
+      "date": "2023-07-10",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-07-10",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/760/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/769/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/769/media",
+      "time": "18:00",
+      "date": "2023-07-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2023-07-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/769/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/748/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/748/media",
+      "time": "18:00",
+      "date": "2023-07-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-07-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/748/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/770/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/770/media",
+      "time": "17:30",
+      "date": "2023-08-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-08-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/770/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/761/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/761/media",
+      "time": "18:00",
+      "date": "2023-08-28",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2023-08-28",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/761/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/762/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/762/media",
+      "time": "17:30",
+      "date": "2023-09-11",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-09-11",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/762/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/771/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/771/media",
+      "time": "17:30",
+      "date": "2023-09-25",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-09-25",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/771/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/763/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/763/media",
+      "time": "17:30",
+      "date": "2023-10-09",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-10-09",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/763/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/947/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/947/media",
+      "time": "17:30",
+      "date": "2023-10-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Avondale Visitor & Conference Center, 11490 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2023-10-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/947/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/751/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/751/media",
+      "time": "18:00",
+      "date": "2023-10-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-10-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/751/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/772/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/772/media",
+      "time": "17:30",
+      "date": "2023-10-23",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-10-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/772/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/773/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/773/media",
+      "time": "17:30",
+      "date": "2023-11-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-11-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/773/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/752/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/752/media",
+      "time": "18:00",
+      "date": "2023-11-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2023-11-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/752/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/774/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/774/media",
+      "time": "18:00",
+      "date": "2023-11-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2023-11-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/774/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/776/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/776/media",
+      "time": "17:30",
+      "date": "2023-12-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-12-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/776/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/777/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/777/media",
+      "time": "18:00",
+      "date": "2023-12-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2023-12-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/777/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/961/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/961/media",
+      "time": "17:30",
+      "date": "2024-01-08",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-01-08",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/961/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/986/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/986/media",
+      "time": "18:00",
+      "date": "2024-01-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-01-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/986/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/963/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/963/media",
+      "time": "17:30",
+      "date": "2024-01-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-01-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/963/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/950/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/950/media",
+      "time": "17:30",
+      "date": "2024-02-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-02-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/950/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1051/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1051/media",
+      "time": "18:00",
+      "date": "2024-02-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-02-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1051/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/964/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/964/media",
+      "time": "17:30",
+      "date": "2024-02-26",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-02-26",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/964/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/951/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/951/media",
+      "time": "17:30",
+      "date": "2024-03-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-03-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/951/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/965/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/965/media",
+      "time": "17:30",
+      "date": "2024-03-25",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-03-25",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/965/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/952/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/952/media",
+      "time": "17:30",
+      "date": "2024-04-08",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-04-08",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/952/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1053/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1053/media",
+      "time": "18:00",
+      "date": "2024-04-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-04-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1053/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/966/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/966/media",
+      "time": "17:30",
+      "date": "2024-04-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-04-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/966/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_special",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1081/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1081/media",
+      "time": "17:30",
+      "date": "2024-04-29",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-special-2024-04-29",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1081/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/953/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/953/media",
+      "time": "17:30",
+      "date": "2024-05-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-05-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/953/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1054/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1054/media",
+      "time": "18:00",
+      "date": "2024-05-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-05-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1054/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/967/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/967/media",
+      "time": "17:30",
+      "date": "2024-05-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-05-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/967/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/954/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/954/media",
+      "time": "17:30",
+      "date": "2024-06-03",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-06-03",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/954/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/968/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/968/media",
+      "time": "17:30",
+      "date": "2024-06-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-06-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/968/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1055/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1055/media",
+      "time": "18:00",
+      "date": "2024-06-26",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-06-26",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1055/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/955/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/955/media",
+      "time": "17:30",
+      "date": "2024-07-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-07-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/955/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/969/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/969/media",
+      "time": "17:30",
+      "date": "2024-07-08",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2024-07-08",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/969/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/970/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/970/media",
+      "time": "17:30",
+      "date": "2024-08-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-08-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/970/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1057/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1057/media",
+      "time": "18:00",
+      "date": "2024-08-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-08-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1057/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/956/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/956/media",
+      "time": "17:30",
+      "date": "2024-08-26",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-08-26",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/956/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/957/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/957/media",
+      "time": "17:30",
+      "date": "2024-09-09",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-09-09",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/957/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1058/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1058/media",
+      "time": "18:00",
+      "date": "2024-09-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-09-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1058/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/971/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/971/media",
+      "time": "17:30",
+      "date": "2024-09-23",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-09-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/971/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/972/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/972/media",
+      "time": "17:30",
+      "date": "2024-10-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-10-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/972/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_special",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1117/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1117/media",
+      "time": "17:30",
+      "date": "2024-10-14",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-special-2024-10-14",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1117/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1059/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1059/media",
+      "time": "18:00",
+      "date": "2024-10-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2024-10-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1059/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/958/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/958/media",
+      "time": "17:30",
+      "date": "2024-10-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-10-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/958/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/959/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/959/media",
+      "time": "17:30",
+      "date": "2024-11-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-11-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/959/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/973/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/973/media",
+      "time": "17:30",
+      "date": "2024-11-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-11-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/973/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/960/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/960/media",
+      "time": "17:30",
+      "date": "2024-12-02",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-12-02",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/960/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/974/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/974/media",
+      "time": "17:30",
+      "date": "2024-12-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2024-12-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/974/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1120/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1120/media",
+      "time": "17:30",
+      "date": "2025-01-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-01-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1120/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1121/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1121/media",
+      "time": "17:30",
+      "date": "2025-01-27",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-01-27",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1121/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1122/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1122/media",
+      "time": "17:30",
+      "date": "2025-02-10",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-02-10",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1122/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1153/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1153/media",
+      "time": "18:00",
+      "date": "2025-02-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2025-02-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1153/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1123/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1123/media",
+      "time": "17:30",
+      "date": "2025-02-24",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-02-24",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1123/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1124/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1124/media",
+      "time": "17:30",
+      "date": "2025-03-03",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-03-03",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1124/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1227/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1227/media",
+      "time": "07:30",
+      "date": "2025-03-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2025-03-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1227/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1226/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1226/media",
+      "time": "07:30",
+      "date": "2025-03-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2025-03-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1226/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1154/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1154/media",
+      "time": "18:00",
+      "date": "2025-03-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2025-03-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1154/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1125/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1125/media",
+      "time": "17:30",
+      "date": "2025-03-24",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-03-24",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1125/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_special",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1234/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1234/media",
+      "time": "17:30",
+      "date": "2025-03-25",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-special-2025-03-25",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1234/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_special",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1241/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1241/media",
+      "time": "18:00",
+      "date": "2025-03-31",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-special-2025-03-31",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1241/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1126/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1126/media",
+      "time": "17:30",
+      "date": "2025-04-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-04-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1126/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1127/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1127/media",
+      "time": "17:30",
+      "date": "2025-04-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-04-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1127/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1128/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1128/media",
+      "time": "17:30",
+      "date": "2025-05-05",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-05-05",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1128/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1129/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1129/media",
+      "time": "17:30",
+      "date": "2025-05-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-05-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1129/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1156/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1156/media",
+      "time": "18:00",
+      "date": "2025-05-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2025-05-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1156/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1130/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1130/media",
+      "time": "17:30",
+      "date": "2025-06-02",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-06-02",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1130/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1131/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1131/media",
+      "time": "17:30",
+      "date": "2025-06-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-06-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1131/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1157/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1157/media",
+      "time": "18:00",
+      "date": "2025-06-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2025-06-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1157/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1132/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1132/media",
+      "time": "17:30",
+      "date": "2025-07-07",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-07-07",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1132/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1133/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1133/media",
+      "time": "17:30",
+      "date": "2025-07-14",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2025-07-14",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1133/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1134/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1134/media",
+      "time": "17:30",
+      "date": "2025-08-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2025-08-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1134/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1135/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1135/media",
+      "time": "17:30",
+      "date": "2025-08-25",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-08-25",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1135/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1136/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1136/media",
+      "time": "17:30",
+      "date": "2025-09-08",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-09-08",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1136/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1137/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1137/media",
+      "time": "17:30",
+      "date": "2025-09-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-09-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1137/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1138/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1138/media",
+      "time": "17:30",
+      "date": "2025-10-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-10-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1138/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1161/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1161/media",
+      "time": "18:00",
+      "date": "2025-10-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2025-10-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1161/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1139/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1139/media",
+      "time": "17:30",
+      "date": "2025-10-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-10-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1139/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1140/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1140/media",
+      "time": "17:30",
+      "date": "2025-11-03",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-11-03",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1140/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1141/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1141/media",
+      "time": "17:30",
+      "date": "2025-11-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-11-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1141/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1162/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1162/media",
+      "time": "18:00",
+      "date": "2025-11-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2025-11-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1162/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1142/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1142/media",
+      "time": "17:30",
+      "date": "2025-12-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-12-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1142/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1143/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1143/media",
+      "time": "17:30",
+      "date": "2025-12-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2025-12-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1143/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1287/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1287/media",
+      "time": "17:30",
+      "date": "2026-01-12",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-01-12",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1287/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1288/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1288/media",
+      "time": "17:30",
+      "date": "2026-01-26",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-01-26",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1288/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1289/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1289/media",
+      "time": "17:30",
+      "date": "2026-02-09",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-02-09",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1289/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1323/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1323/media",
+      "time": "16:30",
+      "date": "2026-02-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Sonoran Conference Room, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2026-02-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1323/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1290/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1290/media",
+      "time": "17:30",
+      "date": "2026-02-23",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-02-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1290/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1291/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1291/media",
+      "time": "17:30",
+      "date": "2026-03-02",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-03-02",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1291/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1277/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1277/media",
+      "time": "18:00",
+      "date": "2026-03-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-03-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1277/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1292/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1292/media",
+      "time": "17:30",
+      "date": "2026-03-23",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-03-23",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1292/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1293/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1293/media",
+      "time": "17:30",
+      "date": "2026-04-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-04-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1293/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1278/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1278/media",
+      "time": "18:00",
+      "date": "2026-04-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-04-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1278/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1294/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1294/media",
+      "time": "17:30",
+      "date": "2026-04-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-04-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1294/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1295/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1295/media",
+      "time": "17:30",
+      "date": "2026-05-04",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-05-04",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1295/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1296/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1296/media",
+      "time": "17:30",
+      "date": "2026-05-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-05-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1296/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1297/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1297/media",
+      "time": "17:30",
+      "date": "2026-06-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-06-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1297/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1298/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1298/media",
+      "time": "17:30",
+      "date": "2026-06-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-06-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1298/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1325/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1325/media",
+      "time": "17:30",
+      "date": "2026-06-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Avondale Visitor & Conference Center, 11490 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2026-06-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1325/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1301/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1301/media",
+      "time": "17:30",
+      "date": "2026-07-06",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-07-06",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1301/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1300/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1300/media",
+      "time": "17:30",
+      "date": "2026-07-13",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2026-07-13",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1300/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1326/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1326/media",
+      "time": "17:30",
+      "date": "2026-08-10",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2026-08-10",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1326/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1282/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1282/media",
+      "time": "18:00",
+      "date": "2026-08-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-08-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1282/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1303/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1303/media",
+      "time": "17:30",
+      "date": "2026-08-24",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Virtual Meeting",
+      "meeting_id": "avondale-city-council-2026-08-24",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1303/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1302/files",
+      "status": "completed",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1302/media",
+      "time": "17:30",
+      "date": "2026-08-31",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2026-08-31",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1302/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
     },
     {
       "meeting_id": "avondale-city-council-2026-09-14",
@@ -27,36 +3485,35 @@
       "date": "2026-09-14",
       "time": "17:30",
       "timezone": "America/Phoenix",
-      "status": "scheduled",
-      "location": "Council Chamber 11465 West Civic Center Drive Avondale, AZ 85323",
-      "official_page_url": "https://avondaleaz.portal.civicclerk.com/",
-      "agenda_url": null,
-      "recording_url": null,
+      "status": "completed",
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1304/overview",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1304/files",
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1304/media",
       "minutes_url": null,
       "source_ids": [
-        "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-25"
     },
     {
-      "meeting_id": "civicclerk-1283",
-      "city_id": "avondale",
-      "governing_body": "Avondale Planning Commission",
       "meeting_type": "planning_commission",
-      "date": "2026-09-16",
-      "time": "18:00",
-      "timezone": "America/Phoenix",
-      "status": "scheduled",
-      "location": "Council Chamber 11465 West Civic Center Drive Avondale, AZ 85323",
-      "official_page_url": "https://avondaleaz.portal.civicclerk.com/",
-      "agenda_url": null,
-      "recording_url": null,
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1283/files",
+      "status": "completed",
       "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1283/media",
+      "time": "18:00",
+      "date": "2026-09-16",
       "source_ids": [
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-09-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1283/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
     },
     {
       "meeting_id": "avondale-city-council-2026-09-28",
@@ -76,7 +3533,7 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
       "meeting_id": "avondale-city-council-2026-10-05",
@@ -96,7 +3553,7 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
       "meeting_id": "avondale-city-council-2026-10-19",
@@ -116,7 +3573,26 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1284/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1284/media",
+      "time": "18:00",
+      "date": "2026-10-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-10-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1284/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
     },
     {
       "meeting_id": "civicclerk-1284",
@@ -135,7 +3611,26 @@
       "source_ids": [
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1361/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1361/media",
+      "time": "17:30",
+      "date": "2026-10-26",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Avondale Visitor & Conference Center, 11490 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2026-10-26",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1361/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
     },
     {
       "meeting_id": "civicclerk-1361",
@@ -154,7 +3649,7 @@
       "source_ids": [
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
       "meeting_id": "avondale-city-council-2026-11-02",
@@ -174,7 +3669,7 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
       "meeting_id": "avondale-city-council-2026-11-16",
@@ -194,7 +3689,26 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1285/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1285/media",
+      "time": "18:00",
+      "date": "2026-11-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-11-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1285/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
     },
     {
       "meeting_id": "civicclerk-1285",
@@ -213,7 +3727,7 @@
       "source_ids": [
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
       "meeting_id": "avondale-city-council-2026-12-07",
@@ -233,7 +3747,7 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
       "meeting_id": "avondale-city-council-2026-12-14",
@@ -253,7 +3767,26 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1286/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1286/media",
+      "time": "18:00",
+      "date": "2026-12-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2026-12-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1286/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
     },
     {
       "meeting_id": "civicclerk-1286",
@@ -272,10 +3805,10 @@
       "source_ids": [
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
     },
     {
-      "meeting_id": "civicclerk-1378",
+      "meeting_id": "avondale-city-council-2027-01-11",
       "city_id": "avondale",
       "governing_body": "Avondale City Council",
       "meeting_type": "city_council",
@@ -292,7 +3825,939 @@
         "avondale-public-meetings",
         "avondale-civicclerk-portal"
       ],
-      "last_verified": "2026-09-01"
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1367/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1367/media",
+      "time": "18:00",
+      "date": "2027-01-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-01-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1367/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1379/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1379/media",
+      "time": "17:30",
+      "date": "2027-01-25",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2027-01-25",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1379/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1380/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1380/media",
+      "time": "17:30",
+      "date": "2027-02-08",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2027-02-08",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1380/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1368/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1368/media",
+      "time": "18:00",
+      "date": "2027-02-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-02-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1368/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1381/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1381/media",
+      "time": "17:30",
+      "date": "2027-02-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2027-02-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1381/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1402/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1402/media",
+      "time": "17:30",
+      "date": "2027-03-01",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2027-03-01",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1402/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1369/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1369/media",
+      "time": "18:00",
+      "date": "2027-03-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-03-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1369/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1383/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1383/media",
+      "time": "17:30",
+      "date": "2027-03-22",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-2027-03-22",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1383/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "city_council_work_session",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1382/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1382/media",
+      "time": "17:30",
+      "date": "2027-03-29",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "Avondale Visitor & Conference Center, 11490 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-city-council-work_session-2027-03-29",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1382/overview",
+      "governing_body": "Avondale City Council",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1370/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1370/media",
+      "time": "18:00",
+      "date": "2027-04-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-04-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1370/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1371/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1371/media",
+      "time": "18:00",
+      "date": "2027-05-19",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-05-19",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1371/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1372/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1372/media",
+      "time": "18:00",
+      "date": "2027-06-16",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-06-16",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1372/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1373/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1373/media",
+      "time": "18:00",
+      "date": "2027-07-21",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-07-21",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1373/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1374/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1374/media",
+      "time": "18:00",
+      "date": "2027-08-18",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-08-18",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1374/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1375/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1375/media",
+      "time": "18:00",
+      "date": "2027-09-15",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-09-15",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1375/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1376/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1376/media",
+      "time": "18:00",
+      "date": "2027-10-20",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-10-20",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1376/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_type": "planning_commission",
+      "agenda_url": "https://avondaleaz.portal.civicclerk.com/event/1377/files",
+      "status": "scheduled",
+      "minutes_url": null,
+      "recording_url": "https://avondaleaz.portal.civicclerk.com/event/1377/media",
+      "time": "18:00",
+      "date": "2027-11-17",
+      "source_ids": [
+        "avondale-civicclerk-portal"
+      ],
+      "location": "City Council Chamber, 11465 West Civic Center Drive, Avondale, AZ 85323",
+      "meeting_id": "avondale-planning-commission-2027-11-17",
+      "last_verified": "2026-09-25",
+      "official_page_url": "https://avondaleaz.portal.civicclerk.com/event/1377/overview",
+      "governing_body": "Avondale Planning Commission",
+      "city_id": "avondale",
+      "timezone": "America/Phoenix"
+    },
+    {
+      "meeting_id": "litchfield-park-city-council-work-session-2026-10-21",
+      "city_id": "litchfield-park",
+      "governing_body": "Litchfield Park City Council",
+      "meeting_type": "city_council_work_session",
+      "date": "2026-10-21",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Calendar.aspx?EID=2973&month=10&year=2026&day=17&calType=0",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "litchfield-park-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "litchfield-park-city-council-2026-10-21",
+      "city_id": "litchfield-park",
+      "governing_body": "Litchfield Park City Council",
+      "meeting_type": "city_council",
+      "date": "2026-10-21",
+      "time": "19:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Calendar.aspx?EID=2974&month=10&year=2026&day=17&calType=0",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "litchfield-park-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "litchfield-park-city-council-retreat-2027-01-27",
+      "city_id": "litchfield-park",
+      "governing_body": "Litchfield Park City Council",
+      "meeting_type": "city_council_retreat",
+      "date": "2027-01-27",
+      "time": "08:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Calendar.aspx?EID=2970&month=1&year=2027&day=17&calType=0",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "litchfield-park-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-01-13",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-01-13",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/226/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/226/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/226/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-01-27",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-01-27",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/239/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/239/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/239/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-02-10",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-02-10",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/254/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/254/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/254/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-02-24",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-02-24",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/240/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/240/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/240/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/240/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-03-10",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-03-10",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "cancelled",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/255/overview",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-03-24",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-03-24",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/241/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/241/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/241/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/241/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-special-2026-03-27",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council_special",
+      "date": "2026-03-27",
+      "time": "15:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/273/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/273/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/273/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-04-15",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-04-15",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/256/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/256/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/256/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-04-22",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-04-22",
+      "time": "16:30",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/274/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/274/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/274/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-04-28",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-04-28",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/242/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/242/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/242/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/242/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-05-12",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-05-12",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/257/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/257/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/257/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/257/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-05-26",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-05-26",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/243/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/243/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/243/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/243/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-06-09",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-06-09",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/258/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/258/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/258/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/258/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-06-23",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-06-23",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/244/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/244/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/244/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/244/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-07-14",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-07-14",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/259/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/259/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/259/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-07-28",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-07-28",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "cancelled",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/245/overview",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-special-2026-08-10",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council_special",
+      "date": "2026-08-10",
+      "time": "16:30",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/278/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/278/files",
+      "recording_url": null,
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/278/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-08-11",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-08-11",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "cancelled",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/260/overview",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-08-25",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-08-25",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/246/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/246/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/246/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/246/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-09-08",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-09-08",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/234/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/234/files",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/234/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/234/files",
+      "source_ids": [
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-09-22",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-09-22",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "completed",
+      "location": null,
+      "official_page_url": "https://tollesonaz.portal.civicclerk.com/event/247/overview",
+      "agenda_url": "https://tollesonaz.portal.civicclerk.com/event/247/files/agenda/1018",
+      "recording_url": "https://tollesonaz.portal.civicclerk.com/event/247/media",
+      "minutes_url": "https://tollesonaz.portal.civicclerk.com/event/247/files",
+      "source_ids": [
+        "tolleson-city-calendar",
+        "tolleson-civicclerk-portal"
+      ],
+      "last_verified": "2026-09-24"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-10-13",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-10-13",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=10&view=list&year=2026",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-10-27",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-10-27",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=10&view=list&year=2026",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-11-10",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-11-10",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=11&view=list&year=2026",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-11-24",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-11-24",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "cancelled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=11&view=list&year=2026",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-12-08",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-12-08",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=12&view=list&year=2026",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2026-12-22",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2026-12-22",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "cancelled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=12&view=list&year=2026",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2027-01-12",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2027-01-12",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=1&view=list&year=2027",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
+    },
+    {
+      "meeting_id": "tolleson-city-council-2027-01-26",
+      "city_id": "tolleson",
+      "governing_body": "Tolleson City Council",
+      "meeting_type": "city_council",
+      "date": "2027-01-26",
+      "time": "18:00",
+      "timezone": "America/Phoenix",
+      "status": "scheduled",
+      "location": null,
+      "official_page_url": "https://www.tolleson.az.gov/calendar.aspx?CID=0&month=1&view=list&year=2027",
+      "agenda_url": null,
+      "recording_url": null,
+      "minutes_url": null,
+      "source_ids": [
+        "tolleson-city-calendar"
+      ],
+      "last_verified": "2026-09-17"
     }
   ]
 }

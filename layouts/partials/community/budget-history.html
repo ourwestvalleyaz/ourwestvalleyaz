@@ -99,19 +99,17 @@
       {{- end -}}
     {{- end -}}
 
-    {{- if ne $mayorCount 1 -}}
-      {{- errorf
-        "budget history: %s %s expected exactly one mayor at adoption; found %d"
-        $cityID
+    {{- if eq $mayorCount 1 -}}
+      {{- $mayorsAtAdoption.Set
         $row.fiscal_year
-        $mayorCount
+        $mayorName
+      -}}
+    {{- else -}}
+      {{- $mayorsAtAdoption.Set
+        $row.fiscal_year
+        "Not yet verified"
       -}}
     {{- end -}}
-
-    {{- $mayorsAtAdoption.Set
-      $row.fiscal_year
-      $mayorName
-    -}}
 
     {{- $clientRow := merge
       $row
@@ -139,6 +137,7 @@
 
   <section class="budget-history"
            data-budget-history
+           data-budget-city="{{ index (dict "avondale" "Avondale" "tolleson" "Tolleson" "litchfield-park" "Litchfield Park") $cityID }}"
            {{- if gt $initialPriorAmount 0 }}
            data-budget-history-initial-prior="{{ $initialPriorAmount }}"
            {{- end }}
@@ -242,7 +241,6 @@
               <td>
                 {{ $mayorsAtAdoption.Get $row.fiscal_year }}
               </td>
-
               <td>
                 {{- if $previous -}}
 
@@ -253,11 +251,23 @@
                     100
                   -}}
 
-                  {{- if gt $pct 0 }}+{{ end -}}
-                  {{ $pct | lang.FormatNumber 1 }}%
+                  {{- $pctText := printf "%s%s%%"
+                    (cond (gt $pct 0) "+" "")
+                    ($pct | lang.FormatNumber 1)
+                  -}}
+
+                  {{ partial "community/budget-change.html" (dict
+                    "value" $pct
+                    "text" $pctText
+                    "class" "budget-history__change-value"
+                  ) }}
 
                 {{- else -}}
-                  —
+                  {{ partial "community/budget-change.html" (dict
+                    "value" 0
+                    "text" "—"
+                    "class" "budget-history__change-value"
+                  ) }}
                 {{- end -}}
               </td>
             </tr>

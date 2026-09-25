@@ -1,6 +1,11 @@
 {{ define "main" }}
 
 {{- $cityID := .Params.city_id -}}
+{{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
+{{- if ne (len $cityMatches) 1 -}}
+  {{- errorf "City return link requires one canonical city for %q" $cityID -}}
+{{- end -}}
+{{- $city := index $cityMatches 0 -}}
 {{- $fiscalYear := .Params.fiscal_year -}}
 {{- $fiscalKey := lower $fiscalYear -}}
 
@@ -53,6 +58,19 @@
 {{- end -}}
 
 {{- $comparison := $budget.prior_year_comparison -}}
+
+{{- $cityName := $cityID | title -}}
+{{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
+{{- if eq (len $cityMatches) 1 -}}
+  {{- $cityName = (index $cityMatches 0).name -}}
+{{- else -}}
+  {{- errorf
+    "budget page %q expected exactly one city record for %s; found %d"
+    .Path
+    $cityID
+    (len $cityMatches)
+  -}}
+{{- end -}}
 
 <article class="budget-year-page">
 
@@ -181,7 +199,7 @@
 
     <nav class="budget-year-page__context" aria-label="Budget page context">
       <a href="/communities/{{ $cityID }}/#budget">
-        Avondale budget overview
+        {{ $cityName }} budget overview
       </a>
     </nav>
 
@@ -202,6 +220,7 @@
 
       </div>
 
+      {{- with $comparison -}}
       {{- $comparisonClass := "neutral" -}}
       {{- if gt $comparison.percent_change 0 -}}
         {{- $comparisonClass = "positive" -}}
@@ -231,9 +250,11 @@
         </small>
 
       </div>
+      {{- end -}}
 
     </section>
 
+    {{- with $comparison -}}
     <section class="budget-year-section" aria-labelledby="what-changed">
 
       <div class="budget-year-section__heading">
@@ -286,6 +307,8 @@
       </dl>
 
     </section>
+
+    {{- end -}}
 
     {{ with $budget.spending_by_purpose }}
       {{ with .categories }}
@@ -557,6 +580,9 @@
     {{ with $budget.capital }}
       {{ with .projects }}
 
+        {{ $itemizedOutlay := eq $budget.capital.presentation "itemized_capital_outlay" }}
+        {{ $tollesonBudgeted := and (eq $budget.city_id "tolleson") (not $itemizedOutlay) }}
+
         <section
           class="budget-year-section"
           aria-labelledby="major-capital-projects"
@@ -564,7 +590,13 @@
 
           <div class="budget-year-section__heading">
             <p class="eyebrow">Capital projects</p>
-            <h2 id="major-capital-projects">Major capital projects</h2>
+            {{ if $itemizedOutlay }}
+              <h2 id="major-capital-projects">Capital outlay by item</h2>
+            {{ else if $tollesonBudgeted }}
+              <h2 id="major-capital-projects">Capital projects and funds</h2>
+            {{ else }}
+              <h2 id="major-capital-projects">Major capital projects</h2>
+            {{ end }}
           </div>
 
           {{ with $budget.capital.selection_definition }}
@@ -573,18 +605,42 @@
 
           <div class="budget-year-table-wrap">
             <table class="budget-year-table">
-              <caption>
-                Selected projects in the adopted {{ $budget.fiscal_year }}
-                Capital Improvement Plan
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Project</th>
-                  <th scope="col">{{ $budget.fiscal_year }} funding</th>
-                  <th scope="col">Carryover</th>
-                  <th scope="col">Total project</th>
-                </tr>
-              </thead>
+              {{ if $itemizedOutlay }}
+                <caption>
+                  Itemized {{ $budget.fiscal_year }} Capital Projects Funds
+                  budgeted capital outlay
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Capital-outlay item</th>
+                    <th scope="col">{{ $budget.fiscal_year }} budgeted amount</th>
+                  </tr>
+                </thead>
+              {{ else if $tollesonBudgeted }}
+                <caption>
+                  Selected capital projects and funds:
+                  {{ $budget.fiscal_year }} budgeted expenditures/expenses
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Project or fund</th>
+                    <th scope="col">{{ $budget.fiscal_year }} budgeted amount</th>
+                  </tr>
+                </thead>
+              {{ else }}
+                <caption>
+                  Selected projects in the adopted {{ $budget.fiscal_year }}
+                  Capital Improvement Plan
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Project</th>
+                    <th scope="col">{{ $budget.fiscal_year }} funding</th>
+                    <th scope="col">Carryover</th>
+                    <th scope="col">Total project</th>
+                  </tr>
+                </thead>
+              {{ end }}
               <tbody>
 
                 {{ range . }}
@@ -592,18 +648,34 @@
                     <th scope="row">
                       {{ .name }}
                       <span class="budget-year-project__meta">
-                        {{ .project_number }} · {{ .project_type }}
+                        {{ if $itemizedOutlay }}
+                          {{ .project_type }}
+                        {{ else if $tollesonBudgeted }}
+                          {{ .project_type }}
+                        {{ else }}
+                          {{ .project_number }} · {{ .project_type }}
+                        {{ end }}
                       </span>
                     </th>
                     <td>
                       ${{ .new_appropriation | lang.FormatNumber 0 }}
                     </td>
-                    <td>
-                      ${{ .carryover | lang.FormatNumber 0 }}
-                    </td>
-                    <td>
-                      ${{ .total | lang.FormatNumber 0 }}
-                    </td>
+                    {{ if and (not $itemizedOutlay) (not $tollesonBudgeted) }}
+                      <td>
+                        {{ if isset . "carryover" }}
+                          ${{ .carryover | lang.FormatNumber 0 }}
+                        {{ else }}
+                          —
+                        {{ end }}
+                      </td>
+                      <td>
+                        {{ if isset . "total" }}
+                          ${{ .total | lang.FormatNumber 0 }}
+                        {{ else }}
+                          —
+                        {{ end }}
+                      </td>
+                    {{ end }}
                   </tr>
                 {{ end }}
 
@@ -612,9 +684,20 @@
           </div>
 
           <p class="budget-year-note">
-            Funding shown here is budget authority in the adopted capital
-            plan. It does not by itself establish expenditure, purchase,
-            construction completion, or deployment.
+            {{ if $itemizedOutlay }}
+              These amounts are fiscal-year budgeted capital outlay.
+              The source does not establish carryover, lifetime project
+              cost, or construction completion for these entries.
+            {{ else if $tollesonBudgeted }}
+              These amounts are fiscal-year budgeted expenditures/expenses.
+              They do not establish actual spending, lifetime project cost,
+              or construction completion. Amounts for different fiscal years
+              should not be added together as a project lifetime total.
+            {{ else }}
+              Funding shown here is budget authority in the adopted capital
+              plan. It does not by itself establish expenditure, purchase,
+              construction completion, or deployment.
+            {{ end }}
           </p>
 
         </section>
@@ -641,33 +724,45 @@
           </div>
 
           <p class="budget-year-section__intro">
-            Final budget adopted
-            <time datetime="{{ $adoption.date }}">
-              {{ time.Format "January 2, 2006" $adoption.date }}
-            </time>
-            {{ with $adoption.authority_identifier }}
-              <span aria-hidden="true"> · </span>
-              Resolution No. {{ . }}
+            {{ with $adoption.date }}
+              Final budget adopted
+              <time datetime="{{ . }}">
+                {{ time.Format "January 2, 2006" . }}
+              </time>
+              {{ with $adoption.authority_identifier }}
+                <span aria-hidden="true"> · </span>
+                Resolution No. {{ . }}
+              {{ end }}
+            {{ else }}
+              {{ with $adoption.authority_identifier }}
+                Adoption date not yet verified
+                <span aria-hidden="true"> · </span>
+                Resolution No. {{ . }}
+              {{ else }}
+                Final adoption date and authority not yet verified.
+              {{ end }}
             {{ end }}
           </p>
 
           <div class="budget-year-governance__body">
 
-            {{ range .members }}
-              {{ if eq .role "mayor" }}
-                <div class="budget-year-governance__mayor">
-                  <h3>Mayor</h3>
-                  <p>{{ .name }}</p>
-                </div>
-              {{ end }}
+            {{ $members := .members }}
+            {{ $mayors := where $members "role" "mayor" }}
+            {{ $councilmembers := where $members "role" "councilmember" }}
+
+            {{ range $mayors }}
+              <div class="budget-year-governance__mayor">
+                <h3>Mayor</h3>
+                <p>{{ .name }}</p>
+              </div>
             {{ end }}
 
-            <div class="budget-year-governance__council">
-              <h3>Councilmembers</h3>
+            {{ with $councilmembers }}
+              <div class="budget-year-governance__council">
+                <h3>Councilmembers</h3>
 
-              <ul>
-                {{ range .members }}
-                  {{ if eq .role "councilmember" }}
+                <ul>
+                  {{ range . }}
                     <li>
                       <span>{{ .name }}</span>
 
@@ -678,9 +773,13 @@
                       {{ end }}
                     </li>
                   {{ end }}
-                {{ end }}
-              </ul>
-            </div>
+                </ul>
+              </div>
+            {{ end }}
+
+            {{ if eq (len $members) 0 }}
+              <p>Historical council membership has not yet been verified.</p>
+            {{ end }}
 
           </div>
 
@@ -703,9 +802,14 @@
       aria-label="Return to community budget"
     >
       <a href="/communities/{{ $cityID }}/#budget">
-        Back to Avondale budget overview
+        Back to {{ $cityName }} budget overview
       </a>
     </nav>
+
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+    ) }}
 
   </div>
 

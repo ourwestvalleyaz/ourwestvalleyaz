@@ -39,25 +39,23 @@
 {{- $city := index $cityMatches 0 -}}
 
 
-<article class="owvaz-detail-page issue-page">
+<article class="owvaz-detail-page issue-page{{ if eq $issueID "tolleson-police-surveillance-technology" }} issue-page--tolleson-surveillance{{ end }}">
 
   <div class="site-shell content-width owvaz-detail-page__inner">
 
-    <nav
-      class="owvaz-detail-page__back"
-      aria-label="Back to community"
-    >
-      <a href="{{ printf "/communities/%s/" $cityID }}">
-        ← {{ $city.name }}
-      </a>
-    </nav>
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+      "label" $city.name
+      "class" "owvaz-detail-page__back"
+    ) }}
 
 
     <header class="owvaz-detail-page__header"
             data-sticky-nav-header>
 
       <p class="owvaz-detail-page__eyebrow">
-        {{ $city.name }} · Local Issue
+        {{ $city.name }} · Civic Topic
       </p>
 
       <h1>
@@ -73,7 +71,7 @@
       <div class="owvaz-detail-page__meta">
 
         {{ with $issue.status }}
-          <span class="owvaz-detail-page__status">
+          <span class="owvaz-detail-page__status owvaz-detail-page__status--{{ . }}">
             {{ . | humanize }}
           </span>
         {{ end }}
@@ -92,47 +90,29 @@
     </header>
 
 
-    {{/* Reusable long-form issue sticky navigation.
-         Uses the same behavior contract as community sticky nav.
-         Links intentionally represent major resident destinations,
-         not every heading on the page. */}}
-    
-{{ $stickySections := slice
-  (dict "id" "at-a-glance"
-        "label" "Overview"
-        "name" "At a glance")
-  (dict "id" "license-plate-readers"
-        "label" "LPRs"
-        "name" "License plate readers")
-  (dict "id" "police-drones"
-        "label" "Drones"
-        "name" "Police drones")
-  (dict "id" "regional-and-interagency-data-sharing"
-        "label" "Data Sharing"
-        "name" "Regional and interagency data sharing")
-  (dict "id" "timeline"
-        "label" "Timeline"
-        "name" "Timeline")
-  (dict "id" "what-the-public-record-does-not-yet-show"
-        "label" "What isn't known"
-        "name" "What the public record does not yet show")
-  (dict "id" "official-sources-heading"
-        "label" "Sources"
-        "name" "Official Sources")
-}}
+    {{/* Issue-specific major destinations are defined in page front matter. */}}
+
+{{ $stickySections := .Params.sticky_sections | default slice }}
 
 {{ partial "site/sticky-nav.html" (dict
-  "context" "Issue"
+  "context" "Civic Topic"
   "title" .Title
   "sections" $stickySections
 ) }}
+
+    {{ partial "community/deep-page-quick-links.html" (dict
+      "sections" $stickySections
+      "label" "Quick links"
+      "aria_label" "Issue page sections"
+      "class" "owvaz-detail-page__quick-links issue-page__quick-links"
+    ) }}
 
     <nav
       class="issue-page__context"
       aria-label="Issue page context"
     >
       <a href="{{ printf "/communities/%s/#local-issues" $cityID }}">
-        {{ $city.name }} local issues
+        {{ $city.name }} civic topics
       </a>
     </nav>
 
@@ -152,11 +132,10 @@
     ) }}
 
 
-    <p class="owvaz-detail-page__return">
-      <a href="{{ printf "/communities/%s/" $cityID }}">
-        ← Back to {{ $city.name }}
-      </a>
-    </p>
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+    ) }}
 
   </div>
 

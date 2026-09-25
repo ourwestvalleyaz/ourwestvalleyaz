@@ -1,0 +1,51 @@
+{{- $cityID := .city_id -}}
+{{- $today := now.Format "2006-01-02" -}}
+
+{{- $meetingRoot := index hugo.Data "meetings" -}}
+{{- $meetingFile := index $meetingRoot "meetings" -}}
+{{- $allMeetings := index $meetingFile "meetings" -}}
+
+{{- $cityMeetings := where $allMeetings "city_id" $cityID -}}
+{{- $archive := slice -}}
+
+{{- range $cityMeetings -}}
+  {{- if and
+      (lt .date $today)
+      (or
+        (eq .status "completed")
+        (eq .status "cancelled")
+        (eq .status "rescheduled")
+      )
+  -}}
+    {{- $archive = $archive | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $archive = sort $archive "date" "desc" -}}
+
+{{- if gt (len $archive) 0 -}}
+  <div class="meeting-archive meeting-archive--recent" aria-labelledby="recent-meetings-heading">
+    <div class="meeting-archive__header">
+      <div>
+        <h3 id="recent-meetings-heading">Recent meetings</h3>
+        <p>
+          Latest verified past public meetings from official City meeting records.
+        </p>
+      </div>
+
+      <a class="button button--secondary meeting-archive__view-all" href="/communities/{{ $cityID }}/meetings/">
+        View full meeting archive
+      </a>
+    </div>
+
+    <ul class="meeting-card-list">
+      {{- range first 3 $archive }}
+        <li>
+          {{ partial "community/meeting-card.html"
+            (dict "meeting" .)
+          }}
+        </li>
+      {{- end }}
+    </ul>
+  </div>
+{{- end -}}

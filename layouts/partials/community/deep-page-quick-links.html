@@ -1,0 +1,28 @@
+{{- $sections := .sections | default slice -}}
+{{- $label := .label | default "Quick links" -}}
+{{- $ariaLabel := .aria_label | default "Page sections" -}}
+{{- $class := .class | default "owvaz-detail-page__quick-links" -}}
+
+{{- if gt (len $sections) 0 -}}
+  <nav class="{{ $class }}" aria-label="{{ $ariaLabel }}">
+    <span class="owvaz-detail-page__quick-links-label">
+      {{ $label }}
+    </span>
+
+    <div class="owvaz-detail-page__quick-links-list">
+      {{- range $sections }}
+        {{- $id := .id -}}
+        {{- $linkLabel := .label | default .name -}}
+        {{- if and $id $linkLabel }}
+          <a href="#{{ $id }}">
+            {{ $linkLabel }}
+          </a>
+        {{- end -}}
+      {{- end }}
+
+      <a href="#top">
+        Top
+      </a>
+    </div>
+  </nav>
+{{- end -}}

@@ -7,47 +7,68 @@
 {{- $cityIssues := where $allIssues "city_id" $cityID -}}
 
 {{- if gt (len $cityIssues) 0 -}}
+  {{- $electionIssues := slice -}}
+  {{- $publicSafetyIssues := slice -}}
+  {{- $otherIssues := slice -}}
 
-  <div class="local-issues-summary">
+  {{- range $cityIssues -}}
+    {{- $title := lower .title -}}
+    {{- $tags := lower (delimit (.tags | default slice) " ") -}}
 
-    {{- range $cityIssues -}}
-      <article class="local-issue">
-        <div class="local-issue__heading">
-          <div>
-            <h3>{{ .title }}</h3>
-
-            {{ with .status }}
-              <p class="local-issue__status">
-                {{ . | humanize }}
-              </p>
-            {{ end }}
-          </div>
-        </div>
-
-        {{ with .summary }}
-          <p class="local-issue__summary">
-            {{ . }}
-          </p>
-        {{ end }}
-
-        <div class="local-issue__actions">
-          <a
-            class="button button--secondary"
-            href="{{ printf "/communities/%s/issues/%s/" $cityID .slug }}"
-          >
-            View issue
-          </a>
-        </div>
-      </article>
+    {{- if or
+        (in $title "proposition")
+        (in $tags "election")
+        (in $tags "ballot")
+        (in $tags "expenditure limitation")
+        (in $tags "bond")
+        (in $tags "franchise")
+    -}}
+      {{- $electionIssues = $electionIssues | append . -}}
+    {{- else if or
+        (in $tags "police")
+        (in $tags "surveillance")
+        (in $tags "alpr")
+        (in $tags "license plate")
+        (in $tags "drone")
+        (in $title "surveillance")
+    -}}
+      {{- $publicSafetyIssues = $publicSafetyIssues | append . -}}
+    {{- else -}}
+      {{- $otherIssues = $otherIssues | append . -}}
     {{- end -}}
+  {{- end -}}
 
+  <div class="local-issues-summary local-issues-summary--grouped">
+    {{- partial "community/local-issues-group.html"
+      (dict
+        "title" "Elections & Ballot Measures"
+        "description" "Election-related measures, ballot questions, and voter-facing civic topics."
+        "issues" $electionIssues
+        "city_id" $cityID
+      )
+    -}}
+
+    {{- partial "community/local-issues-group.html"
+      (dict
+        "title" "Public Safety & Surveillance"
+        "description" "Police, surveillance technology, public-safety systems, and related budget records."
+        "issues" $publicSafetyIssues
+        "city_id" $cityID
+      )
+    -}}
+
+    {{- partial "community/local-issues-group.html"
+      (dict
+        "title" "Other Civic Topics"
+        "description" "Additional documented local-government topics."
+        "issues" $otherIssues
+        "city_id" $cityID
+      )
+    -}}
   </div>
-
 {{- else -}}
-
   {{ partial "community/empty-state.html"
     (dict "message"
-      "Verified local civic issues will appear here when applicable.")
+      "Verified civic topics will appear here when applicable.")
   }}
-
 {{- end -}}

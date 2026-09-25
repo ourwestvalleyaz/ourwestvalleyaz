@@ -1,14 +1,14 @@
 {{- $cityID := .city_id -}}
 {{- $cityName := .city_name -}}
 
-<div class="city-search"
+<div class="city-search city-search--community"
      data-city-search
      data-city-id="{{ $cityID }}"
      data-city-name="{{ $cityName }}">
 
   <div class="city-search__intro">
     <p>
-      Search {{ $cityName }} budgets, meetings, public records,
+      Find {{ $cityName }} budgets, meeting records, public records,
       official City resources, and OWVAZ research.
     </p>
   </div>
@@ -41,7 +41,8 @@
   </form>
 
   <p class="city-search__privacy">
-    Searches run locally in your browser.
+    Searches run locally in your browser. Try: budget, council meeting,
+    water, police, proposition.
   </p>
 
   <div class="city-search__status"

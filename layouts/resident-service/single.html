@@ -2,11 +2,18 @@
 <article class="owvaz-detail-page resident-service-page">
   <div class="site-shell content-width owvaz-detail-page__inner">
 
-    {{- with .Params.city_id }}
-      <p class="owvaz-detail-page__back">
-        <a href="/communities/{{ . }}/">← Back to {{ humanize . }}</a>
-      </p>
-    {{- end }}
+    {{- $cityID := .Params.city_id -}}
+    {{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
+    {{- if ne (len $cityMatches) 1 -}}
+      {{- errorf "Resident-service page requires one canonical city for %q" $cityID -}}
+    {{- end -}}
+    {{- $city := index $cityMatches 0 -}}
+
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+      "class" "owvaz-detail-page__back"
+    ) }}
 
     <header class="owvaz-detail-page__header"
             data-sticky-nav-header>
@@ -56,11 +63,10 @@
       {{- end }}
     </article>
 
-    {{- with .Params.city_id }}
-      <p class="owvaz-detail-page__return">
-        <a href="/communities/{{ . }}/">← Back to {{ humanize . }}</a>
-      </p>
-    {{- end }}
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+    ) }}
 
   </div>
 </article>

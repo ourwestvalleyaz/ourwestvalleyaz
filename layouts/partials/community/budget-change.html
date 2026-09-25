@@ -1,0 +1,23 @@
+{{- /*
+  Shared budget-change display helper.
+
+  Expected context:
+  - value: numeric value used for classing
+  - text: already-formatted text to display
+  - class: optional extra class
+*/ -}}
+{{- $value := .value -}}
+{{- $text := .text -}}
+{{- $extraClass := .class | default "" -}}
+{{- $direction := "flat" -}}
+{{- $color := "#5f5a50" -}}
+
+{{- if gt $value 0 -}}
+  {{- $direction = "up" -}}
+  {{- $color = "#1f7a3f" -}}
+{{- else if lt $value 0 -}}
+  {{- $direction = "down" -}}
+  {{- $color = "#b3261e" -}}
+{{- end -}}
+
+<span class="budget-change budget-change--{{ $direction }}{{ with $extraClass }} {{ . }}{{ end }}" style="color: {{ $color | safeCSS }} !important; font-weight: 850; white-space: nowrap;">{{ $text }}</span>

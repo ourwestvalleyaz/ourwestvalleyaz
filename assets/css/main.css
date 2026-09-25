@@ -364,6 +364,62 @@ svg {
     min-height: 4.5rem;
   }
 }
+/* Compact only the available-city buttons on the homepage. */
+.home-city-picker--available {
+  grid-template-columns: repeat(3, minmax(0, 15rem));
+  max-width: 48rem;
+}
+
+/* Compact upcoming-community row, separate from clickable city cards. */
+.home-coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 31rem;
+  margin-top: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-coming-soon__details {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.home-coming-soon__heading {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.home-coming-soon__city {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.home-coming-soon__status {
+  flex: 0 0 auto;
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 25rem) {
+  .home-coming-soon {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
 /* END OWVAZ HOME CITY PICKER */
 
 .foundation-note,
@@ -1807,6 +1863,88 @@ main {
   line-height: 1.65;
 }
 
+
+/* Grouped Official Sources */
+.owvaz-source-groups {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.owvaz-source-group {
+  border: 1px solid var(--border);
+  background: var(--surface, transparent);
+}
+
+.owvaz-source-group > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 2.9rem;
+  padding: 0.7rem 0.9rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 750;
+}
+
+.owvaz-source-group > summary::-webkit-details-marker {
+  display: none;
+}
+
+.owvaz-source-group > summary::before {
+  content: "▸";
+  flex: 0 0 auto;
+  margin-right: 0.45rem;
+}
+
+.owvaz-source-group[open] > summary::before {
+  content: "▾";
+}
+
+.owvaz-source-group > summary::after {
+  content: "";
+}
+
+.owvaz-source-group > summary {
+  justify-content: flex-start;
+}
+
+.owvaz-source-group__label {
+  flex: 1 1 auto;
+}
+
+.owvaz-source-group__count {
+  flex: 0 0 auto;
+  min-width: 1.5rem;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.owvaz-source-group__content {
+  border-top: 1px solid var(--border);
+  padding: 0 0.9rem;
+}
+
+.owvaz-source-group:focus-within > summary {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
+
+.owvaz-source-group .owvaz-source {
+  margin: 0;
+  padding: 0.8rem 0;
+}
+
+.owvaz-source-group .owvaz-source + .owvaz-source {
+  border-top: 1px solid var(--border);
+}
+
+.owvaz-source-group .owvaz-source__description {
+  margin-top: 0.45rem;
+}
+
 .owvaz-source-list {
   margin-top: 1.75rem;
 }
@@ -2286,9 +2424,11 @@ main {
 }
 
 .communities-menu--desktop .communities-menu__panel {
+  min-width: 12rem;
   position: absolute;
   top: calc(100% + 0.65rem);
-  left: 0;
+  left: auto;
+  right: 0;
   z-index: 40;
   padding: 0.45rem;
   border: 1px solid var(--border);
@@ -2363,6 +2503,31 @@ main {
   .communities-menu__pending {
     padding: 0.65rem 0;
   }
+}
+
+/* OWVAZ pending communities: stacked status and city */
+.site-header .communities-menu__pending {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.35rem;
+}
+
+.site-header .communities-menu__pending .communities-menu__status {
+  order: -1;
+}
+
+.site-header .communities-menu__pending .communities-menu__city {
+  order: 0;
+}
+
+/* OWVAZ communities dropdown: links without underlines */
+.site-header .communities-menu__panel a,
+.site-header .communities-menu__panel a:hover,
+.site-header .communities-menu__panel a:focus-visible,
+.site-header .communities-menu__panel a[aria-current="page"] {
+  text-decoration: none;
 }
 
 /* END OWVAZ COMMUNITIES NAVIGATION */
@@ -4444,11 +4609,61 @@ main {
 }
 
 .local-issue__status {
-  margin: .18rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: .35rem 0 0;
+  padding: .22rem .58rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 10%, var(--surface) 90%);
   color: var(--text-soft);
   font-size: .76rem;
-  font-weight: 650;
+  font-weight: 750;
+  line-height: 1.2;
   letter-spacing: .02em;
+}
+
+.local-issue__status--on-ballot,
+.owvaz-detail-page__status--on-ballot {
+  color: #155b85;
+  background: color-mix(in srgb, #155b85 14%, var(--surface) 86%);
+}
+
+.local-issue__status--proposed,
+.owvaz-detail-page__status--proposed {
+  color: #8a5a00;
+  background: color-mix(in srgb, #8a5a00 15%, var(--surface) 85%);
+}
+
+.local-issue__status--passed,
+.owvaz-detail-page__status--passed {
+  color: #2f6b3c;
+  background: color-mix(in srgb, #2f6b3c 14%, var(--surface) 86%);
+}
+
+.local-issue__status--failed,
+.owvaz-detail-page__status--failed {
+  color: #9a2f2f;
+  background: color-mix(in srgb, #9a2f2f 13%, var(--surface) 87%);
+}
+
+.local-issue__status--withdrawn,
+.owvaz-detail-page__status--withdrawn {
+  color: #6a4c93;
+  background: color-mix(in srgb, #6a4c93 13%, var(--surface) 87%);
+}
+
+.local-issue__status--documented,
+.owvaz-detail-page__status--documented {
+  color: var(--text-soft);
+  background: color-mix(in srgb, var(--text-soft) 9%, var(--surface) 91%);
+}
+
+.owvaz-detail-page__status {
+  padding: .22rem .58rem;
+  font-size: .74rem;
+  line-height: 1.2;
 }
 
 .local-issue__summary {
@@ -6089,30 +6304,6 @@ END OWVAZ G67 ISSUE SUMMARY TIMELINE SCOPE FIX
 .site-footer button:focus-visible {
   outline-color: var(--surface);
 }
-
-/* ==========================================================
-   END OWVAZ F FINAL CONTRAST ACCESSIBILITY
-   ========================================================== */
-
-/* OWVAZ BUDGET HISTORY YOY DIRECTION
-   Direction is communicated by both sign and color.
-   Color is limited to the numeric YoY value so the table remains calm. */
-.budget-history__change {
-  font-weight: 750;
-  font-variant-numeric: tabular-nums;
-}
-
-.budget-history__change--positive {
-  color: #245c36;
-}
-
-.budget-history__change--negative {
-  color: #8a3434;
-}
-
-.budget-history__change--neutral {
-  color: var(--text-soft);
-}
 /* END OWVAZ BUDGET HISTORY YOY DIRECTION */
 
 /* ==========================================================
@@ -7152,3 +7343,4659 @@ END OWVAZ G67 ISSUE SUMMARY TIMELINE SCOPE FIX
 /* ==========================================================
    END OWVAZ POLICE VERTICAL TIMELINE
    ========================================================== */
+
+/* BEGIN OWVAZ COMMUNITY OFFICIAL SOURCES DISCLOSURE
+   Community landing pages collapse source details by default while
+   keeping source provenance and source count immediately visible.
+   --------------------------------------------------------------- */
+
+.owvaz-sources-disclosure {
+  max-width: 52rem;
+  margin-top: .75rem;
+}
+
+.owvaz-sources-disclosure > summary {
+  width: fit-content;
+  cursor: pointer;
+
+  color: var(--accent-dark);
+
+  font-weight: 700;
+  line-height: 1.4;
+
+  text-decoration: underline;
+  text-decoration-color:
+    color-mix(in srgb, var(--accent) 72%, transparent);
+  text-decoration-thickness: .08em;
+  text-underline-offset: .18rem;
+}
+
+.owvaz-sources-disclosure > summary:hover,
+.owvaz-sources-disclosure > summary:focus-visible {
+  color: var(--accent-dark);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: .12em;
+}
+
+.owvaz-sources-disclosure__content {
+  margin-top: 1rem;
+}
+
+@media (max-width: 40rem) {
+  .owvaz-sources-disclosure {
+    max-width: none;
+  }
+}
+
+/* END OWVAZ COMMUNITY OFFICIAL SOURCES DISCLOSURE */
+
+/* Ballot proposition comparison */
+.owvaz-ballot-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.owvaz-ballot-choice {
+  border: 1px solid var(--border-color, #d8dee4);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.owvaz-ballot-choice > :first-child {
+  margin-top: 0;
+}
+
+.owvaz-ballot-choice > :last-child {
+  margin-bottom: 0;
+}
+
+.owvaz-ballot-choice h3 {
+  text-align: center;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.owvaz-ballot-choice ul {
+  padding-left: 1.25rem;
+}
+
+.owvaz-ballot-choice li + li {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .owvaz-ballot-comparison {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Ballot proposition quick answers */
+.owvaz-ballot-quick-answers {
+  border: 1px solid var(--border-color, #d8dee4);
+  border-radius: 0.75rem;
+  margin: 1rem 0 1.75rem;
+  padding: 1.25rem;
+}
+
+.owvaz-ballot-quick-answers h3 {
+  margin-top: 0;
+}
+
+.owvaz-ballot-quick-answers__content > :last-child {
+  margin-bottom: 0;
+}
+
+.owvaz-ballot-quick-answers__content p {
+  margin: 0.65rem 0;
+}
+
+/* Ballot proposition key dates */
+.owvaz-ballot-key-dates {
+  margin: 2rem 0;
+}
+
+.owvaz-ballot-key-dates__grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.owvaz-ballot-date {
+  min-width: 0;
+  padding: .95rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--owvaz-component-radius);
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 94%,
+      var(--surface-warm) 6%
+    );
+}
+
+.owvaz-ballot-date dt {
+  margin: 0;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.owvaz-ballot-date dd {
+  margin: .25rem 0 0;
+  color: var(--text);
+  font-size: 1.08rem;
+  font-weight: 750;
+  line-height: 1.25;
+  font-variant-numeric: tabular-nums;
+}
+
+.owvaz-ballot-date__detail {
+  margin-top: .5rem;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.owvaz-ballot-date__detail > :first-child {
+  margin-top: 0;
+}
+
+.owvaz-ballot-date__detail > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 40rem) {
+  .owvaz-ballot-key-dates__grid {
+    grid-template-columns: 1fr;
+    gap: .7rem;
+  }
+}
+
+/* Ballot proposition quick-answer facts */
+.owvaz-ballot-quick-answers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.owvaz-ballot-answer {
+  min-width: 0;
+}
+
+.owvaz-ballot-answer__question {
+  margin: 0 0 .4rem;
+  color: var(--az-blue);
+  font-size: .95rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.owvaz-ballot-answer__response {
+  color: var(--text);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.owvaz-ballot-answer__response > :first-child {
+  margin-top: 0;
+}
+
+.owvaz-ballot-answer__response > :last-child {
+  margin-bottom: 0;
+}
+
+.owvaz-ballot-answer:last-child {
+  grid-column: 1 / -1;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 40rem) {
+  .owvaz-ballot-quick-answers__grid {
+    grid-template-columns: 1fr;
+    gap: .9rem;
+  }
+
+  .owvaz-ballot-answer:last-child {
+    grid-column: auto;
+  }
+}
+
+/* Ballot financial figures */
+.owvaz-ballot-financial-figures {
+  margin: 1.25rem 0 1.5rem;
+}
+
+.owvaz-ballot-financial-figures__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.owvaz-ballot-financial-figure {
+  min-width: 0;
+  padding: .95rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--owvaz-component-radius);
+  background: color-mix(
+    in srgb,
+    var(--surface) 92%,
+    var(--warm) 8%
+  );
+}
+
+.owvaz-ballot-financial-figure__value {
+  color: var(--az-blue);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.owvaz-ballot-financial-figure__label {
+  margin-top: .35rem;
+  font-size: .84rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.owvaz-ballot-financial-figure__detail {
+  margin-top: .45rem;
+  color: var(--muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+
+.owvaz-ballot-financial-figure__detail > :first-child {
+  margin-top: 0;
+}
+
+.owvaz-ballot-financial-figure__detail > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 40rem) {
+  .owvaz-ballot-financial-figures__grid {
+    grid-template-columns: 1fr;
+    gap: .7rem;
+  }
+}
+
+/* ==================================================================
+   BEGIN OWVAZ COMMUNITY CITY HISTORY
+
+   Reusable community-history timeline. Scope is intentionally
+   restricted to .city-history so issue-page timeline treatments
+   remain independent.
+   ================================================================== */
+
+.city-history {
+  margin-top: var(--space-4);
+}
+
+.city-history__intro {
+  max-width: 52rem;
+  margin: 0 0 var(--space-6);
+  color: var(--muted);
+}
+
+.city-history__timeline {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.city-history__timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  left: 0.45rem;
+  width: 2px;
+  background: var(--border-strong, var(--border));
+}
+
+.city-history__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0 0 var(--space-6);
+}
+
+.city-history__item:last-child {
+  padding-bottom: 0;
+}
+
+.city-history__marker {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-top: 0.35rem;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: var(--background, var(--bg, #fff));
+}
+
+.city-history__body {
+  min-width: 0;
+}
+
+.city-history__date {
+  margin: 0 0 0.25rem;
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.city-history__body h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.city-history__body > p:not(.city-history__date):not(.city-history__status) {
+  max-width: 58rem;
+  margin: 0;
+}
+
+.city-history__dispute {
+  max-width: 58rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--border-strong, var(--border));
+  background: var(--surface, transparent);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.city-history__dispute strong {
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.city-history__status {
+  margin: 0.45rem 0 0;
+  font-size: 0.84rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.city-history__full {
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.city-history__full > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3rem;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.city-history__full > summary::-webkit-details-marker {
+  display: none;
+}
+
+.city-history__full > summary::marker {
+  content: "";
+}
+
+.city-history__full > summary::after {
+  content: "↓";
+  flex: 0 0 auto;
+  font-size: 1rem;
+}
+
+.city-history__full[open] > summary::after {
+  content: "↑";
+}
+
+.city-history__collapse-label {
+  display: none;
+}
+
+.city-history__full[open]
+.city-history__expand-label {
+  display: none;
+}
+
+.city-history__full[open]
+.city-history__collapse-label {
+  display: inline;
+}
+
+.city-history__full-content {
+  padding: var(--space-4) 0 var(--space-6);
+}
+
+.city-history__timeline--events
+.city-history__body h3 {
+  font-size: 1rem;
+}
+
+.city-history__timeline--events
+.city-history__item {
+  padding-bottom: var(--space-5);
+}
+
+@media (max-width: 40rem) {
+  .city-history__item {
+    gap: 0.75rem;
+  }
+
+  .city-history__intro {
+    margin-bottom: var(--space-5);
+  }
+
+  .city-history__full > summary {
+    align-items: flex-start;
+  }
+}
+
+
+/* Unified history timeline: keyboard-accessible expansion. */
+.city-history__item[hidden],
+.city-history__toggle-label [hidden] {
+  display: none !important;
+}
+
+.city-history__toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 3rem;
+  margin-top: var(--space-6);
+  padding: 0.75rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.city-history__toggle-label::after {
+  content: "↓";
+  flex: 0 0 auto;
+}
+
+.city-history__toggle-label[aria-expanded="true"]::after {
+  content: "↑";
+}
+
+.city-history__toggle-label:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.city-history__sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.65rem;
+  margin: 0.55rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.city-history__sources a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.city-history__sources a:hover,
+.city-history__sources a:focus-visible {
+  text-decoration-thickness: 2px;
+}
+
+.city-history__sources {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.city-history__dispute > p {
+  margin: 0.25rem 0 0;
+}
+
+.city-history__dispute .city-history__sources {
+  margin-top: 0.65rem;
+}
+
+
+.city-history__sources-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* Shared compact city-history preview and expansion control. */
+.city-history__intro {
+  margin-bottom: var(--space-4);
+}
+
+.city-history__item {
+  padding-bottom: var(--space-4);
+}
+
+.city-history__sources {
+  margin-top: 0.35rem;
+}
+
+.city-history__toggle-label {
+  width: fit-content;
+  max-width: 100%;
+  min-height: 2.75rem;
+  margin-top: var(--space-4);
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border-strong, var(--border));
+  border-radius: 0.5rem;
+  background: var(--surface, transparent);
+  gap: 1.25rem;
+}
+
+.city-history__toggle-label:hover {
+  border-color: currentColor;
+}
+
+/* ==================================================================
+   END OWVAZ COMMUNITY CITY HISTORY
+   ================================================================== */
+
+
+/* OWVAZ LP surveillance section styling */
+.lp-surveillance-section {
+  margin: 1.25rem 0 1.75rem;
+}
+.lp-surveillance-section > h3 {
+  margin: 0 0 1rem;
+}
+.lp-surveillance-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  border: 1px solid #d8cfc1;
+  border-radius: 0.65rem;
+}
+.lp-surveillance-table {
+  width: 100%;
+  min-width: 28rem;
+  border-collapse: collapse;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.lp-surveillance-table th,
+.lp-surveillance-table td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid #e7dfd3;
+  text-align: left;
+  vertical-align: top;
+}
+.lp-surveillance-table th {
+  background: #f1ebe1;
+  font-weight: 700;
+}
+.lp-surveillance-table tbody tr:nth-child(even) {
+  background: #faf7f1;
+}
+.lp-surveillance-table tbody tr.summary {
+  background: #efe7d9;
+  font-weight: 700;
+}
+.lp-surveillance-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+.lp-surveillance-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+.lp-surveillance-note {
+  margin: 1.25rem 0;
+  padding: 1rem 1.15rem;
+  border-left: 4px solid #806a51;
+  background: #f4eee4;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.lp-surveillance-note p {
+  margin: 0.45rem 0 0;
+}
+.lp-surveillance-note--review {
+  border-left-color: #a16e29;
+}
+.lp-surveillance-comparison {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: #f4eee4;
+  border: 1px solid #d8cfc1;
+  border-radius: 0.65rem;
+}
+.lp-surveillance-comparison__label {
+  display: block;
+  font-weight: 700;
+}
+.lp-surveillance-comparison__value {
+  display: block;
+  margin: 0.55rem 0;
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  line-height: 1.2;
+}
+.lp-surveillance-comparison__value small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.45em;
+  font-weight: 600;
+}
+.lp-surveillance-comparison p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 40rem) {
+  .lp-surveillance-table th,
+  .lp-surveillance-table td {
+    padding: 0.65rem 0.7rem;
+  }
+  .lp-surveillance-comparison {
+    padding: 1rem;
+  }
+}
+
+/* OWVAZ: Tolleson surveillance Markdown budget tables */
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.25rem 0;
+  border: 1px solid #d8cfc1;
+  border-radius: 0.65rem;
+  border-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table th,
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid #e7dfd3;
+  text-align: left;
+  vertical-align: top;
+}
+
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table th {
+  background: #f1ebe1;
+  font-weight: 700;
+}
+
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table tbody tr:nth-child(even) {
+  background: #faf7f1;
+}
+
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table th:last-child,
+.issue-page--tolleson-surveillance .owvaz-detail-page__content > table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 40rem) {
+  .issue-page--tolleson-surveillance .owvaz-detail-page__content > table th,
+  .issue-page--tolleson-surveillance .owvaz-detail-page__content > table td {
+    padding: 0.65rem 0.7rem;
+  }
+}
+
+/* OWVAZ contact form: message field sizing */
+.owvaz-contact #contact-message {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 26rem;
+  min-height: 11rem;
+  padding: 0.75rem;
+  font: inherit;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* OWVAZ contact form: Web3Forms status */
+.owvaz-contact .contact-form-status {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid currentColor;
+}
+
+.owvaz-contact .contact-form-status[data-state="success"] {
+  font-weight: 600;
+}
+
+.owvaz-contact .contact-form-status[data-state="error"] {
+  font-weight: 600;
+}
+
+
+/* OWVAZ contact form: presentation refinement */
+#owvaz-contact-form input:not([type="hidden"]):not([type="checkbox"]),
+#owvaz-contact-form select,
+#owvaz-contact-form textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid #777;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+}
+
+#owvaz-contact-form select {
+  min-height: 2.75rem;
+}
+
+#owvaz-contact-form textarea {
+  width: 100%;
+  min-height: 11rem;
+  resize: vertical;
+}
+
+#owvaz-contact-form input:not([type="hidden"]):not([type="checkbox"]):focus-visible,
+#owvaz-contact-form select:focus-visible,
+#owvaz-contact-form textarea:focus-visible,
+#owvaz-contact-form button:focus-visible {
+  outline: 3px solid #245aa8;
+  outline-offset: 3px;
+}
+
+#owvaz-contact-form button[type="submit"] {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.7rem 1.15rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+#owvaz-contact-form button[type="submit"]:hover:not(:disabled) {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: var(--surface);
+}
+
+#owvaz-contact-form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#owvaz-contact-form .contact-form-status {
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  padding: 1rem 1.15rem;
+  line-height: 1.5;
+}
+
+#owvaz-contact-form .contact-form-status[hidden] {
+  display: none;
+}
+
+#owvaz-contact-form .contact-form-status[data-state="success"] {
+  color: #14532d;
+  background: #f0fdf4;
+  border: 2px solid #15803d;
+}
+
+#owvaz-contact-form .contact-form-status[data-state="error"] {
+  color: #991b1b;
+  background: #fef2f2;
+  border: 2px solid #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  #owvaz-contact-form .contact-form-status[data-state="success"] {
+    color: #dcfce7;
+    background: #143522;
+    border-color: #4ade80;
+  }
+
+  #owvaz-contact-form .contact-form-status[data-state="error"] {
+    color: #fee2e2;
+    background: #451a1a;
+    border-color: #f87171;
+  }
+}
+
+
+/* OWVAZ communities navigation: no text underlines */
+.site-header .communities-menu > summary,
+.site-header .communities-menu > summary:hover,
+.site-header .communities-menu > summary:focus-visible,
+.site-header .communities-menu--current > summary,
+.site-header .communities-menu__panel a,
+.site-header .communities-menu__panel a:hover,
+.site-header .communities-menu__panel a:focus-visible,
+.site-header .communities-menu__panel a[aria-current="page"] {
+  text-decoration: none;
+}
+
+/* Meeting archive */
+.meeting-archive {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border, #d9d2c3);
+}
+
+.meeting-archive__header {
+  margin-bottom: 1rem;
+}
+
+.meeting-archive__header h3 {
+  margin: 0;
+}
+
+.meeting-archive__header p {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.meeting-archive__list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meeting-archive__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-border, #d9d2c3);
+  border-radius: 0.9rem;
+  background: var(--color-surface, #fffaf0);
+}
+
+.meeting-archive__date {
+  min-width: 4.25rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border, #d9d2c3);
+  background: var(--color-surface-muted, #f5f0e6);
+}
+
+.meeting-archive__month,
+.meeting-archive__year {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.meeting-archive__month {
+  padding-top: 0.45rem;
+}
+
+.meeting-archive__year {
+  padding-bottom: 0.45rem;
+}
+
+.meeting-archive__day {
+  display: block;
+  font-size: 1.65rem;
+  line-height: 1.1;
+}
+
+.meeting-archive__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.meeting-archive__title-row h4 {
+  margin: 0;
+}
+
+.meeting-archive__meta {
+  margin: 0 0 0.8rem;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.meeting-archive__actions {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .meeting-archive__item {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-archive__date {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    align-items: baseline;
+    gap: 0.35rem;
+    width: fit-content;
+    min-width: 0;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .meeting-archive__month,
+  .meeting-archive__year {
+    padding: 0;
+  }
+
+  .meeting-archive__day {
+    font-size: 1.2rem;
+  }
+
+  .meeting-archive__title-row {
+    display: block;
+  }
+
+  .meeting-archive__title-row .meeting-status {
+    margin-top: 0.4rem;
+  }
+}
+
+/* Meeting archive: landing-page link and full archive page */
+.meeting-archive__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.meeting-archive__view-all {
+  flex: 0 0 auto;
+}
+
+.meeting-archive-page {
+  margin-top: 2rem;
+}
+
+.meeting-archive-page__year {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.meeting-archive-page__list + .meeting-archive-page__year {
+  margin-top: 2.5rem;
+}
+
+.meeting-archive-page .meeting-archive__title-row h3 {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .meeting-archive__header {
+    display: block;
+  }
+
+  .meeting-archive__view-all {
+    margin-top: 1rem;
+  }
+}
+
+/* Meeting card consistency */
+.meetings-summary {
+  gap: 1rem;
+}
+
+.meeting-next,
+.meeting-following,
+.meeting-archive__item {
+  border-color: rgba(112, 73, 44, 0.28);
+  background: rgba(255, 253, 247, 0.86);
+}
+
+.meeting-next {
+  border-left: 4px solid var(--color-accent, #70492c);
+}
+
+.meeting-following {
+  padding: 1rem;
+}
+
+.meeting-following__list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.meeting-following__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding: 0.9rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.85rem;
+  background: rgba(255, 253, 247, 0.72);
+}
+
+.meeting-following__date,
+.meeting-archive__date {
+  min-width: 4.25rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  background: rgba(245, 239, 228, 0.95);
+}
+
+.meeting-following__month,
+.meeting-archive__month {
+  display: block;
+  padding-top: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent, #70492c);
+}
+
+.meeting-following__day,
+.meeting-archive__day {
+  display: block;
+  font-size: 1.45rem;
+  line-height: 1.1;
+}
+
+.meeting-following__date {
+  padding-bottom: 0.45rem;
+}
+
+.meeting-following__title-row,
+.meeting-archive__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.meeting-following__body {
+  font-weight: 800;
+}
+
+.meeting-following__meta,
+.meeting-archive__meta {
+  margin: 0.25rem 0 0.55rem;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.meeting-following__details {
+  display: inline-block;
+  margin-top: 0.15rem;
+}
+
+.meeting-archive__item {
+  align-items: start;
+}
+
+.meeting-archive__header {
+  padding-top: 0.2rem;
+}
+
+@media (max-width: 640px) {
+  .meeting-following__item {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-following__date {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    align-items: baseline;
+    gap: 0.35rem;
+    width: fit-content;
+    min-width: 0;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .meeting-following__month {
+    padding: 0;
+  }
+
+  .meeting-following__day {
+    font-size: 1.2rem;
+  }
+
+  .meeting-following__title-row {
+    display: block;
+  }
+
+  .meeting-following__title-row .meeting-status {
+    margin-top: 0.4rem;
+  }
+}
+
+/* Meeting card refinement */
+.meeting-following {
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.meeting-following h3 {
+  margin-bottom: 0.9rem;
+}
+
+.meeting-following__list,
+.meeting-archive__list {
+  gap: 1rem;
+}
+
+.meeting-following__item,
+.meeting-archive__item {
+  min-height: 7.25rem;
+  box-shadow: none;
+}
+
+.meeting-following__content,
+.meeting-archive__body {
+  align-self: center;
+}
+
+.meeting-archive--recent {
+  margin-top: 2rem;
+}
+
+.meeting-archive__header {
+  margin-bottom: 1rem;
+}
+
+.meeting-archive__header p {
+  max-width: 42rem;
+}
+
+@media (min-width: 760px) {
+  .meeting-following__item,
+  .meeting-archive__item {
+    grid-template-columns: 5rem 1fr;
+  }
+}
+
+/* Following meetings should visually match recent meeting cards */
+.meeting-following__list.meeting-archive__list {
+  margin-top: 1rem;
+}
+
+.meeting-following__item.meeting-archive__item {
+  min-height: auto;
+}
+
+.meeting-following__item .meeting-archive__body,
+.meeting-archive--recent .meeting-archive__body {
+  align-self: center;
+}
+
+.meeting-following__item .meeting-archive__actions .button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.meeting-following__item .meeting-archive__actions .button:hover,
+.meeting-following__item .meeting-archive__actions .button:focus-visible {
+  background: transparent;
+}
+
+/* Shared meeting cards */
+.meeting-card-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meeting-card {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgba(112, 73, 44, 0.26);
+  border-radius: 0.9rem;
+  background: rgba(255, 253, 247, 0.86);
+}
+
+.meeting-card--featured {
+  align-items: start;
+  padding: 1.15rem;
+  border-left: 4px solid var(--color-accent, #70492c);
+}
+
+.meeting-card__date {
+  min-width: 0;
+  width: 5rem;
+  text-align: center;
+  border: 1px solid rgba(112, 73, 44, 0.24);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: rgba(245, 239, 228, 0.95);
+}
+
+.meeting-card__month,
+.meeting-card__year {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent, #70492c);
+}
+
+.meeting-card__month {
+  padding-top: 0.45rem;
+}
+
+.meeting-card__year {
+  padding-bottom: 0.45rem;
+}
+
+.meeting-card__day {
+  display: block;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.meeting-card--featured .meeting-card__month {
+  padding: 0.45rem 0 0.25rem;
+  color: #fff;
+  background: var(--color-accent, #70492c);
+}
+
+.meeting-card--featured .meeting-card__year {
+  display: none;
+}
+
+.meeting-card--featured .meeting-card__day {
+  padding: 0.35rem 0 0.55rem;
+}
+
+.meeting-card__title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.meeting-card__label {
+  margin: 0 0 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent, #70492c);
+}
+
+.meeting-card__title-row h3 {
+  margin: 0;
+}
+
+.meeting-card__meta {
+  margin: 0.35rem 0 0.65rem;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.meeting-card__actions {
+  margin-top: 0.15rem;
+}
+
+.meeting-card__actions .button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.meeting-card__actions .button:hover,
+.meeting-card__actions .button:focus-visible {
+  background: transparent;
+}
+
+.meeting-following {
+  margin-top: 1.25rem;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.meeting-following h3 {
+  margin: 0 0 0.9rem;
+}
+
+.meeting-archive--recent {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(112, 73, 44, 0.2);
+}
+
+.meeting-archive__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.meeting-archive__header h3 {
+  margin: 0;
+}
+
+.meeting-archive__header p {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.meeting-archive__view-all {
+  flex: 0 0 auto;
+}
+
+.meeting-archive-page {
+  margin-top: 2rem;
+}
+
+.meeting-archive-page__year {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+  .meeting-card {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-card__date {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    align-items: baseline;
+    gap: 0.35rem;
+    width: fit-content;
+    min-width: 0;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .meeting-card__month,
+  .meeting-card__year,
+  .meeting-card--featured .meeting-card__month {
+    padding: 0;
+    background: transparent;
+    color: var(--color-accent, #70492c);
+  }
+
+  .meeting-card--featured .meeting-card__year {
+    display: block;
+  }
+
+  .meeting-card__day,
+  .meeting-card--featured .meeting-card__day {
+    padding: 0;
+    font-size: 1.2rem;
+  }
+
+  .meeting-card__title-row {
+    display: block;
+  }
+
+  .meeting-card__title-row .meeting-status {
+    margin-top: 0.4rem;
+  }
+
+  .meeting-archive__header {
+    display: block;
+  }
+
+  .meeting-archive__view-all {
+    margin-top: 1rem;
+  }
+}
+
+/* Meeting card spacing polish */
+.meeting-card:not(.meeting-card--featured) {
+  padding: 0.85rem 1rem;
+  gap: 0.9rem;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__meta {
+  margin-bottom: 0.35rem;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__actions {
+  margin-top: 0;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__date {
+  align-self: center;
+}
+
+.meeting-card-list {
+  gap: 0.8rem;
+}
+
+.meeting-following {
+  margin-top: 1rem;
+}
+
+.meeting-archive--recent {
+  margin-top: 1.8rem;
+}
+
+/* Meeting card title alignment */
+.meeting-card:not(.meeting-card--featured) {
+  align-items: start;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__date {
+  align-self: start;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__body {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__title-row {
+  align-items: flex-start;
+  min-height: 1.4rem;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__title-row h3 {
+  margin: 0;
+  line-height: 1.25;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__meta {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__actions {
+  margin-top: 0;
+}
+
+/* Meeting card date tile centering */
+.meeting-card:not(.meeting-card--featured) .meeting-card__date {
+  align-self: center;
+}
+
+/* Meeting card date tile force-center */
+.meeting-card:not(.meeting-card--featured) {
+  align-items: center !important;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__date {
+  align-self: center !important;
+  justify-self: start;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.meeting-card:not(.meeting-card--featured) .meeting-card__body {
+  align-self: center !important;
+}
+
+/* Featured next-meeting date tile vertical centering */
+.meeting-card--featured {
+  align-items: center !important;
+}
+
+.meeting-card--featured .meeting-card__date {
+  align-self: center !important;
+}
+
+.meeting-card--featured .meeting-card__body {
+  align-self: center !important;
+}
+
+/* Civic Topics grouped layout */
+.local-issues-summary--grouped {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.local-issue-group {
+  padding: 1rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.95rem;
+  background: rgba(255, 253, 247, 0.72);
+}
+
+.local-issue-group__header {
+  margin-bottom: 0.9rem;
+}
+
+.local-issue-group__header h3 {
+  margin: 0;
+}
+
+.local-issue-group__header p {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.local-issue-group__items {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.local-issue-group .local-issue {
+  margin: 0;
+}
+
+.local-issue-group .local-issue__heading h4 {
+  margin: 0;
+}
+
+.local-issue-group .local-issue__actions .button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.local-issue-group .local-issue__actions .button:hover,
+.local-issue-group .local-issue__actions .button:focus-visible {
+  background: transparent;
+}
+
+/* Civic Topics category heading refinement */
+.local-issues-summary--grouped {
+  gap: 2rem;
+}
+
+.local-issue-group {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.local-issue-group__header {
+  margin-bottom: 0.85rem;
+}
+
+.local-issue-group__header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.local-issue-group__header p {
+  max-width: 46rem;
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+.local-issue-group__items {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.local-issue-group .local-issue {
+  padding: 1rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.9rem;
+  background: rgba(255, 253, 247, 0.86);
+}
+
+.local-issue-group .local-issue + .local-issue {
+  margin-top: 0;
+}
+
+.local-issue-group .local-issue__summary {
+  max-width: 48rem;
+}
+
+/* Civic topic status pill alignment */
+.local-issue-group .local-issue__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.local-issue-group .local-issue__heading > div {
+  display: contents;
+}
+
+.local-issue-group .local-issue__heading h4 {
+  margin: 0;
+  min-width: 0;
+}
+
+.local-issue-group .local-issue__status {
+  flex: 0 0 auto;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.local-issue-group .local-issue__summary {
+  margin-top: 0.55rem;
+}
+
+@media (max-width: 640px) {
+  .local-issue-group .local-issue__heading {
+    display: block;
+  }
+
+  .local-issue-group .local-issue__status {
+    display: inline-block;
+    margin-top: 0.4rem;
+  }
+}
+
+/* Community search light card */
+.city-search--community {
+  padding: 1.15rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.95rem;
+  background: rgba(255, 253, 247, 0.78);
+}
+
+.city-search--community .city-search__intro p {
+  max-width: 48rem;
+}
+
+.city-search--community .city-search__privacy {
+  margin-top: 0.65rem;
+}
+
+/* Civic Topics card width alignment */
+#local-issues .local-issues-summary,
+#local-issues .local-issue-group,
+#local-issues .local-issue-group__items,
+#local-issues .local-issue {
+  width: 100%;
+  max-width: none;
+}
+
+#local-issues .local-issue-group__header,
+#local-issues .local-issue-group__items {
+  max-width: none;
+}
+
+#local-issues .local-issue__summary {
+  max-width: 100%;
+}
+
+/* Official Sources light polish */
+#official-sources {
+  padding-top: 0.25rem;
+}
+
+#official-sources .owvaz-sources-disclosure {
+  margin-top: 0.9rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.95rem;
+  background: rgba(255, 253, 247, 0.72);
+  overflow: hidden;
+}
+
+#official-sources .owvaz-sources-disclosure > summary {
+  padding: 1rem 1.15rem;
+  font-weight: 800;
+  color: var(--color-accent, #70492c);
+  cursor: pointer;
+}
+
+#official-sources .owvaz-sources-disclosure__content {
+  padding: 0 1.15rem 1.15rem;
+}
+
+#official-sources .owvaz-detail-page__source-intro {
+  margin-top: 0;
+  max-width: 48rem;
+  color: var(--color-text-muted, #5f5a50);
+}
+
+#official-sources .owvaz-source-groups {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
+#official-sources .owvaz-source-group {
+  border: 1px solid rgba(112, 73, 44, 0.18);
+  border-radius: 0.8rem;
+  background: rgba(255, 253, 247, 0.78);
+}
+
+#official-sources .owvaz-source-group > summary {
+  padding: 0.85rem 1rem;
+}
+
+#official-sources .owvaz-source-group__content {
+  padding: 0 1rem 1rem;
+}
+
+#official-sources .owvaz-source {
+  padding: 0.85rem 0;
+}
+
+#official-sources .owvaz-source__title {
+  margin-bottom: 0.35rem;
+}
+
+#official-sources .owvaz-source__actions a {
+  text-underline-offset: 0.16em;
+}
+
+/* Official Sources accordion and button-style disclosure */
+#official-sources .owvaz-sources-disclosure {
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+#official-sources .owvaz-sources-disclosure > summary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-accent, #70492c);
+  border-radius: 0.35rem;
+  background: var(--color-accent, #70492c);
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.1;
+  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+#official-sources .owvaz-sources-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+
+#official-sources .owvaz-sources-disclosure > summary::marker {
+  content: "";
+}
+
+#official-sources .owvaz-sources-disclosure > summary::before {
+  content: "";
+}
+
+#official-sources .owvaz-sources-disclosure > summary:hover,
+#official-sources .owvaz-sources-disclosure > summary:focus-visible {
+  background: #5f3d25;
+  border-color: #5f3d25;
+  color: #fff;
+  text-decoration: none;
+}
+
+#official-sources .owvaz-sources-disclosure[open] > summary {
+  margin-bottom: 1rem;
+}
+
+#official-sources .owvaz-sources-disclosure__content {
+  padding: 1rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.95rem;
+  background: rgba(255, 253, 247, 0.72);
+}
+
+#official-sources .owvaz-source-group[open] > summary {
+  border-bottom: 1px solid rgba(112, 73, 44, 0.16);
+}
+
+/* Official Sources: homepage city-button style compatibility */
+#official-sources .owvaz-sources-disclosure {
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+#official-sources .owvaz-sources-disclosure > summary.official-sources__toggle {
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#official-sources .owvaz-sources-disclosure > summary.official-sources__toggle::-webkit-details-marker {
+  display: none;
+}
+
+#official-sources .owvaz-sources-disclosure > summary.official-sources__toggle::marker {
+  content: "";
+}
+
+#official-sources .owvaz-sources-disclosure > summary.official-sources__toggle::before,
+#official-sources .owvaz-sources-disclosure > summary.official-sources__toggle::after {
+  text-decoration: none;
+}
+
+#official-sources .owvaz-sources-disclosure[open] > summary.official-sources__toggle {
+  margin-bottom: 1rem;
+}
+
+#official-sources .owvaz-sources-disclosure__content {
+  padding: 1rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.95rem;
+  background: rgba(255, 253, 247, 0.72);
+}
+
+/* Community page section bands, link normalization, and search cleanup */
+main article > .community-section-band--a {
+  background: var(--color-page, #f7f0e8);
+}
+
+main article > .community-section-band--b {
+  background: var(--color-section-soft, #eee4d6);
+}
+
+/* Keep section bands alternating even where older section--soft styles apply. */
+main article > .community-section-band--a.section--soft {
+  background: var(--color-page, #f7f0e8);
+}
+
+main article > .community-section-band--b.section--soft {
+  background: var(--color-section-soft, #eee4d6);
+}
+
+/* Normalize underlined text links inside community page content. */
+main article a:not(.button):not([class*="button"]) {
+  color: var(--color-accent, #70492c);
+  text-decoration-color: currentColor;
+}
+
+main article a:not(.button):not([class*="button"]):visited {
+  color: var(--color-accent, #70492c);
+}
+
+main article a:not(.button):not([class*="button"]):hover,
+main article a:not(.button):not([class*="button"]):focus-visible {
+  color: #5f3d25;
+  text-decoration-color: currentColor;
+}
+
+/* Do not show an empty search-results divider before a query has results. */
+.city-search__results:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Community page typography standardization pass 1 */
+.community-page {
+  --community-text: rgb(38, 36, 33);
+  --community-muted: rgb(95, 90, 80);
+  --community-accent: rgb(104, 67, 43);
+  --community-link: rgb(112, 73, 44);
+  --community-link-hover: rgb(95, 61, 37);
+  --community-rule: rgba(112, 73, 44, 0.22);
+}
+
+/* Section headings */
+.community-page .section-heading h2,
+.community-page #official-sources-heading {
+  font-size: clamp(1.8rem, 1.35rem + 1.2vw, 2.15rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--community-accent);
+}
+
+/* Subsection headings */
+.community-page .quick-reference-inline__group h3,
+.community-page .local-issue-group__header h3,
+.community-page .meeting-following h3,
+.community-page .meeting-archive__header h3,
+.community-page .budget-history__heading h3 {
+  font-size: 1.17rem;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--community-text);
+}
+
+/* Card and item titles */
+.community-page .meeting-card h3,
+.community-page .local-issue h4,
+.community-page .owvaz-source__title,
+.community-page .city-history__title,
+.community-page .local-government-summary h3 {
+  color: var(--community-text);
+  font-weight: 700;
+}
+
+/* Normal body copy */
+.community-page p,
+.community-page li,
+.community-page td,
+.community-page dd {
+  color: var(--community-text);
+}
+
+/* Muted descriptions and helper copy */
+.community-page .page-summary,
+.community-page .city-history__intro,
+.community-page .local-issue-group__header p,
+.community-page .meeting-archive__header p,
+.community-page .budget-history__summary,
+.community-page .owvaz-detail-page__source-intro,
+.community-page .city-search__privacy,
+.community-page .budget-history__note,
+.community-page .meeting-card__meta,
+.community-page .quick-reference-inline__description {
+  color: var(--community-muted);
+}
+
+/* Meta, labels, source labels, and eyebrow text */
+.community-page .community-budget-summary__eyebrow,
+.community-page .city-history__year,
+.community-page .city-history__sources-label,
+.community-page .meeting-card__eyebrow,
+.community-page label,
+.community-page dt {
+  font-weight: 750;
+}
+
+/* Normal underlined text links inside community content */
+.community-page a:not(.button):not([class*="button"]):not(.home-coming-soon__details) {
+  color: var(--community-link);
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.16em;
+}
+
+.community-page a:not(.button):not([class*="button"]):not(.home-coming-soon__details):visited {
+  color: var(--community-link);
+}
+
+.community-page a:not(.button):not([class*="button"]):not(.home-coming-soon__details):hover,
+.community-page a:not(.button):not([class*="button"]):not(.home-coming-soon__details):focus-visible {
+  color: var(--community-link-hover);
+  text-decoration-color: currentColor;
+}
+
+/* Action links that are intentionally text-style buttons */
+.community-page .meeting-actions a.button--secondary,
+.community-page .local-issue__actions a.button--secondary,
+.community-page .meeting-archive__view-all,
+.community-page .official-sources__back-to-top a {
+  color: var(--community-link);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.16em;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.community-page .meeting-actions a.button--secondary:hover,
+.community-page .meeting-actions a.button--secondary:focus-visible,
+.community-page .local-issue__actions a.button--secondary:hover,
+.community-page .local-issue__actions a.button--secondary:focus-visible,
+.community-page .meeting-archive__view-all:hover,
+.community-page .meeting-archive__view-all:focus-visible,
+.community-page .official-sources__back-to-top a:hover,
+.community-page .official-sources__back-to-top a:focus-visible {
+  color: var(--community-link-hover);
+  text-decoration-color: currentColor;
+}
+
+/* Source and citation links stay smaller, but use the same link color family */
+.community-page .city-history__sources a,
+.community-page .owvaz-source__actions a,
+.community-page .local-government-summary__email {
+  color: var(--community-link);
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.16em;
+}
+
+.community-page .city-history__sources a:hover,
+.community-page .city-history__sources a:focus-visible,
+.community-page .owvaz-source__actions a:hover,
+.community-page .owvaz-source__actions a:focus-visible,
+.community-page .local-government-summary__email:hover,
+.community-page .local-government-summary__email:focus-visible {
+  color: var(--community-link-hover);
+  text-decoration-color: currentColor;
+}
+
+/* Table links should match normal underlined links */
+.community-page .budget-history__table a {
+  color: var(--community-link);
+  text-decoration-color: currentColor;
+  text-underline-offset: 0.16em;
+}
+
+/* Form button should use the shared accent/button family */
+.community-page .city-search__button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  background: var(--community-accent);
+  border-color: var(--community-accent);
+}
+
+.community-page .city-search__button:hover,
+.community-page .city-search__button:focus-visible {
+  background: var(--community-link-hover);
+  border-color: var(--community-link-hover);
+}
+
+/* Official Sources top toggle keeps homepage city-button styling, but normalizes text decoration */
+.community-page #official-sources .official-sources__toggle {
+  text-decoration: none;
+}
+
+.community-page #official-sources .official-sources__toggle:hover,
+.community-page #official-sources .official-sources__toggle:focus-visible {
+  text-decoration: none;
+}
+
+.budget-history__mobile-bar-change--positive,
+.budget-history__mobile-bar-change.budget-history__mobile-bar-change--positive {
+  color: #1f6f43 !important;
+  font-weight: 800;
+}
+
+.budget-history__mobile-bar-change--negative,
+.budget-history__mobile-bar-change.budget-history__mobile-bar-change--negative {
+  color: #9a3b2f !important;
+  font-weight: 800;
+}
+
+.budget-history__mobile-bar-change--neutral,
+.budget-history__mobile-bar-change.budget-history__mobile-bar-change--neutral {
+  color: #5f5a50 !important;
+  font-weight: 750;
+}
+
+/* Budget YoY text-only final styling */
+.budget-history__table td.budget-history__change,
+.budget-history__table td.budget-history__change--positive,
+.budget-history__table td.budget-history__change--negative,
+.budget-history__table td.budget-history__change--neutral,
+.budget-history__table td.budget-history__change--up,
+.budget-history__table td.budget-history__change--down,
+.budget-history__table td.budget-history__change--flat {
+  background: transparent !important;
+  font-weight: 850 !important;
+  white-space: nowrap;
+}
+
+.budget-history__table td.budget-history__change--positive,
+.budget-history__table td.budget-history__change--up,
+.budget-history__table td .budget-change--up {
+  color: #1f7a3f !important;
+}
+
+.budget-history__table td.budget-history__change--negative,
+.budget-history__table td.budget-history__change--down,
+.budget-history__table td .budget-change--down {
+  color: #b3261e !important;
+}
+
+.budget-history__table td.budget-history__change--neutral,
+.budget-history__table td.budget-history__change--flat,
+.budget-history__table td .budget-change--flat {
+  color: #5f5a50 !important;
+}
+
+.budget-history__table td .budget-change {
+  background: transparent !important;
+  font-weight: 850 !important;
+  white-space: nowrap;
+}
+
+.city-history__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.city-history__toggle::marker {
+  content: "";
+}
+
+.city-history__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.city-history__toggle::marker {
+  content: "";
+}
+
+.city-history__timeline--extra {
+  margin-top: 1rem;
+}
+
+.city-history__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.city-history__toggle::marker {
+  content: "";
+}
+
+.city-history__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.city-history__toggle::marker {
+  content: "";
+}
+
+.city-history__toggle-label .city-history__collapse-label[hidden],
+.city-history__toggle-label .city-history__expand-label[hidden] {
+  display: none;
+}
+
+
+.city-history {
+  margin-bottom: 0;
+}
+
+.city-history__timeline {
+  margin-bottom: 1.25rem;
+}
+
+.city-history__toggle-label .city-history__expand-label[hidden],
+.city-history__toggle-label .city-history__collapse-label[hidden] {
+  display: none !important;
+}
+
+.city-history__toggle-label .city-history__expand-label,
+.city-history__toggle-label .city-history__collapse-label {
+  display: inline;
+}
+
+.city-history__toggle-label .city-history__expand-label[hidden],
+.city-history__toggle-label .city-history__collapse-label[hidden] {
+  display: none !important;
+}
+
+.city-history__toggle-label .city-history__expand-label[hidden],
+.city-history__toggle-label .city-history__collapse-label[hidden] {
+  display: none !important;
+}
+
+/* City History toggle final: dark button with white text */
+.city-history__toggle-label.home-coming-soon__details {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  color: #fffdf8 !important;
+  background: #70492c !important;
+  border: 1px solid #70492c !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+
+  padding: 0.62rem 1rem !important;
+  font-weight: 750 !important;
+  line-height: 1.25 !important;
+  text-decoration: none !important;
+}
+
+.city-history__toggle-label.home-coming-soon__details:hover,
+.city-history__toggle-label.home-coming-soon__details:focus,
+.city-history__toggle-label.home-coming-soon__details:focus-visible {
+  color: #fffdf8 !important;
+  background: #5f3d25 !important;
+  border-color: #5f3d25 !important;
+  text-decoration: none !important;
+}
+
+.city-history__toggle-label.home-coming-soon__details::after {
+  content: none !important;
+}
+
+.city-history__toggle-label .city-history__expand-label[hidden],
+.city-history__toggle-label .city-history__collapse-label[hidden] {
+  display: none !important;
+}
+
+
+/* Resident Quick Reference polish */
+#quick-reference .section-heading {
+  margin-bottom: 1.35rem;
+}
+
+.quick-reference__intro {
+  max-width: 46rem;
+  margin: 0.45rem 0 0;
+  color: var(--community-muted, #5f5a50);
+  font-size: clamp(1rem, 1.6vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.quick-reference-inline {
+  align-items: start;
+}
+
+.quick-reference-inline__group {
+  border-top: 3px solid #70492c;
+  border-color: rgba(112, 73, 44, 0.45);
+  box-shadow: 0 1px 0 rgba(112, 73, 44, 0.08);
+}
+
+.quick-reference-inline__group h3 {
+  color: var(--community-text, #262421);
+}
+
+.quick-reference-inline__links a {
+  color: var(--community-link, #70492c) !important;
+  text-decoration-color: rgba(112, 73, 44, 0.55);
+  text-underline-offset: 0.14em;
+  font-weight: 800;
+}
+
+.quick-reference-inline__links a:hover,
+.quick-reference-inline__links a:focus-visible {
+  color: var(--community-link-hover, #5f3d25) !important;
+  text-decoration-thickness: 0.12em;
+}
+
+.quick-reference-inline__summary {
+  color: var(--community-muted, #5f5a50);
+  line-height: 1.45;
+}
+
+@media (min-width: 52rem) {
+  .quick-reference-inline {
+    gap: 1.15rem 2rem;
+  }
+}
+
+/* Community landing section quick links */
+.community-section-nav {
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+  padding: 0.95rem 0;
+  border-top: 1px solid rgba(112, 73, 44, 0.20);
+  border-bottom: 1px solid rgba(112, 73, 44, 0.20);
+}
+
+.community-section-nav .section-nav__label {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--community-muted, #5f5a50);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.community-section-nav .section-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.community-section-nav .section-nav__links a {
+  color: var(--community-link, #70492c) !important;
+  font-weight: 800;
+  text-decoration-color: rgba(112, 73, 44, 0.55);
+  text-underline-offset: 0.14em;
+}
+
+.community-section-nav .section-nav__links a:hover,
+.community-section-nav .section-nav__links a:focus-visible {
+  color: var(--community-link-hover, #5f3d25) !important;
+  text-decoration-thickness: 0.12em;
+}
+
+/* Community page header spacing polish */
+.community-page > .page-header {
+  padding-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.community-page > .page-header + .community-section-nav {
+  margin-top: 0;
+}
+
+/* Community page header spacing polish */
+.community-page > .page-header {
+  padding-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.community-page > .page-header + .community-section-nav {
+  margin-top: 0;
+}
+
+/* Global header Communities dropdown polish */
+.site-header {
+  box-shadow: 0 1px 0 rgba(38, 36, 33, 0.10);
+}
+
+.site-header nav a,
+.site-header .communities-menu > summary {
+  border-radius: 0.38rem;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.site-header .communities-menu > summary:hover,
+.site-header .communities-menu > summary:focus-visible {
+  background: rgba(255, 253, 248, 0.12);
+  color: #fffdf8;
+  text-decoration: none;
+}
+
+.site-header .communities-menu > summary {
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.site-header .communities-menu[open] > summary {
+  background: rgba(255, 253, 248, 0.10);
+  border-color: rgba(255, 253, 248, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(255, 253, 248, 0.10);
+}
+
+.site-header .communities-menu__panel {
+  margin-top: 0.45rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(112, 73, 44, 0.22);
+  border-radius: 0.55rem;
+  background: #fffdf8;
+  box-shadow: 0 1rem 2.25rem rgba(38, 36, 33, 0.16);
+}
+
+.site-header .communities-menu__panel a,
+.site-header .communities-menu__pending {
+  border-radius: 0.42rem;
+  padding: 0.5rem 0.55rem;
+}
+
+.site-header .communities-menu__panel a {
+  color: #70492c;
+  text-decoration: none;
+}
+
+.site-header .communities-menu__panel a:hover,
+.site-header .communities-menu__panel a:focus-visible,
+.site-header .communities-menu__panel a[aria-current="page"] {
+  background: rgba(112, 73, 44, 0.10);
+  color: #5f3d25;
+  text-decoration: none;
+}
+
+.site-header .communities-menu__pending {
+  color: #262421;
+}
+
+.site-header .communities-menu__status {
+  color: #6f675c;
+  letter-spacing: 0.08em;
+}
+
+.site-header .communities-menu__panel hr,
+.site-header .communities-menu__panel .communities-menu__divider {
+  border-color: rgba(112, 73, 44, 0.22);
+}
+
+/* Global header Communities dropdown: clean In Progress divider */
+.site-header .communities-menu__pending {
+  margin-top: 0.45rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(112, 73, 44, 0.24);
+}
+
+.site-header .communities-menu__pending .communities-menu__status {
+  display: block;
+  margin-bottom: 0.35rem;
+  padding: 0;
+  background: transparent;
+}
+
+/* Global header active nav should use background/border, not underline */
+.site-header nav a,
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.site-header nav a[aria-current="page"],
+.site-header nav a[aria-current="true"],
+.site-header nav a[aria-current="location"] {
+  text-decoration: none !important;
+}
+
+/* Global header: remove odd divider beside Search */
+.site-header nav > a,
+.site-header nav > details,
+.site-header nav > .communities-menu {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+.site-header nav > a::before,
+.site-header nav > a::after,
+.site-header nav > details::before,
+.site-header nav > details::after,
+.site-header nav > .communities-menu::before,
+.site-header nav > .communities-menu::after {
+  content: none !important;
+}
+
+
+.site-header .communities-menu[open] > summary,
+.site-header .communities-menu > summary[aria-current],
+.site-header .communities-menu > summary[aria-current="page"],
+.site-header .communities-menu > summary[aria-current="true"],
+.site-header .communities-menu > summary[aria-current="location"],
+.site-header .communities-menu.is-active > summary,
+.site-header .communities-menu:has([aria-current="page"]) > summary,
+.site-header .communities-menu:has([aria-current="true"]) > summary,
+.site-header .communities-menu:has([aria-current="location"]) > summary {
+  border-color: transparent !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.site-header .communities-menu > summary:focus:not(:focus-visible) {
+  border-color: transparent !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.site-header .communities-menu > summary:focus-visible {
+  border-color: rgba(255, 255, 255, 0.72) !important;
+  outline: 2px solid rgba(255, 255, 255, 0.72) !important;
+  outline-offset: 3px;
+}
+
+/* Deep city page shared navigation partials */
+.owvaz-detail-page__quick-links {
+  margin: 1.25rem 0 2rem;
+  padding: 0.75rem 0;
+  border-block: 1px solid rgba(54, 43, 38, 0.16);
+}
+
+.owvaz-detail-page__quick-links-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.owvaz-detail-page__quick-links-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+}
+
+.owvaz-detail-page__quick-links-list a {
+  color: var(--accent);
+  font-weight: 800;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.owvaz-detail-page__quick-links-list a:hover,
+.owvaz-detail-page__quick-links-list a:focus-visible {
+  color: var(--accent-dark);
+}
+
+/* Header scroll behavior: hide on downward scroll, reveal on upward scroll. */
+.site-header {
+  transition: transform 180ms ease;
+  will-change: transform;
+}
+
+.site-header.site-header--hidden {
+  transform: translateY(-110%);
+}
+
+.site-header.site-header--revealed {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+    will-change: auto;
+  }
+}
+
+/* Sitewide scroll-aware header behavior */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transform: translateY(0);
+  transition: transform 180ms ease;
+  will-change: transform;
+}
+
+.site-header.site-header--hidden {
+  transform: translateY(-110%);
+}
+
+.site-header.site-header--revealed {
+  transform: translateY(0);
+}
+
+.site-header:focus-within,
+.site-header:has(details[open]) {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+    will-change: auto;
+  }
+}
+
+/* Global header Search hover alignment */
+.site-header .primary-nav > a,
+.site-header .communities-menu > summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.55rem;
+  line-height: 1.2;
+}
+
+.site-header .primary-nav__search {
+  padding-left: 0.55rem !important;
+  border-left: 0 !important;
+}
+
+/* OWVAZ homepage first-pass refinements */
+.home-hero .hero__summary {
+  margin-bottom: 0;
+}
+
+.home-hero__next-step {
+  max-width: 42rem;
+  margin-top: 1.8rem;
+  color: var(--accent);
+  font-size: clamp(1.02rem, 1.8vw, 1.16rem);
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.home-communities .page-summary {
+  max-width: 42rem;
+}
+
+.home-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 54rem;
+  margin-top: 1.75rem;
+}
+
+.home-feature-card {
+  padding: 1.1rem 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--border) 78%, var(--accent) 22%);
+  border-radius: 0.75rem;
+  background: var(--surface, #fffdf8);
+}
+
+.home-feature-card h3 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.02rem;
+  line-height: 1.25;
+}
+
+.home-feature-card p {
+  margin: 0.6rem 0 0;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+@media (max-width: 46rem) {
+  .home-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Homepage inactive city card */
+.home-city-picker--available {
+  grid-template-columns: repeat(3, minmax(0, 15rem));
+  max-width: 48rem;
+}
+
+.home-city-picker__item--inactive {
+  background: color-mix(in srgb, var(--surface, #fffdf8) 92%, var(--background-soft) 8%);
+}
+
+.home-city-picker__link--inactive {
+  cursor: default;
+}
+
+.home-city-picker__link--inactive:hover,
+.home-city-picker__link--inactive:focus,
+.home-city-picker__link--inactive:focus-visible {
+  background: transparent;
+  color: var(--text);
+}
+
+.home-city-picker__link--inactive .home-city-picker__action {
+  color: var(--text-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.home-city-picker__link--inactive:hover .home-city-picker__action,
+.home-city-picker__link--inactive:focus-visible .home-city-picker__action {
+  color: var(--text-soft);
+}
+
+@media (max-width: 58rem) {
+  .home-city-picker--available {
+    grid-template-columns: minmax(0, 15rem);
+    max-width: 15rem;
+  }
+}\n\n/* Homepage city card alignment refinement */
+.home-city-picker__item--available {
+  display: flex;
+}
+
+.home-city-picker__item--available .home-city-picker__link,
+.home-city-picker__item--available .home-city-picker__link--inactive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.45rem;
+  min-height: 5.75rem;
+  width: 100%;
+}
+
+.home-city-picker__item--available .home-city-picker__city {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.home-city-picker__item--available .home-city-picker__action {
+  display: block;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.home-city-picker__link--inactive .home-city-picker__action {
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: normal;
+  text-transform: none;
+}\n
+
+/* Homepage Coming Soon inline list */
+.home-coming-soon--inline {
+  max-width: 48rem;
+  margin-top: 1.35rem;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-coming-soon__inline-list {
+  margin: 0.4rem 0 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.home-coming-soon__inline-list span {
+  white-space: nowrap;
+}
+
+/* OWVAZ mobile first-pass refinements */
+@media (max-width: 46rem) {
+  /* Homepage: keep primary city cards and social buttons in two columns on mobile. */
+  .home-communities .home-city-picker--available,
+  .home-social-picker {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 100%;
+    gap: 0.7rem;
+  }
+
+  .home-communities .home-city-picker--available .home-city-picker__link,
+  .home-social-picker .home-city-picker__link {
+    min-height: 4.75rem;
+    padding: 0.85rem 0.75rem;
+  }
+
+  .home-communities .home-city-picker--available .home-city-picker__city,
+  .home-social-picker .home-city-picker__city {
+    font-size: 0.98rem;
+    line-height: 1.2;
+  }
+
+  .home-communities .home-city-picker--available .home-city-picker__action,
+  .home-social-picker .home-city-picker__action {
+    font-size: 0.74rem;
+    line-height: 1.25;
+  }
+
+  .home-coming-soon--inline {
+    max-width: 100%;
+  }
+
+  .home-coming-soon__inline-list {
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  /* Meetings: make cards compact and readable on narrow screens. */
+  .meetings-summary {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .meeting-card,
+  .meeting-card--featured,
+  .meeting-following__item,
+  .meeting-archive__item {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+    padding: 0.85rem;
+  }
+
+  .meeting-card__date,
+  .meeting-following__date,
+  .meeting-archive__date {
+    min-width: 3.35rem;
+    border-radius: 0.7rem;
+  }
+
+  .meeting-card__month,
+  .meeting-card__year,
+  .meeting-following__month,
+  .meeting-archive__month,
+  .meeting-archive__year {
+    font-size: 0.68rem;
+    line-height: 1.1;
+  }
+
+  .meeting-card__day,
+  .meeting-following__day,
+  .meeting-archive__day {
+    font-size: 1.45rem;
+    line-height: 1;
+  }
+
+  .meeting-card__title-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+
+  .meeting-card__title-row h3,
+  .meeting-following h3,
+  .meeting-archive__header h3 {
+    line-height: 1.18;
+  }
+
+  .meeting-card__meta {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .meeting-card__actions,
+  .meeting-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.65rem;
+  }
+
+  .meeting-card__actions .button,
+  .meeting-actions .button {
+    flex: 1 1 calc(50% - 0.45rem);
+    justify-content: center;
+    min-height: 2.35rem;
+    padding: 0.45rem 0.55rem;
+    font-size: 0.84rem;
+    text-align: center;
+  }
+
+  .meeting-following {
+    margin-top: 1rem;
+  }
+
+  .meeting-card-list {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .meeting-archive__header {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .meeting-archive__view-all {
+    width: fit-content;
+  }
+
+  /* Local government: compact city/council metadata and person title areas. */
+  .local-government-summary__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.6rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .local-government-summary__meta strong,
+  .local-government-summary__meta span {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .local-government-summary__meta span::before {
+    content: "•";
+    margin-right: 0.6rem;
+    color: var(--text-soft);
+  }
+
+  .local-government-summary__roster,
+  .local-government-summary__members {
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .local-government-summary__mayor,
+  .local-government-summary__member {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem;
+    align-items: start;
+  }
+
+  .local-government-summary__portrait {
+    width: 56px;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .local-government-summary__person-copy p {
+    margin: 0 0 0.1rem;
+    font-size: 0.72rem;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .local-government-summary__person-copy h3 {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.18;
+  }
+
+  .local-government-summary__term-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.65rem;
+    margin-top: 0.35rem;
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+
+  .local-government-summary__email {
+    display: inline-flex;
+    margin-top: 0.45rem;
+  }
+}
+
+@media (max-width: 24rem) {
+  .home-communities .home-city-picker--available,
+  .home-social-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-card,
+  .meeting-card--featured,
+  .meeting-following__item,
+  .meeting-archive__item {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-card__date,
+  .meeting-following__date,
+  .meeting-archive__date {
+    width: fit-content;
+  }
+}
+
+/* OWVAZ mobile meetings tightened layout */
+@media (max-width: 46rem) {
+  #meetings .section-heading {
+    margin-bottom: 1.2rem;
+  }
+
+  #meetings .meetings-summary {
+    gap: 1.15rem;
+  }
+
+  #meetings .meeting-following {
+    margin-top: 1.5rem;
+  }
+
+  #meetings .meeting-following > h3,
+  #meetings .meeting-archive__header h3 {
+    margin-bottom: 0.85rem;
+    font-size: 1.45rem;
+    line-height: 1.12;
+  }
+
+  #meetings .meeting-card-list {
+    gap: 0.85rem;
+  }
+
+  #meetings .meeting-card,
+  #meetings .meeting-card--featured {
+    display: grid;
+    grid-template-columns: 4.65rem minmax(0, 1fr);
+    column-gap: 0.9rem;
+    row-gap: 0.65rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  #meetings .meeting-card--featured {
+    padding: 1.05rem;
+  }
+
+  #meetings .meeting-card__date {
+    min-width: 0;
+    width: 4.65rem;
+    border-radius: 0.7rem;
+  }
+
+  #meetings .meeting-card__month,
+  #meetings .meeting-card__year {
+    padding: 0;
+    font-size: 0.72rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+  }
+
+  #meetings .meeting-card__day {
+    padding: 0.12rem 0;
+    font-size: 1.75rem;
+    line-height: 1;
+  }
+
+  #meetings .meeting-card__body {
+    min-width: 0;
+  }
+
+  #meetings .meeting-card__title-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    align-items: start;
+  }
+
+  #meetings .meeting-card__label {
+    margin-bottom: 0.25rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+  }
+
+  #meetings .meeting-card__title-row h3 {
+    margin: 0;
+    font-size: 1.22rem;
+    line-height: 1.18;
+  }
+
+  #meetings .meeting-card__meta {
+    margin: 0.35rem 0 0;
+    color: var(--text-soft);
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  #meetings .meeting-status {
+    width: fit-content;
+    max-width: 100%;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  #meetings .meeting-card__actions {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.65rem;
+  }
+
+  #meetings .meeting-card__actions .button,
+  #meetings .meeting-card__actions a {
+    flex: 0 1 auto;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.96rem;
+    font-weight: 750;
+    line-height: 1.35;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+  }
+
+  #meetings .meeting-card__actions .button:hover,
+  #meetings .meeting-card__actions .button:focus-visible,
+  #meetings .meeting-card__actions a:hover,
+  #meetings .meeting-card__actions a:focus-visible {
+    background: transparent;
+    color: var(--accent-dark);
+    text-decoration: underline;
+  }
+
+  #meetings .meeting-archive {
+    margin-top: 2rem;
+  }
+
+  #meetings .meeting-archive__header {
+    display: grid;
+    gap: 0.55rem;
+    margin-bottom: 0.9rem;
+  }
+
+  #meetings .meeting-archive__header p {
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+
+  #meetings .meeting-archive__view-all {
+    width: fit-content;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-weight: 750;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+  }
+}
+
+@media (max-width: 24rem) {
+  #meetings .meeting-card,
+  #meetings .meeting-card--featured {
+    grid-template-columns: 1fr;
+  }
+
+  #meetings .meeting-card__date {
+    width: fit-content;
+  }
+
+  #meetings .meeting-card__actions {
+    grid-column: 1;
+  }
+}
+
+/* OWVAZ mobile meetings compact refinement */
+@media (max-width: 46rem) {
+  #meetings .section-heading {
+    margin-bottom: 1rem;
+  }
+
+  #meetings .meetings-summary,
+  #meetings .meeting-card-list {
+    gap: 0.75rem;
+  }
+
+  #meetings .meeting-following {
+    margin-top: 1.35rem;
+  }
+
+  #meetings .meeting-following > h3,
+  #meetings .meeting-archive__header h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+    line-height: 1.12;
+  }
+
+  #meetings .meeting-card,
+  #meetings .meeting-card--featured {
+    display: grid !important;
+    grid-template-columns: 3.75rem minmax(0, 1fr) !important;
+    column-gap: 0.75rem !important;
+    row-gap: 0.45rem !important;
+    align-items: center !important;
+    padding: 0.8rem !important;
+    border-radius: 0.85rem !important;
+  }
+
+  #meetings .meeting-card--featured {
+    border-left-width: 0.35rem;
+  }
+
+  #meetings .meeting-card__date {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    align-content: center !important;
+    width: 3.75rem !important;
+    min-width: 0 !important;
+    min-height: 3.2rem !important;
+    padding: 0.35rem 0.2rem !important;
+    border-radius: 0.65rem !important;
+    overflow: hidden !important;
+  }
+
+  #meetings .meeting-card__month {
+    display: block !important;
+    padding: 0 !important;
+    font-size: 0.62rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.09em !important;
+  }
+
+  #meetings .meeting-card__day {
+    display: block !important;
+    padding: 0.08rem 0 0 !important;
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+  }
+
+  #meetings .meeting-card__year {
+    display: none !important;
+  }
+
+  #meetings .meeting-card__body {
+    min-width: 0 !important;
+  }
+
+  #meetings .meeting-card__title-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0.25rem !important;
+    align-items: start !important;
+  }
+
+  #meetings .meeting-card__label {
+    margin: 0 0 0.2rem !important;
+    font-size: 0.68rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: 0.11em !important;
+  }
+
+  #meetings .meeting-card__title-row h3 {
+    margin: 0 !important;
+    font-size: 1.06rem !important;
+    line-height: 1.16 !important;
+  }
+
+  #meetings .meeting-card__meta {
+    margin: 0.28rem 0 0 !important;
+    color: var(--text-soft) !important;
+    font-size: 0.86rem !important;
+    line-height: 1.32 !important;
+  }
+
+  #meetings .meeting-status {
+    width: fit-content !important;
+    max-width: 100% !important;
+    margin-top: 0.3rem !important;
+    padding: 0.16rem 0.5rem !important;
+    font-size: 0.72rem !important;
+    line-height: 1.15 !important;
+  }
+
+  #meetings .meeting-card__actions,
+  #meetings .meeting-actions {
+    grid-column: 2 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.25rem 0.7rem !important;
+    margin: 0.45rem 0 0 !important;
+  }
+
+  #meetings .meeting-card__actions .button,
+  #meetings .meeting-card__actions a,
+  #meetings .meeting-actions .button,
+  #meetings .meeting-actions a {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    min-height: 0 !important;
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--accent) !important;
+    font-size: 0.86rem !important;
+    font-weight: 750 !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.14em !important;
+    white-space: nowrap !important;
+  }
+
+  #meetings .meeting-card__actions .button:hover,
+  #meetings .meeting-card__actions .button:focus-visible,
+  #meetings .meeting-card__actions a:hover,
+  #meetings .meeting-card__actions a:focus-visible,
+  #meetings .meeting-actions .button:hover,
+  #meetings .meeting-actions .button:focus-visible,
+  #meetings .meeting-actions a:hover,
+  #meetings .meeting-actions a:focus-visible {
+    background: transparent !important;
+    color: var(--accent-dark) !important;
+    text-decoration: underline !important;
+  }
+
+  #meetings .meeting-archive {
+    margin-top: 1.75rem;
+  }
+
+  #meetings .meeting-archive__header {
+    display: grid;
+    gap: 0.55rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #meetings .meeting-archive__header p {
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  #meetings .meeting-archive__view-all {
+    width: fit-content !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--accent) !important;
+    font-size: 0.9rem !important;
+    font-weight: 750 !important;
+    text-align: left !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.14em !important;
+  }
+}
+
+@media (max-width: 24rem) {
+  #meetings .meeting-card,
+  #meetings .meeting-card--featured {
+    grid-template-columns: 1fr !important;
+  }
+
+  #meetings .meeting-card__date {
+    width: fit-content !important;
+    min-width: 3.75rem !important;
+  }
+
+  #meetings .meeting-card__actions,
+  #meetings .meeting-actions {
+    grid-column: 1 !important;
+  }
+}
+
+/* OWVAZ mobile community section heading consistency */
+@media (max-width: 46rem) {
+  .community-page .section-heading {
+    margin-bottom: 1rem;
+  }
+
+  .community-page .section-heading h2 {
+    max-width: 24ch;
+    font-size: clamp(1.55rem, 6.2vw, 1.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .community-page #meetings .section-heading {
+    margin-bottom: 1rem;
+  }
+
+  .community-page #meetings .section-heading h2 {
+    font-size: clamp(1.55rem, 6.2vw, 1.9rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* OWVAZ mobile local-government meta row */
+@media (max-width: 46rem) {
+  .community-page .local-government-summary__meta {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .community-page .local-government-summary__meta strong {
+    display: block;
+    width: 100%;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .community-page .local-government-summary__meta span {
+    display: inline;
+    width: auto;
+    margin: 0;
+    color: var(--text-soft);
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+
+  .community-page .local-government-summary__meta span::before {
+    content: "";
+    margin: 0;
+  }
+
+  .community-page .local-government-summary__meta span + span::before {
+    content: "•";
+    margin: 0 0.45rem;
+    color: var(--text-soft);
+  }
+}
+
+/* OWVAZ mobile local-government meta final */
+@media (max-width: 46rem) {
+  .community-page .local-government-summary__meta {
+    display: block !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .community-page .local-government-summary__meta strong {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 0.35rem !important;
+    color: var(--text) !important;
+    font-size: 1rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .community-page .local-government-summary__meta span {
+    display: inline !important;
+    width: auto !important;
+    margin: 0 !important;
+    color: var(--text-soft) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .community-page .local-government-summary__meta span::before {
+    content: "" !important;
+    margin: 0 !important;
+  }
+
+  .community-page .local-government-summary__meta span + span::before {
+    content: "•" !important;
+    display: inline !important;
+    margin: 0 0.45rem !important;
+    color: var(--text-soft) !important;
+  }
+}
+
+/* OWVAZ mobile hamburger white lines */
+@media (max-width: 46rem) {
+  .site-header .mobile-menu > summary {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: inherit !important;
+  }
+
+  .site-header .mobile-menu > summary:hover,
+  .site-header .mobile-menu > summary:focus-visible,
+  .site-header .mobile-menu[open] > summary {
+    background: transparent !important;
+    color: inherit !important;
+  }
+
+  .site-header .hamburger-icon span {
+    background: #fff !important;
+  }
+}
+
+/* OWVAZ final mobile hamburger menu width */
+@media (max-width: 46rem) {
+  .site-header .site-header__brand-row > .mobile-menu {
+    position: relative !important;
+  }
+
+  .site-header .site-header__brand-row > .mobile-menu[open] > nav,
+  .site-header .site-header__brand-row > .mobile-menu > nav {
+    position: absolute !important;
+    top: calc(100% + var(--space-2)) !important;
+
+    left: auto !important;
+    right: 0 !important;
+    inset-inline-start: auto !important;
+    inset-inline-end: 0 !important;
+
+    width: 14.5rem !important;
+    inline-size: 14.5rem !important;
+    max-width: calc(100vw - 2rem) !important;
+    max-inline-size: calc(100vw - 2rem) !important;
+
+    margin: 0 !important;
+    padding: 0.72rem 0.78rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-header .site-header__brand-row > .mobile-menu > nav a,
+  .site-header .site-header__brand-row > .mobile-menu > nav > .communities-menu > summary {
+    padding-block: 0.55rem !important;
+  }
+
+  .site-header .site-header__brand-row > .mobile-menu > nav .communities-menu__panel {
+    min-width: 0 !important;
+    width: auto !important;
+    inline-size: auto !important;
+    margin-top: 0.3rem !important;
+    padding: 0.55rem 0.62rem !important;
+  }
+
+  .site-header .site-header__brand-row > .mobile-menu > nav .communities-menu__panel a,
+  .site-header .site-header__brand-row > .mobile-menu > nav .communities-menu__pending {
+    padding-block: 0.48rem !important;
+  }
+}
+
+@media (max-width: 23rem) {
+  .site-header .site-header__brand-row > .mobile-menu[open] > nav,
+  .site-header .site-header__brand-row > .mobile-menu > nav {
+    width: calc(100vw - 1rem) !important;
+    inline-size: calc(100vw - 1rem) !important;
+    max-width: calc(100vw - 1rem) !important;
+    max-inline-size: calc(100vw - 1rem) !important;
+  }
+}
+
+/* Meeting archive year groups */
+.meeting-archive-page--by-year {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.meeting-year-group {
+  border: 1px solid var(--border-color, rgba(80, 63, 44, 0.18));
+  border-radius: 0.75rem;
+  background: var(--surface-color, #fffaf0);
+  overflow: hidden;
+}
+
+.meeting-year-summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+}
+
+.meeting-year-summary:hover {
+  background: rgba(80, 63, 44, 0.06);
+}
+
+.meeting-year-summary__title {
+  font-size: 1.05rem;
+}
+
+.meeting-year-summary__meta {
+  font-size: 0.88rem;
+  font-weight: 500;
+  opacity: 0.78;
+  text-align: right;
+}
+
+.meeting-year-summary__breakdown {
+  margin-left: 0.35rem;
+}
+
+.meeting-year-group__list {
+  padding: 0 0.75rem 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .meeting-year-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .meeting-year-summary__meta {
+    text-align: left;
+  }
+
+  .meeting-year-summary__breakdown {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+
+/* Mobile meeting section and menu refinements */
+@media (max-width: 640px) {
+  .meetings-summary {
+    gap: 0.85rem;
+  }
+
+  .meetings-summary > h3,
+  .meeting-following > h3,
+  .meeting-archive h3,
+  #recent-meetings-heading {
+    margin-block: 0 0.55rem;
+    font-size: 1.08rem;
+    line-height: 1.2;
+  }
+
+  .meeting-card {
+    grid-template-columns: 4.2rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+
+  .meeting-card--featured {
+    padding-block: 0.95rem;
+  }
+
+  .meeting-card__date {
+    width: 4rem;
+    min-width: 4rem;
+  }
+
+  .meeting-card__month {
+    padding-block: 0.28rem;
+    font-size: 0.72rem;
+  }
+
+  .meeting-card__day {
+    font-size: 1.55rem;
+  }
+
+  .meeting-card__year {
+    font-size: 0.72rem;
+  }
+
+  .meeting-card__body h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .meeting-card__meta {
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .meeting-card__actions {
+    gap: 0.45rem;
+    margin-top: 0.45rem;
+  }
+
+  .meeting-card__actions .button,
+  .meeting-card__actions a {
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    text-align: left;
+  }
+
+  .meeting-following {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .meeting-following .meeting-card-list {
+    gap: 0.65rem;
+  }
+}
+
+/* Mobile navigation height/scroll refinement */
+@media (max-width: 46rem) {
+  .site-header .site-header__brand-row > .mobile-menu[open] > nav,
+  .site-header .site-header__brand-row > .mobile-menu > nav {
+    max-height: min(78vh, 34rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .site-header .communities-menu--mobile[open] .communities-menu__panel {
+    max-height: min(62vh, 26rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .site-header .communities-menu--mobile .communities-menu__panel a,
+  .site-header .communities-menu--mobile .communities-menu__pending {
+    min-height: 2.8rem;
+    padding-block: 0.7rem;
+  }
+}
+
+/* Mobile meetings compact override - must stay after earlier meeting rules */
+@media (max-width: 46rem) {
+  .meetings-summary {
+    gap: 0.75rem !important;
+  }
+
+  .meetings-summary > h3,
+  .meeting-following > h3,
+  #recent-meetings-heading {
+    margin: 1.15rem 0 0.55rem !important;
+    font-size: 1.28rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .meetings-summary > h3:first-child {
+    margin-top: 0 !important;
+  }
+
+  .meeting-card,
+  .meeting-card.meeting-card--featured {
+    display: grid !important;
+    grid-template-columns: 3.75rem minmax(0, 1fr) !important;
+    gap: 0.72rem !important;
+    align-items: center !important;
+    padding: 0.8rem 0.8rem !important;
+    min-height: 0 !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .meeting-card--featured {
+    border-left-width: 0.28rem !important;
+  }
+
+  .meeting-card__date {
+    width: 3.55rem !important;
+    min-width: 3.55rem !important;
+    max-width: 3.55rem !important;
+    border-radius: 0.55rem !important;
+  }
+
+  .meeting-card__month {
+    padding: 0.24rem 0.2rem !important;
+    font-size: 0.68rem !important;
+    line-height: 1 !important;
+  }
+
+  .meeting-card__day {
+    padding: 0.22rem 0.2rem 0.1rem !important;
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+  }
+
+  .meeting-card__year {
+    padding: 0 0.2rem 0.28rem !important;
+    font-size: 0.68rem !important;
+    line-height: 1 !important;
+  }
+
+  .meeting-card__body {
+    min-width: 0 !important;
+  }
+
+  .meeting-card__title-row {
+    display: block !important;
+  }
+
+  .meeting-card__body h3 {
+    margin: 0 0 0.25rem !important;
+    font-size: 1.05rem !important;
+    line-height: 1.16 !important;
+  }
+
+  .meeting-card__meta {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .meeting-card__actions,
+  .meeting-actions.meeting-card__actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.45rem 0.65rem !important;
+    margin-top: 0.38rem !important;
+  }
+
+  .meeting-card__actions a,
+  .meeting-card__actions .button,
+  .meeting-actions.meeting-card__actions a,
+  .meeting-actions.meeting-card__actions .button {
+    display: inline !important;
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 0.86rem !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+  }
+
+  .meeting-following {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .meeting-card-list {
+    gap: 0.62rem !important;
+  }
+}
+
+/* Mobile header menu height override */
+@media (max-width: 46rem) {
+  .site-header .site-header__brand-row > .mobile-menu[open] > nav,
+  .site-header .site-header__brand-row > .mobile-menu > nav {
+    max-height: calc(100dvh - 7.5rem) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+  }
+
+  .site-header .site-header__brand-row > .mobile-menu .communities-menu--mobile[open] .communities-menu__panel {
+    max-height: calc(100dvh - 13rem) !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+  }
+
+  .site-header .site-header__brand-row > .mobile-menu .communities-menu--mobile .communities-menu__panel a,
+  .site-header .site-header__brand-row > .mobile-menu .communities-menu--mobile .communities-menu__pending {
+    min-height: 3rem !important;
+    padding-top: 0.78rem !important;
+    padding-bottom: 0.78rem !important;
+  }
+}
+
+/* Mobile meeting archive card cleanup */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    display: grid !important;
+    grid-template-columns: 3.25rem minmax(0, 1fr) !important;
+    gap: 0.65rem !important;
+    align-items: start !important;
+    padding: 0.72rem !important;
+    overflow: hidden !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    width: 3.15rem !important;
+    min-width: 3.15rem !important;
+    max-width: 3.15rem !important;
+    border-radius: 0.52rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__month,
+  .meeting-year-group__list .meeting-card__month {
+    padding: 0.22rem 0.12rem !important;
+    font-size: 0.63rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  .meeting-archive-page .meeting-card__day,
+  .meeting-year-group__list .meeting-card__day {
+    padding: 0.18rem 0.12rem 0.06rem !important;
+    font-size: 1.32rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .meeting-archive-page .meeting-card__year,
+  .meeting-year-group__list .meeting-card__year {
+    padding: 0 0.12rem 0.24rem !important;
+    font-size: 0.62rem !important;
+    line-height: 1 !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    display: block !important;
+  }
+
+  .meeting-archive-page .meeting-card__body h3,
+  .meeting-year-group__list .meeting-card__body h3 {
+    margin: 0 0 0.22rem !important;
+    font-size: 0.98rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta {
+    margin: 0 !important;
+    font-size: 0.82rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .meeting-archive-page .meeting-status,
+  .meeting-year-group__list .meeting-status {
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: max-content !important;
+    margin: 0.35rem 0 0 !important;
+    padding: 0.18rem 0.48rem !important;
+    font-size: 0.68rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions,
+  .meeting-archive-page .meeting-actions.meeting-card__actions,
+  .meeting-year-group__list .meeting-actions.meeting-card__actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.38rem 0.62rem !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions a,
+  .meeting-year-group__list .meeting-card__actions a,
+  .meeting-archive-page .meeting-card__actions .button,
+  .meeting-year-group__list .meeting-card__actions .button {
+    display: inline !important;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 0.8rem !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+  }
+
+  .meeting-year-group__list {
+    gap: 0.58rem !important;
+    padding-inline: 0.55rem !important;
+  }
+
+  .meeting-year-summary {
+    padding: 0.72rem 0.78rem !important;
+  }
+
+  .meeting-year-summary__title {
+    font-size: 1rem !important;
+  }
+
+  .meeting-year-summary__meta {
+    font-size: 0.78rem !important;
+  }
+}
+
+
+
+
+
+/* Final mobile archive cards: match city landing meeting cards */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    display: grid !important;
+    grid-template-columns: 4.25rem minmax(0, 1fr) !important;
+    gap: 0.72rem !important;
+    align-items: center !important;
+    padding: 0.8rem !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    display: block !important;
+    width: 4rem !important;
+    min-width: 4rem !important;
+    max-width: 4rem !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 0.55rem !important;
+    text-align: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__month,
+  .meeting-year-group__list .meeting-card__month {
+    display: block !important;
+    padding: 0.28rem 0.2rem !important;
+    background: transparent !important;
+    color: var(--color-accent, #70492c) !important;
+    font-size: 0.72rem !important;
+    line-height: 1 !important;
+    text-align: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__day,
+  .meeting-year-group__list .meeting-card__day {
+    display: block !important;
+    padding: 0.22rem 0.2rem 0.1rem !important;
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+
+  .meeting-archive-page .meeting-card__year,
+  .meeting-year-group__list .meeting-card__year {
+    display: block !important;
+    padding: 0 0.2rem 0.28rem !important;
+    background: transparent !important;
+    color: var(--color-accent, #70492c) !important;
+    font-size: 0.72rem !important;
+    line-height: 1 !important;
+    text-align: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    display: block !important;
+    min-width: 0 !important;
+    align-self: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    display: block !important;
+    min-height: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row h3,
+  .meeting-year-group__list .meeting-card__title-row h3 {
+    margin: 0 0 0.25rem !important;
+    font-size: 1.05rem !important;
+    line-height: 1.16 !important;
+  }
+
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.45rem 0.65rem !important;
+    margin-top: 0.38rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions a,
+  .meeting-year-group__list .meeting-card__actions a,
+  .meeting-archive-page .meeting-card__actions .button,
+  .meeting-year-group__list .meeting-card__actions .button {
+    display: inline !important;
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 0.86rem !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+  }
+
+  .meeting-year-group__list {
+    padding: 0 0.65rem 0.75rem !important;
+    gap: 0.62rem !important;
+  }
+}
+
+/* Final archive meeting links: match landing-page card links */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions,
+  .meeting-archive-page .meeting-actions,
+  .meeting-year-group__list .meeting-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: baseline !important;
+    gap: 0.28rem 0.7rem !important;
+    margin-top: 0.38rem !important;
+    width: auto !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions a,
+  .meeting-year-group__list .meeting-card__actions a,
+  .meeting-archive-page .meeting-actions a,
+  .meeting-year-group__list .meeting-actions a,
+  .meeting-archive-page .meeting-card__actions .button,
+  .meeting-year-group__list .meeting-card__actions .button,
+  .meeting-archive-page .meeting-actions .button,
+  .meeting-year-group__list .meeting-actions .button {
+    display: inline !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: max-content !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--community-link, var(--color-accent, #70492c)) !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+    text-underline-offset: 0.16em !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions a:hover,
+  .meeting-year-group__list .meeting-card__actions a:hover,
+  .meeting-archive-page .meeting-actions a:hover,
+  .meeting-year-group__list .meeting-actions a:hover,
+  .meeting-archive-page .meeting-card__actions a:focus-visible,
+  .meeting-year-group__list .meeting-card__actions a:focus-visible,
+  .meeting-archive-page .meeting-actions a:focus-visible,
+  .meeting-year-group__list .meeting-actions a:focus-visible {
+    background: transparent !important;
+    color: var(--community-link-hover, var(--community-link, var(--color-accent, #70492c))) !important;
+  }
+}
+
+/* Final archive card vertical alignment */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    align-items: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    align-self: center !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    align-self: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    width: 100% !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    align-items: center !important;
+  }
+}
+
+/* Final archive card inner alignment */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    grid-template-columns: 4rem minmax(0, 1fr) !important;
+    align-items: center !important;
+    min-height: 6.9rem !important;
+    padding: 0.85rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    align-self: center !important;
+    justify-self: center !important;
+    width: 3.85rem !important;
+    min-width: 3.85rem !important;
+    max-width: 3.85rem !important;
+    margin: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    align-self: center !important;
+    justify-self: stretch !important;
+    display: grid !important;
+    align-content: center !important;
+    gap: 0.26rem !important;
+    min-height: 4.9rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    display: block !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row h3,
+  .meeting-year-group__list .meeting-card__title-row h3 {
+    margin: 0 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.16 !important;
+  }
+
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta {
+    margin: 0 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.22 !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    margin: 0 !important;
+    line-height: 1.2 !important;
+  }
+}
+
+/* Final archive card body child alignment */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    justify-items: start !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row,
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta,
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    justify-self: stretch !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    justify-content: flex-start !important;
+  }
+}
+
+/* Final archive card mobile layout: date top-left, links single row */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    display: grid !important;
+    grid-template-columns: 4rem minmax(0, 1fr) !important;
+    gap: 0.75rem !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    padding: 0.85rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    align-self: start !important;
+    justify-self: start !important;
+    width: 3.85rem !important;
+    min-width: 3.85rem !important;
+    max-width: 3.85rem !important;
+    margin: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    display: block !important;
+    align-self: start !important;
+    justify-self: stretch !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row h3,
+  .meeting-year-group__list .meeting-card__title-row h3 {
+    margin: 0 0 0.25rem !important;
+    font-size: 1.05rem !important;
+    line-height: 1.16 !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta {
+    width: 100% !important;
+    margin: 0 0 0.4rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.28 !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions,
+  .meeting-archive-page .meeting-actions,
+  .meeting-year-group__list .meeting-actions {
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: flex-start !important;
+    align-items: baseline !important;
+    gap: 0.7rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions a,
+  .meeting-year-group__list .meeting-card__actions a,
+  .meeting-archive-page .meeting-actions a,
+  .meeting-year-group__list .meeting-actions a,
+  .meeting-archive-page .meeting-card__actions .button,
+  .meeting-year-group__list .meeting-card__actions .button,
+  .meeting-archive-page .meeting-actions .button,
+  .meeting-year-group__list .meeting-actions .button {
+    display: inline-block !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 0.84rem !important;
+    line-height: 1.2 !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+  }
+}
+
+/* Final archive card alignment: title top matches date tile top */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    align-items: start !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    align-self: start !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    align-self: start !important;
+    display: block !important;
+    min-height: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    margin-top: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row h3,
+  .meeting-year-group__list .meeting-card__title-row h3 {
+    margin-top: 0 !important;
+  }
+}
+
+/* Final compact mobile archive card layout */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    display: grid !important;
+    grid-template-columns: 3.75rem minmax(0, 1fr) !important;
+    gap: 0.65rem !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0.55rem 0.6rem !important;
+    border-radius: 0.65rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    display: block !important;
+    align-self: start !important;
+    justify-self: start !important;
+    width: 3.45rem !important;
+    min-width: 3.45rem !important;
+    max-width: 3.45rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0.5rem !important;
+    overflow: hidden !important;
+    text-align: center !important;
+  }
+
+  .meeting-archive-page .meeting-card__month,
+  .meeting-year-group__list .meeting-card__month {
+    display: block !important;
+    padding: 0.2rem 0.15rem 0.05rem !important;
+    font-size: 0.6rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.08em !important;
+    background: transparent !important;
+    color: var(--color-accent, #70492c) !important;
+  }
+
+  .meeting-archive-page .meeting-card__day,
+  .meeting-year-group__list .meeting-card__day {
+    display: block !important;
+    padding: 0.05rem 0.15rem !important;
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .meeting-archive-page .meeting-card__year,
+  .meeting-year-group__list .meeting-card__year {
+    display: block !important;
+    padding: 0 0.15rem 0.2rem !important;
+    font-size: 0.58rem !important;
+    line-height: 1 !important;
+    letter-spacing: 0.08em !important;
+    background: transparent !important;
+    color: var(--color-accent, #70492c) !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    display: block !important;
+    align-self: start !important;
+    justify-self: stretch !important;
+    min-height: 0 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row h3,
+  .meeting-year-group__list .meeting-card__title-row h3 {
+    margin: 0 0 0.16rem !important;
+    padding: 0 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.12 !important;
+  }
+
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta {
+    margin: 0 0 0.22rem !important;
+    padding: 0 !important;
+    font-size: 0.78rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: baseline !important;
+    gap: 0.18rem 0.48rem !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.1 !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions a,
+  .meeting-year-group__list .meeting-card__actions a,
+  .meeting-archive-page .meeting-card__actions .button,
+  .meeting-year-group__list .meeting-card__actions .button {
+    display: inline !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    max-width: max-content !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    font-size: 0.76rem !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+    text-align: left !important;
+    text-decoration: underline !important;
+    text-underline-offset: 0.15em !important;
+  }
+
+  .meeting-year-group__list {
+    gap: 0.5rem !important;
+    padding: 0 0.55rem 0.65rem !important;
+  }
+}
+
+/* BEGIN OWVAZ ISSUE STICKY NAV ANCHOR CLEARANCE
+   Civic topic section anchors must clear the fixed sticky navigation.
+   This applies to proposition pages and other issue/detail pages.
+   --------------------------------------------------------------- */
+
+.owvaz-detail-page__content h2[id],
+.owvaz-detail-page__content h3[id],
+.issue-page h2[id],
+.issue-page h3[id],
+#official-sources-heading {
+  scroll-margin-top: 7.25rem;
+}
+
+@media (max-width: 46rem) {
+  .owvaz-detail-page__content h2[id],
+  .owvaz-detail-page__content h3[id],
+  .issue-page h2[id],
+  .issue-page h3[id],
+  #official-sources-heading {
+    scroll-margin-top: 7.75rem;
+  }
+}
+
+/* END OWVAZ ISSUE STICKY NAV ANCHOR CLEARANCE */
+
+/* Final standard mobile archive card alignment */
+@media (max-width: 46rem) {
+  .meeting-archive-page .meeting-card,
+  .meeting-year-group__list .meeting-card {
+    display: grid !important;
+    grid-template-columns: 3.75rem minmax(0, 1fr) !important;
+    column-gap: 0.65rem !important;
+    align-items: start !important;
+    padding: 0.65rem 0.6rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__date,
+  .meeting-year-group__list .meeting-card__date {
+    align-self: start !important;
+    justify-self: start !important;
+    margin: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__body,
+  .meeting-year-group__list .meeting-card__body {
+    display: block !important;
+    align-self: start !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateY(0.55rem) !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row,
+  .meeting-year-group__list .meeting-card__title-row,
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta,
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .meeting-archive-page .meeting-card__title-row h3,
+  .meeting-year-group__list .meeting-card__title-row h3 {
+    margin: 0 0 0.16rem !important;
+    padding: 0 !important;
+  }
+
+  .meeting-archive-page .meeting-card__meta,
+  .meeting-year-group__list .meeting-card__meta {
+    margin: 0 0 0.22rem !important;
+  }
+
+  .meeting-archive-page .meeting-card__actions,
+  .meeting-year-group__list .meeting-card__actions {
+    margin: 0 !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* BEGIN OWVAZ ISSUE STICKY NAV ANCHOR CLEARANCE
+   Civic topic section anchors must clear the fixed sticky navigation.
+   This applies to proposition pages and other issue/detail pages.
+   --------------------------------------------------------------- */
+
+.owvaz-detail-page__content h2[id],
+.owvaz-detail-page__content h3[id],
+.issue-page h2[id],
+.issue-page h3[id],
+#official-sources-heading {
+  scroll-margin-top: 7.25rem;
+}
+
+@media (max-width: 46rem) {
+  .owvaz-detail-page__content h2[id],
+  .owvaz-detail-page__content h3[id],
+  .issue-page h2[id],
+  .issue-page h3[id],
+  #official-sources-heading {
+    scroll-margin-top: 7.75rem;
+  }
+}
+
+/* END OWVAZ ISSUE STICKY NAV ANCHOR CLEARANCE */
+
+/* BEGIN OWVAZ RESEARCH STATUS NOTE
+   Used on working civic research pages where records are still being gathered.
+   ------------------------------------------------------------------------ */
+
+.research-status-note {
+  margin: 1.25rem 0 1.75rem;
+  padding: .95rem 1rem;
+
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--az-gold) 52%,
+      var(--border) 48%
+    );
+  border-left: .32rem solid var(--az-gold);
+  border-radius: .45rem;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--surface) 88%,
+      var(--az-gold) 12%
+    );
+
+  color: var(--text);
+}
+
+.research-status-note strong {
+  display: block;
+  margin-bottom: .25rem;
+
+  color: var(--accent-dark);
+  font-weight: 850;
+}
+
+.research-status-note__body > :last-child {
+  margin-bottom: 0;
+}
+
+/* END OWVAZ RESEARCH STATUS NOTE */

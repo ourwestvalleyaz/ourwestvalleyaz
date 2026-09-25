@@ -1,0 +1,152 @@
+{
+  "city_id": "tolleson",
+  "fiscal_year": "FY2020",
+  "fiscal_period": {
+    "start": "2019-07-01",
+    "end": "2020-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 76796734,
+    "currency": "USD",
+    "scope": "all_funds",
+    "measure": "budgeted_expenditures_expenses"
+  },
+  "adoption": {
+    "date": "2019-05-28",
+    "authority_type": "resolution",
+    "authority_identifier": "2391",
+    "authority_title": "Resolution No. 2391 adopting the final FY2019-2020 budget",
+    "governing_body": {
+      "name": "Tolleson City Council",
+      "context": "final adoption",
+      "members": [
+        {
+          "name": "Anna Tovar",
+          "role": "mayor"
+        }
+      ]
+    }
+  },
+  "source_ids": [
+    "tolleson-fy2020-adopted-budget"
+  ],
+  "source": {
+    "title": "Detailed Adopted Budget FY 2019-2020",
+    "publisher": "City of Tolleson",
+    "document_type": "official adopted budget",
+    "url": "https://www.tolleson.az.gov/DocumentCenter/View/4340/Detailed-Adopted-Budget-FY-2019-2020-PDF",
+    "accessed": "2026-09-15"
+  },
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-21"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2019",
+    "adopted_budget": 77150947,
+    "measure": "canonical_final_adopted_budget",
+    "dollar_change": -354213,
+    "percent_change": -0.5,
+    "summary": "FY2020 budgeted expenditures/expenses decreased by $354,213 compared with FY2019, a decrease of 0.5%.",
+    "note": "Comparison uses the FY2019 final adopted budget of $77,150,947, confirmed against the original FY2019 Schedule A, PDF page 3, 2019 Budgeted Expenditures/Expenses, Total All Funds. The FY2020 final Schedule A also lists $77,150,947 in its FY2019 adopted/adjusted comparison column."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 31143465,
+      "percent_of_measure": 40.6,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Fund",
+      "amount": 6033233,
+      "percent_of_measure": 7.9,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 5223303,
+      "percent_of_measure": 6.8,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 11734924,
+      "percent_of_measure": 15.3,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 22661809,
+      "percent_of_measure": 29.5,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 47129589,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2020 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "This is the final Schedule A estimate of revenues other than property taxes and is distinct from total financial resources available or total budgeted expenditures/expenses."
+  },
+  "property_tax": {
+    "primary_levy": 3891031,
+    "secondary_levy": 4478000,
+    "total_levy": 8369031,
+    "primary_rate": 1.7281,
+    "secondary_rate": 1.9888,
+    "combined_rate": 3.7169,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2020 Schedule B."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 11734924,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "final_adopted_schedule_e",
+        "label": "Capital Projects Fund",
+        "note": "FY2020 Schedule E budgeted expenditures/expenses."
+      }
+    ],
+    "projects": [
+      {
+        "name": "City Hall Construction Fund",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 11000000,
+        "total": 11000000,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2020",
+        "description": "Schedule E identifies $11,000,000 in FY2020 budgeted expenditures/expenses for this item under the Capital Projects Fund. This represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      },
+      {
+        "name": "Construction Fund",
+        "project_type": "Capital Projects Fund",
+        "new_appropriation": 734924,
+        "total": 734924,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "FY2020",
+        "description": "Schedule E identifies $734,924 in FY2020 budgeted expenditures/expenses for this item under the Capital Projects Fund. This represents fiscal-year budget authority and should not be interpreted as total lifetime project cost."
+      }
+    ],
+    "selection_method": "complete_capital_projects_fund_schedule_e",
+    "selection_definition": "All Capital Projects Fund items listed in FY2020 Schedule E.",
+    "note": "The $11,734,924 capital measure reconciles exactly to the Capital Projects Fund amount in the final schedules."
+  }
+}

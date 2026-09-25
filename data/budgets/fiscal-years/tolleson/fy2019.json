@@ -1,0 +1,158 @@
+{
+  "city_id": "tolleson",
+  "fiscal_year": "FY2019",
+  "fiscal_period": {
+    "start": "2018-07-01",
+    "end": "2019-06-30"
+  },
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 77150947,
+    "currency": "USD",
+    "scope": "all_funds",
+    "measure": "budgeted_expenditures_expenses"
+  },
+  "adoption": {
+    "date": "2018-06-12",
+    "authority_type": "resolution",
+    "authority_identifier": "2359",
+    "authority_title": "Resolution No. 2359 adopting the final FY2018-2019 budget",
+    "governing_body": {
+      "name": "Tolleson City Council",
+      "context": "final adoption",
+      "members": [
+        {
+          "name": "Anna Tovar",
+          "role": "mayor"
+        }
+      ]
+    }
+  },
+  "source_ids": [
+    "tolleson-fy2019-adopted-budget"
+  ],
+  "source": {
+    "title": "Detailed Adopted Budget FY 2018-2019",
+    "publisher": "City of Tolleson",
+    "document_type": "official adopted budget",
+    "url": "https://www.tolleson.az.gov/DocumentCenter/View/3999/Detailed-Adopted-Budget-FY-2018-2019-PDF",
+    "accessed": "2026-09-15"
+  },
+  "verification": {
+    "state": "verified",
+    "last_verified": "2026-09-21"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2018",
+    "adopted_budget": 63057727,
+    "measure": "adopted_adjusted_budget",
+    "dollar_change": 14093220,
+    "percent_change": 22.3,
+    "summary": "FY2019 budgeted expenditures/expenses increased by $14,093,220 compared with FY2018, an increase of 22.3%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General Fund",
+      "amount": 33265662,
+      "percent_of_measure": 43.1,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue Fund",
+      "amount": 6165560,
+      "percent_of_measure": 8.0,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service Fund",
+      "amount": 5457668,
+      "percent_of_measure": 7.1,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects Fund",
+      "amount": 12466558,
+      "percent_of_measure": 16.2,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise Funds",
+      "amount": 19795499,
+      "percent_of_measure": 25.7,
+      "measure": "budgeted_expenditures_expenses",
+      "scope": "final_adopted_schedule_a"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 54917078,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Final FY2019 Schedule A statutory revenue measure."
+      }
+    ],
+    "note": "This is the final Schedule A estimate of revenues other than property taxes and is distinct from total financial resources available or total budgeted expenditures/expenses."
+  },
+  "property_tax": {
+    "primary_levy": 3738559,
+    "secondary_levy": 4203000,
+    "total_levy": 7941559,
+    "primary_rate": 1.8039,
+    "secondary_rate": 2.028,
+    "combined_rate": 3.8319,
+    "rate_basis": "per $100 of net assessed valuation",
+    "note": "Final FY2019 Schedule B."
+  },
+  "capital": {
+    "measures": [
+      {
+        "amount": 12466558,
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "final_adopted_schedule_e",
+        "label": "Capital Projects Fund",
+        "note": "FY2019 Schedule E budgeted expenditures/expenses."
+      }
+    ],
+    "projects": [
+      {
+        "name": "New City Hall Building",
+        "project_type": "City Hall Construction Fund",
+        "new_appropriation": 11515000,
+        "measure": "budgeted_capital_outlay",
+        "scope": "FY2019",
+        "description": "FY2019 Capital Outlay entry within City Hall Construction Fund. This is a fiscal-year budgeted amount, not a verified lifetime project cost."
+      },
+      {
+        "name": "Capital improvement projects, WWTP facility construction",
+        "project_type": "Construction Fund",
+        "new_appropriation": 939783,
+        "measure": "budgeted_capital_outlay",
+        "scope": "FY2019",
+        "description": "FY2019 Capital Outlay entry within Construction Fund."
+      },
+      {
+        "name": "WWTP facility construction",
+        "project_type": "Construction Fund",
+        "new_appropriation": 11775,
+        "measure": "budgeted_capital_outlay",
+        "scope": "FY2019",
+        "description": "Separate FY2019 Capital Outlay entry within Construction Fund."
+      }
+    ],
+    "selection_method": "capital_projects_funds_capital_outlay_entries",
+    "selection_definition": "Three Capital Projects Funds entries reported in the FY2019 Capital Outlay schedule.",
+    "note": "The three FY2019 budgeted capital-outlay entries total $12,466,558, reconciling to the Capital Projects Fund budgeted expenditures/expenses in Schedule E. These schedules do not establish carryover or lifetime project costs.",
+    "presentation": "itemized_capital_outlay"
+  }
+}

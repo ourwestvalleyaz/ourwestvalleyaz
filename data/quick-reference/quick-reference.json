@@ -383,6 +383,342 @@
         "avondale-block-party"
       ],
       "priority": 270
+    },
+    {
+      "record_id": "tolleson-utilities",
+      "city_id": "tolleson",
+      "category": "utilities",
+      "title": "Water, Sewer & Utilities",
+      "summary": "City water and wastewater information, service contacts and help determining whether a property is within Tolleson's service area.",
+      "action_label": "Utilities",
+      "action_url": "https://www.tolleson.az.gov/580/Utilities",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-utilities"
+      ],
+      "priority": 10,
+      "note": "A Tolleson or 85353 mailing address does not necessarily mean the property is inside Tolleson city limits."
+    },
+    {
+      "record_id": "tolleson-utility-service",
+      "city_id": "tolleson",
+      "category": "utilities",
+      "title": "Start or Stop Utility Service",
+      "summary": "Start or stop City water, sewer and sanitation service and get help with utility billing.",
+      "action_label": "Utility service",
+      "action_url": "https://www.tolleson.az.gov/18/Water-Sanitation-Set-Up-Payment",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-utility-service"
+      ],
+      "priority": 20
+    },
+    {
+      "record_id": "tolleson-sanitation",
+      "city_id": "tolleson",
+      "category": "trash-recycling",
+      "title": "Trash, Recycling & Bulk Pickup",
+      "summary": "Residential trash, recycling and registered bulk-trash service information.",
+      "action_label": "Trash & recycling",
+      "action_url": "https://www.tolleson.az.gov/695/Sanitation-and-Bulk-Services",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-sanitation"
+      ],
+      "priority": 60
+    },
+    {
+      "record_id": "tolleson-code-violation",
+      "city_id": "tolleson",
+      "category": "report-a-problem",
+      "title": "Report a Code Violation",
+      "summary": "Report a possible property or code-compliance violation to the City.",
+      "action_label": "Report a violation",
+      "action_url": "https://www.tolleson.az.gov/585/Report-a-Violation",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-code-violation"
+      ],
+      "priority": 70
+    },
+    {
+      "record_id": "tolleson-council-meetings",
+      "city_id": "tolleson",
+      "category": "city-meetings",
+      "title": "City Council Meetings",
+      "summary": "Find Tolleson City Council meeting information and links to the City's current meeting calendar and notices.",
+      "action_label": "Council meetings",
+      "action_url": "https://www.tolleson.az.gov/26/Tolleson-City-Council-Members",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-current-city-council"
+      ],
+      "priority": 90,
+      "note": "Check the City's current calendar or agenda for the date and time of a specific meeting."
+    },
+    {
+      "record_id": "tolleson-city-clerk",
+      "city_id": "tolleson",
+      "category": "city-meetings",
+      "title": "Agendas, Minutes & Public Records",
+      "summary": "Find Council and board records, agendas, minutes and City public-record information.",
+      "action_label": "City Clerk",
+      "action_url": "https://www.tolleson.az.gov/12/City-Clerks-Office",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-city-clerk"
+      ],
+      "priority": 100
+    },
+    {
+      "record_id": "tolleson-police-non-emergency",
+      "city_id": "tolleson",
+      "category": "safety",
+      "title": "Police & Non-Emergency",
+      "summary": "Tolleson Police contact and non-emergency information for incidents within Tolleson city limits.",
+      "action_label": "Police non-emergency",
+      "action_url": "https://www.tolleson.az.gov/657/Anonymous-Tips",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-police-non-emergency"
+      ],
+      "priority": 160,
+      "note": "For emergencies, call 911. A Tolleson mailing address does not necessarily mean an address is within Tolleson Police jurisdiction."
+    },
+    {
+      "record_id": "tolleson-micro-transit",
+      "city_id": "tolleson",
+      "category": "transportation",
+      "title": "Tolleson Micro Transit",
+      "summary": "Tolleson's local micro-transit program provides eligible trips using Lyft and Uber.",
+      "action_label": "Micro Transit",
+      "action_url": "https://www.tolleson.az.gov/762/Tolleson-Micro-Transit-Program",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-micro-transit"
+      ],
+      "priority": 210,
+      "note": "Check the City's current program page for eligibility, destinations, fares and other rules."
+    },
+    {
+      "record_id": "tolleson-parks-recreation",
+      "city_id": "tolleson",
+      "category": "parks-community",
+      "title": "Parks & Recreation",
+      "summary": "Parks, recreation programs, reservations, activities and community events.",
+      "action_label": "Parks & recreation",
+      "action_url": "https://www.tolleson.az.gov/632/Parks-Recreation",
+      "provider": "City of Tolleson",
+      "source_ids": [
+        "tolleson-parks-recreation"
+      ],
+      "priority": 240
+    },
+    {
+      "record_id": "litchfield-park-aps-electric-service",
+      "city_id": "litchfield-park",
+      "category": "utilities",
+      "title": "Electric Service",
+      "summary": "Start, stop or move residential electric service with APS.",
+      "provider": "Arizona Public Service",
+      "action_label": "Manage APS service",
+      "action_url": "https://www.aps.com/en/Residential/Account/Start-Stop-and-Move-Service",
+      "priority": 10,
+      "source_ids": [
+        "litchfield-park-utility-services",
+        "litchfield-park-aps-residential-service"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-natural-gas-service",
+      "city_id": "litchfield-park",
+      "category": "utilities",
+      "title": "Natural Gas Service",
+      "summary": "Contact Southwest Gas for residential natural-gas service, account or billing assistance.",
+      "provider": "Southwest Gas",
+      "action_label": "Southwest Gas",
+      "action_url": "https://www.swgas.com/en/contact-us",
+      "priority": 20,
+      "source_ids": [
+        "litchfield-park-utility-services",
+        "litchfield-park-southwest-gas"
+      ],
+      "note": "For a suspected natural-gas leak, leave the area and call 911 and Southwest Gas."
+    },
+    {
+      "record_id": "litchfield-park-trash-recycling",
+      "city_id": "litchfield-park",
+      "category": "trash-recycling",
+      "title": "Trash & Recycling",
+      "summary": "Residential refuse and recycling information for Litchfield Park.",
+      "provider": "Waste Management",
+      "action_label": "Trash & recycling",
+      "action_url": "https://www.litchfieldpark.gov/20/Refuse-Recycling",
+      "priority": 60,
+      "source_ids": [
+        "litchfield-park-refuse-recycling",
+        "litchfield-park-utility-services"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-report-problem",
+      "city_id": "litchfield-park",
+      "category": "report-a-problem",
+      "title": "Report a City Problem",
+      "summary": "Find City reporting options for non-emergency problems and service concerns.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Report a problem",
+      "action_url": "https://www.litchfieldpark.gov/1145/Report",
+      "priority": 70,
+      "source_ids": [
+        "litchfield-park-report"
+      ],
+      "note": "Do not use non-emergency reporting options for emergencies."
+    },
+    {
+      "record_id": "litchfield-park-code-enforcement",
+      "city_id": "litchfield-park",
+      "category": "report-a-problem",
+      "title": "Code Enforcement",
+      "summary": "Find information about City code enforcement and property-related compliance concerns.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Code enforcement",
+      "action_url": "https://www.litchfieldpark.gov/1007/Code-Enforcement",
+      "priority": 80,
+      "source_ids": [
+        "litchfield-park-code-enforcement"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-agendas-minutes",
+      "city_id": "litchfield-park",
+      "category": "city-meetings",
+      "title": "City Meetings, Agendas & Minutes",
+      "summary": "Find City Council and other public meeting agendas, minutes and meeting information.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Agendas & minutes",
+      "action_url": "https://www.litchfieldpark.gov/1742/Agendas-and-Minutes",
+      "priority": 90,
+      "source_ids": [
+        "litchfield-park-agendas-minutes"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-public-safety",
+      "city_id": "litchfield-park",
+      "category": "safety",
+      "title": "Public Safety & Non-Emergency Information",
+      "summary": "Find police, fire and other public-safety information for Litchfield Park residents.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Public safety",
+      "action_url": "https://www.litchfieldpark.gov/70/Public-Safety",
+      "priority": 160,
+      "source_ids": [
+        "litchfield-park-public-safety"
+      ],
+      "note": "For emergencies, call 911."
+    },
+    {
+      "record_id": "litchfield-park-aps-outage",
+      "city_id": "litchfield-park",
+      "category": "safety",
+      "title": "APS Power Outage",
+      "summary": "View or report an APS electric outage.",
+      "provider": "Arizona Public Service",
+      "action_label": "APS outages",
+      "action_url": "https://www.aps.com/outagecenter",
+      "priority": 170,
+      "source_ids": [
+        "litchfield-park-utility-services",
+        "litchfield-park-aps-outage-center"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-water-service",
+      "city_id": "litchfield-park",
+      "category": "water",
+      "title": "Water Service",
+      "summary": "Water and wastewater service information for the Liberty Utilities Litchfield Park service area.",
+      "provider": "Liberty Utilities",
+      "action_label": "Liberty water service",
+      "action_url": "https://arizona.libertyutilities.com/litchfield-park/residential/",
+      "priority": 180,
+      "source_ids": [
+        "litchfield-park-utility-services",
+        "litchfield-park-liberty-water"
+      ],
+      "note": "Liberty Utilities is not a department of the City of Litchfield Park."
+    },
+    {
+      "record_id": "litchfield-park-road-projects",
+      "city_id": "litchfield-park",
+      "category": "transportation",
+      "title": "Road Construction Projects",
+      "summary": "Current City roadway construction project information.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Road projects",
+      "action_url": "https://www.litchfieldpark.gov/21/Road-Construction-Projects",
+      "priority": 210,
+      "source_ids": [
+        "litchfield-park-road-construction"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-traffic-restrictions",
+      "city_id": "litchfield-park",
+      "category": "transportation",
+      "title": "Traffic Restrictions",
+      "summary": "Find current City traffic restrictions and roadway impacts.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Traffic restrictions",
+      "action_url": "https://www.litchfieldpark.gov/1675/Traffic-Restrictions",
+      "priority": 220,
+      "source_ids": [
+        "litchfield-park-traffic-restrictions"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-recreation",
+      "city_id": "litchfield-park",
+      "category": "parks-community",
+      "title": "Parks & Recreation",
+      "summary": "Recreation programs, activities and community recreation information.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Recreation",
+      "action_url": "https://www.litchfieldpark.gov/1745/Recreation",
+      "priority": 240,
+      "source_ids": [
+        "litchfield-park-recreation",
+        "litchfield-park-city-parks"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-city-parks",
+      "city_id": "litchfield-park",
+      "category": "parks-community",
+      "title": "City Parks",
+      "summary": "Find Litchfield Park parks, amenities and park information.",
+      "provider": "City of Litchfield Park",
+      "action_label": "City parks",
+      "action_url": "https://www.litchfieldpark.gov/150/City-Parks",
+      "priority": 250,
+      "source_ids": [
+        "litchfield-park-city-parks"
+      ]
+    },
+    {
+      "record_id": "litchfield-park-special-events",
+      "city_id": "litchfield-park",
+      "category": "parks-community",
+      "title": "Special Events",
+      "summary": "Find City-sponsored special events and community activities.",
+      "provider": "City of Litchfield Park",
+      "action_label": "Special events",
+      "action_url": "https://www.litchfieldpark.gov/1411/Special-Events-Main-Page",
+      "priority": 260,
+      "source_ids": [
+        "litchfield-park-special-events"
+      ]
     }
   ]
 }
