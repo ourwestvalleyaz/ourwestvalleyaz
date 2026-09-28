@@ -1,0 +1,101 @@
+{
+  "sources": {
+    "finding_flock": {
+      "name": "FindingFlock / OpenStreetMap volunteer reports",
+      "url": "https://www.findingflock.com/",
+      "polling_status": "count_source",
+      "description": "FindingFlock is the public map source OWVAZ may use for reviewed city-level ALPR count snapshots."
+    },
+    "deflock": {
+      "name": "DeFlock",
+      "url": "https://deflockusa.com/",
+      "polling_status": "context_only",
+      "description": "DeFlock is listed as an additional public, community-oriented ALPR camera map. OWVAZ is not currently using DeFlock for automated city-level count polling."
+    },
+    "flock_surveillance_map": {
+      "name": "FLOCK Surveillance Network Map",
+      "url": "https://flocksurveillance.org/index.html",
+      "polling_status": "context_only",
+      "description": "The FLOCK Surveillance Network Map is listed as broader public research context. OWVAZ is not currently using it for automated city-level count polling.",
+      "site_notice": "The FLOCK Surveillance Network Map describes itself as an independent research site presenting Joshua Michael’s cybersecurity work. It says it is not affiliated with or endorsed by Flock Safety, Flock Group, Inc., or their products; that Flock names and marks belong to their respective owners and are used only to identify the research subject; and that use of copyrighted material is intended as fair use for criticism, comment, scholarship, and research under 17 U.S.C. § 107."
+    }
+  },
+  "cities": {
+    "litchfield-park": {
+      "finding_flock_url": "https://www.findingflock.com/cameras/arizona/litchfield-park",
+      "documented_readers": 29,
+      "vendor_note": "FindingFlock identifies all 29 as Flock Safety units.",
+      "density_note": "FindingFlock lists the city at 8.8 readers per square mile.",
+      "checked_against_osm": "September 21, 2026",
+      "last_changed": "August 9, 2026",
+      "count_note": "This count is useful public-source context, but it is not an official City inventory.",
+      "findingflock": {
+        "checked_against_osm": "September 21, 2026",
+        "checked_against_openstreetmap": "September 21, 2026",
+        "osm_checked_date": "September 21, 2026",
+        "last_changed": "August 9, 2026",
+        "last_changed_date": "August 9, 2026"
+      }
+    },
+    "avondale": {
+      "city_name": "Avondale",
+      "findingflock": {
+        "enabled": true,
+        "title": "FindingFlock / OpenStreetMap volunteer reports",
+        "url": "https://www.findingflock.com/cameras/arizona/avondale",
+        "documented_readers": 23,
+        "manufacturer_summary": "FindingFlock identifies 22 of the 23 documented readers as Flock Safety units and 1 as Motorola Solutions.",
+        "density_summary": "FindingFlock lists Avondale at 0.5 readers per square mile.",
+        "checked_against_osm": "September 10, 2026",
+        "last_changed": "August 31, 2026",
+        "caveat": "This count is useful public-source context, but it is not an official City inventory. FindingFlock locations are documented through public volunteer mapping and may lag behind camera additions, removals, or changes in the field.",
+        "checked_against_openstreetmap": "September 10, 2026",
+        "osm_checked_date": "September 10, 2026",
+        "last_changed_date": "August 31, 2026"
+      },
+      "deflock": {
+        "enabled": true,
+        "title": "DeFlock",
+        "url": "https://deflockusa.com/",
+        "summary": "DeFlock is listed as an additional public, community-oriented ALPR camera map. OWVAZ is not currently using DeFlock for automated city-level count polling."
+      },
+      "flock_surveillance_network_map": {
+        "enabled": true,
+        "title": "FLOCK Surveillance Network Map",
+        "url": "https://flocksurveillance.org/index.html",
+        "summary": "The FLOCK Surveillance Network Map is listed as broader public research context. OWVAZ is not currently using it for automated city-level count polling.",
+        "notice": "The FLOCK Surveillance Network Map describes itself as an independent research site presenting Joshua Michael’s cybersecurity work. It says it is not affiliated with or endorsed by Flock Safety, Flock Group, Inc., or their products; that Flock names and marks belong to their respective owners and are used only to identify the research subject; and that use of copyrighted material is intended as fair use for criticism, comment, scholarship, and research under 17 U.S.C. § 107."
+      }
+    },
+    "tolleson": {
+      "city_name": "Tolleson",
+      "findingflock": {
+        "enabled": true,
+        "title": "FindingFlock / OpenStreetMap volunteer reports",
+        "url": "https://www.findingflock.com/cameras/arizona/tolleson",
+        "documented_readers": 59,
+        "manufacturer_summary": "FindingFlock identifies all 59 documented readers as Flock Safety units.",
+        "density_summary": "FindingFlock lists Tolleson at 10.3 readers per square mile.",
+        "checked_against_osm": "September 24, 2026",
+        "last_changed": "September 9, 2026",
+        "caveat": "This count is useful public-source context, but it is not an official City inventory. FindingFlock locations are documented through public volunteer mapping and may lag behind camera additions, removals, or changes in the field.",
+        "checked_against_openstreetmap": "September 24, 2026",
+        "osm_checked_date": "September 24, 2026",
+        "last_changed_date": "September 9, 2026"
+      },
+      "deflock": {
+        "enabled": true,
+        "title": "DeFlock",
+        "url": "https://deflockusa.com/",
+        "summary": "DeFlock is listed as an additional public, community-oriented ALPR camera map. OWVAZ is not currently using DeFlock for automated city-level count polling."
+      },
+      "flock_surveillance_network_map": {
+        "enabled": true,
+        "title": "FLOCK Surveillance Network Map",
+        "url": "https://flocksurveillance.org/index.html",
+        "summary": "The FLOCK Surveillance Network Map is listed as broader public research context. OWVAZ is not currently using it for automated city-level count polling.",
+        "notice": "The FLOCK Surveillance Network Map describes itself as an independent research site presenting Joshua Michael’s cybersecurity work. It says it is not affiliated with or endorsed by Flock Safety, Flock Group, Inc., or their products; that Flock names and marks belong to their respective owners and are used only to identify the research subject; and that use of copyrighted material is intended as fair use for criticism, comment, scholarship, and research under 17 U.S.C. § 107."
+      }
+    }
+  }
+}

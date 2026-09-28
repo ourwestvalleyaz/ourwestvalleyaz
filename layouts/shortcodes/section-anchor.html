@@ -1,0 +1,5 @@
+{{- $id := .Get "id" -}}
+{{- if not $id -}}
+  {{- errorf "section-anchor shortcode requires id" -}}
+{{- end -}}
+<span id="{{ $id | safeHTMLAttr }}" class="section-anchor" aria-hidden="true"></span>

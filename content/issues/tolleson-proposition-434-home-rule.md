@@ -23,6 +23,7 @@ sticky_sections:
     name: "Official Sources"
 ---
 
+{{< section-anchor id="what-a-yes-or-no-vote-means" >}}
 ## What a yes or no vote meant
 
 {{< ballot-comparison >}}

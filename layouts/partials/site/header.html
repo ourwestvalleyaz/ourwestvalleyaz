@@ -27,37 +27,45 @@
               Communities
             </summary>
 
-            <div class="communities-menu__panel">
-              {{ $cities := slice
-                (dict "slug" "avondale" "name" "Avondale" "complete" true)
-                (dict "slug" "tolleson" "name" "Tolleson" "complete" true)
-                (dict "slug" "litchfield-park" "name" "Litchfield Park" "complete" false)
-              }}
+            <div class="communities-menu__panel communities-menu__panel--grouped">
+              <div class="communities-menu__section">
+                <span class="communities-menu__section-label">Available</span>
+                <a href="/communities/avondale/"
+                   {{ if hasPrefix $.RelPermalink "/communities/avondale/" }}aria-current="page"{{ end }}>
+                  Avondale
+                </a>
+                <a href="/communities/litchfield-park/"
+                   {{ if hasPrefix $.RelPermalink "/communities/litchfield-park/" }}aria-current="page"{{ end }}>
+                  Litchfield Park
+                </a>
+                <a href="/communities/tolleson/"
+                   {{ if hasPrefix $.RelPermalink "/communities/tolleson/" }}aria-current="page"{{ end }}>
+                  Tolleson
+                </a>
+              </div>
 
-              {{ range $cities }}
-                {{ $city := . }}
-                {{ $page := site.GetPage (printf "/communities/%s" $city.slug) }}
+              <div class="communities-menu__section">
+                <span class="communities-menu__section-label">In progress</span>
+                <span class="communities-menu__pending communities-menu__pending--plain">
+                  <span class="communities-menu__city">Surprise</span>
+                </span>
+              </div>
 
-                {{ if and $city.complete $page }}
-                  <a href="{{ $page.RelPermalink }}"
-                     {{ if and
-                          (eq $.Section "communities")
-                          (hasPrefix $.RelPermalink $page.RelPermalink)
-                     }}aria-current="page"{{ end }}>
-                    {{ $city.name }}
-                    
-                  </a>
-                {{ else }}
-                  <div class="communities-menu__pending">
-                    <span class="communities-menu__city">
-                      {{ $city.name }}
-                    </span>
-                    <span class="communities-menu__status">
-                      In Progress
-                    </span>
-                  </div>
-                {{ end }}
-              {{ end }}
+              <div class="communities-menu__section">
+                <span class="communities-menu__section-label">Coming soon</span>
+                <span class="communities-menu__pending communities-menu__pending--plain">
+                  <span class="communities-menu__city">Buckeye</span>
+                </span>
+                <span class="communities-menu__pending communities-menu__pending--plain">
+                  <span class="communities-menu__city">Glendale</span>
+                </span>
+                <span class="communities-menu__pending communities-menu__pending--plain">
+                  <span class="communities-menu__city">Goodyear</span>
+                </span>
+                <span class="communities-menu__pending communities-menu__pending--plain">
+                  <span class="communities-menu__city">Peoria</span>
+                </span>
+              </div>
             </div>
           </details>
 
@@ -83,37 +91,45 @@
           Communities
         </summary>
 
-        <div class="communities-menu__panel">
-          {{ $cities := slice
-                (dict "slug" "avondale" "name" "Avondale" "complete" true)
-                (dict "slug" "tolleson" "name" "Tolleson" "complete" true)
-                (dict "slug" "litchfield-park" "name" "Litchfield Park" "complete" false)
-              }}
+        <div class="communities-menu__panel communities-menu__panel--grouped">
+          <div class="communities-menu__section">
+            <span class="communities-menu__section-label">Available</span>
+            <a href="/communities/avondale/"
+               {{ if hasPrefix $.RelPermalink "/communities/avondale/" }}aria-current="page"{{ end }}>
+              Avondale
+            </a>
+            <a href="/communities/litchfield-park/"
+               {{ if hasPrefix $.RelPermalink "/communities/litchfield-park/" }}aria-current="page"{{ end }}>
+              Litchfield Park
+            </a>
+            <a href="/communities/tolleson/"
+               {{ if hasPrefix $.RelPermalink "/communities/tolleson/" }}aria-current="page"{{ end }}>
+              Tolleson
+            </a>
+          </div>
 
-          {{ range $cities }}
-            {{ $city := . }}
-            {{ $page := site.GetPage (printf "/communities/%s" $city.slug) }}
+          <div class="communities-menu__section">
+            <span class="communities-menu__section-label">In progress</span>
+            <span class="communities-menu__pending communities-menu__pending--plain">
+              <span class="communities-menu__city">Surprise</span>
+            </span>
+          </div>
 
-            {{ if and $city.complete $page }}
-              <a href="{{ $page.RelPermalink }}"
-                 {{ if and
-                      (eq $.Section "communities")
-                      (hasPrefix $.RelPermalink $page.RelPermalink)
-                 }}aria-current="page"{{ end }}>
-                {{ $city.name }}
-                    
-              </a>
-            {{ else }}
-              <div class="communities-menu__pending">
-                <span class="communities-menu__city">
-                  {{ $city.name }}
-                </span>
-                <span class="communities-menu__status">
-                  In Progress
-                </span>
-              </div>
-            {{ end }}
-          {{ end }}
+          <div class="communities-menu__section">
+            <span class="communities-menu__section-label">Coming soon</span>
+            <span class="communities-menu__pending communities-menu__pending--plain">
+              <span class="communities-menu__city">Buckeye</span>
+            </span>
+            <span class="communities-menu__pending communities-menu__pending--plain">
+              <span class="communities-menu__city">Glendale</span>
+            </span>
+            <span class="communities-menu__pending communities-menu__pending--plain">
+              <span class="communities-menu__city">Goodyear</span>
+            </span>
+            <span class="communities-menu__pending communities-menu__pending--plain">
+              <span class="communities-menu__city">Peoria</span>
+            </span>
+          </div>
         </div>
       </details>
 

@@ -48,6 +48,7 @@ engine, an analytics provider, or another third-party search service.
 Loading a search index is a normal request for a static website file. The
 resident's typed search term is not included in that request.
 
+{{< section-anchor id="forms-and-information-residents-submit" >}}
 ## Contact form and information residents submit
 
 Residents can browse OWVAZ without creating an account or identifying

@@ -866,6 +866,116 @@
           ]
         }
       ]
+    },
+    "litchfield-park": {
+      "city_id": "litchfield-park",
+      "introduction": "Litchfield Park’s history traces its development from early land claims and Goodyear’s agricultural company town into an incorporated West Valley city shaped by the Wigwam, Luke Field, and Rancho La Loma.",
+      "events": [
+        {
+          "record_id": "litchfield-park-kriegbaum-land-claims-1910",
+          "category": "settlement",
+          "date_start": "1910",
+          "date_end": null,
+          "date_label": "1910",
+          "title": "The first land claims are filed",
+          "summary": "The first land claims in the area were filed in 1910 by the Kriegbaums from California, covering 640 acres that included land now in Litchfield Park’s downtown area.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-goodyear-land-purchases-1916",
+          "category": "agriculture",
+          "date_start": "1916",
+          "date_end": null,
+          "date_label": "1916",
+          "title": "Goodyear purchases land for cotton production",
+          "summary": "In 1916, Goodyear Tire and Rubber Company sent executive Paul W. Litchfield to purchase land for growing Egyptian long-staple cotton used to reinforce automobile and truck tires during the war effort.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-rancho-la-loma-1920s",
+          "category": "community_development",
+          "date_start": "1920",
+          "date_end": "1929",
+          "date_label": "1920s",
+          "title": "Rancho La Loma is built",
+          "summary": "During the 1920s, Paul and Florence Litchfield built Rancho La Loma, their winter estate on the hill overlooking the town site.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-community-naming-1926",
+          "category": "founding",
+          "date_start": "1926",
+          "date_end": null,
+          "date_label": "1926",
+          "title": "The company town is named Litchfield Park",
+          "summary": "The company town was officially named Litchfield Park in 1926.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-wigwam-public-opening-1929",
+          "category": "landmark",
+          "date_start": "1929",
+          "date_end": null,
+          "date_label": "November 1929",
+          "title": "The Wigwam expands into a public resort",
+          "summary": "The Wigwam, originally called Organization House and built as guest quarters for visiting Goodyear Tire executives, expanded into a public resort in November 1929.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-world-war-ii-growth",
+          "category": "growth",
+          "date_start": "1940",
+          "date_end": "1945",
+          "date_label": "World War II and after",
+          "title": "Luke Field and World War II shape community growth",
+          "summary": "Paul Litchfield was instrumental in establishing Luke Field north of the community, and Litchfield Park grew extensively during and after World War II as many veterans made it home.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-incorporation-1987",
+          "category": "government",
+          "date_start": "1987",
+          "date_end": null,
+          "date_label": "1987",
+          "title": "Litchfield Park incorporates as a city",
+          "summary": "Litchfield Park incorporated as a city in 1987, covering 3.3 square miles.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        },
+        {
+          "record_id": "litchfield-park-rancho-la-loma-gift-2009",
+          "category": "historic_preservation",
+          "date_start": "2009",
+          "date_end": null,
+          "date_label": "2009",
+          "title": "Rancho La Loma Homestead is gifted to the city",
+          "summary": "The Litchfield/Denny family estate gifted Rancho La Loma Homestead to the city in 2009, with plans to restore the site and buildings for eventual public use.",
+          "verification_state": "verified",
+          "source_ids": [
+            "litchfield-park-city-history"
+          ]
+        }
+      ]
     }
   }
 }

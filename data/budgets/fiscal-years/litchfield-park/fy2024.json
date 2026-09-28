@@ -1,0 +1,79 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "litchfield-park",
+  "fiscal_year": "FY2024",
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 34676278,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2023",
+    "adopted_budget": 48685240,
+    "measure": "prior_year_adopted_adjusted",
+    "dollar_change": -14008962,
+    "percent_change": -28.8,
+    "summary": "FY2024 adopted budget authority changed by $14,008,962 compared with the prior adopted/adjusted budget, a decrease of 28.8%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General",
+      "amount": 11392364,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue",
+      "amount": 1558220,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service",
+      "amount": 1675694,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects",
+      "amount": 20050000,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 18643817,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Canonical Litchfield Park statutory revenue measure."
+      }
+    ],
+    "note": "Only the documented statutory revenue measure is presented. No rounded resident-facing revenue value was invented."
+  },
+  "property_tax": {
+    "primary_levy": 0,
+    "secondary_levy": 0,
+    "total_levy": 0,
+    "note": "City primary and secondary property-tax levies only. SLID and CFD assessments are excluded."
+  },
+  "source_ids": [
+    "litchfield-park-fy2024-city-budget"
+  ],
+  "verification": {
+    "state": "partial",
+    "note": "Public record proposed from the validated Litchfield Park canonical fiscal-year record. No unsupported fields added."
+  },
+  "adoption": {
+    "status": "partial"
+  },
+  "comparison_note": "FY2024 Schedule A uses a later FY2023 adopted/adjusted amount of $48,685,240; FY2023 originally adopted budget remains $48,665,240."
+}

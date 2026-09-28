@@ -1,0 +1,5 @@
+{{- $cityID := .Get "city_id" -}}
+{{- if not $cityID -}}
+  {{- errorf "public-alpr-map-sources shortcode requires city_id" -}}
+{{- end -}}
+{{- partial "issues/public-alpr-map-sources.html" (dict "city_id" $cityID "Page" .Page) -}}

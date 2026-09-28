@@ -124,6 +124,11 @@ OWVAZ does not currently treat the Police Data Sharing system, the West Valley R
 
 {{< surveillance-timeline >}}
 
+
+## Public ALPR map references
+
+{{< public-alpr-map-sources city_id="avondale" >}}
+
 ## What the public record does not yet show
 
 The earlier 58-camera LPR request and the final budget's State RICO funding assignment are both documented at **$239,000**. The matching amounts do not, by themselves, establish that the final State RICO funding paid for the earlier 58-camera request.

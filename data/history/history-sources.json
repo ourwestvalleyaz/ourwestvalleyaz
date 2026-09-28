@@ -225,6 +225,12 @@
       "official_url": "https://tolleson.az.gov/DocumentCenter/View/2494/Community-Profile?bidId=",
       "source_id": "tolleson-community-profile-population-2001",
       "city_id": "tolleson"
+    },
+    {
+      "source_id": "litchfield-park-city-history",
+      "title": "History",
+      "issuing_agency": "City of Litchfield Park",
+      "official_url": "https://www.litchfieldpark.gov/101/History"
     }
   ]
 }

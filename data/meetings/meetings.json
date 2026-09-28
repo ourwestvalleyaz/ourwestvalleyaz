@@ -4151,6 +4151,366 @@
       "timezone": "America/Phoenix"
     },
     {
+      "external_id": "litchfield-park-city-council-2025-02-19-regular_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council",
+      "title": "Litchfield Park City Council Regular Meeting",
+      "date": "2025-02-19",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5136",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5136",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Regular Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-02-19-special_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_special",
+      "title": "Litchfield Park City Council Special Meeting",
+      "date": "2025-02-19",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5147",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5147",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Special Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-02-19-work_study_session",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_work_study",
+      "title": "Litchfield Park City Council Work Study Session",
+      "date": "2025-02-19",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5148",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5148",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Work Study Session",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-03-13-state_of_the_city",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council",
+      "title": "Litchfield Park City Council State of the City",
+      "date": "2025-03-13",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5137",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5137",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council State of the City",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-03-19-regular_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council",
+      "title": "Litchfield Park City Council Regular Meeting",
+      "date": "2025-03-19",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5138",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5138",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Regular Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-03-19-special_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_special",
+      "title": "Litchfield Park City Council Special Meeting",
+      "date": "2025-03-19",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5139",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5139",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Special Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-03-19-work_study_session",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_work_study",
+      "title": "Litchfield Park City Council Work Study Session",
+      "date": "2025-03-19",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5149",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5149",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Work Study Session",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-04-02-special_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_special",
+      "title": "Litchfield Park City Council Special Meeting",
+      "date": "2025-04-02",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5140",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5140",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Special Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-04-02-work_study_session",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_work_study",
+      "title": "Litchfield Park City Council Work Study Session",
+      "date": "2025-04-02",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5141",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5141",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Work Study Session",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-04-16-regular_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council",
+      "title": "Litchfield Park City Council Regular Meeting",
+      "date": "2025-04-16",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5142",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5142",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Regular Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-04-16-special_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_special",
+      "title": "Litchfield Park City Council Special Meeting",
+      "date": "2025-04-16",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5143",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5143",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Special Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-05-21-regular_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council",
+      "title": "Litchfield Park City Council Regular Meeting",
+      "date": "2025-05-21",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5150",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5150",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Regular Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-05-28-special_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_special",
+      "title": "Litchfield Park City Council Special Meeting",
+      "date": "2025-05-28",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5144",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5144",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Special Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-06-18-regular_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council",
+      "title": "Litchfield Park City Council Regular Meeting",
+      "date": "2025-06-18",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5145",
+      "minutes_url": null,
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5145",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Regular Meeting",
+      "body": "City Council"
+    },
+    {
+      "external_id": "litchfield-park-city-council-2025-07-08-special_meeting",
+      "city_id": "litchfield-park",
+      "meeting_type": "city_council_special",
+      "title": "Litchfield Park City Council Special Meeting",
+      "date": "2025-07-08",
+      "time": null,
+      "timezone": "America/Phoenix",
+      "meeting_mode": null,
+      "location": null,
+      "status": "completed",
+      "agenda_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5146",
+      "minutes_url": "https://www.litchfieldpark.gov/Archive.aspx?ADID=5119",
+      "video_url": null,
+      "official_page_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_url": "https://www.litchfieldpark.gov/Archive.aspx",
+      "source_event_id": "agenda_adid_5146",
+      "notes": [
+        "Seeded from the official Litchfield Park Archive Center City Council Agendas category AMID 102.",
+        "Minutes link added when a matching City Council Minutes archive item was found in AMID 103."
+      ],
+      "governing_body": "Litchfield Park City Council Special Meeting",
+      "body": "City Council"
+    },
+    {
       "meeting_id": "litchfield-park-city-council-work-session-2026-10-21",
       "city_id": "litchfield-park",
       "governing_body": "Litchfield Park City Council",
@@ -4167,7 +4527,14 @@
       "source_ids": [
         "litchfield-park-city-calendar"
       ],
-      "last_verified": "2026-09-17"
+      "last_verified": "2026-09-17",
+      "title": "Litchfield Park City Council",
+      "external_id": "litchfield-park-city-council-2026-10-21-18-00-eid-2973",
+      "source_event_id": "2973",
+      "source_url": "https://www.litchfieldpark.gov/Calendar.aspx?EID=2973&month=10&year=2026&day=17&calType=0",
+      "notes": [
+        "Scheduled meeting retained from the official Litchfield Park calendar event listing; agenda/minutes links were not available at the time this record was created."
+      ]
     },
     {
       "meeting_id": "litchfield-park-city-council-2026-10-21",
@@ -4186,7 +4553,14 @@
       "source_ids": [
         "litchfield-park-city-calendar"
       ],
-      "last_verified": "2026-09-17"
+      "last_verified": "2026-09-17",
+      "title": "Litchfield Park City Council",
+      "external_id": "litchfield-park-city-council-2026-10-21-19-00-eid-2974",
+      "source_event_id": "2974",
+      "source_url": "https://www.litchfieldpark.gov/Calendar.aspx?EID=2974&month=10&year=2026&day=17&calType=0",
+      "notes": [
+        "Scheduled meeting retained from the official Litchfield Park calendar event listing; agenda/minutes links were not available at the time this record was created."
+      ]
     },
     {
       "meeting_id": "litchfield-park-city-council-retreat-2027-01-27",
@@ -4205,7 +4579,14 @@
       "source_ids": [
         "litchfield-park-city-calendar"
       ],
-      "last_verified": "2026-09-17"
+      "last_verified": "2026-09-17",
+      "title": "Litchfield Park City Council",
+      "external_id": "litchfield-park-city-council-2027-01-27-08-00-eid-2970",
+      "source_event_id": "2970",
+      "source_url": "https://www.litchfieldpark.gov/Calendar.aspx?EID=2970&month=1&year=2027&day=17&calType=0",
+      "notes": [
+        "Scheduled meeting retained from the official Litchfield Park calendar event listing; agenda/minutes links were not available at the time this record was created."
+      ]
     },
     {
       "meeting_id": "tolleson-city-council-2026-01-13",

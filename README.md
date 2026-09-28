@@ -7,7 +7,7 @@ Arizona's West Valley.
 
 Core concept:
 
-> Find it. Understand it. Go to the source if you want more.
+> OWVAZ links explanations back to original sources so residents can verify the records for themselves.
 
 Primary design principle:
 

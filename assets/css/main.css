@@ -11999,3 +11999,376 @@ main article a:not(.button):not([class*="button"]):focus-visible {
 }
 
 /* END OWVAZ RESEARCH STATUS NOTE */
+
+/* OWVAZ Communities dropdown grouped release cleanup */
+.site-header .communities-menu__panel--grouped {
+  gap: 0;
+  padding: 0.85rem;
+}
+
+.site-header .communities-menu__section {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.45rem 0;
+}
+
+.site-header .communities-menu__section + .communities-menu__section {
+  border-top: 1px solid rgba(105, 76, 53, 0.18);
+  margin-top: 0.35rem;
+  padding-top: 0.75rem;
+}
+
+.site-header .communities-menu__section-label {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  padding: 0.15rem 0.55rem 0.3rem;
+  text-transform: uppercase;
+}
+
+.site-header .communities-menu__panel--grouped a,
+.site-header .communities-menu__pending--plain {
+  border: 0;
+  border-radius: 0.5rem;
+  display: block;
+  padding: 0.45rem 0.55rem;
+}
+
+.site-header .communities-menu__pending--plain {
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: 700;
+}
+
+.site-header .communities-menu__pending--plain .communities-menu__city {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.site-header .communities-menu__pending--plain .communities-menu__status {
+  display: none;
+}
+
+/* OWVAZ homepage city picker grouping */
+.home-city-groups {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.home-city-group {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.home-city-group__label {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.home-city-group .home-city-picker {
+  margin-top: 0;
+}
+
+/* OWVAZ homepage social links: three columns when space allows */
+@media (min-width: 760px) {
+  .home-social-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* OWVAZ homepage social links: full-width desktop, compact mobile icons */
+.home-social-section .section-heading,
+.home-social-section .home-social-summary {
+  max-width: 48rem;
+}
+
+.home-social-picker {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.home-social-picker__link {
+  align-items: center;
+  display: grid;
+  gap: 0.35rem;
+  justify-items: center;
+  min-height: 8.5rem;
+  text-align: center;
+}
+
+.home-social-picker__icon {
+  align-items: center;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 1.35rem;
+  font-weight: 900;
+  height: 3rem;
+  justify-content: center;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  text-transform: lowercase;
+  width: 3rem;
+}
+
+@media (min-width: 760px) {
+  .home-social-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-social-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-social-picker__link {
+    min-height: 5.25rem;
+    padding: 0.85rem 0.5rem;
+  }
+
+  .home-social-picker__icon {
+    font-size: 1.1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .home-social-picker__name,
+  .home-social-picker__action {
+    display: none;
+  }
+}
+
+/* OWVAZ homepage social buttons final behavior:
+   desktop = text cards, mobile = logo/wordmark row only */
+@media (min-width: 760px) {
+  .home-social-picker__icon {
+    display: none !important;
+  }
+
+  .home-social-picker__name,
+  .home-social-picker__action {
+    display: block !important;
+  }
+
+  .home-social-picker__link {
+    min-height: 7.25rem;
+  }
+}
+
+@media (max-width: 759px) {
+  .home-social-picker {
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  .home-social-picker .home-city-picker__item,
+  .home-social-picker .home-city-picker__item--available {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .home-social-picker__link,
+  .home-social-picker .home-city-picker__link {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    min-height: 0;
+    padding: 0.25rem 0.1rem;
+  }
+
+  .home-social-picker__icon,
+  .home-social-picker__action {
+    display: none !important;
+  }
+
+  .home-social-picker__name {
+    display: inline-block !important;
+    font-size: 0.95rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .home-social-picker__link:hover,
+  .home-social-picker__link:focus-visible {
+    background: transparent;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+/* OWVAZ homepage social row: align desktop width with feature-card grid above */
+@media (min-width: 760px) {
+  .home-social-picker {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 980px) {
+  .home-social-picker {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+/* OWVAZ homepage social links:
+   Desktop keeps text cards. Mobile uses logo-only link buttons. */
+@media (min-width: 760px) {
+  .home-social-picker__logo {
+    display: none !important;
+  }
+
+  .home-social-picker__name,
+  .home-social-picker__action {
+    display: block !important;
+  }
+}
+
+@media (max-width: 759px) {
+  .home-social-picker {
+    align-items: center !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 1.6rem !important;
+    justify-content: center !important;
+    margin-top: 1.25rem !important;
+  }
+
+  .home-social-picker .home-city-picker__item,
+  .home-social-picker .home-city-picker__item--available {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  .home-social-picker .home-city-picker__link,
+  .home-social-picker__link {
+    align-items: center !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    min-height: 0 !important;
+    padding: 0.2rem !important;
+  }
+
+  .home-social-picker__logo {
+    display: block !important;
+    height: 2.4rem !important;
+    width: 2.4rem !important;
+  }
+
+  .home-social-picker__icon,
+  .home-social-picker__name,
+  .home-social-picker__action {
+    display: none !important;
+  }
+
+  .home-social-picker__link:hover,
+  .home-social-picker__link:focus-visible {
+    background: transparent !important;
+    box-shadow: none !important;
+    filter: brightness(0.9);
+    outline: 2px solid currentColor;
+    outline-offset: 0.35rem;
+  }
+}
+
+/* OWVAZ homepage social links: mobile logo cards with reveal text */
+@media (max-width: 759px) {
+  .home-social-picker {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.85rem !important;
+    margin-top: 1.35rem !important;
+  }
+
+  .home-social-picker .home-city-picker__item,
+  .home-social-picker .home-city-picker__item--available {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  .home-social-picker .home-city-picker__link,
+  .home-social-picker__link {
+    align-items: center !important;
+    background: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 0.85rem !important;
+    box-shadow: none !important;
+    display: grid !important;
+    gap: 0.35rem !important;
+    justify-items: center !important;
+    min-height: 5.75rem !important;
+    padding: 0.85rem 0.45rem !important;
+    text-align: center !important;
+  }
+
+  .home-social-picker__logo {
+    display: block !important;
+    height: 2.35rem !important;
+    width: 2.35rem !important;
+  }
+
+  .home-social-picker__icon {
+    display: none !important;
+  }
+
+  .home-social-picker__name {
+    display: block !important;
+    font-size: 0.72rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.1 !important;
+  }
+
+  .home-social-picker__action {
+    display: none !important;
+  }
+
+  .home-social-picker__link:hover,
+  .home-social-picker__link:focus-visible {
+    background: var(--color-surface-strong) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0.75rem 1.5rem rgba(75, 52, 35, 0.12) !important;
+    text-decoration: none !important;
+  }
+
+  .home-social-picker__link:hover .home-social-picker__action,
+  .home-social-picker__link:focus-visible .home-social-picker__action {
+    display: block !important;
+    font-size: 0.62rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.15 !important;
+  }
+}

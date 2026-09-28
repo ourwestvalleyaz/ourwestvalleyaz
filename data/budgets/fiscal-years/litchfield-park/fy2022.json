@@ -1,0 +1,78 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "litchfield-park",
+  "fiscal_year": "FY2022",
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 45233877,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2021",
+    "adopted_budget": 19743726,
+    "measure": "prior_year_adopted_adjusted",
+    "dollar_change": 25490151,
+    "percent_change": 129.1,
+    "summary": "FY2022 adopted budget authority changed by $25,490,151 compared with the prior adopted/adjusted budget, an increase of 129.1%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General",
+      "amount": 9732977,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue",
+      "amount": 1484709,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service",
+      "amount": 1104691,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects",
+      "amount": 32911500,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 15141577,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Canonical Litchfield Park statutory revenue measure."
+      }
+    ],
+    "note": "Only the documented statutory revenue measure is presented. No rounded resident-facing revenue value was invented."
+  },
+  "property_tax": {
+    "primary_levy": 0,
+    "secondary_levy": 0,
+    "total_levy": 0,
+    "note": "City primary and secondary property-tax levies only. SLID and CFD assessments are excluded."
+  },
+  "source_ids": [
+    "litchfield-park-fy2022-city-budget"
+  ],
+  "verification": {
+    "state": "partial",
+    "note": "Public record proposed from the validated Litchfield Park canonical fiscal-year record. No unsupported fields added."
+  },
+  "adoption": {
+    "status": "partial"
+  }
+}

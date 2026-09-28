@@ -1,0 +1,78 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "litchfield-park",
+  "fiscal_year": "FY2019",
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 17868042,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2018",
+    "adopted_budget": 16907027,
+    "measure": "prior_year_adopted_adjusted",
+    "dollar_change": 961015,
+    "percent_change": 5.7,
+    "summary": "FY2019 adopted budget authority changed by $961,015 compared with the prior adopted/adjusted budget, an increase of 5.7%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General",
+      "amount": 8186480,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue",
+      "amount": 339070,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects",
+      "amount": 8217000,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise",
+      "amount": 1125492,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 11066928,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Canonical Litchfield Park statutory revenue measure."
+      }
+    ],
+    "note": "Only the documented statutory revenue measure is presented. No rounded resident-facing revenue value was invented."
+  },
+  "property_tax": {
+    "primary_levy": 0,
+    "secondary_levy": 0,
+    "total_levy": 0,
+    "note": "City primary and secondary property-tax levies only. SLID and CFD assessments are excluded."
+  },
+  "source_ids": [
+    "litchfield-park-fy2019-city-budget"
+  ],
+  "verification": {
+    "state": "partial",
+    "note": "Public record proposed from the validated Litchfield Park canonical fiscal-year record. No unsupported fields added."
+  },
+  "adoption": {
+    "status": "partial"
+  }
+}

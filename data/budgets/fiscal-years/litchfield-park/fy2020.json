@@ -1,0 +1,85 @@
+{
+  "schema_version": "avondale-budget-v1",
+  "city_id": "litchfield-park",
+  "fiscal_year": "FY2020",
+  "status": "adopted",
+  "adopted_budget": {
+    "amount": 19026365,
+    "scope": "all_funds",
+    "measure": "adopted_budget",
+    "currency": "USD"
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2019",
+    "adopted_budget": 17868042,
+    "measure": "prior_year_adopted_adjusted",
+    "dollar_change": 1158323,
+    "percent_change": 6.5,
+    "summary": "FY2020 adopted budget authority changed by $1,158,323 compared with the prior adopted/adjusted budget, an increase of 6.5%."
+  },
+  "fund_breakdown": [
+    {
+      "id": "general",
+      "label": "General",
+      "amount": 7518413,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "special-revenue",
+      "label": "Special Revenue",
+      "amount": 1264940,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "debt-service",
+      "label": "Debt Service",
+      "amount": 329302,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "capital-projects",
+      "label": "Capital Projects",
+      "amount": 8589000,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    },
+    {
+      "id": "enterprise",
+      "label": "Enterprise",
+      "amount": 1324710,
+      "measure": "adopted_budget",
+      "scope": "canonical_fund_breakdown"
+    }
+  ],
+  "revenue": {
+    "measures": [
+      {
+        "amount": 14795025,
+        "measure": "statutory_estimated_revenues_other_than_property_taxes",
+        "scope": "statutory_budget_form",
+        "label": "Estimated revenues other than property taxes",
+        "note": "Canonical Litchfield Park statutory revenue measure."
+      }
+    ],
+    "note": "Only the documented statutory revenue measure is presented. No rounded resident-facing revenue value was invented."
+  },
+  "property_tax": {
+    "primary_levy": 0,
+    "secondary_levy": 0,
+    "total_levy": 0,
+    "note": "City primary and secondary property-tax levies only. SLID and CFD assessments are excluded."
+  },
+  "source_ids": [
+    "litchfield-park-fy2020-city-budget"
+  ],
+  "verification": {
+    "state": "partial",
+    "note": "Public record proposed from the validated Litchfield Park canonical fiscal-year record. No unsupported fields added."
+  },
+  "adoption": {
+    "status": "partial"
+  }
+}

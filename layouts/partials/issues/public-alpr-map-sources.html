@@ -1,0 +1,89 @@
+{{- $cityID := .city_id -}}
+{{- $maps := index hugo.Data.surveillance "public-alpr-maps" -}}
+{{- $city := index $maps.cities $cityID -}}
+
+{{- if $city }}
+  {{- $findingflock := index $city "findingflock" -}}
+  {{- $deflock := index $city "deflock" -}}
+  {{- $networkMap := index $city "flock_surveillance_network_map" -}}
+
+  <section class="owvaz-public-alpr-map-sources" id="public-alpr-map-references">
+    <h2>Public ALPR map references</h2>
+
+    {{- if and $findingflock (ne (index $findingflock "enabled") false) }}
+      {{- $checkedAgainstOsm := or (index $findingflock "checked_against_osm") (index $findingflock "checked_against_openstreetmap") (index $findingflock "osm_checked_date") -}}
+      {{- $lastChanged := or (index $findingflock "last_changed") (index $findingflock "last_changed_date") -}}
+
+      <article class="owvaz-public-alpr-map-source">
+        <h3>{{ index $findingflock "title" }}</h3>
+
+        {{- with index $findingflock "documented_readers" }}
+          <p>
+            FindingFlock currently lists <strong>{{ . }} volunteer-documented automated license plate readers</strong>
+            inside this city.
+            {{- with index $findingflock "manufacturer_summary" }} {{ . }}{{ end }}
+            {{- with index $findingflock "density_summary" }} {{ . }}{{ end }}
+          </p>
+        {{- end }}
+
+        {{- if or $checkedAgainstOsm $lastChanged }}
+          <p>
+            {{- if and $checkedAgainstOsm $lastChanged -}}
+              FindingFlock says these figures were checked against OpenStreetMap on <strong>{{ $checkedAgainstOsm }}</strong> and last changed on <strong>{{ $lastChanged }}</strong>.
+            {{- else if $checkedAgainstOsm -}}
+              FindingFlock says these figures were checked against OpenStreetMap on <strong>{{ $checkedAgainstOsm }}</strong>.
+            {{- else -}}
+              FindingFlock says these figures last changed on <strong>{{ $lastChanged }}</strong>.
+            {{- end -}}
+          </p>
+        {{- end }}
+
+        {{- with index $findingflock "caveat" }}
+          <p>{{ . }}</p>
+        {{- end }}
+
+        {{- with index $findingflock "url" }}
+          <p>
+            <a href="{{ . }}">{{ . }}</a>
+          </p>
+        {{- end }}
+      </article>
+    {{- end }}
+
+    {{- if and $deflock (ne (index $deflock "enabled") false) }}
+      <article class="owvaz-public-alpr-map-source">
+        <h3>{{ index $deflock "title" }}</h3>
+        {{- with index $deflock "summary" }}
+          <p>{{ . }}</p>
+        {{- end }}
+        {{- with index $deflock "url" }}
+          <p>
+            <a href="{{ . }}">{{ . }}</a>
+          </p>
+        {{- end }}
+      </article>
+    {{- end }}
+
+    {{- if and $networkMap (ne (index $networkMap "enabled") false) }}
+      <article class="owvaz-public-alpr-map-source">
+        <h3>{{ index $networkMap "title" }}</h3>
+        {{- with index $networkMap "summary" }}
+          <p>{{ . }}</p>
+        {{- end }}
+        {{- with index $networkMap "notice" }}
+          <p>{{ . }}</p>
+        {{- end }}
+        {{- with index $networkMap "url" }}
+          <p>
+            <a href="{{ . }}">{{ . }}</a>
+          </p>
+        {{- end }}
+      </article>
+    {{- end }}
+
+    <p class="owvaz-research-note">
+      For now, OWVAZ should only use FindingFlock for city-level count polling.
+      DeFlock and the FLOCK Surveillance Network Map are listed as additional public context sources unless stable public data sources and terms are confirmed.
+    </p>
+  </section>
+{{- end }}

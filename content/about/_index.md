@@ -14,7 +14,7 @@ budgets, meeting portals, agendas, reports, and other public records. OWVAZ
 organizes that information around what residents are trying to find and
 explains it in plain language.
 
-**Find it. Understand it. Go to the source if you want more.**
+**OWVAZ links explanations back to original sources so residents can verify the records for themselves.**
 
 ## How information is researched
 

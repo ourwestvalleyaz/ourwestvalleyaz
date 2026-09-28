@@ -23,6 +23,7 @@ sticky_sections:
     name: "Official Sources"
 ---
 
+{{< section-anchor id="what-a-yes-or-no-vote-means" >}}
 ## What a yes or no vote meant
 
 {{< ballot-comparison >}}
@@ -85,6 +86,7 @@ The proposed franchise would provide Southwest Gas Corporation with the franchis
 
 The City's October 2020 election notice described the agreement as a 25-year term beginning November 4, 2020 and ending November 4, 2045.
 
+{{< section-anchor id="financial-figures" >}}
 ## Key terms
 
 {{< ballot-financial-figures >}}

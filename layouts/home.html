@@ -37,50 +37,54 @@
       (dict "slug" "tolleson" "name" "Tolleson")
     }}
 
-    <ul class="community-list home-city-picker home-city-picker--available">
-      {{ range $homepageCities }}
-        {{ $page := site.GetPage (printf "/communities/%s" .slug) }}
-        {{ if not $page }}
-          {{ errorf "Homepage community page missing for %s" .slug }}
-        {{ else }}
-          <li class="home-city-picker__item home-city-picker__item--available">
-            <a class="home-city-picker__link"
-               href="{{ $page.RelPermalink }}">
-              <span class="home-city-picker__city">{{ .name }}</span>
-              <small class="home-city-picker__action">
-                View city page
-              </small>
-            </a>
+    <div class="home-city-groups">
+      <section class="home-city-group">
+        <h3 class="home-city-group__label">Available</h3>
+        <ul class="community-list home-city-picker home-city-picker--available">
+          {{ $availableOrder := slice "avondale" "litchfield-park" "tolleson" }}
+          {{ range $availableOrder }}
+            {{ $cityID := . }}
+            {{ $city := index (where hugo.Data.cities.cities.cities "slug" $cityID) 0 }}
+            {{ $page := site.GetPage (printf "/communities/%s" $cityID) }}
+            {{ if and $city $page }}
+              <li class="home-city-picker__item home-city-picker__item--available">
+                <a class="home-city-picker__link"
+                   href="{{ $page.RelPermalink }}">
+                  <span class="home-city-picker__city">{{ $city.name }}</span>
+                  <span class="home-city-picker__status">View city page</span>
+                </a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="home-city-group">
+        <h3 class="home-city-group__label">In Progress</h3>
+        <ul class="community-list home-city-picker home-city-picker--available">
+          <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
+            <span class="home-city-picker__link">
+              <span class="home-city-picker__city">Surprise</span>
+              <span class="home-city-picker__status">In Progress</span>
+            </span>
           </li>
-        {{ end }}
-      {{ end }}
+        </ul>
+      </section>
 
-      <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
-        <div class="home-city-picker__link home-city-picker__link--inactive" aria-disabled="true">
-          <span class="home-city-picker__city">Litchfield Park</span>
-          <small class="home-city-picker__action">
-            In progress
-          </small>
-        </div>
-      </li>
-    </ul>
-    {{ $futureCities := slice
-      (dict "name" "Buckeye")
-      (dict "name" "Glendale")
-      (dict "name" "Goodyear")
-      (dict "name" "Peoria")
-      (dict "name" "Surprise")
-    }}
-
-    <div class="home-coming-soon home-coming-soon--inline">
-      <p class="home-coming-soon__heading">Coming Soon</p>
-
-      <p class="home-coming-soon__inline-list" aria-label="Future OWVAZ communities">
-        {{ range $index, $city := $futureCities -}}
-          {{- if $index }}, {{ end -}}
-          <span>{{ $city.name }}</span>
-        {{- end }}
-      </p>
+      <section class="home-city-group">
+        <h3 class="home-city-group__label">Coming Soon</h3>
+        <ul class="community-list home-city-picker home-city-picker--available">
+          {{ $comingSoon := slice "Buckeye" "Glendale" "Goodyear" "Peoria" }}
+          {{ range $comingSoon }}
+            <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
+              <span class="home-city-picker__link">
+                <span class="home-city-picker__city">{{ . }}</span>
+                <span class="home-city-picker__status">Coming Soon</span>
+              </span>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
     </div>
   </div>
 </section>
@@ -128,37 +132,54 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section home-social-section">
   <div class="site-shell content-width">
     <header class="section-heading">
       <p class="eyebrow">Connect with neighbors</p>
       <h2>Join the community</h2>
     </header>
 
-    <p class="page-summary">
-      Join Our West Valley AZ on Facebook or Nextdoor for local information,
-      community updates, and discussion.
+    <p class="page-summary home-social-summary">
+      Follow Our West Valley AZ where you already spend time. Facebook, Nextdoor,
+      and Reddit are used for local updates, source links, and community discussion.
     </p>
 
     <ul class="community-list home-city-picker home-social-picker">
       <li class="home-city-picker__item home-city-picker__item--available">
-        <a class="home-city-picker__link"
+        <a class="home-city-picker__link home-social-picker__link"
            href="https://www.facebook.com/groups/2125291671729593/"
-           rel="noopener noreferrer">
-          <span class="home-city-picker__city">Facebook</span>
-          <small class="home-city-picker__action">
+           rel="noopener noreferrer"
+           aria-label="Visit the Our West Valley AZ Facebook group">
+          <img class="home-social-picker__logo" src="/images/social/facebook.svg" alt="" aria-hidden="true">
+          <span class="home-city-picker__city home-social-picker__name">Facebook</span>
+          <small class="home-city-picker__action home-social-picker__action">
             Visit the Facebook group
           </small>
         </a>
       </li>
 
       <li class="home-city-picker__item home-city-picker__item--available">
-        <a class="home-city-picker__link"
+        <a class="home-city-picker__link home-social-picker__link"
            href="https://nextdoor.com/g/64p97kb8q/"
-           rel="noopener noreferrer">
-          <span class="home-city-picker__city">Nextdoor</span>
-          <small class="home-city-picker__action">
+           rel="noopener noreferrer"
+           aria-label="Join the Our West Valley AZ Nextdoor group">
+          <img class="home-social-picker__logo" src="/images/social/nextdoor.svg" alt="" aria-hidden="true">
+          <span class="home-city-picker__city home-social-picker__name">Nextdoor</span>
+          <small class="home-city-picker__action home-social-picker__action">
             Join the Nextdoor group
+          </small>
+        </a>
+      </li>
+
+      <li class="home-city-picker__item home-city-picker__item--available">
+        <a class="home-city-picker__link home-social-picker__link"
+           href="https://www.reddit.com/r/OurWestValleyAZ/"
+           rel="noopener noreferrer"
+           aria-label="Visit the Our West Valley AZ subreddit">
+          <img class="home-social-picker__logo" src="/images/social/reddit.svg" alt="" aria-hidden="true">
+          <span class="home-city-picker__city home-social-picker__name">Reddit</span>
+          <small class="home-city-picker__action home-social-picker__action">
+            Visit the subreddit
           </small>
         </a>
       </li>
