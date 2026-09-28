@@ -74,10 +74,9 @@ These are budget entries, not confirmed purchases or cumulative spending. Repeat
 {{< tolleson-surveillance-timeline >}}
 
 
-## Public ALPR map references
-
 {{< public-alpr-map-sources city_id="tolleson" >}}
 
+{{< section-anchor id="what-the-reviewed-records-do-not-establish" >}}
 ## What the reviewed records do not establish
 
 The reviewed records do not establish:

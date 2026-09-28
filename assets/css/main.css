@@ -12372,3 +12372,13 @@ main article a:not(.button):not([class*="button"]):focus-visible {
     line-height: 1.15 !important;
   }
 }
+
+/* OWVAZ invisible anchor targets for sticky/page navigation */
+.section-anchor {
+  display: block;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  scroll-margin-top: 6rem;
+  width: 0;
+}

@@ -125,8 +125,6 @@ OWVAZ does not currently treat the Police Data Sharing system, the West Valley R
 {{< surveillance-timeline >}}
 
 
-## Public ALPR map references
-
 {{< public-alpr-map-sources city_id="avondale" >}}
 
 ## What the public record does not yet show

@@ -195,6 +195,4 @@ The source records associated with this topic include official Litchfield Park l
 
 This page distinguishes between documented facts, derived figures, independent mapping, secondary reporting, and questions that remain unresolved.
 
-## Public ALPR map references
-
 {{< public-alpr-map-sources city_id="litchfield-park" >}}
