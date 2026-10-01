@@ -1,13 +1,14 @@
 ---
 title: "Contact"
-description: "Report a website issue, suggest a correction, request city coverage, or ask OWVAZ a question."
+description: "Report a website issue, suggest a correction, request city coverage, contact OWVAZ social media moderators, or ask OWVAZ a question."
 ---
 
-Have a correction, question, or suggestion for Our West Valley AZ? Choose a
-topic below and tell us what you would like us to review.
+Have a correction, question, or suggestion for Our West Valley AZ? Need to
+contact the admins or moderators of an Our West Valley AZ social media
+community? Choose a topic below and tell us what you would like us to review.
 
-You do not need to provide your name or email address unless you would like
-a response. Please do not include passwords, account numbers, confidential
+You do not need to provide contact information unless you would like a
+response. Please do not include passwords, account numbers, confidential
 records, or other sensitive personal information.
 
 Our West Valley AZ is an independent civic-information project and is not

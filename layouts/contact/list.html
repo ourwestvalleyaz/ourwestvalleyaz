@@ -12,7 +12,7 @@
 
     <section aria-labelledby="contact-form-heading">
       <h2 id="contact-form-heading">Send OWVAZ a message</h2>
-      <p>You can send a message without providing your name or email address.</p>
+      <p>You can send a message without providing contact information.</p>
 
       <form
       id="owvaz-contact-form"
@@ -44,6 +44,7 @@
             <option value="correction">Suggest an information correction</option>
             <option value="city-request">Request coverage of a city or town</option>
             <option value="improvement">Suggest a website improvement</option>
+            <option value="social-moderation">Social Media / Moderation</option>
             <option value="question">Ask a general question</option>
           </select>
         </p>
@@ -78,15 +79,59 @@
           </label>
         </p>
 
+        <div id="contact-response-method-field" hidden>
+          <p>How would you like us to contact you?</p>
+          <label>
+            <input id="contact-response-email" name="response_method"
+                   type="radio" value="email">
+            Email
+          </label><br>
+          <label>
+            <input id="contact-response-facebook" name="response_method"
+                   type="radio" value="facebook">
+            Facebook
+          </label><br>
+          <label>
+            <input id="contact-response-nextdoor" name="response_method"
+                   type="radio" value="nextdoor">
+            Nextdoor
+          </label><br>
+          <label>
+            <input id="contact-response-reddit" name="response_method"
+                   type="radio" value="reddit">
+            Reddit
+          </label>
+        </div>
+
         <p id="contact-email-field" hidden>
           <label for="contact-email">Email address (required for a response)</label><br>
           <input id="contact-email" name="email" type="email"
                  autocomplete="email" maxlength="254">
         </p>
 
-        <p id="contact-form-status" role="status" aria-live="polite">
-          If you would like a response, select that option and provide your email address.
-        </p>
+        <div id="contact-social-profile-field" hidden>
+          <label id="contact-social-profile-label"
+                 for="contact-social-profile">Social media profile URL</label><br>
+          <input id="contact-social-profile"
+                 name="social_profile_url"
+                 type="url"
+                 maxlength="500"
+                 aria-describedby="contact-social-profile-help">
+
+          <p id="contact-social-profile-help">
+            Enter the link to your social media profile so an OWVAZ
+            admin or moderator can contact you. Do not provide your
+            password or other account information.
+          </p>
+
+          <details id="contact-social-profile-instructions">
+            <summary id="contact-social-profile-summary">
+              How do I find my profile link?
+            </summary>
+            <div id="contact-social-profile-instructions-text"></div>
+          </details>
+        </div>
+
         <button type="submit">Send message</button>
             <p
         id="owvaz-contact-result"
