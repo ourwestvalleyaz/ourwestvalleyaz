@@ -277,5 +277,7 @@
 
 </section>
 
-<script src="/js/trash-zone-map.js" defer></script>
+{{ with resources.Get "js/trash-zone-map.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{ end }}
 {{- end }}

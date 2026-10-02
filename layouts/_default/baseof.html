@@ -36,9 +36,17 @@
   </main>
 
   {{ partial "site/footer.html" . }}
-  <script src="/js/city-search.js" defer></script>
-  <script src="/js/budget-history.js" defer></script>
-  <script src="/js/community-sticky-nav.js" defer></script>
-  <script src="/js/city-history.js" defer></script>
+  {{ with resources.Get "js/city-search.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{ end }}
+  {{ with resources.Get "js/budget-history.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{ end }}
+  {{ with resources.Get "js/community-sticky-nav.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{ end }}
+  {{ with resources.Get "js/city-history.js" | minify | fingerprint }}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{ end }}
 </body>
 </html>

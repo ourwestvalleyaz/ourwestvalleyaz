@@ -142,4 +142,6 @@
 
   </div>
 </header>
-<script defer src="/js/site-header.js"></script>
+{{ with resources.Get "js/site-header.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{ end }}
