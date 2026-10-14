@@ -976,6 +976,402 @@
           ]
         }
       ]
+    },
+    "surprise": {
+      "presentation": {
+        "default_state": "condensed",
+        "featured_limit": 4,
+        "featured_event_ids": [
+          "surprise-community-development-1938",
+          "surprise-incorporation-1960",
+          "surprise-mlb-spring-training-2003",
+          "surprise-population-growth-2010"
+        ]
+      },
+      "events": [
+        {
+          "record_id": "surprise-agricultural-labor-1930s",
+          "category": "settlement",
+          "date_start": "1930",
+          "date_end": "1939",
+          "date_label": "1930s",
+          "title": "Agricultural labor and migration shape the area",
+          "summary": "Before Surprise became an incorporated city, the surrounding Dysart-area communities were closely tied to agriculture and migrant farm labor. Federal research and later historical scholarship describe Surprise and nearby communities as developing in this agricultural-worker setting.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-eric-agricultural-community-study",
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-statler-land-1938",
+          "category": "settlement",
+          "date_start": "1938-05-12",
+          "date_end": null,
+          "date_label": "May 12, 1938",
+          "title": "Flora Statler acquires land associated with the Surprise townsite",
+          "summary": "Historian Carol Palmer identifies a May 12, 1938 State of Arizona deed documenting Flora Statler's acquisition of an unimproved parcel west of the Agua Fria River. The land became associated with development of the community that became Surprise.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-community-development-1938",
+          "category": "settlement",
+          "date_start": "1938",
+          "date_end": null,
+          "date_label": "1938",
+          "title": "Development of the Surprise community begins",
+          "summary": "Modern City histories date Surprise's beginnings to 1938. Palmer's research describes Flora Statler developing a community where railroad and highway access met an agricultural area whose workers needed nearby housing.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-city-facts-history",
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-name-origin-1938",
+          "category": "settlement",
+          "date_start": "1938",
+          "date_end": null,
+          "date_label": "1938",
+          "title": "Accounts differ over how Surprise got its name",
+          "summary": "Modern City history associates the name with Flora Statler and the idea that she would be surprised if the small development ever amounted to much. An older Arizona Department of Commerce account instead credited Homer C. Ludden and connected the name to Surprise, Nebraska.",
+          "verification_state": "disputed",
+          "dispute_note": "Historical accounts do not agree on the origin of the name Surprise. Modern City history and Carol Palmer's research center Flora Statler, while an older Arizona Department of Commerce profile credited Homer C. Ludden and Surprise, Nebraska. Palmer also notes that recollections of Statler's exact wording vary. OWVAZ preserves both traditions rather than presenting either wording as an uncontested quotation.",
+          "source_ids": [
+            "surprise-city-facts-history",
+            "surprise-palmer-dissertation-2012",
+            "surprise-arizona-commerce-historical-profile"
+          ]
+        },
+        {
+          "record_id": "surprise-agricultural-community-1940s-1950s",
+          "category": "community",
+          "date_start": "1940",
+          "date_end": "1959",
+          "date_label": "1940s-1950s",
+          "title": "Surprise grows as an agricultural-worker community",
+          "summary": "For much of its early history, Surprise remained closely connected to surrounding farms and the workers who supported West Valley agriculture. This economic and social setting shaped the community before incorporation.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-palmer-dissertation-2012",
+            "surprise-eric-agricultural-community-study"
+          ]
+        },
+        {
+          "record_id": "surprise-incorporation-effort-1960",
+          "category": "government",
+          "date_start": "1960",
+          "date_end": null,
+          "date_label": "1960",
+          "title": "Residents pursue municipal incorporation",
+          "summary": "Residents of Surprise and North El Mirage pursued incorporation during a period of municipal expansion in the West Valley. Palmer reports that voters approved joining together by a vote of 113 to 40.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-incorporation-1960",
+          "category": "government",
+          "date_start": "1960-12-12",
+          "date_end": null,
+          "date_label": "December 12, 1960",
+          "title": "Surprise officially incorporates",
+          "summary": "The Maricopa County Board of Supervisors certified the new municipality, establishing December 12, 1960 as Surprise's official incorporation date. The community entered cityhood with a small population and substantial infrastructure needs.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-city-facts-history",
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-infrastructure-needs-1960s",
+          "category": "infrastructure",
+          "date_start": "1961",
+          "date_end": "1969",
+          "date_label": "1960s",
+          "title": "The new city confronts major infrastructure needs",
+          "summary": "Early incorporated Surprise had limited municipal resources and significant gaps in roads and basic services. Building municipal infrastructure became a defining challenge for the young city.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-cumbie-mayor-1969",
+          "category": "government",
+          "date_start": "1969",
+          "date_end": null,
+          "date_label": "1969",
+          "title": "George Cumbie becomes mayor",
+          "summary": "George Cumbie became mayor after entering Surprise city government during the previous decade. His long tenure coincided with efforts to improve roads and other basic municipal infrastructure as the city developed.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-road-improvements-1970s",
+          "category": "infrastructure",
+          "date_start": "1970",
+          "date_end": "1979",
+          "date_label": "1970s",
+          "title": "Road paving and infrastructure modernization continue",
+          "summary": "Surprise continued working to replace dirt roads and improve transportation and municipal infrastructure. Palmer documents road work as a recurring priority during this period.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-villanueva-office-1979",
+          "category": "government",
+          "date_start": "1979-06",
+          "date_end": null,
+          "date_label": "June 1979",
+          "title": "Roy Villanueva enters Surprise city government",
+          "summary": "Roy Villanueva was first sworn into city office in June 1979. He later served as councilmember, vice mayor and mayor during more than three decades of public service.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-villanueva-league-2013"
+          ]
+        },
+        {
+          "record_id": "surprise-cdbg-improvements-1980s",
+          "category": "infrastructure",
+          "date_start": "1980",
+          "date_end": "1989",
+          "date_label": "1980s",
+          "title": "Federal community-development funding supports neighborhood improvements",
+          "summary": "Community Development Block Grant funding supported housing rehabilitation and improvements to roads, streetlights, sidewalks, sewer systems and other neighborhood infrastructure. Roy Villanueva was credited with helping direct those federal resources toward Surprise.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-villanueva-league-2013"
+          ]
+        },
+        {
+          "record_id": "surprise-shafer-council-1990",
+          "category": "government",
+          "date_start": "1990",
+          "date_end": null,
+          "date_label": "1990",
+          "title": "Joan Shafer becomes the first woman elected to City Council",
+          "summary": "Joan H. Shafer became the first woman elected to the Surprise City Council in 1990, beginning a series of electoral firsts in the city's government.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-shafer-city-budget"
+          ]
+        },
+        {
+          "record_id": "surprise-population-1990",
+          "category": "population",
+          "date_start": "1990",
+          "date_end": null,
+          "date_label": "1990",
+          "title": "Population reaches 7,122",
+          "summary": "The 1990 Census counted 7,122 residents in Surprise. The figure provides a baseline for the extraordinary population expansion that followed during the next two decades.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-census-2010-arizona"
+          ]
+        },
+        {
+          "record_id": "surprise-shafer-mayor-1994",
+          "category": "government",
+          "date_start": "1994",
+          "date_end": null,
+          "date_label": "1994",
+          "title": "Joan Shafer becomes Surprise's first woman mayor and first elected mayor",
+          "summary": "City records state that Joan H. Shafer became both the first woman mayor and the first elected mayor of Surprise in 1994.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-shafer-city-budget"
+          ]
+        },
+        {
+          "record_id": "surprise-sun-city-grand-1996",
+          "category": "development",
+          "date_start": "1996-10",
+          "date_end": null,
+          "date_label": "October 1996",
+          "title": "Sun City Grand opens in Surprise",
+          "summary": "Sun City Grand opened in October 1996 as the local successor to Del Webb's earlier Sun City communities. Its arrival reflected Surprise's growing shift toward large master-planned suburban and retirement development.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-sun-city-grand-1997",
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-population-2000",
+          "category": "population",
+          "date_start": "2000",
+          "date_end": null,
+          "date_label": "2000",
+          "title": "Population reaches 30,848",
+          "summary": "The 2000 Census counted 30,848 residents in Surprise, more than four times the city's 1990 population.",
+          "verification_state": "verified",
+          "source_ids": [
+            "avondale-census-2000",
+            "surprise-census-2010-arizona"
+          ]
+        },
+        {
+          "record_id": "surprise-stadium-opens-2002",
+          "category": "development",
+          "date_start": "2002",
+          "date_end": null,
+          "date_label": "2002",
+          "title": "Surprise Stadium opens",
+          "summary": "Surprise Stadium opened in 2002 as the centerpiece of a major baseball complex and a new civic and recreational landmark for the rapidly growing city.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-mlb-stadium",
+            "surprise-mlb-mark-coronado"
+          ]
+        },
+        {
+          "record_id": "surprise-mlb-spring-training-2003",
+          "category": "development",
+          "date_start": "2003",
+          "date_end": null,
+          "date_label": "2003",
+          "title": "Major League Baseball spring training comes to Surprise",
+          "summary": "The Kansas City Royals and Texas Rangers began spring training in Surprise in 2003. The move established Surprise as part of the Cactus League and gave the city a regional sports identity.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-mlb-stadium",
+            "surprise-mlb-mark-coronado"
+          ]
+        },
+        {
+          "record_id": "surprise-marley-park-cfd-2004",
+          "category": "development",
+          "date_start": "2004-02-12",
+          "date_end": null,
+          "date_label": "February 12, 2004",
+          "title": "City forms the Marley Park Community Facilities District",
+          "summary": "Surprise formed the Marley Park Community Facilities District to finance public infrastructure associated with the master-planned development, illustrating how municipal financing tools accompanied the city's rapid physical expansion.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-marley-park-cfd-fy2026"
+          ]
+        },
+        {
+          "record_id": "surprise-marley-park-opens-2005",
+          "category": "development",
+          "date_start": "2005",
+          "date_end": null,
+          "date_label": "2005",
+          "title": "Marley Park opens",
+          "summary": "Marley Park opened in 2005 as a large master-planned community in Surprise. Developer records describe a grand-opening celebration drawing about 2,000 visitors.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-marley-park-dmb",
+            "surprise-marley-park-cfd-fy2026"
+          ]
+        },
+        {
+          "record_id": "surprise-city-historian-2008",
+          "category": "preservation",
+          "date_start": "2008",
+          "date_end": null,
+          "date_label": "2008",
+          "title": "City establishes the City Historian role",
+          "summary": "The Surprise City Council appointed the City Clerk as City Historian in 2008. The role became the foundation for organized municipal efforts to collect, preserve and present Surprise's history.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-city-historian",
+            "surprise-city-history-project"
+          ]
+        },
+        {
+          "record_id": "surprise-history-project-2010",
+          "category": "preservation",
+          "date_start": "2010",
+          "date_end": null,
+          "date_label": "2010",
+          "title": "Surprise History Project documents the city's past",
+          "summary": "The City's historical work developed into the Surprise History Project, which gathered archival material and oral histories and produced a written community history and documentary as Surprise marked its first half-century as an incorporated city.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-city-history-project",
+            "surprise-city-historian",
+            "surprise-palmer-dissertation-2012"
+          ]
+        },
+        {
+          "record_id": "surprise-population-growth-2010",
+          "category": "population",
+          "date_start": "2010",
+          "date_end": null,
+          "date_label": "2010",
+          "title": "Population reaches 117,517 after a decade of extraordinary growth",
+          "summary": "The 2010 Census counted 117,517 Surprise residents, up from 30,848 in 2000. The Census Bureau calculated 281.0 percent growth and ranked Surprise second among the nation's fastest-growing incorporated places that had at least 10,000 residents in 2000.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-census-2010-arizona",
+            "surprise-census-2000-2010-fastest-growing"
+          ]
+        },
+        {
+          "record_id": "surprise-loop-303-2011",
+          "category": "infrastructure",
+          "date_start": "2011",
+          "date_end": null,
+          "date_label": "2011",
+          "title": "Loop 303 freeway construction advances through Surprise",
+          "summary": "Construction began on a major Loop 303 segment through Surprise in 2011, converting an existing roadway into a modern urban freeway. The corridor became increasingly important to West Valley mobility and economic-development planning.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-adot-loop-303-2011",
+            "surprise-adot-loop-303-future"
+          ]
+        },
+        {
+          "record_id": "surprise-heritage-district-2016",
+          "category": "preservation",
+          "date_start": "2016",
+          "date_end": null,
+          "date_label": "2016",
+          "title": "Surprise establishes the Heritage District framework",
+          "summary": "The Surprise Heritage District replaced the former Original Townsite overlay. The district covers the historic area between Bell and Greenway roads and El Mirage and Dysart roads, with regulations intended to protect the historic residential core while allowing compatible infill and redevelopment.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-heritage-district-ordinance",
+            "surprise-city-history-project"
+          ]
+        },
+        {
+          "record_id": "surprise-population-2020",
+          "category": "population",
+          "date_start": "2020",
+          "date_end": null,
+          "date_label": "2020",
+          "title": "Population reaches 143,148",
+          "summary": "The 2020 Census counted 143,148 residents in Surprise, continuing the city's long-term transformation from a small agricultural community into a major West Valley municipality.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-census-quickfacts"
+          ]
+        },
+        {
+          "record_id": "surprise-population-estimate-2025",
+          "category": "population",
+          "date_start": "2025-07-01",
+          "date_end": null,
+          "date_label": "July 1, 2025 estimate",
+          "title": "Census estimate places Surprise above 175,000 residents",
+          "summary": "The U.S. Census Bureau estimated Surprise's population at 175,304 as of July 1, 2025. Unlike the decennial Census counts elsewhere in this timeline, this figure is an annual population estimate.",
+          "verification_state": "verified",
+          "source_ids": [
+            "surprise-census-quickfacts"
+          ]
+        }
+      ]
     }
   }
 }

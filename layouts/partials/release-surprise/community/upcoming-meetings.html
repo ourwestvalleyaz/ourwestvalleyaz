@@ -1,0 +1,62 @@
+{{- $cityID := .city_id -}}
+{{- $today := now.Format "2006-01-02" -}}
+
+{{- $meetingRoot := index hugo.Data "meetings" -}}
+{{- $meetingFile := index $meetingRoot "meetings" -}}
+{{- $allMeetings := index $meetingFile "meetings" -}}
+
+{{- $cityMeetings := where $allMeetings "city_id" $cityID -}}
+{{- $upcoming := slice -}}
+
+{{- range $cityMeetings -}}
+  {{- if and
+      (ge .date $today)
+      (or
+        (eq .status "scheduled")
+        (eq .status "rescheduled")
+        (eq .status "cancelled")
+      )
+  -}}
+    {{- $upcoming = $upcoming | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $upcoming = sort $upcoming "meeting_id" "asc" -}}
+{{- $upcoming = sort $upcoming "time" "asc" -}}
+{{- $upcoming = sort $upcoming "date" "asc" -}}
+
+{{- if gt (len $upcoming) 0 -}}
+  {{- $next := index $upcoming 0 -}}
+
+  <div class="meetings-summary">
+    <h3>Next public meeting</h3>
+
+    {{ partial "release-surprise/community/meeting-card.html"
+      (dict
+        "meeting" $next
+        "featured" true
+      )
+    }}
+
+    {{ if gt (len $upcoming) 1 }}
+      <div class="meeting-following">
+        <h3>Following meetings</h3>
+
+        <ul class="meeting-card-list">
+          {{ range first 3 (after 1 $upcoming) }}
+            <li>
+              {{ partial "release-surprise/community/meeting-card.html"
+                (dict "meeting" .)
+              }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+{{- else -}}
+  {{ partial "community/empty-state.html"
+    (dict "message"
+      "No verified upcoming public meetings are currently listed.")
+  }}
+{{- end -}}

@@ -1,0 +1,476 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2025",
+  "status": "adopted",
+  "headline": {
+    "amount": 952132000,
+    "currency": "USD",
+    "measure": "adopted_expenditure_limitation_budget",
+    "scope": "all_funds",
+    "label": "Adopted Expenditure Limitation Budget",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2025-adopted-budget",
+        "page": 21,
+        "section": "Budget Summary",
+        "row": "FY2025 adopted expenditure limitation budget",
+        "column": "FY2025"
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2024",
+    "amount": 771076900,
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": 181055100,
+    "percent_change": 23.481,
+    "summary": "FY2025 adopted expenditure limitation budget is compared with FY2024 Budgeted Expenditures/Expenses."
+  },
+  "uses": {
+    "measures": [
+      {
+        "amount": 347970900,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "label": "Operating Expenses"
+      },
+      {
+        "amount": 67084200,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Transfers Out"
+      },
+      {
+        "amount": 415055100,
+        "currency": "USD",
+        "measure": "operating_uses",
+        "scope": "all_funds",
+        "label": "Operating Uses"
+      },
+      {
+        "amount": 455942600,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "label": "Capital"
+      },
+      {
+        "amount": 11426600,
+        "currency": "USD",
+        "measure": "debt_service",
+        "scope": "all_funds",
+        "label": "Debt Service"
+      },
+      {
+        "amount": 136791900,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "label": "Contingency"
+      },
+      {
+        "amount": 1019216200,
+        "currency": "USD",
+        "measure": "total_identified_uses",
+        "scope": "all_funds",
+        "label": "Total Uses"
+      }
+    ],
+    "note": "FY2025 distinguishes the adopted expenditure limitation budget from the broader Total Uses presentation. Transfers Out are included in Operating Uses and must not be double-counted."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "amount": 509426700,
+        "currency": "USD",
+        "measure": "beginning_fund_balance_net_position",
+        "scope": "all_funds",
+        "label": "Beginning Fund Balance/(Deficit) or Net Position/(Deficit)",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Beginning Fund Balance/(Deficit) or Net Position/(Deficit) at July 1",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "amount": 507841500,
+        "currency": "USD",
+        "measure": "estimated_revenues_other_than_property_taxes",
+        "scope": "all_funds",
+        "label": "Estimated Revenues Other than Property Taxes",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Estimated Revenues Other than Property Taxes",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "amount": 18067000,
+        "currency": "USD",
+        "measure": "property_tax_levies",
+        "scope": "all_funds",
+        "label": "Property Tax Levies",
+        "note": "Primary and secondary property-tax levies combined.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Primary and Secondary Property Tax Levies",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "amount": 84408500,
+        "currency": "USD",
+        "measure": "other_financing_sources",
+        "scope": "all_funds",
+        "label": "Other Financing Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Other Financing Sources",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "amount": 67084200,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "label": "Interfund Transfers In",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Interfund Transfers In",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "amount": -67084200,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Interfund Transfers (Out)",
+        "note": "Stored as a signed source-side amount because Schedule A presents transfers out as a deduction.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Interfund Transfers (Out)",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "amount": 1119743700,
+        "currency": "USD",
+        "measure": "total_financial_resources_available",
+        "scope": "all_funds",
+        "label": "Total Financial Resources Available",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 394,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses",
+            "row": "Total Financial Resources Available",
+            "column": "FY2025"
+          }
+        ]
+      }
+    ],
+    "note": "Schedule A presents a statutory financial-resource layer that is distinct from the budget book's Summary of Sources and Uses presentation. Beginning fund balance/net position and Other Financing Sources are not treated as recurring revenue."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 94084300,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2025-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Beginning Fund Balance",
+          "column": "FY2025"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "amount": 222287500,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2025-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Sources",
+              "column": "FY2025"
+            }
+          ]
+        },
+        {
+          "amount": 222287500,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2025-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Uses",
+              "column": "FY2025"
+            }
+          ]
+        },
+        {
+          "amount": 0,
+          "currency": "USD",
+          "measure": "ongoing_surplus",
+          "scope": "general_fund",
+          "label": "Ongoing Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2025-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Ongoing Surplus/(Shortfall)",
+              "column": "FY2025"
+            }
+          ]
+        }
+      ]
+    },
+    "one_time": {
+      "measures": [
+        {
+          "amount": 14919000,
+          "currency": "USD",
+          "measure": "total_one_time_sources",
+          "scope": "general_fund",
+          "label": "Total One-Time Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2025-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Sources",
+              "column": "FY2025"
+            }
+          ]
+        },
+        {
+          "amount": 29423400,
+          "currency": "USD",
+          "measure": "total_one_time_uses",
+          "scope": "general_fund",
+          "label": "Total One-Time Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2025-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Uses",
+              "column": "FY2025"
+            }
+          ]
+        },
+        {
+          "amount": -14504400,
+          "currency": "USD",
+          "measure": "one_time_surplus_shortfall",
+          "scope": "general_fund",
+          "label": "One-Time Surplus/(Shortfall)",
+          "note": "Signed accounting effect. FY2025 presents a $14,504,400 one-time shortfall.",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2025-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "One-Time Surplus/(Shortfall)",
+              "column": "FY2025"
+            }
+          ]
+        }
+      ],
+      "note": "FY2025 separately presents one-time sources, one-time uses, and their signed result."
+    },
+    "ending_fund_balance": {
+      "amount": 79579900,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2025-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Ending Fund Balance",
+          "column": "FY2025"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 58627300,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "definition": "Required reserve presented in the General Fund Five-Year Forecast.",
+        "accounting_treatment": "Compared with Ending Fund Balance to determine Balance Above/(Below) Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Required Reserve",
+            "column": "FY2025"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-required-reserve",
+        "label": "Balance Above/(Below) Reserve",
+        "amount": 20952600,
+        "measure": "balance_above_required_reserve",
+        "scope": "general_fund",
+        "definition": "Ending Fund Balance above the forecast Required Reserve.",
+        "accounting_treatment": "Ending Fund Balance minus Required Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2025-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Balance Above/(Below) Reserve",
+            "column": "FY2025"
+          }
+        ]
+      }
+    ],
+    "note": "General Fund forecast values are preserved as their own accounting layer and are not collapsed with citywide fund-balance or contingency measures."
+  },
+  "source_ids": [
+    "surprise-fy2025-adopted-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2025-adopted-budget",
+      "title": "FY2025 Adopted Budget Book",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget_book",
+      "url": "https://surpriseaz.gov/annual-budget-capital-improvements-plan",
+      "supports": [
+        "headline",
+        "prior_year_comparison",
+        "uses",
+        "sources_and_fund_balance",
+        "general_fund",
+        "property_tax"
+      ],
+      "note": "Primary comprehensive FY2025 adopted budget publication."
+    }
+  ],
+  "notes": [
+    "FY2025 distinguishes the adopted expenditure limitation budget from broader identified uses.",
+    "Fund balance is not treated as recurring revenue.",
+    "Property-tax detail is intentionally omitted from this candidate pending targeted exact evidence.",
+    "FY2025 Schedule A reports Total Financial Resources Available of $1,119,743,700. This is a distinct statutory accounting layer and is not interchangeable with the budget book's Summary of Sources and Uses.",
+    "FY2025 Schedule B reports a maximum allowable primary property-tax levy of $13,785,971, an adopted primary levy of $9,816,600, a secondary levy of $8,250,400, and a total levy of $18,067,000.",
+    "FY2025 property-tax rates are 0.5693 primary, 0.3880 secondary, and 0.9573 combined per $100 of assessed value.",
+    "Schedule A contains contradictory boilerplate saying the City does not levy property taxes and Schedule B is omitted, despite explicit property-tax rows and an included Schedule B. The contradiction is retained as a source anomaly."
+  ],
+  "property_tax": {
+    "maximum_allowable_primary_levy": {
+      "amount": 13785971,
+      "currency": "USD",
+      "measure": "maximum_allowable_primary_property_tax_levy",
+      "scope": "citywide",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2025-adopted-budget",
+          "page": 395,
+          "section": "Tax levy and tax rate information",
+          "row": "Maximum allowable primary property tax levy",
+          "column": "FY2025"
+        }
+      ]
+    },
+    "primary_levy": {
+      "amount": 9816600,
+      "currency": "USD",
+      "measure": "primary_property_tax_levy",
+      "scope": "citywide",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2025-adopted-budget",
+          "page": 395,
+          "section": "Tax levy and tax rate information",
+          "row": "Primary property taxes",
+          "column": "FY2025"
+        }
+      ]
+    },
+    "secondary_levy": {
+      "amount": 8250400,
+      "currency": "USD",
+      "measure": "secondary_property_tax_levy",
+      "scope": "citywide",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2025-adopted-budget",
+          "page": 395,
+          "section": "Tax levy and tax rate information",
+          "row": "Secondary property taxes",
+          "column": "FY2025"
+        }
+      ]
+    },
+    "total_levy": {
+      "amount": 18067000,
+      "currency": "USD",
+      "measure": "total_property_tax_levy",
+      "scope": "citywide",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2025-adopted-budget",
+          "page": 395,
+          "section": "Tax levy and tax rate information",
+          "row": "Total property tax levy amounts",
+          "column": "FY2025"
+        }
+      ]
+    },
+    "primary_rate": 0.5693,
+    "secondary_rate": 0.388,
+    "combined_rate": 0.9573,
+    "rate_basis": "$100 of assessed value",
+    "note": "FY2025 reduces the primary property-tax rate from 0.7591 to 0.5693 per $100 assessed value. Schedule A also contains boilerplate stating that the City does not levy property taxes and that Schedule B is omitted. That statement conflicts with Schedule A's explicit levy rows, the included Schedule B, and the FY2025 tax levy resolution. The source anomaly is preserved here rather than silently corrected."
+  }
+}

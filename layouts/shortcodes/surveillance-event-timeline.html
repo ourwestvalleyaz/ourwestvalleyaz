@@ -1,0 +1,22 @@
+{{- $events := .Page.Params.surveillance_events | default (slice) -}}
+{{- if gt (len $events) 0 }}
+<section class="surveillance-timeline" aria-labelledby="timeline">
+  <h2 id="timeline" class="surveillance-timeline__heading">
+    Flock ALPR cancellation timeline
+  </h2>
+
+  <ol class="surveillance-timeline__list">
+    {{- range $events }}
+    <li class="surveillance-timeline__event">
+      <span class="surveillance-timeline__marker" aria-hidden="true"></span>
+
+      <div class="surveillance-timeline__body">
+        <p class="surveillance-timeline__date">{{ .date }}</p>
+        <p><strong>{{ .title }}</strong></p>
+        <p>{{ .description }}</p>
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+{{- end }}

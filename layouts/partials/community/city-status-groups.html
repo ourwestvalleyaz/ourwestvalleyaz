@@ -1,0 +1,38 @@
+{{- $cities := hugo.Data.cities.cities.cities -}}
+{{- $available := slice -}}
+{{- $progress := slice -}}
+{{- $planned := slice -}}
+{{- $orders := slice -}}
+{{- range $cities -}}
+  {{- $city := . -}}
+  {{- if not (isset $city "development_status") -}}
+    {{- errorf "City status missing" -}}
+  {{- end -}}
+  {{- if not (isset $city "display_order") -}}
+    {{- errorf "City order missing" -}}
+  {{- end -}}
+  {{- if not (in (slice "complete" "in_progress" "planned") $city.development_status) -}}
+    {{- errorf "Invalid city development status" -}}
+  {{- end -}}
+  {{- if in $orders $city.display_order -}}
+    {{- errorf "Duplicate city display order" -}}
+  {{- end -}}
+  {{- $orders = $orders | append $city.display_order -}}
+  {{- if and $city.published (ne $city.development_status "complete") -}}
+    {{- errorf "Published city must be complete" -}}
+  {{- end -}}
+  {{- if $city.published -}}
+    {{- $available = $available | append $city -}}
+  {{- else if eq $city.development_status "in_progress" -}}
+    {{- $progress = $progress | append $city -}}
+  {{- else if eq $city.development_status "planned" -}}
+    {{- $planned = $planned | append $city -}}
+  {{- else -}}
+    {{- errorf "Unpublished city must be in progress or planned" -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict
+  "available" (sort $available "display_order")
+  "in_progress" (sort $progress "display_order")
+  "coming_soon" (sort $planned "display_order")
+) -}}

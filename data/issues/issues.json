@@ -186,6 +186,41 @@
         "avondale-prop-418-sample-ballot",
         "avondale-police-surveillance-topic"
       ]
+    },
+    {
+      "issue_id": "surprise-police-surveillance-technology",
+      "city_id": "surprise",
+      "title": "Police Surveillance Technology",
+      "slug": "police-surveillance-technology",
+      "status": "documented",
+      "summary": "Public sources document historical and reported police surveillance technology in Surprise, including automated license plate readers, the August 2026 Flock contract cancellation, camera access, digital evidence, CAD/RMS systems and drone projects. Some current operating details remain unresolved.",
+      "source_ids": [
+        "surprise-fy2020-final-budget",
+        "surprise-fy2021-final-budget",
+        "surprise-fy2022-adopted-budget",
+        "surprise-fy2023-adopted-budget",
+        "surprise-fy2024-adopted-budget",
+        "surprise-fy2025-adopted-budget",
+        "surprise-fy2026-adopted-budget",
+        "surprise-fy2027-adopted-budget",
+        "surprise-civicclerk",
+        "surprise-flock-officer-cleared-2026",
+        "surprise-flock-removal-report-2026",
+        "surprise-mark43-deployment-2025",
+        "surprise-dysart-camera-partnership-2025",
+        "surprise-finding-flock-observations-2026",
+        "surprise-safe-flock-camera-program",
+        "surprise-police-ops59-video-camera-policy"
+      ],
+      "last_verified": "2026-10-08",
+      "tags": [
+        "police surveillance",
+        "ALPR",
+        "Flock Safety",
+        "body-worn cameras",
+        "drones",
+        "real time crime center"
+      ]
     }
   ]
 }

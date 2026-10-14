@@ -1,0 +1,48 @@
+{
+  "cities": {
+    "surprise": {
+      "source_ids": [
+        "surprise-city-council",
+        "surprise-election-2022",
+        "surprise-election-2024",
+        "surprise-election-2018",
+        "surprise-hastings-election-history",
+        "surprise-duffy-election-history",
+        "surprise-fy2020-final-budget",
+        "surprise-fy2021-final-budget",
+        "surprise-fy2022-adopted-budget",
+        "surprise-fy2023-adopted-budget",
+        "surprise-fy2024-adopted-budget",
+        "surprise-fy2025-adopted-budget",
+        "surprise-fy2026-adopted-budget",
+        "surprise-fy2027-adopted-budget"
+      ],
+      "source_groups": [
+        {
+          "label": "Local Government & Elections",
+          "source_ids": [
+            "surprise-city-council",
+            "surprise-election-2022",
+            "surprise-election-2024",
+            "surprise-election-2018",
+            "surprise-hastings-election-history",
+            "surprise-duffy-election-history"
+          ]
+        },
+        {
+          "label": "Budgets",
+          "source_ids": [
+            "surprise-fy2020-final-budget",
+            "surprise-fy2021-final-budget",
+            "surprise-fy2022-adopted-budget",
+            "surprise-fy2023-adopted-budget",
+            "surprise-fy2024-adopted-budget",
+            "surprise-fy2025-adopted-budget",
+            "surprise-fy2026-adopted-budget",
+            "surprise-fy2027-adopted-budget"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,395 @@
+{{ define "main" }}
+
+{{- $cityID := .Params.city_id -}}
+{{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
+{{- if ne (len $cityMatches) 1 -}}
+  {{- errorf "City return link requires one canonical city for %q" $cityID -}}
+{{- end -}}
+{{- $city := index $cityMatches 0 -}}
+{{- $fiscalYear := .Params.fiscal_year -}}
+{{- $fiscalKey := lower $fiscalYear -}}
+
+{{- $budgetRoot := index hugo.Data.budgets "fiscal-years" -}}
+
+{{- if not $budgetRoot -}}
+  {{- errorf
+    "budget page %q could not find canonical fiscal-year data root"
+    .Path
+  -}}
+{{- end -}}
+
+{{- $cityBudgets := index $budgetRoot $cityID -}}
+
+{{- if not $cityBudgets -}}
+  {{- errorf
+    "budget page %q could not find canonical budget data for city %s"
+    .Path
+    $cityID
+  -}}
+{{- end -}}
+
+{{- $budget := index $cityBudgets $fiscalKey -}}
+
+{{- if not $budget -}}
+  {{- errorf
+    "budget page %q could not find canonical record for %s %s"
+    .Path
+    $cityID
+    $fiscalYear
+  -}}
+{{- end -}}
+
+{{- if ne $budget.city_id $cityID -}}
+  {{- errorf
+    "budget page %q city_id mismatch: page=%s data=%s"
+    .Path
+    $cityID
+    $budget.city_id
+  -}}
+{{- end -}}
+
+{{- if ne $budget.fiscal_year $fiscalYear -}}
+  {{- errorf
+    "budget page %q fiscal_year mismatch: page=%s data=%s"
+    .Path
+    $fiscalYear
+    $budget.fiscal_year
+  -}}
+{{- end -}}
+
+{{/*
+  Normalize the small renderer-facing budget headline contract.
+
+  municipal-budget-v1 uses:
+    headline.amount
+    prior_year_comparison.amount
+
+  Legacy records use:
+    adopted_budget.amount
+    prior_year_comparison.adopted_budget
+
+  Keep the full canonical headline object so optional metadata
+  such as measure, scope, currency, label, note, and evidence
+  remains available to shared presentation components.
+*/}}
+
+{{- $headline := $budget.adopted_budget -}}
+{{- $comparison := $budget.prior_year_comparison -}}
+
+{{- if eq $budget.schema_version "municipal-budget-v1" -}}
+  {{- $headline = $budget.headline -}}
+{{- else -}}
+  {{- with $comparison -}}
+    {{- $comparison = merge
+      (dict "amount" .adopted_budget)
+      .
+    -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $cityName := $cityID | title -}}
+{{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
+{{- if eq (len $cityMatches) 1 -}}
+  {{- $cityName = (index $cityMatches 0).name -}}
+{{- else -}}
+  {{- errorf
+    "budget page %q expected exactly one city record for %s; found %d"
+    .Path
+    $cityID
+    (len $cityMatches)
+  -}}
+{{- end -}}
+
+<article class="budget-year-page">
+
+  <header class="page-header"
+          data-sticky-nav-header>
+    <div class="site-shell content-width">
+
+      <p class="eyebrow">Budget &amp; Spending</p>
+
+      <h1>{{ .Title }}</h1>
+
+      {{ with .Description }}
+        <p class="page-summary">{{ . }}</p>
+      {{ end }}
+
+    </div>
+  </header>
+
+  {{/*
+    Budget navigation mirrors only sections that are actually
+    available in this fiscal-year record.
+  */}}
+
+  {{ $stickySections := slice }}
+
+  {{ $stickySections = $stickySections | append
+      (dict
+        "id" "what-changed"
+        "label" "Changes"
+        "name" "What changed"
+      )
+  }}
+
+  {{ with $budget.spending_by_purpose }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "spending-by-purpose"
+          "label" "Spending"
+          "name" "Where the budget goes"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.fund_breakdown }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "fund-breakdown"
+          "label" "Funds"
+          "name" "Budget by fund"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.revenue }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "revenue"
+          "label" "Revenue"
+          "name" "Revenue measures"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.property_tax }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "property-tax"
+          "label" "Property Tax"
+          "name" "Property tax"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.capital }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "capital"
+          "label" "Capital"
+          "name" "Capital measures"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.capital.projects }}
+    {{ if gt (len .) 0 }}
+      {{ $stickySections = $stickySections | append
+          (dict
+            "id" "major-capital-projects"
+            "label" "Projects"
+            "name" "Major capital projects"
+          )
+      }}
+    {{ end }}
+  {{ end }}
+
+  {{ with $budget.adoption.governing_body }}
+    {{ $stickySections = $stickySections | append
+        (dict
+          "id" "governance-at-adoption"
+          "label" "Council"
+          "name" "Mayor and Council at adoption"
+        )
+    }}
+  {{ end }}
+
+  {{ with $budget.sources }}
+    {{ if gt (len .) 0 }}
+      {{ $stickySections = $stickySections | append
+          (dict
+            "id" "official-sources"
+            "label" "Sources"
+            "name" "Official sources"
+          )
+      }}
+    {{ end }}
+  {{ end }}
+
+  {{ partial "site/sticky-nav.html" (dict
+    "context" "Budget"
+    "title" .Title
+    "sections" $stickySections
+  ) }}
+
+
+  <div class="site-shell content-width section">
+
+    <nav class="budget-year-page__context" aria-label="Budget page context">
+      <a href="/communities/{{ $cityID }}/#budget">
+        {{ $cityName }} budget overview
+      </a>
+    </nav>
+
+    {{ partial "release-surprise/budget/overview.html" (dict
+      "headline" $headline
+      "comparison" $comparison
+    ) }}
+
+    {{ partial "release-surprise/budget/comparison.html" (dict
+      "headline" $headline
+      "comparison" $comparison
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "release-surprise/budget/spending-by-purpose.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "release-surprise/budget/fund-breakdown.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "release-surprise/budget/sources-and-fund-balance.html" (dict
+  "budget" $budget
+  "fiscal_year" $fiscalYear
+) }}
+
+{{ partial "release-surprise/budget/revenue.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "release-surprise/budget/general-fund.html" (dict
+  "budget" $budget
+  "fiscal_year" $fiscalYear
+) }}
+
+{{ partial "release-surprise/budget/property-tax.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "release-surprise/budget/capital.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "release-surprise/budget/capital-projects.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    <!-- OWVAZ: budget adoption governance -->
+    {{ with $budget.adoption }}
+      {{ $adoption := . }}
+
+      {{ with .governing_body }}
+
+        <section
+          class="budget-year-section budget-year-governance"
+          aria-labelledby="governance-at-adoption"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Historical context</p>
+            <h2 id="governance-at-adoption">
+              Mayor and Council at adoption
+            </h2>
+          </div>
+
+          <p class="budget-year-section__intro">
+            {{ with $adoption.date }}
+              Final budget adopted
+              <time datetime="{{ . }}">
+                {{ time.Format "January 2, 2006" . }}
+              </time>
+              {{ with $adoption.authority_identifier }}
+                <span aria-hidden="true"> · </span>
+                Resolution No. {{ . }}
+              {{ end }}
+            {{ else }}
+              {{ with $adoption.authority_identifier }}
+                Adoption date not yet verified
+                <span aria-hidden="true"> · </span>
+                Resolution No. {{ . }}
+              {{ else }}
+                Final adoption date and authority not yet verified.
+              {{ end }}
+            {{ end }}
+          </p>
+
+          <div class="budget-year-governance__body">
+
+            {{ $members := .members }}
+            {{ $mayors := where $members "role" "mayor" }}
+            {{ $councilmembers := where $members "role" "councilmember" }}
+
+            {{ range $mayors }}
+              <div class="budget-year-governance__mayor">
+                <h3>Mayor</h3>
+                <p>{{ .name }}</p>
+              </div>
+            {{ end }}
+
+            {{ with $councilmembers }}
+              <div class="budget-year-governance__council">
+                <h3>Councilmembers</h3>
+
+                <ul>
+                  {{ range . }}
+                    <li>
+                      <span>{{ .name }}</span>
+
+                      {{ if eq .leadership_role "vice_mayor" }}
+                        <span class="budget-year-governance__role">
+                          Vice Mayor
+                        </span>
+                      {{ end }}
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+
+            {{ if eq (len $members) 0 }}
+              <p>Historical council membership has not yet been verified.</p>
+            {{ end }}
+
+          </div>
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+
+    {{ partial "release-surprise/sources/official-sources.html"
+      (dict
+        "source_ids" $budget.source_ids
+        "context" (printf "%s %s budget" $cityID $fiscalYear)
+        "heading_id" "official-sources-heading"
+        "intro" "These government sources support the budget figures and historical context on this page. OWVAZ preserves original source addresses even if the City later moves or removes a document."
+      )
+    }}
+
+    <nav
+      class="budget-year-page__return"
+      aria-label="Return to community budget"
+    >
+      <a href="/communities/{{ $cityID }}/#budget">
+        Back to {{ $cityName }} budget overview
+      </a>
+    </nav>
+
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+    ) }}
+
+  </div>
+
+</article>
+
+{{ end }}

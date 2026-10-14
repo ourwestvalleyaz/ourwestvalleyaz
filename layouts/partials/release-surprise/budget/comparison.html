@@ -1,0 +1,58 @@
+{{- $headline := .headline -}}
+{{- $comparison := .comparison -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{- with $comparison -}}
+    <section class="budget-year-section" aria-labelledby="what-changed">
+
+      <div class="budget-year-section__heading">
+        <p class="eyebrow">Year over year</p>
+        <h2 id="what-changed">What changed</h2>
+      </div>
+
+      {{ with $comparison.summary }}
+        <p class="budget-year-section__intro">{{ . }}</p>
+      {{ else }}
+        <p class="budget-year-section__intro">
+          The {{ $fiscalYear }} adopted all-funds budget was
+          ${{ $headline.amount | lang.FormatNumber 0 }},
+          compared with
+          ${{ $comparison.amount | lang.FormatNumber 0 }}
+          in {{ $comparison.fiscal_year }}.
+        </p>
+      {{ end }}
+
+      <dl class="budget-year-facts">
+
+        <div>
+          <dt>{{ $comparison.fiscal_year }} comparison amount</dt>
+          <dd>
+            ${{ $comparison.amount | lang.FormatNumber 0 }}
+          </dd>
+        </div>
+
+        <div>
+          <dt>Dollar change</dt>
+          <dd>
+            {{- if gt $comparison.dollar_change 0 -}}
+              +${{ $comparison.dollar_change | lang.FormatNumber 0 }}
+            {{- else if lt $comparison.dollar_change 0 -}}
+              -${{ math.Abs $comparison.dollar_change | lang.FormatNumber 0 }}
+            {{- else -}}
+              $0
+            {{- end -}}
+          </dd>
+        </div>
+
+        <div>
+          <dt>Percent change</dt>
+          <dd>
+            {{- if gt $comparison.percent_change 0 }}+{{ end -}}
+            {{ $comparison.percent_change | lang.FormatNumber 1 }}%
+          </dd>
+        </div>
+
+      </dl>
+
+    </section>
+
+    {{- end -}}

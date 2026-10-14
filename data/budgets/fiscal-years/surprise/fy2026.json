@@ -1,0 +1,495 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2026",
+  "status": "adopted",
+  "headline": {
+    "amount": 925744000,
+    "currency": "USD",
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "label": "Budgeted Expenditures/Expenses",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2026-adopted-budget",
+        "page": 340,
+        "section": "Schedule A",
+        "row": "Budgeted expenditures/expenses",
+        "note": "City of Surprise FY2026 Schedule A, Total All Funds."
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2025",
+    "amount": 952132000,
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": -26388000,
+    "percent_change": -2.771464,
+    "summary": "FY2026 Budgeted Expenditures/Expenses are $26,388,000 lower than FY2025, a decrease of approximately 2.77%."
+  },
+  "uses": {
+    "measures": [
+      {
+        "amount": 395080100,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "label": "Operating Expenses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Total Operating Expenses"
+          }
+        ]
+      },
+      {
+        "amount": 59978700,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Transfers Out",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Transfers Out"
+          }
+        ]
+      },
+      {
+        "amount": 455058800,
+        "currency": "USD",
+        "measure": "operating_uses",
+        "scope": "all_funds",
+        "label": "Operating Uses",
+        "note": "Operating Expenses plus Transfers Out.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "note": "Derived from exact source rows: $395,080,100 Operating Expenses plus $59,978,700 Transfers Out."
+          }
+        ]
+      },
+      {
+        "amount": 381530100,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "label": "Capital",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Capital"
+          }
+        ]
+      },
+      {
+        "amount": 11354600,
+        "currency": "USD",
+        "measure": "debt",
+        "scope": "all_funds",
+        "label": "Debt",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Debt"
+          }
+        ]
+      },
+      {
+        "amount": 137779200,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "label": "Contingency",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Contingency"
+          }
+        ]
+      },
+      {
+        "amount": 985722700,
+        "currency": "USD",
+        "measure": "total_identified_uses",
+        "scope": "all_funds",
+        "label": "Total Uses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Total Uses"
+          }
+        ]
+      }
+    ],
+    "note": "Transfers Out are included in Total Uses but are not part of the Schedule A Budgeted Expenditures/Expenses headline. Do not add Transfers Out twice when using Operating Uses."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "amount": 597360800,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "label": "Revenue",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Total Revenue"
+          }
+        ]
+      },
+      {
+        "amount": 59978700,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "label": "Transfers In",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Transfers In"
+          }
+        ]
+      },
+      {
+        "amount": 657339500,
+        "currency": "USD",
+        "measure": "operating_sources",
+        "scope": "all_funds",
+        "label": "Total Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "row": "Total Sources"
+          }
+        ]
+      },
+      {
+        "amount": 328383200,
+        "currency": "USD",
+        "measure": "fund_balance_reduction",
+        "scope": "all_funds",
+        "label": "Change in Fund Balance",
+        "note": "Exact amount required to reconcile Total Sources of $657,339,500 to Total Uses of $985,722,700. The budget narrative describes $328.38 million of change in fund balance.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 41,
+            "section": "Sources Summary",
+            "note": "Narrative reports $985.72 million total sources identified, including $328.38 million change in fund balance, $597.36 million revenues, and $59.98 million Transfers In."
+          },
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "note": "Exact amount derived as Total Uses $985,722,700 minus Total Sources $657,339,500."
+          }
+        ]
+      },
+      {
+        "amount": 530679600,
+        "currency": "USD",
+        "measure": "beginning_fund_balance_net_position",
+        "scope": "all_funds",
+        "label": "Beginning Fund Balance/(Deficit) or Net Position/(Deficit)",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 340,
+            "section": "Schedule A",
+            "row": "Beginning fund balance/(deficit) or net position/(deficit) at July 1"
+          }
+        ]
+      },
+      {
+        "amount": 17939600,
+        "currency": "USD",
+        "measure": "other_financing_sources",
+        "scope": "all_funds",
+        "label": "Other Financing Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 340,
+            "section": "Schedule A",
+            "row": "Other financing sources"
+          }
+        ]
+      },
+      {
+        "amount": 1128040300,
+        "currency": "USD",
+        "measure": "total_financial_resources_available",
+        "scope": "all_funds",
+        "label": "Total Financial Resources Available",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 340,
+            "section": "Schedule A",
+            "row": "Total financial resources available"
+          }
+        ]
+      }
+    ],
+    "note": "The Summary of Sources and Uses and Schedule A are distinct accounting presentations. Beginning fund balance/net position and Total Financial Resources Available should not be treated as recurring revenue."
+  },
+  "general_fund": {
+    "ongoing": {
+      "measures": [
+        {
+          "amount": 239400100,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "label": "Total Ongoing Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2026-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Sources",
+              "column": "FY2026"
+            }
+          ]
+        },
+        {
+          "amount": 239400000,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "label": "Total Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2026-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Uses",
+              "column": "FY2026"
+            }
+          ]
+        },
+        {
+          "amount": 100,
+          "currency": "USD",
+          "measure": "ongoing_surplus",
+          "scope": "general_fund",
+          "label": "Ongoing Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2026-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Ongoing Surplus/(Shortfall)",
+              "column": "FY2026"
+            }
+          ]
+        }
+      ],
+      "note": "FY2026 General Fund ongoing sources exceed ongoing uses by $100."
+    },
+    "one_time": {
+      "measures": [
+        {
+          "amount": 16739600,
+          "currency": "USD",
+          "measure": "total_one_time_sources",
+          "scope": "general_fund",
+          "label": "Total One-Time Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2026-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Sources",
+              "column": "FY2026"
+            }
+          ]
+        },
+        {
+          "amount": 22326000,
+          "currency": "USD",
+          "measure": "total_one_time_uses",
+          "scope": "general_fund",
+          "label": "Total One-Time Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2026-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Uses",
+              "column": "FY2026"
+            }
+          ]
+        },
+        {
+          "amount": -5586400,
+          "currency": "USD",
+          "measure": "one_time_surplus_shortfall",
+          "scope": "general_fund",
+          "label": "One-Time Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2026-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "One-Time Surplus/(Shortfall)",
+              "column": "FY2026"
+            }
+          ]
+        }
+      ],
+      "note": "The source presents the FY2026 one-time result as a $5,586,400 shortfall."
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 62927700,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "accounting_treatment": "Compared with Ending Fund Balance to determine Balance Above/(Below) Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Required Reserve",
+            "column": "FY2026"
+          }
+        ],
+        "definition": "Required reserve presented in the General Fund Five-Year Forecast."
+      },
+      {
+        "id": "balance-above-required-reserve",
+        "label": "Balance Above/(Below) Reserve",
+        "amount": 30683700,
+        "measure": "balance_above_required_reserve",
+        "scope": "general_fund",
+        "accounting_treatment": "Ending Fund Balance minus Required Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2026-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Balance Above/(Below) Reserve",
+            "column": "FY2026"
+          }
+        ],
+        "definition": "Ending Fund Balance above the forecast Required Reserve."
+      }
+    ],
+    "beginning_fund_balance": {
+      "amount": 99197700,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2026-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Beginning Fund Balance",
+          "column": "FY2026"
+        }
+      ]
+    },
+    "ending_fund_balance": {
+      "amount": 93611400,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2026-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Ending Fund Balance",
+          "column": "FY2026"
+        }
+      ]
+    },
+    "note": "General Fund forecast values are preserved as their own accounting layer and are not collapsed with citywide fund-balance or contingency measures."
+  },
+  "source_ids": [
+    "surprise-fy2026-adopted-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2026-adopted-budget",
+      "title": "FY2026 Adopted Budget - City of Surprise",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget",
+      "url": "https://surpriseaz.gov/annual-budget-capital-improvements-plan",
+      "supports": [
+        "headline",
+        "prior_year_comparison",
+        "uses",
+        "sources_and_fund_balance",
+        "general_fund",
+        "property_tax"
+      ],
+      "note": "Retained official City of Surprise adopted budget. Verified retained PDF SHA256: b8ee3e81133274a6890476d9d06549cbe46a775c0d55c308f88393eea8b4b74f."
+    }
+  ],
+  "notes": [
+    "FY2026 Budgeted Expenditures/Expenses are $925,744,000. Transfers Out of $59,978,700 are separate in the Summary of Sources and Uses.",
+    "The Summary of Sources and Uses reports Total Uses of $985,722,700 and Total Sources of $657,339,500. The exact difference is $328,383,200 of change/reduction in fund balance.",
+    "Schedule A is a distinct statutory financial-resource presentation and reports $1,128,040,300 in Total Financial Resources Available.",
+    "Schedule A contains property-tax boilerplate that conflicts with its own levy rows and the included Schedule B. The discrepancy is preserved."
+  ],
+  "property_tax": {
+    "presentation": "citywide_property_tax",
+    "fiscal_year": "FY2026",
+    "maximum_allowable_primary_levy": 14880892,
+    "primary_levy": 10387300,
+    "secondary_levy": 10288800,
+    "total_levy": 20676100,
+    "primary_rate": 0.5534,
+    "secondary_rate": 0.388,
+    "combined_rate": 0.9414,
+    "rate_basis": "per $100 assessed value",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2026-adopted-budget",
+        "page": 341,
+        "section": "Schedule B",
+        "table": "Tax levy and tax rate information"
+      }
+    ],
+    "note": "Schedule A contains boilerplate stating that the city does not levy property taxes and that Schedule B is omitted. This conflicts with the levy rows in Schedule A and the included City of Surprise Schedule B. Both source presentations are preserved rather than silently corrected."
+  }
+}

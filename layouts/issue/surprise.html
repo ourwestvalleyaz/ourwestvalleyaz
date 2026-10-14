@@ -1,0 +1,152 @@
+{{ define "main" }}
+
+{{- $issueID := .Params.issue_id -}}
+{{- $cityID := .Params.city_id -}}
+
+{{- $issueRoot := index hugo.Data "issues" -}}
+{{- $issueFile := index $issueRoot "issues" -}}
+{{- $allIssues := index $issueFile "issues" -}}
+{{- $issueMatches := where $allIssues "issue_id" $issueID -}}
+
+{{- if ne (len $issueMatches) 1 -}}
+  {{- errorf
+      "Issue page %q expected exactly one canonical issue record for %q; found %d"
+      .RelPermalink
+      $issueID
+      (len $issueMatches)
+  -}}
+{{- end -}}
+
+{{- $issue := index $issueMatches 0 -}}
+
+
+{{/* Resolve canonical city rather than deriving the display name from slug. */}}
+
+{{- $cityRoot := index hugo.Data "cities" -}}
+{{- $cityFile := index $cityRoot "cities" -}}
+{{- $allCities := index $cityFile "cities" -}}
+{{- $cityMatches := where $allCities "id" $cityID -}}
+
+{{- if ne (len $cityMatches) 1 -}}
+  {{- errorf
+      "Issue page %q expected exactly one canonical city record for %q; found %d"
+      .RelPermalink
+      $cityID
+      (len $cityMatches)
+  -}}
+{{- end -}}
+
+{{- $city := index $cityMatches 0 -}}
+
+
+<article class="owvaz-detail-page issue-page{{ if eq $issueID "tolleson-police-surveillance-technology" }} issue-page--tolleson-surveillance{{ end }}">
+
+  <div class="site-shell content-width owvaz-detail-page__inner">
+
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+      "label" $city.name
+      "class" "owvaz-detail-page__back"
+    ) }}
+
+
+    <header class="owvaz-detail-page__header"
+            data-sticky-nav-header>
+
+      <p class="owvaz-detail-page__eyebrow">
+        {{ $city.name }} · Civic Topic
+      </p>
+
+      <h1>
+        {{ $issue.title }}
+      </h1>
+
+      {{ with $issue.summary }}
+        <p class="owvaz-detail-page__lead">
+          {{ . }}
+        </p>
+      {{ end }}
+
+      <div class="owvaz-detail-page__meta">
+
+        {{ with $issue.status }}
+          <span class="owvaz-detail-page__status owvaz-detail-page__status--{{ . }}">
+            {{ . | humanize }}
+          </span>
+        {{ end }}
+
+        {{ with $issue.last_verified }}
+          <span>
+            Last verified
+            <time datetime="{{ . }}">
+              {{ time.Format "January 2, 2006" . }}
+            </time>
+          </span>
+        {{ end }}
+
+      </div>
+
+    </header>
+
+
+    {{/* Issue-specific major destinations are defined in page front matter. */}}
+
+{{ $stickySections := .Params.sticky_sections | default slice }}
+
+{{ partial "site/sticky-nav.html" (dict
+  "context" "Civic Topic"
+  "title" .Title
+  "sections" $stickySections
+) }}
+
+    {{ partial "community/deep-page-quick-links.html" (dict
+      "sections" $stickySections
+      "label" "Quick links"
+      "aria_label" "Issue page sections"
+      "class" "owvaz-detail-page__quick-links issue-page__quick-links"
+    ) }}
+
+    <nav
+      class="issue-page__context"
+      aria-label="Issue page context"
+    >
+      <a href="{{ printf "/communities/%s/#local-issues" $cityID }}">
+        {{ $city.name }} civic topics
+      </a>
+    </nav>
+
+    <article
+      id="overview"
+      class="owvaz-detail-page__content"
+    >
+
+      {{ if hasSuffix $issueID "-police-surveillance-technology" }}
+        {{ partial "release-surprise/issues/surveillance-information-note.html" . }}
+      {{ end }}
+
+      {{ .Content }}
+
+    </article>
+
+
+    {{ partial "release-surprise/sources/official-sources.html" (dict
+      "context" (printf "Issue %q" $issueID)
+      "source_ids" $issue.source_ids
+      "source_groups" (.Params.source_groups | default slice)
+      "heading" (.Params.sources_heading | default "Official Sources")
+      "toggle_label" (.Params.sources_toggle_label | default "View official sources")
+      "intro" (.Params.sources_intro | default "These government sources support the information on this page. OWVAZ preserves an original source address even if the government later moves or removes the document.")
+    ) }}
+
+
+    {{ partial "community/back-to-city.html" (dict
+      "city" $city
+      "city_id" $cityID
+    ) }}
+
+  </div>
+
+</article>
+
+{{ end }}

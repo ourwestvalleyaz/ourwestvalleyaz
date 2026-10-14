@@ -27,46 +27,7 @@
               Communities
             </summary>
 
-            <div class="communities-menu__panel communities-menu__panel--grouped">
-              <div class="communities-menu__section">
-                <span class="communities-menu__section-label">Available</span>
-                <a href="/communities/avondale/"
-                   {{ if hasPrefix $.RelPermalink "/communities/avondale/" }}aria-current="page"{{ end }}>
-                  Avondale
-                </a>
-                <a href="/communities/litchfield-park/"
-                   {{ if hasPrefix $.RelPermalink "/communities/litchfield-park/" }}aria-current="page"{{ end }}>
-                  Litchfield Park
-                </a>
-                <a href="/communities/tolleson/"
-                   {{ if hasPrefix $.RelPermalink "/communities/tolleson/" }}aria-current="page"{{ end }}>
-                  Tolleson
-                </a>
-              </div>
-
-              <div class="communities-menu__section">
-                <span class="communities-menu__section-label">In progress</span>
-                <span class="communities-menu__pending communities-menu__pending--plain">
-                  <span class="communities-menu__city">Surprise</span>
-                </span>
-              </div>
-
-              <div class="communities-menu__section">
-                <span class="communities-menu__section-label">Coming soon</span>
-                <span class="communities-menu__pending communities-menu__pending--plain">
-                  <span class="communities-menu__city">Buckeye</span>
-                </span>
-                <span class="communities-menu__pending communities-menu__pending--plain">
-                  <span class="communities-menu__city">Glendale</span>
-                </span>
-                <span class="communities-menu__pending communities-menu__pending--plain">
-                  <span class="communities-menu__city">Goodyear</span>
-                </span>
-                <span class="communities-menu__pending communities-menu__pending--plain">
-                  <span class="communities-menu__city">Peoria</span>
-                </span>
-              </div>
-            </div>
+            {{ partial "community/city-menu-groups.html" . }}
           </details>
 
 
@@ -91,46 +52,7 @@
           Communities
         </summary>
 
-        <div class="communities-menu__panel communities-menu__panel--grouped">
-          <div class="communities-menu__section">
-            <span class="communities-menu__section-label">Available</span>
-            <a href="/communities/avondale/"
-               {{ if hasPrefix $.RelPermalink "/communities/avondale/" }}aria-current="page"{{ end }}>
-              Avondale
-            </a>
-            <a href="/communities/litchfield-park/"
-               {{ if hasPrefix $.RelPermalink "/communities/litchfield-park/" }}aria-current="page"{{ end }}>
-              Litchfield Park
-            </a>
-            <a href="/communities/tolleson/"
-               {{ if hasPrefix $.RelPermalink "/communities/tolleson/" }}aria-current="page"{{ end }}>
-              Tolleson
-            </a>
-          </div>
-
-          <div class="communities-menu__section">
-            <span class="communities-menu__section-label">In progress</span>
-            <span class="communities-menu__pending communities-menu__pending--plain">
-              <span class="communities-menu__city">Surprise</span>
-            </span>
-          </div>
-
-          <div class="communities-menu__section">
-            <span class="communities-menu__section-label">Coming soon</span>
-            <span class="communities-menu__pending communities-menu__pending--plain">
-              <span class="communities-menu__city">Buckeye</span>
-            </span>
-            <span class="communities-menu__pending communities-menu__pending--plain">
-              <span class="communities-menu__city">Glendale</span>
-            </span>
-            <span class="communities-menu__pending communities-menu__pending--plain">
-              <span class="communities-menu__city">Goodyear</span>
-            </span>
-            <span class="communities-menu__pending communities-menu__pending--plain">
-              <span class="communities-menu__city">Peoria</span>
-            </span>
-          </div>
-        </div>
+        {{ partial "community/city-menu-groups.html" . }}
       </details>
 
 

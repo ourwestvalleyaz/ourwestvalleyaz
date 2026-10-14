@@ -42,7 +42,7 @@
 
   <div class="site-shell content-width section">
 
-    {{ partial "community/budget-history.html"
+    {{ partial (cond (eq $.Params.city_id "surprise") "release-surprise/community/budget-history.html" "community/budget-history.html")
       (dict
         "city_id" $cityID
         "heading_level" 2

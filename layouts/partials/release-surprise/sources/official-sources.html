@@ -1,0 +1,255 @@
+{{- $sourceIDs := .source_ids | default (slice) -}}
+{{- $sourceGroups := .source_groups | default (slice) -}}
+{{- $context := .context | default "Page" -}}
+{{- $heading := .heading | default "Official Sources" -}}
+{{- $toggleLabel := .toggle_label | default "View official sources" -}}
+{{- $intro := .intro | default "These government sources support the information on this page. OWVAZ preserves an original source address even if the government later moves or removes the document." -}}
+{{- $headingID := .heading_id | default "official-sources-heading" -}}
+{{- $collapsed := true -}}
+{{- if isset . "collapsed" -}}
+  {{- $collapsed = .collapsed -}}
+{{- end -}}
+
+{{- if gt (len $sourceIDs) 0 -}}
+
+  {{- $sourceRoot := index hugo.Data "sources" -}}
+  {{- $sourceFile := index $sourceRoot "sources" -}}
+  {{- $allSources := index $sourceFile "sources" -}}
+
+  <section
+    id="official-sources"
+    class="owvaz-detail-page__sources"
+    aria-labelledby="{{ $headingID }}"
+  >
+
+    <h2 id="{{ $headingID }}">
+      {{ if and (eq (len $sourceIDs) 1) (eq $heading "Official Sources") }}Official Source{{ else }}{{ $heading }}{{ if and $collapsed (gt (len $sourceIDs) 1) }} ({{ len $sourceIDs }}){{ end }}{{ end }}
+    </h2>
+
+    {{- if $collapsed }}
+    <details class="owvaz-sources-disclosure">
+      <summary class="official-sources__toggle home-coming-soon__details">{{ $toggleLabel }}</summary>
+      <div class="owvaz-sources-disclosure__content">
+    {{- end }}
+
+    <p class="owvaz-detail-page__source-intro">
+      {{ $intro }}
+    </p>
+
+    {{- if gt (len $sourceGroups) 0 }}
+
+      <div class="owvaz-source-groups">
+
+        {{- range $group := $sourceGroups }}
+
+          {{- $groupIDs := $group.source_ids | default (slice) -}}
+
+          <details class="owvaz-source-group" name="official-source-groups">
+            <summary>
+              <span class="owvaz-source-group__label">
+                {{ $group.label }}
+              </span>
+              <span class="owvaz-source-group__count">
+                {{ len $groupIDs }}
+              </span>
+            </summary>
+
+            <div class="owvaz-source-group__content">
+
+              {{- range $groupIDs -}}
+
+                {{- $sourceID := . -}}
+                {{- $sourceMatches := where $allSources "source_id" $sourceID -}}
+
+                {{- if ne (len $sourceMatches) 1 -}}
+                  {{- errorf
+                      "%s references source %q but found %d canonical source records"
+                      $context
+                      $sourceID
+                      (len $sourceMatches)
+                  -}}
+                {{- end -}}
+
+                {{- $source := index $sourceMatches 0 -}}
+                {{- $availability := default "unchecked" $source.availability_status -}}
+
+                <article class="owvaz-source">
+
+                  <h3 class="owvaz-source__title">
+                    {{ $source.title }}
+                  </h3>
+
+                  <div class="owvaz-source__actions">
+
+                    {{- if ne $availability "unavailable" }}
+                      <a
+                        href="{{ $source.official_url | default $source.url }}"
+                        rel="external"
+                      >
+                        View original source
+                      </a>
+                    {{- else }}
+                      <span class="owvaz-source__unavailable">
+                        Original City link no longer available on the City's website
+                      </span>
+                    {{- end }}
+                      {{- if eq $availability "unavailable" }}
+                      {{- with ($source.official_url | default $source.url) }}
+                      <p class="owvaz-source__original-broken-url" style="overflow-wrap: anywhere;">
+                      Original City URL (preserved, currently unavailable):
+                      <a href="{{ . }}" rel="external nofollow">{{ . }}</a>
+                      </p>
+                      {{- end }}
+                      {{- end }}
+                    {{- with $source.replacement_url }}
+                      <a
+                        href="{{ . }}"
+                        rel="external"
+                      >
+                        Current City source
+                      </a>
+                    {{- end }}
+
+                  </div>
+
+                  {{- if eq $availability "unavailable" }}
+
+                    <p class="owvaz-source__availability">
+                      Original City link was unavailable when checked
+                      {{- with $source.availability_checked }}
+                        on
+                        <time datetime="{{ . }}">
+                          {{ time.Format "January 2, 2006" . }}
+                        </time>
+                      {{- end -}}.
+                    </p>
+
+                  {{- else if eq $availability "moved" }}
+
+                    <p class="owvaz-source__availability">
+                      The City appears to have moved this source.
+                      The original address is retained for provenance.
+                    </p>
+
+                  {{- end }}
+
+                  {{- with $source.notes }}
+                    <p class="owvaz-source__description">
+                      {{ . }}
+                    </p>
+                  {{- end }}
+
+                </article>
+
+              {{- end }}
+
+            </div>
+          </details>
+
+        {{- end }}
+
+      </div>
+
+    {{- else }}
+
+      <div class="owvaz-source-list">
+
+        {{- range $sourceIDs -}}
+
+          {{- $sourceID := . -}}
+          {{- $sourceMatches := where $allSources "source_id" $sourceID -}}
+
+          {{- if ne (len $sourceMatches) 1 -}}
+            {{- errorf
+                "%s references source %q but found %d canonical source records"
+                $context
+                $sourceID
+                (len $sourceMatches)
+            -}}
+          {{- end -}}
+
+          {{- $source := index $sourceMatches 0 -}}
+          {{- $availability := default "unchecked" $source.availability_status -}}
+
+          <article class="owvaz-source">
+
+            <h3 class="owvaz-source__title">
+              {{ $source.title }}
+            </h3>
+
+            <div class="owvaz-source__actions">
+
+              {{- if ne $availability "unavailable" }}
+                <a
+                  href="{{ $source.official_url | default $source.url }}"
+                  rel="external"
+                >
+                  View original source
+                </a>
+              {{- else }}
+                <span class="owvaz-source__unavailable">
+                  Original City link no longer available on the City's website
+                </span>
+              {{- end }}
+                {{- if eq $availability "unavailable" }}
+                {{- with ($source.official_url | default $source.url) }}
+                <p class="owvaz-source__original-broken-url" style="overflow-wrap: anywhere;">
+                Original City URL (preserved, currently unavailable):
+                <a href="{{ . }}" rel="external nofollow">{{ . }}</a>
+                </p>
+                {{- end }}
+                {{- end }}
+              {{- with $source.replacement_url }}
+                <a
+                  href="{{ . }}"
+                  rel="external"
+                >
+                  Current City source
+                </a>
+              {{- end }}
+
+            </div>
+
+            {{- if eq $availability "unavailable" }}
+
+              <p class="owvaz-source__availability">
+                Original City link was unavailable when checked
+                {{- with $source.availability_checked }}
+                  on
+                  <time datetime="{{ . }}">
+                    {{ time.Format "January 2, 2006" . }}
+                  </time>
+                {{- end -}}.
+              </p>
+
+            {{- else if eq $availability "moved" }}
+
+              <p class="owvaz-source__availability">
+                The City appears to have moved this source.
+                The original address is retained for provenance.
+              </p>
+
+            {{- end }}
+
+            {{- with $source.notes }}
+              <p class="owvaz-source__description">
+                {{ . }}
+              </p>
+            {{- end }}
+
+          </article>
+
+        {{- end }}
+
+      </div>
+
+    {{- end }}
+
+    {{- if $collapsed }}
+      </div>
+    </details>
+    {{- end }}
+
+  </section>
+
+{{- end -}}

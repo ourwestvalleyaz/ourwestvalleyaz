@@ -16,6 +16,7 @@
         content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 
   <link rel="canonical" href="{{ .Permalink }}">
+{{ if hasPrefix .RelPermalink "/communities/surprise/" }}{{ partial "site/social-meta.html" . }}{{ end }}
 
   {{ with resources.Get "css/main.css" }}
     {{ with . | minify | fingerprint }}

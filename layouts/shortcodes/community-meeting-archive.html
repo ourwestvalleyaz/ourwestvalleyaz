@@ -3,4 +3,4 @@
   {{- errorf "community-meeting-archive shortcode requires city_id" -}}
 {{- end -}}
 
-{{ partial "community/meeting-archive-by-year.html" (dict "city_id" $cityID) }}
+{{ partial (cond (eq $.Page.RelPermalink "/communities/surprise/meetings/") "release-surprise/community/meeting-archive-by-year.html" "community/meeting-archive-by-year.html") (dict "city_id" $cityID) }}

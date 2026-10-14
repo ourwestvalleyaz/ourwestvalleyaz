@@ -1,0 +1,500 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2024",
+  "status": "adopted",
+  "headline": {
+    "amount": 771076900,
+    "currency": "USD",
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "label": "Budgeted Expenditures/Expenses",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2024-adopted-budget",
+        "page": 390,
+        "section": "Schedule A",
+        "row": "Budgeted Expenditures/Expenses",
+        "column": "2024"
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2023",
+    "amount": 667815300,
+    "measure": "adopted_adjusted_budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": 103261600,
+    "percent_change": 15.463,
+    "summary": "FY2024 Budgeted Expenditures/Expenses are compared with FY2023 Adopted/Adjusted Budgeted Expenditures/Expenses using the expenditure-limitation comparison in Schedule A."
+  },
+  "uses": {
+    "measures": [
+      {
+        "amount": 771076900,
+        "currency": "USD",
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "all_funds",
+        "label": "Budgeted Expenditures/Expenses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 390,
+            "section": "Schedule A",
+            "row": "Budgeted Expenditures/Expenses",
+            "column": "2024"
+          }
+        ]
+      },
+      {
+        "amount": 110197600,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Transfers Out",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers Out",
+            "column": "2024 Budget"
+          }
+        ]
+      }
+    ],
+    "note": "FY2024 Budgeted Expenditures/Expenses are the state-form all-funds expenditure measure. Transfers Out are retained separately and are not added to the headline unless the source explicitly presents a broader total-uses measure."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "amount": 532618600,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "label": "Total Revenue",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Revenue",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 110197600,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "label": "Transfers In",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers In",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 642816200,
+        "currency": "USD",
+        "measure": "total_sources",
+        "scope": "all_funds",
+        "label": "Total Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Sources",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 433852400,
+        "currency": "USD",
+        "measure": "beginning_fund_balance_net_position",
+        "scope": "all_funds",
+        "label": "Beginning Fund Balance/(Deficit) or Net Position/(Deficit)",
+        "note": "State Schedule A accounting measure. This is not treated as recurring revenue or as equivalent to the Summary of Sources and Uses Total Sources.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 390,
+            "section": "Schedule A",
+            "row": "Beginning Fund Balance/(Deficit) or Net Position/(Deficit) at July 1",
+            "column": "2024"
+          }
+        ]
+      },
+      {
+        "amount": 34980000,
+        "currency": "USD",
+        "measure": "other_financing_sources",
+        "scope": "all_funds",
+        "label": "Other Financing Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 390,
+            "section": "Schedule A",
+            "row": "Other Financing Sources",
+            "column": "2024"
+          }
+        ]
+      },
+      {
+        "amount": 966471000,
+        "currency": "USD",
+        "measure": "total_financial_resources_available",
+        "scope": "all_funds",
+        "label": "Total Financial Resources Available",
+        "note": "State Schedule A accounting measure. It is kept distinct from the Summary of Sources and Uses Total Sources.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 390,
+            "section": "Schedule A",
+            "row": "Total Financial Resources Available",
+            "column": "2024"
+          }
+        ]
+      }
+    ],
+    "note": "FY2024 contains both Summary of Sources and Uses measures and statutory Schedule A financial-resource measures. These accounting layers are preserved separately."
+  },
+  "revenue": {
+    "measures": [
+      {
+        "amount": 532618600,
+        "currency": "USD",
+        "measure": "total_revenue",
+        "scope": "all_funds",
+        "label": "Total Revenue",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Revenue",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 126113200,
+        "currency": "USD",
+        "measure": "local_sales_tax_revenue",
+        "scope": "all_funds",
+        "label": "Local Sales Tax",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Local Sales Tax",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 116888700,
+        "currency": "USD",
+        "measure": "intergovernmental_revenue",
+        "scope": "all_funds",
+        "label": "Intergovernmental",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Intergovernmental",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 137922900,
+        "currency": "USD",
+        "measure": "charges_for_services",
+        "scope": "all_funds",
+        "label": "Charges for Services",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Charges for Services",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 124688900,
+        "currency": "USD",
+        "measure": "other_revenue",
+        "scope": "all_funds",
+        "label": "Other",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Other",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 20475100,
+        "currency": "USD",
+        "measure": "property_tax_revenue",
+        "scope": "all_funds",
+        "label": "Property Tax",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Property Tax",
+            "column": "2024 Budget"
+          }
+        ]
+      },
+      {
+        "amount": 6529800,
+        "currency": "USD",
+        "measure": "franchise_fees_and_licenses",
+        "scope": "all_funds",
+        "label": "Franchise Fees & Licenses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 41,
+            "section": "Summary of Sources and Uses",
+            "row": "Franchise Fees & Licenses",
+            "column": "2024 Budget"
+          }
+        ]
+      }
+    ]
+  },
+  "property_tax": {
+    "primary_levy": 11789000,
+    "secondary_levy": 8686100,
+    "total_levy": 20475100,
+    "primary_rate": 0.7591,
+    "secondary_rate": 0.388,
+    "combined_rate": 1.1471,
+    "note": "Schedule B reports explicit FY2024 property-tax levies and rates. Schedule A also contains boilerplate stating that the city does not levy property taxes. The explicit Schedule B values are preserved and the contradiction is not silently resolved."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 91136200,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2024-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Beginning Fund Balance",
+          "column": "FY2024"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "amount": 202790100,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2024-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Sources",
+              "column": "FY2024"
+            }
+          ]
+        },
+        {
+          "amount": 198693000,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2024-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Uses",
+              "column": "FY2024"
+            }
+          ]
+        },
+        {
+          "amount": 4097100,
+          "currency": "USD",
+          "measure": "ongoing_surplus",
+          "scope": "general_fund",
+          "label": "Ongoing Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2024-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Ongoing Surplus/(Shortfall)",
+              "column": "FY2024"
+            }
+          ]
+        }
+      ]
+    },
+    "one_time": {
+      "measures": [
+        {
+          "amount": 9711400,
+          "currency": "USD",
+          "measure": "total_one_time_sources",
+          "scope": "general_fund",
+          "label": "Total One-Time Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2024-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Sources",
+              "column": "FY2024"
+            }
+          ]
+        },
+        {
+          "amount": 35726400,
+          "currency": "USD",
+          "measure": "total_one_time_uses",
+          "scope": "general_fund",
+          "label": "Total One-Time Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2024-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Uses",
+              "column": "FY2024"
+            }
+          ]
+        },
+        {
+          "amount": -26015000,
+          "currency": "USD",
+          "measure": "one_time_surplus_shortfall",
+          "scope": "general_fund",
+          "label": "One-Time Surplus/(Shortfall)",
+          "note": "Signed accounting effect. The source presents FY2024 as a $26,015,000 shortfall.",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2024-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "One-Time Surplus/(Shortfall)",
+              "column": "FY2024"
+            }
+          ]
+        }
+      ],
+      "note": "FY2024 explicitly separates one-time sources, one-time uses, and their resulting signed surplus/(shortfall)."
+    },
+    "ending_fund_balance": {
+      "amount": 69218300,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2024-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Ending Fund Balance",
+          "column": "FY2024"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 51572100,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "definition": "Required reserve presented in the General Fund Five-Year Forecast.",
+        "accounting_treatment": "Compared with Ending Fund Balance to determine Balance Above/(Below) Reserve.",
+        "policy_context": "The FY2024 adopted budget states that the General Fund reserve equals at least three months of operational funds.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Required Reserve",
+            "column": "FY2024"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-required-reserve",
+        "label": "Balance Above/(Below) Reserve",
+        "amount": 17646200,
+        "measure": "balance_above_required_reserve",
+        "scope": "general_fund",
+        "definition": "Ending Fund Balance above the forecast Required Reserve.",
+        "accounting_treatment": "Ending Fund Balance minus Required Reserve.",
+        "policy_context": "Retained as the General Fund forecast reserve comparison rather than collapsed with other citywide reserve or contingency concepts.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2024-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Balance Above/(Below) Reserve",
+            "column": "FY2024"
+          }
+        ]
+      }
+    ],
+    "note": "The FY2024 adopted budget states that required reserves for all funds total approximately $86.3 million, including approximately $51.6 million in the General Fund. The exact General Fund forecast Required Reserve is $51,572,100."
+  },
+  "source_ids": [
+    "surprise-fy2024-adopted-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2024-adopted-budget",
+      "title": "FY2024 Adopted Budget Book",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget_book",
+      "url": "https://surpriseaz.gov/annual-budget-capital-improvements-plan",
+      "supports": [
+        "headline",
+        "prior_year_comparison",
+        "uses",
+        "sources_and_fund_balance",
+        "revenue",
+        "property_tax",
+        "general_fund"
+      ],
+      "note": "Primary comprehensive FY2024 adopted budget publication. Retained source file: Surprise-FY2024-Adopted-Budget-Book.pdf. Retained SHA256: a0e48501782e444ee99e64641d3ea914abc2f98fb697e46b16d4f812d90c8e8b."
+    }
+  ],
+  "notes": [
+    "FY2024 preserves the distinction between the Summary of Sources and Uses and statutory Schedule A accounting.",
+    "The state-form Total Financial Resources Available is not treated as recurring revenue or as the adopted expenditure headline.",
+    "Schedule A contains boilerplate stating that the City does not levy property taxes, while Schedule B explicitly reports FY2024 primary and secondary property-tax levies. The explicit tax values are retained and the source contradiction is documented."
+  ]
+}

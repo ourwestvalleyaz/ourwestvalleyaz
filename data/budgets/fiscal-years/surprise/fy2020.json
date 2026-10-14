@@ -1,0 +1,396 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2020",
+  "status": "adopted",
+  "headline": {
+    "amount": 376362400,
+    "currency": "USD",
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "label": "FY2020 expenditure budget",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2020-final-budget",
+        "page": 22,
+        "section": "Budget Overview - Budget Summary",
+        "label": "FY2020 expenditure budget",
+        "note": "The City states that its FY2020 expenditure budget is $376,362,400."
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2019",
+    "amount": 327026900,
+    "measure": "adopted_adjusted_budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": 49335500,
+    "percent_change": 15.086,
+    "summary": "FY2019 is labeled Adopted/Adjusted Budgeted Expenditure/Expenses in the state budget form."
+  },
+  "uses": {
+    "measures": [
+      {
+        "amount": 186558500,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "label": "Operating Expenses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Operating Expenses"
+          }
+        ]
+      },
+      {
+        "amount": 105822500,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "label": "Capital",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Capital"
+          }
+        ]
+      },
+      {
+        "amount": 10676200,
+        "currency": "USD",
+        "measure": "debt",
+        "scope": "all_funds",
+        "label": "Debt",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Debt"
+          }
+        ]
+      },
+      {
+        "amount": 73305200,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "label": "Contingency",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Contingency"
+          }
+        ]
+      },
+      {
+        "amount": 376362400,
+        "currency": "USD",
+        "measure": "budgeted_expenditures_expenses",
+        "scope": "all_funds",
+        "label": "Expenditure budget",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 22,
+            "section": "Budget Overview - Budget Summary",
+            "label": "Expenditure budget"
+          }
+        ]
+      },
+      {
+        "amount": 36334700,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Transfers Out",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Transfers Out"
+          }
+        ]
+      },
+      {
+        "amount": 412697100,
+        "currency": "USD",
+        "measure": "total_uses",
+        "scope": "all_funds",
+        "label": "Total Uses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Total Uses"
+          }
+        ]
+      }
+    ],
+    "note": "The $376,362,400 expenditure budget excludes interfund transfers. Adding $36,334,700 of transfers out produces $412,697,100 total uses."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "amount": 253398000,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "label": "Total Revenue",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Total Revenue"
+          }
+        ]
+      },
+      {
+        "amount": 36334700,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "label": "Transfers In",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Transfers In"
+          }
+        ]
+      },
+      {
+        "amount": 289732700,
+        "currency": "USD",
+        "measure": "total_sources",
+        "scope": "all_funds",
+        "label": "Total Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 40,
+            "section": "Summary of Sources and Uses",
+            "label": "Total Sources"
+          }
+        ]
+      },
+      {
+        "amount": 184192000,
+        "currency": "USD",
+        "measure": "beginning_fund_balance",
+        "scope": "all_funds",
+        "label": "Beginning Fund Balance",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 43,
+            "section": "Fund Balance Summary",
+            "label": "Beginning Fund Balance"
+          }
+        ]
+      }
+    ],
+    "note": "Beginning fund balance is maintained separately from recurring revenue and Total Sources."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 37470800,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "label": "Beginning Fund Balance",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2020-final-budget",
+          "page": 29,
+          "section": "Five-Year Forecasts - General Fund",
+          "label": "Beginning Fund Balance"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "amount": 123254800,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "label": "Total Ongoing Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2020-final-budget",
+              "page": 29,
+              "section": "Five-Year Forecasts - General Fund",
+              "label": "Total Ongoing Sources"
+            }
+          ]
+        },
+        {
+          "amount": 118553700,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "label": "Total Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2020-final-budget",
+              "page": 29,
+              "section": "Five-Year Forecasts - General Fund",
+              "label": "Total Uses"
+            }
+          ]
+        },
+        {
+          "amount": 4701100,
+          "currency": "USD",
+          "measure": "ongoing_surplus_shortfall",
+          "scope": "general_fund",
+          "label": "Ongoing Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2020-final-budget",
+              "page": 29,
+              "section": "Five-Year Forecasts - General Fund",
+              "label": "Ongoing Surplus/(Shortfall)"
+            }
+          ]
+        }
+      ],
+      "note": "Ongoing surplus equals ongoing sources minus ongoing uses."
+    },
+    "one_time": {
+      "measures": [
+        {
+          "amount": 1635700,
+          "currency": "USD",
+          "measure": "transfers_out",
+          "scope": "general_fund",
+          "label": "Transfers Out",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2020-final-budget",
+              "page": 29,
+              "section": "Five-Year Forecasts - General Fund",
+              "label": "Transfers Out"
+            }
+          ]
+        },
+        {
+          "amount": 1427800,
+          "currency": "USD",
+          "measure": "other",
+          "scope": "general_fund",
+          "label": "Other",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2020-final-budget",
+              "page": 29,
+              "section": "Five-Year Forecasts - General Fund",
+              "label": "Other"
+            }
+          ]
+        },
+        {
+          "amount": 3063500,
+          "currency": "USD",
+          "measure": "total_one_time_change",
+          "scope": "general_fund",
+          "label": "Total One-Time Change",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2020-final-budget",
+              "page": 29,
+              "section": "Five-Year Forecasts - General Fund",
+              "label": "Total One-Time Change",
+              "note": "Presented as a positive amount and subtracted in H=(A+D-G)."
+            }
+          ]
+        }
+      ],
+      "note": "The source presents Total One-Time Change as a positive amount that is subtracted when calculating ending fund balance."
+    },
+    "ending_fund_balance": {
+      "amount": 39108400,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "label": "Ending Fund Balance",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2020-final-budget",
+          "page": 29,
+          "section": "Five-Year Forecasts - General Fund",
+          "label": "Ending Fund Balance"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 21690500,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 29,
+            "section": "Five-Year Forecasts - General Fund",
+            "label": "Required Reserve"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-below-reserve",
+        "label": "Balance Above/(Below) Reserve",
+        "amount": 17417900,
+        "measure": "balance_above_below_reserve",
+        "scope": "general_fund",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2020-final-budget",
+            "page": 29,
+            "section": "Five-Year Forecasts - General Fund",
+            "label": "Balance Above/(Below) Reserve"
+          }
+        ]
+      }
+    ],
+    "note": "Values are from the FY2020 column of the General Fund Five-Year Forecast."
+  },
+  "source_ids": [
+    "surprise-fy2020-final-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2020-final-budget",
+      "title": "FY2020 Final Budget Book",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget",
+      "url": "https://content.civicplus.com/api/assets/az-surprise/5e7d38ea-506e-4edd-86ce-ce800998c282",
+      "supports": [
+        "FY2020 expenditure budget",
+        "FY2019 comparison",
+        "citywide sources and uses",
+        "fund balance summary",
+        "General Fund five-year forecast"
+      ]
+    }
+  ],
+  "notes": [
+    "Surprise identifies $376,362,400 as its FY2020 expenditure budget and $412,697,100 as total uses including transfers.",
+    "The FY2019 comparison is explicitly labeled Adopted/Adjusted Budgeted Expenditure/Expenses.",
+    "Fund balance is not treated as recurring revenue."
+  ]
+}

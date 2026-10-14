@@ -1,0 +1,33 @@
+{{- $groups := .Page.Params.surveillance_summary | default (slice) -}}
+{{- if gt (len $groups) 0 }}
+<section class="surveillance-glance" aria-labelledby="at-a-glance">
+  <div class="surveillance-glance__heading">
+    <p class="eyebrow">At a glance</p>
+    <h2 id="at-a-glance">What the records show</h2>
+  </div>
+
+  {{- range $index, $group := $groups }}
+  <section class="surveillance-glance__section" aria-labelledby="summary-group-{{ $index }}">
+    <div class="surveillance-glance__section-heading">
+      <p class="eyebrow">{{ $group.category }}</p>
+      <h3 id="summary-group-{{ $index }}">{{ $group.heading }}</h3>
+    </div>
+
+    <dl class="surveillance-glance__measures">
+      {{- range $group.measures }}
+      <div>
+        <dt>{{ .label }}</dt>
+        <dd>{{ .value }}</dd>
+      </div>
+      {{- end }}
+    </dl>
+  </section>
+  {{- end }}
+
+  <p class="surveillance-glance__note">
+    Historical City-reported equipment and crowdsourced
+    geographic observations are separate measures.
+    Neither establishes the current operating inventory.
+  </p>
+</section>
+{{- end }}

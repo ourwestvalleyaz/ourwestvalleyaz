@@ -1,0 +1,448 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2021",
+  "status": "adopted",
+  "headline": {
+    "amount": 375296800,
+    "currency": "USD",
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "label": "FY2021 expenditure budget",
+    "note": "The City describes this amount as the FY2021 expenditure budget. Schedule A identifies the same amount as total Budgeted Expenditures/Expenses for all funds.",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2021-final-budget",
+        "page": 22,
+        "section": "Budget Summary",
+        "label": "FY2021 expenditure budget"
+      },
+      {
+        "source_id": "surprise-fy2021-final-budget",
+        "page": 362,
+        "section": "Schedule A",
+        "row": "2021 Budgeted Expenditures/Expenses",
+        "column": "Total All Funds"
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2020",
+    "amount": 376362400,
+    "measure": "adopted_adjusted_budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": -1065600,
+    "percent_change": -0.283,
+    "summary": "FY2021 Budgeted Expenditures/Expenses are $1,065,600 lower than FY2020 Adopted/Adjusted Budgeted Expenditures/Expenses, a decrease of approximately 0.283%."
+  },
+  "uses": {
+    "measures": [
+      {
+        "label": "Operating Expenses",
+        "amount": 191887400,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Operating Expenses",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Capital",
+        "amount": 97864300,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Capital",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Debt",
+        "amount": 11239000,
+        "currency": "USD",
+        "measure": "debt",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Debt",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Contingency",
+        "amount": 74306100,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Contingency",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Transfers Out",
+        "amount": 40163600,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers Out",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Total Uses",
+        "amount": 415460400,
+        "currency": "USD",
+        "measure": "total_uses",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 22,
+            "section": "Budget Summary",
+            "label": "total uses for FY2021"
+          },
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Uses",
+            "column": "2021 Budget"
+          }
+        ]
+      }
+    ],
+    "note": "Total uses include transfers out. Budgeted Expenditures/Expenses exclude transfers out."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "label": "Revenue",
+        "amount": 287857200,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Revenue",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Transfers In",
+        "amount": 40163600,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers In",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Total Sources",
+        "amount": 328020800,
+        "currency": "USD",
+        "measure": "total_sources",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 34,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Sources",
+            "column": "2021 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Fund Balance/Net Position at July 1",
+        "amount": 139415100,
+        "currency": "USD",
+        "measure": "beginning_fund_balance_net_position",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 362,
+            "section": "Schedule A",
+            "row": "2021 Fund Balance/Net Position at July 1",
+            "column": "Total All Funds"
+          }
+        ]
+      },
+      {
+        "label": "Reduction in Fund Balance",
+        "amount": 87500000,
+        "currency": "USD",
+        "measure": "fund_balance_reduction",
+        "scope": "all_funds",
+        "note": "Budget Summary narrative identifies approximately $87.5 million of beginning fund balance as being used for FY2021 budgeted uses.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 23,
+            "section": "Budget Summary",
+            "label": "reduction in fund balance"
+          }
+        ]
+      }
+    ],
+    "note": "Fund balance is presented separately from recurring revenue and operating sources. The City states that fund balances are not a recurring revenue source."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 45374100,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2021-final-budget",
+          "page": 27,
+          "section": "Five-Year Forecasts",
+          "row": "Beginning Fund Balance",
+          "column": "FY2021"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "label": "Total Ongoing Sources",
+          "amount": 123451900,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Total Ongoing Sources",
+              "column": "FY2021"
+            }
+          ]
+        },
+        {
+          "label": "Total Uses",
+          "amount": 117980100,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Total Uses",
+              "column": "FY2021"
+            }
+          ]
+        },
+        {
+          "label": "Ongoing Surplus/(Shortfall)",
+          "amount": 5471800,
+          "currency": "USD",
+          "measure": "ongoing_surplus_shortfall",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Ongoing Surplus/(Shortfall)",
+              "column": "FY2021"
+            }
+          ]
+        }
+      ]
+    },
+    "one_time": {
+      "measures": [
+        {
+          "label": "Personnel/Supplies/Services",
+          "amount": -191100,
+          "currency": "USD",
+          "measure": "one_time_effect",
+          "scope": "general_fund",
+          "note": "The source presents this as a negative amount because personnel will be paid from grant money.",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Personnel/Supplies/Services",
+              "column": "FY2021"
+            }
+          ]
+        },
+        {
+          "label": "Contingency",
+          "amount": 5002100,
+          "currency": "USD",
+          "measure": "one_time_use",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Contingency",
+              "column": "FY2021"
+            }
+          ]
+        },
+        {
+          "label": "Other - Transfers Out",
+          "amount": 2593900,
+          "currency": "USD",
+          "measure": "one_time_use",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Other - Transfers Out",
+              "column": "FY2021"
+            }
+          ]
+        },
+        {
+          "label": "Total One-Time Change",
+          "amount": 7404900,
+          "currency": "USD",
+          "measure": "total_one_time_change",
+          "scope": "general_fund",
+          "note": "The source equation is H = (E + F + G). This amount is subtracted when calculating ending fund balance.",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2021-final-budget",
+              "page": 27,
+              "section": "Five-Year Forecasts",
+              "row": "Total One-Time Change",
+              "column": "FY2021"
+            }
+          ]
+        }
+      ]
+    },
+    "ending_fund_balance": {
+      "amount": 43441000,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2021-final-budget",
+          "page": 27,
+          "section": "Five-Year Forecasts",
+          "row": "Ending Fund Balance",
+          "column": "FY2021"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 19336000,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "definition": "Reserve equal to two months of budgeted personnel, supplies, and services for the General Fund, Ground Ambulance Fund, and Highway User Revenue Fund.",
+        "accounting_treatment": "The FY2021 emergency reserve is carried in the one-time contingency line and is not included in the Minimum Required Fund Balance line.",
+        "policy_context": "The source distinguishes the required reserve from the emergency reserve for FY2021.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 27,
+            "section": "Five-Year Forecasts",
+            "row": "Required Reserve",
+            "column": "FY2021"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-below-reserve",
+        "label": "Balance Above/(Below) Reserve",
+        "amount": 24105000,
+        "measure": "balance_above_below_reserve",
+        "scope": "general_fund",
+        "definition": "Ending Fund Balance less Required Reserve.",
+        "accounting_treatment": "Calculated by the source as K = (I - J).",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2021-final-budget",
+            "page": 27,
+            "section": "Five-Year Forecasts",
+            "row": "Balance Above/(Below) Reserve",
+            "column": "FY2021"
+          }
+        ]
+      }
+    ],
+    "note": "FY2021 has distinct required-reserve and emergency-reserve treatment. The emergency reserve is included in one-time contingency and excluded from the Minimum Required Fund Balance line."
+  },
+  "source_ids": [
+    "surprise-fy2021-final-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2021-final-budget",
+      "title": "FY2021 Final Budget Book",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget",
+      "url": "https://content.civicplus.com/api/assets/az-surprise/1e84c437-124e-4ca9-8864-be9b30bcb16a?cache=1800",
+      "supports": [
+        "FY2021 expenditure budget",
+        "FY2020 comparison",
+        "citywide sources and uses",
+        "fund balance summary",
+        "General Fund five-year forecast"
+      ]
+    }
+  ],
+  "notes": [
+    "The FY2021 headline is Budgeted Expenditures/Expenses, not Total Uses. Transfers out are included in Total Uses but excluded from the expenditure-budget headline.",
+    "Fund balance is kept separate from recurring revenue and operating sources.",
+    "FY2021 emergency reserve treatment differs from the Minimum Required Fund Balance presentation and is preserved explicitly."
+  ]
+}

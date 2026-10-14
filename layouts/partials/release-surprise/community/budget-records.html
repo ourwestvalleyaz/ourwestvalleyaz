@@ -1,0 +1,91 @@
+{{- /*
+Normalize canonical fiscal-year records for community budget
+summary/history presentation.
+
+Input:
+  city_id
+
+Output:
+  slice of presentation records ordered by fiscal year.
+
+The canonical fiscal-year files remain authoritative. This partial
+does not maintain a second copy of budget amounts.
+*/ -}}
+
+{{- $cityID := .city_id -}}
+{{- $records := slice -}}
+{{- $fiscalYearRoot := index hugo.Data.budgets "fiscal-years" -}}
+
+{{- with $fiscalYearRoot -}}
+  {{- $cityFiscalYears := index . $cityID -}}
+
+  {{- with $cityFiscalYears -}}
+    {{- range $key, $fy := . -}}
+
+      {{- if eq $fy.status "adopted" -}}
+
+        {{- $amount := 0 -}}
+        {{- $currency := "USD" -}}
+        {{- $measure := "" -}}
+        {{- $scope := "" -}}
+
+        {{- with $fy.adopted_budget -}}
+          {{- $amount = int .amount -}}
+          {{- $currency = default "USD" .currency -}}
+          {{- $measure = default "adopted_budget" .measure -}}
+          {{- $scope = default "all_funds" .scope -}}
+        {{- else -}}
+          {{- with $fy.headline -}}
+            {{- $amount = int .amount -}}
+            {{- $currency = default "USD" .currency -}}
+            {{- $measure = .measure -}}
+            {{- $scope = .scope -}}
+          {{- end -}}
+        {{- end -}}
+
+        {{- if and (gt $amount 0) (eq $scope "all_funds") -}}
+
+          {{- $row := dict
+            "city_id" $cityID
+            "fiscal_year" $fy.fiscal_year
+            "status" $fy.status
+            "metric" "total_budget"
+            "metric_label" "Total budget"
+            "amount" $amount
+            "currency" $currency
+            "measure" $measure
+            "scope" $scope
+            "verification_state" "verified"
+          -}}
+
+          {{- with $fy.fiscal_period -}}
+            {{- with .start -}}
+              {{- $row = merge $row
+                (dict "fiscal_period_start" .)
+              -}}
+            {{- end -}}
+
+            {{- with .end -}}
+              {{- $row = merge $row
+                (dict "fiscal_period_end" .)
+              -}}
+            {{- end -}}
+          {{- end -}}
+
+          {{- with $fy.adoption -}}
+            {{- with .date -}}
+              {{- $row = merge $row
+                (dict "adoption_date" .)
+              -}}
+            {{- end -}}
+          {{- end -}}
+
+          {{- $records = $records | append $row -}}
+
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return (sort $records "fiscal_year" "asc") -}}

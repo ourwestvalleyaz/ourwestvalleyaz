@@ -719,6 +719,194 @@
       "source_ids": [
         "litchfield-park-special-events"
       ]
+    },
+    {
+      "record_id": "surprise-service-utility-finder",
+      "city_id": "surprise",
+      "category": "utilities",
+      "title": "Find Services for Your Address",
+      "summary": "Enter a Surprise address to find important property-related service and utility information.",
+      "action_label": "Find address services",
+      "action_url": "https://surpriseaz.gov/838/My-Surprise-Address",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-service-utility-finder"
+      ],
+      "priority": 10
+    },
+    {
+      "record_id": "surprise-utility-billing",
+      "city_id": "surprise",
+      "category": "utilities",
+      "title": "Utility Billing & Rates",
+      "summary": "City utility billing, rates and account information for customers served by the City.",
+      "action_label": "Utility billing",
+      "action_url": "https://surpriseaz.gov/utility-billing-rates",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-utility-billing"
+      ],
+      "note": "Use the address-based service finder if you are unsure which utility provider serves your property.",
+      "priority": 20
+    },
+    {
+      "record_id": "surprise-start-stop-utilities",
+      "city_id": "surprise",
+      "category": "utilities",
+      "title": "Start or Stop City Utility Service",
+      "summary": "Start or stop applicable City of Surprise utility services for an address served by the City.",
+      "action_label": "Start / stop utilities",
+      "action_url": "https://surpriseaz.gov/1209/Start-Stop-Utilities",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-start-stop-utilities"
+      ],
+      "note": "City utility service does not necessarily cover every Surprise address.",
+      "priority": 30
+    },
+    {
+      "record_id": "surprise-trash-recycling",
+      "city_id": "surprise",
+      "category": "trash-recycling",
+      "title": "Trash, Recycling & Bulk Trash",
+      "summary": "Collection schedules, recycling, bulk trash, household hazardous waste and other sanitation services.",
+      "action_label": "Trash & recycling",
+      "action_url": "https://surpriseaz.gov/trash-recycling",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-trash-recycling"
+      ],
+      "note": "Some sanitation services apply specifically to residents serviced by the City's Sanitation Department.",
+      "priority": 60
+    },
+    {
+      "record_id": "surprise-service-request",
+      "city_id": "surprise",
+      "category": "report-a-problem",
+      "title": "Report a City Service Problem",
+      "summary": "Use the City's service-request resource for non-emergency City service issues.",
+      "action_label": "Request City service",
+      "action_url": "https://surpriseaz.gov/880/Service-Requests-My-Surprise-App",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-service-requests"
+      ],
+      "note": "Do not use a routine service request for emergencies.",
+      "priority": 70
+    },
+    {
+      "record_id": "surprise-meeting-agendas-media",
+      "city_id": "surprise",
+      "category": "city-meetings",
+      "title": "City Meetings, Agendas & Minutes",
+      "summary": "Find City Council, board and commission agendas, minutes and available meeting media.",
+      "action_label": "Agendas & minutes",
+      "action_url": "https://surpriseaz.gov/meetings-agendas-minutes",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-meeting-agendas-media"
+      ],
+      "priority": 90
+    },
+    {
+      "record_id": "surprise-police-non-emergency",
+      "city_id": "surprise",
+      "category": "safety",
+      "title": "Police & Non-Emergency Information",
+      "summary": "Find Surprise Police Department contact and non-emergency information.",
+      "action_label": "Police information",
+      "action_url": "https://surpriseaz.gov/useful-numbers",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-police-non-emergency"
+      ],
+      "note": "For emergencies, call 911.",
+      "priority": 160
+    },
+    {
+      "record_id": "surprise-find-water-provider",
+      "city_id": "surprise",
+      "category": "water",
+      "title": "Find Your Drinking Water Provider",
+      "summary": "Determine the drinking-water provider serving your address and access City drinking-water resources.",
+      "action_label": "Find water provider",
+      "action_url": "https://surpriseaz.gov/water-resource-management",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-water-resource-management"
+      ],
+      "note": "The City of Surprise is not the drinking-water provider for every Surprise address.",
+      "priority": 180
+    },
+    {
+      "record_id": "surprise-water-resources",
+      "city_id": "surprise",
+      "category": "water",
+      "title": "Water Resources & Conservation",
+      "summary": "Water quality, conservation, wastewater, drought preparedness and water-resource information.",
+      "action_label": "Water resources",
+      "action_url": "https://surpriseaz.gov/water-resource-management",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-water-resource-management"
+      ],
+      "priority": 190
+    },
+    {
+      "record_id": "surprise-transportation-resources",
+      "city_id": "surprise",
+      "category": "transportation",
+      "title": "Transportation & Traffic",
+      "summary": "Find public transit, road restrictions, transportation projects, Park and Ride and related resources.",
+      "action_label": "Transportation resources",
+      "action_url": "https://surpriseaz.gov/transportation-resources",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-transportation-resources"
+      ],
+      "priority": 210
+    },
+    {
+      "record_id": "surprise-parks-recreation",
+      "city_id": "surprise",
+      "category": "parks-community",
+      "title": "Parks & Recreation",
+      "summary": "Parks, facilities, recreation programs, aquatics, sports and community activities.",
+      "action_label": "Parks & recreation",
+      "action_url": "https://surpriseaz.gov/parks-recreation",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-parks-recreation"
+      ],
+      "priority": 240
+    },
+    {
+      "record_id": "surprise-parks-calendar",
+      "city_id": "surprise",
+      "category": "parks-community",
+      "title": "Parks & Recreation Calendar",
+      "summary": "Find upcoming City parks, recreation and community activities.",
+      "action_label": "Recreation calendar",
+      "action_url": "https://surpriseaz.gov/1164/Parks-Recreation-Calendar",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-parks-recreation-calendar"
+      ],
+      "priority": 250
+    },
+    {
+      "record_id": "surprise-resident-services",
+      "city_id": "surprise",
+      "category": "city-services",
+      "title": "Resident Services",
+      "summary": "Browse City resources for neighborhoods, courts, public safety, assistance programs, libraries, transportation and other services.",
+      "action_label": "Resident services",
+      "action_url": "https://surpriseaz.gov/residents",
+      "provider": "City of Surprise",
+      "source_ids": [
+        "surprise-residents"
+      ],
+      "priority": 280
     }
   ]
 }

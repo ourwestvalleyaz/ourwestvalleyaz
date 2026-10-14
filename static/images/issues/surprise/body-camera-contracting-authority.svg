@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="730" viewBox="0 0 960 730" role="img" aria-labelledby="chart-title chart-desc">
+<title id="chart-title">City of Surprise budget contracting-authority history</title>
+<desc id="chart-desc">FY2020 $150,000; FY2021 $350,000; FY2022 $500,000; FY2023 $750,000; FY2024 $750,000; FY2025 $920,000; FY2026 $1,012,000. FY2027 $1,500,000 combines body cameras, Tasers and UAS equipment. Listed authority is not spending.</desc>
+<rect width="960" height="730" rx="16" fill="#faf7f1"/>
+<text x="38" y="50" font-size="31" font-weight="700" fill="#65442f" font-family="Noto Sans Display,Arial,sans-serif">Budget-listed contracting authority</text>
+<text x="38" y="82" font-size="22" fill="#60574e" font-family="Noto Sans Display,Arial,sans-serif">Amounts are authority, not verified spending</text>
+<g stroke="#dfd2c3" stroke-width="1">
+<line x1="170" y1="113" x2="170" y2="582"/>
+<line x1="370" y1="113" x2="370" y2="582"/>
+<line x1="570" y1="113" x2="570" y2="582"/>
+<line x1="770" y1="113" x2="770" y2="582"/>
+</g>
+<text x="38" y="153" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2020</text>
+<rect x="170" y="130" width="60" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="154" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$0.15m</text>
+<text x="38" y="208" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2021</text>
+<rect x="170" y="185" width="140" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="209" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$0.35m</text>
+<text x="38" y="263" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2022</text>
+<rect x="170" y="240" width="200" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="264" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$0.50m</text>
+<text x="38" y="318" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2023</text>
+<rect x="170" y="295" width="300" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="319" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$0.75m</text>
+<text x="38" y="373" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2024</text>
+<rect x="170" y="350" width="300" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="374" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$0.75m</text>
+<text x="38" y="428" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2025</text>
+<rect x="170" y="405" width="368" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="429" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$0.92m</text>
+<text x="38" y="483" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2026</text>
+<rect x="170" y="460" width="405" height="30" rx="4" fill="#70492f"/>
+<text x="790" y="484" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$1.012m</text>
+<text x="38" y="538" font-size="26" font-weight="700" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">FY2027</text>
+<rect x="170" y="515" width="600" height="30" rx="4" fill="#e9d6c2" stroke="#70492f" stroke-width="3" stroke-dasharray="7 4"/>
+<text x="790" y="539" font-size="25" fill="#443b34" font-family="Noto Sans Display,Arial,sans-serif">$1.50m *</text>
+<g font-size="23" fill="#60574e" font-family="Noto Sans Display,Arial,sans-serif">
+<text x="170" y="612" text-anchor="middle">$0</text>
+<text x="370" y="612" text-anchor="middle">$0.5m</text>
+<text x="570" y="612" text-anchor="middle">$1.0m</text>
+<text x="770" y="612" text-anchor="middle">$1.5m</text>
+</g>
+<text x="38" y="659" font-size="22" font-weight="700" fill="#5b4533" font-family="Noto Sans Display,Arial,sans-serif">* FY2027 is a combined equipment category.</text>
+<text x="38" y="692" font-size="21" fill="#5b4533" font-family="Noto Sans Display,Arial,sans-serif">Includes body cameras, Tasers and UAS equipment.</text>
+</svg>

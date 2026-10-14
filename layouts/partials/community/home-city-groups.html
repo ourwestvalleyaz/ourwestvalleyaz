@@ -1,0 +1,35 @@
+{{- $groups := partial "community/city-status-groups.html" . -}}
+<div class="home-city-groups">
+  {{- range $group := (slice
+    (dict "label" "Available" "items" $groups.available)
+    (dict "label" "In Progress" "items" $groups.in_progress)
+    (dict "label" "Coming Soon" "items" $groups.coming_soon)
+  ) -}}
+  <section class="home-city-group">
+    <h3 class="home-city-group__label">{{ $group.label }}</h3>
+    <ul class="community-list home-city-picker home-city-picker--available">
+      {{- range $city := $group.items -}}
+        {{- if $city.published -}}
+          {{- $page := site.GetPage (printf "/communities/%s" $city.slug) -}}
+          {{- if not $page -}}
+            {{- errorf "Published city page missing" -}}
+          {{- end -}}
+          <li class="home-city-picker__item home-city-picker__item--available">
+            <a class="home-city-picker__link" href="{{ $page.RelPermalink }}">
+              <span class="home-city-picker__city">{{ $city.name }}</span>
+              <span class="home-city-picker__status">View city page</span>
+            </a>
+          </li>
+        {{- else -}}
+          <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
+            <span class="home-city-picker__link">
+              <span class="home-city-picker__city">{{ $city.name }}</span>
+              <span class="home-city-picker__status">{{ $group.label }}</span>
+            </span>
+          </li>
+        {{- end -}}
+      {{- end -}}
+    </ul>
+  </section>
+  {{- end -}}
+</div>

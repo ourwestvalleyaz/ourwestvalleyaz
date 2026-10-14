@@ -1,0 +1,490 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2027",
+  "status": "adopted",
+  "headline": {
+    "amount": 966639200,
+    "currency": "USD",
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "label": "Budgeted Expenditures/Expenses",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2027-adopted-budget",
+        "page": 352,
+        "section": "Schedule A",
+        "row": "Budgeted expenditures/expenses",
+        "note": "City of Surprise FY2027 Schedule A, Total All Funds."
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2026",
+    "amount": 925744000,
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": 40895200,
+    "percent_change": 4.41755,
+    "summary": "FY2027 Budgeted Expenditures/Expenses are $40,895,200 higher than FY2026, an increase of approximately 4.42%."
+  },
+  "uses": {
+    "measures": [
+      {
+        "amount": 443379900,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "label": "Operating Expenses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Operating Expenses",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 46276900,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Transfers Out",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers Out",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 489656800,
+        "currency": "USD",
+        "measure": "operating_uses",
+        "scope": "all_funds",
+        "label": "Operating Uses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "note": "Derived from exact source rows: $443,379,900 Operating Expenses plus $46,276,900 Transfers Out."
+          }
+        ],
+        "note": "Operating Expenses plus Transfers Out."
+      },
+      {
+        "amount": 433760300,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "label": "Capital",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Capital",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 11510300,
+        "currency": "USD",
+        "measure": "debt",
+        "scope": "all_funds",
+        "label": "Debt",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Debt",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 77988700,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "label": "Contingency",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Contingency",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 1012916100,
+        "currency": "USD",
+        "measure": "total_identified_uses",
+        "scope": "all_funds",
+        "label": "Total Uses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Grand Total",
+            "table": "All Funds"
+          }
+        ]
+      }
+    ],
+    "note": "Transfers Out are included in Total Uses but are not part of the Schedule A Budgeted Expenditures/Expenses headline. Do not add Transfers Out twice when using Operating Uses."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "amount": 635399500,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "label": "Revenue",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Revenue",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 46276900,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "label": "Transfers In",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers In",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 681676400,
+        "currency": "USD",
+        "measure": "operating_sources",
+        "scope": "all_funds",
+        "label": "Total Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Sources",
+            "table": "All Funds"
+          }
+        ]
+      },
+      {
+        "amount": 331239700,
+        "currency": "USD",
+        "measure": "fund_balance_reduction",
+        "scope": "all_funds",
+        "label": "Change in Fund Balance",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 29,
+            "section": "Summary of Sources and Uses",
+            "table": "All Funds",
+            "note": "Exact amount derived as Total Uses $1,012,916,100 minus Total Sources $681,676,400."
+          }
+        ],
+        "note": "Exact amount required to reconcile Total Sources of $681,676,400 to Total Uses of $1,012,916,100."
+      },
+      {
+        "amount": 587597600,
+        "currency": "USD",
+        "measure": "beginning_fund_balance_net_position",
+        "scope": "all_funds",
+        "label": "Beginning Fund Balance/(Deficit) or Net Position/(Deficit)",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 352,
+            "section": "Schedule A",
+            "row": "Beginning fund balance/(deficit) or net position/(deficit) at July 1"
+          }
+        ]
+      },
+      {
+        "amount": 77527200,
+        "currency": "USD",
+        "measure": "other_financing_sources",
+        "scope": "all_funds",
+        "label": "Other Financing Sources",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 352,
+            "section": "Schedule A",
+            "row": "Other financing sources"
+          }
+        ]
+      },
+      {
+        "amount": 1222997100,
+        "currency": "USD",
+        "measure": "total_financial_resources_available",
+        "scope": "all_funds",
+        "label": "Total Financial Resources Available",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 352,
+            "section": "Schedule A",
+            "row": "Total financial resources available"
+          }
+        ]
+      }
+    ],
+    "note": "The Summary of Sources and Uses and Schedule A are distinct accounting presentations. Beginning fund balance/net position and Total Financial Resources Available should not be treated as recurring revenue."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 99674700,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2027-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Beginning Fund Balance",
+          "column": "FY2027"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "amount": 257946600,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "label": "Total Ongoing Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2027-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Sources",
+              "column": "FY2027"
+            }
+          ]
+        },
+        {
+          "amount": 257946600,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "label": "Total Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2027-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Uses",
+              "column": "FY2027"
+            }
+          ]
+        },
+        {
+          "amount": 0,
+          "currency": "USD",
+          "measure": "ongoing_surplus",
+          "scope": "general_fund",
+          "label": "Ongoing Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2027-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Ongoing Surplus/(Shortfall)",
+              "column": "FY2027"
+            }
+          ]
+        }
+      ],
+      "note": "FY2027 General Fund ongoing sources equal ongoing uses."
+    },
+    "one_time": {
+      "measures": [
+        {
+          "amount": 12457200,
+          "currency": "USD",
+          "measure": "total_one_time_sources",
+          "scope": "general_fund",
+          "label": "Total One-Time Sources",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2027-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Sources",
+              "column": "FY2027"
+            }
+          ]
+        },
+        {
+          "amount": 24948100,
+          "currency": "USD",
+          "measure": "total_one_time_uses",
+          "scope": "general_fund",
+          "label": "Total One-Time Uses",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2027-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Uses",
+              "column": "FY2027"
+            }
+          ]
+        },
+        {
+          "amount": -12490900,
+          "currency": "USD",
+          "measure": "one_time_surplus_shortfall",
+          "scope": "general_fund",
+          "label": "One-Time Surplus/(Shortfall)",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2027-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "One-Time Surplus/(Shortfall)",
+              "column": "FY2027"
+            }
+          ]
+        }
+      ],
+      "note": "The source presents the FY2027 one-time result as a $12,490,900 shortfall."
+    },
+    "ending_fund_balance": {
+      "amount": 87183800,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2027-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Ending Fund Balance",
+          "column": "FY2027"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 69408300,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "definition": "Required reserve presented in the General Fund Five-Year Forecast.",
+        "accounting_treatment": "Compared with Ending Fund Balance to determine Balance Above/(Below) Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Required Reserve",
+            "column": "FY2027"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-required-reserve",
+        "label": "Balance Above/(Below) Reserve",
+        "amount": 17775500,
+        "measure": "balance_above_required_reserve",
+        "scope": "general_fund",
+        "definition": "Ending Fund Balance above the forecast Required Reserve.",
+        "accounting_treatment": "Ending Fund Balance minus Required Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2027-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Balance Above/(Below) Reserve",
+            "column": "FY2027"
+          }
+        ]
+      }
+    ],
+    "note": "General Fund forecast values are preserved as their own accounting layer and are not collapsed with citywide fund-balance or contingency measures."
+  },
+  "source_ids": [
+    "surprise-fy2027-adopted-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2027-adopted-budget",
+      "title": "FY2027 Adopted Budget - City of Surprise",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget",
+      "url": "https://surpriseaz.gov/annual-budget-capital-improvements-plan",
+      "supports": [
+        "headline",
+        "prior_year_comparison",
+        "uses",
+        "sources_and_fund_balance",
+        "general_fund",
+        "property_tax"
+      ],
+      "note": "Retained official City of Surprise FY2027 adopted budget. Verified retained PDF SHA256: 808ea306398f6bfbac2ce063f46e8300bb11ef6ff5f421a8e14f463f6b98d6d6. The document's visible content identifies FY2027, while embedded PDF metadata contains an FY2026 title. The discrepancy is preserved as source provenance and does not alter the document's FY2027 identity."
+    }
+  ],
+  "notes": [
+    "FY2027 Budgeted Expenditures/Expenses are $966,639,200. Transfers Out of $46,276,900 are separate in the Summary of Sources and Uses.",
+    "The Summary of Sources and Uses reports Total Uses of $1,012,916,100 and Total Sources of $681,676,400. The exact difference is $331,239,700 of change/reduction in fund balance.",
+    "Schedule A is a distinct statutory financial-resource presentation and reports $1,222,997,100 in Total Financial Resources Available.",
+    "Schedule A contains property-tax boilerplate that conflicts with its own levy rows and the included Schedule B. The discrepancy is preserved.",
+    "The retained FY2027 adopted-budget PDF has embedded metadata referring to Fiscal Year 2026, while the visible document content, Schedule A, Schedule B, and adopted-budget figures identify Fiscal Year 2027. The metadata anomaly is preserved rather than silently corrected."
+  ],
+  "property_tax": {
+    "fiscal_year": "FY2027",
+    "presentation": "citywide_property_tax",
+    "maximum_allowable_primary_levy": 15846425,
+    "primary_levy": 11490400,
+    "secondary_levy": 9614600,
+    "total_levy": 21105000,
+    "primary_rate": 0.5534,
+    "secondary_rate": 0.388,
+    "combined_rate": 0.9414,
+    "rate_basis": "per $100 assessed value",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2027-adopted-budget",
+        "page": 353,
+        "section": "Schedule B",
+        "table": "Tax levy and tax rate information"
+      }
+    ],
+    "note": "Schedule A contains boilerplate stating that the city does not levy property taxes and that Schedule B is omitted. This conflicts with the levy rows in Schedule A and the included City of Surprise Schedule B. Both source presentations are preserved rather than silently corrected."
+  }
+}

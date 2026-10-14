@@ -1,0 +1,97 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{ with $budget.property_tax }}
+
+      <section
+        class="budget-year-section"
+        aria-labelledby="property-tax"
+      >
+
+        <div class="budget-year-section__heading">
+          <p class="eyebrow">Property tax</p>
+          <h2 id="property-tax">Property tax</h2>
+        </div>
+
+        <dl class="budget-year-measures">
+
+          {{ with .maximum_allowable_primary_levy }}
+            {{- $value := . -}}
+            {{- if reflect.IsMap . -}}
+              {{- $value = .amount -}}
+            {{- end -}}
+            <div>
+              <dt>Maximum allowable primary levy</dt>
+              <dd>${{ $value | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .primary_levy }}
+            {{- $value := . -}}
+            {{- if reflect.IsMap . -}}
+              {{- $value = .amount -}}
+            {{- end -}}
+            <div>
+              <dt>Primary levy</dt>
+              <dd>${{ $value | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .secondary_levy }}
+            {{- $value := . -}}
+            {{- if reflect.IsMap . -}}
+              {{- $value = .amount -}}
+            {{- end -}}
+            <div>
+              <dt>Secondary levy</dt>
+              <dd>${{ $value | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .total_levy }}
+            {{- $value := . -}}
+            {{- if reflect.IsMap . -}}
+              {{- $value = .amount -}}
+            {{- end -}}
+            <div>
+              <dt>Total levy</dt>
+              <dd>${{ $value | lang.FormatNumber 0 }}</dd>
+            </div>
+          {{ end }}
+
+          {{ with .primary_rate }}
+            <div>
+              <dt>Primary rate</dt>
+              <dd>${{ . | lang.FormatNumber 4 }} per $100 assessed value</dd>
+            </div>
+          {{ end }}
+
+          {{ with .secondary_rate }}
+            <div>
+              <dt>Secondary rate</dt>
+              <dd>${{ . | lang.FormatNumber 4 }} per $100 assessed value</dd>
+            </div>
+          {{ end }}
+
+          {{ with .combined_rate }}
+            <div>
+              <dt>Combined rate</dt>
+              <dd>${{ . | lang.FormatNumber 4 }} per $100 assessed value</dd>
+            </div>
+          {{ end }}
+
+        </dl>
+
+        {{ with .rate_basis }}
+          <p class="budget-year-note">
+            Rate basis: {{ . }}
+          </p>
+        {{ end }}
+
+        {{ with .note }}
+          <p class="budget-year-note">{{ . }}</p>
+        {{ end }}
+
+      </section>
+
+    {{ end }}
+

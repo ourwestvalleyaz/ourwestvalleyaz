@@ -6,7 +6,9 @@
       "slug": "avondale",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": true
+      "published": true,
+      "development_status": "complete",
+      "display_order": 10
     },
     {
       "id": "buckeye",
@@ -14,7 +16,9 @@
       "slug": "buckeye",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": false,
+      "development_status": "in_progress",
+      "display_order": 50
     },
     {
       "id": "glendale",
@@ -22,7 +26,9 @@
       "slug": "glendale",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": false,
+      "development_status": "planned",
+      "display_order": 60
     },
     {
       "id": "goodyear",
@@ -30,7 +36,9 @@
       "slug": "goodyear",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": false,
+      "development_status": "planned",
+      "display_order": 70
     },
     {
       "id": "litchfield-park",
@@ -38,7 +46,9 @@
       "slug": "litchfield-park",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": true
+      "published": true,
+      "development_status": "complete",
+      "display_order": 20
     },
     {
       "id": "peoria",
@@ -46,7 +56,9 @@
       "slug": "peoria",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": false,
+      "development_status": "planned",
+      "display_order": 80
     },
     {
       "id": "surprise",
@@ -54,7 +66,9 @@
       "slug": "surprise",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": false
+      "published": true,
+      "display_order": 40,
+      "development_status": "complete"
     },
     {
       "id": "tolleson",
@@ -62,7 +76,9 @@
       "slug": "tolleson",
       "state": "AZ",
       "timezone": "America/Phoenix",
-      "published": true
+      "published": true,
+      "development_status": "complete",
+      "display_order": 30
     }
   ]
 }

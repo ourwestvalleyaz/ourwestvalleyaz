@@ -12382,3 +12382,83 @@ main article a:not(.button):not([class*="button"]):focus-visible {
   scroll-margin-top: 6rem;
   width: 0;
 }
+
+
+/* Mobile Communities: remove redundant nested panel styling. */
+@media (max-width: 46rem) {
+  .site-header .communities-menu--mobile .communities-menu__panel {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+/* OWVAZ SURPRISE UI IMPROVEMENTS OCT 2026
+   Evidence tables and mobile city alignment. */
+
+h3#drone-as-first-responder-funding + table,
+h4#body-camera-contracting-authority-history + p + p + table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+h3#drone-as-first-responder-funding + table :is(th, td),
+h4#body-camera-contracting-authority-history + p + p + table :is(th, td) {
+  padding: .65rem .45rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+h3#drone-as-first-responder-funding + table th,
+h4#body-camera-contracting-authority-history + p + p + table th {
+  line-height: 1.35;
+  font-weight: 700;
+  background: rgba(112, 73, 47, .06);
+}
+
+h3#drone-as-first-responder-funding + table :is(th, td):first-child,
+h4#body-camera-contracting-authority-history + p + p + table :is(th, td):first-child {
+  text-align: left;
+}
+
+h3#drone-as-first-responder-funding + table :is(th, td):not(:first-child),
+h4#body-camera-contracting-authority-history + p + p + table :is(th, td):not(:first-child) {
+  text-align: right;
+}
+
+p:has(> img[src$="/body-camera-contracting-authority.svg"]) {
+  margin-block: 1rem 1.25rem;
+}
+
+p > img[src$="/body-camera-contracting-authority.svg"] {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 46rem) {
+  .mobile-menu .communities-menu__panel--grouped
+  .communities-menu__section > :is(a, span) {
+    box-sizing: border-box;
+    margin-inline-start: 0;
+    padding-inline-start: .7rem;
+    padding-inline-end: .7rem;
+  }
+
+  h3#drone-as-first-responder-funding + table :is(th, td),
+  h4#body-camera-contracting-authority-history + p + p + table :is(th, td) {
+    padding-inline: .3rem;
+    font-size: .88rem;
+  }
+}
+
+
+/* OWVAZ MOBILE GROUP LABEL ALIGNMENT 2026-10
+   Move status headings left without moving city links. */
+@media (max-width: 46rem) {
+  .mobile-menu .communities-menu__panel--grouped
+  .communities-menu__section > .communities-menu__section-label {
+    padding-inline-start: 0;
+  }
+}

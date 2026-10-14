@@ -37,55 +37,7 @@
       (dict "slug" "tolleson" "name" "Tolleson")
     }}
 
-    <div class="home-city-groups">
-      <section class="home-city-group">
-        <h3 class="home-city-group__label">Available</h3>
-        <ul class="community-list home-city-picker home-city-picker--available">
-          {{ $availableOrder := slice "avondale" "litchfield-park" "tolleson" }}
-          {{ range $availableOrder }}
-            {{ $cityID := . }}
-            {{ $city := index (where hugo.Data.cities.cities.cities "slug" $cityID) 0 }}
-            {{ $page := site.GetPage (printf "/communities/%s" $cityID) }}
-            {{ if and $city $page }}
-              <li class="home-city-picker__item home-city-picker__item--available">
-                <a class="home-city-picker__link"
-                   href="{{ $page.RelPermalink }}">
-                  <span class="home-city-picker__city">{{ $city.name }}</span>
-                  <span class="home-city-picker__status">View city page</span>
-                </a>
-              </li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </section>
-
-      <section class="home-city-group">
-        <h3 class="home-city-group__label">In Progress</h3>
-        <ul class="community-list home-city-picker home-city-picker--available">
-          <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
-            <span class="home-city-picker__link">
-              <span class="home-city-picker__city">Surprise</span>
-              <span class="home-city-picker__status">In Progress</span>
-            </span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="home-city-group">
-        <h3 class="home-city-group__label">Coming Soon</h3>
-        <ul class="community-list home-city-picker home-city-picker--available">
-          {{ $comingSoon := slice "Buckeye" "Glendale" "Goodyear" "Peoria" }}
-          {{ range $comingSoon }}
-            <li class="home-city-picker__item home-city-picker__item--available home-city-picker__item--inactive">
-              <span class="home-city-picker__link">
-                <span class="home-city-picker__city">{{ . }}</span>
-                <span class="home-city-picker__status">Coming Soon</span>
-              </span>
-            </li>
-          {{ end }}
-        </ul>
-      </section>
-    </div>
+    {{ partial "community/home-city-groups.html" . }}
   </div>
 </section>
 

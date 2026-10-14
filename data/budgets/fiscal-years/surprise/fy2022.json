@@ -1,0 +1,456 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2022",
+  "status": "adopted",
+  "headline": {
+    "amount": 437829400,
+    "currency": "USD",
+    "measure": "budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "label": "Budgeted Expenditures/Expenses",
+    "note": "City of Surprise FY2022 state expenditure limitation comparison.",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2022-adopted-budget",
+        "page": 337,
+        "section": "City of Surprise state budget form",
+        "label": "Budgeted Expenditures/Expenses"
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2021",
+    "amount": 375296800,
+    "measure": "adopted_adjusted_budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": 62532600,
+    "percent_change": 16.662,
+    "summary": "FY2022 budgeted expenditures/expenses compared with FY2021 adopted/adjusted budgeted expenditures/expenses."
+  },
+  "uses": {
+    "measures": [
+      {
+        "label": "Operating Expenses",
+        "amount": 232586800,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Operating Expenses",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Capital",
+        "amount": 121542100,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Capital",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Debt",
+        "amount": 11480500,
+        "currency": "USD",
+        "measure": "debt",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Debt",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Contingency",
+        "amount": 72220000,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Contingency",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Transfers Out",
+        "amount": 48110500,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers Out",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Total Uses",
+        "amount": 485939900,
+        "currency": "USD",
+        "measure": "total_uses",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Uses",
+            "column": "FY2022 Budget"
+          }
+        ]
+      }
+    ],
+    "note": "The Summary of Sources and Uses includes transfers out in Total Uses. The state-form Budgeted Expenditures/Expenses headline excludes transfers."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "label": "Total Revenue",
+        "amount": 310502900,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Revenue",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Transfers In",
+        "amount": 48110500,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Transfers In",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Total Sources",
+        "amount": 358613400,
+        "currency": "USD",
+        "measure": "total_sources",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 33,
+            "section": "Summary of Sources and Uses",
+            "row": "Total Sources",
+            "column": "FY2022 Budget"
+          }
+        ]
+      },
+      {
+        "label": "Fund Balance/Net Position at July 1",
+        "amount": 265412000,
+        "currency": "USD",
+        "measure": "beginning_fund_balance_net_position",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 337,
+            "section": "City of Surprise state budget form",
+            "row": "Fund Balance/Net Position at July 1",
+            "column": "FY2022"
+          }
+        ],
+        "note": "State-form accounting measure. It is not part of the Summary of Sources and Uses Total Sources."
+      },
+      {
+        "label": "Other Financing Sources",
+        "amount": 1000000,
+        "currency": "USD",
+        "measure": "other_financing_sources",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 337,
+            "section": "City of Surprise state budget form",
+            "row": "Other Financing Sources",
+            "column": "FY2022"
+          }
+        ],
+        "note": "State-form financial-resource measure, kept separate from the Summary of Sources and Uses."
+      },
+      {
+        "label": "Total Financial Resources Available",
+        "amount": 575914900,
+        "currency": "USD",
+        "measure": "total_financial_resources_available",
+        "scope": "all_funds",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 337,
+            "section": "City of Surprise state budget form",
+            "row": "Total Financial Resources Available",
+            "column": "FY2022"
+          }
+        ],
+        "note": "State-form accounting layer. Do not equate this with the Summary Total Sources."
+      }
+    ],
+    "note": "Summary-of-Sources-and-Uses measures and state-form financial-resource measures are preserved as distinct accounting layers."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 90890600,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2022-adopted-budget",
+          "page": 26,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Beginning Fund Balance",
+          "column": "FY2022"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "label": "Total Ongoing Sources",
+          "amount": 139749000,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Sources",
+              "column": "FY2022"
+            }
+          ]
+        },
+        {
+          "label": "Total Ongoing Uses",
+          "amount": 139685100,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Uses",
+              "column": "FY2022"
+            }
+          ]
+        },
+        {
+          "label": "Ongoing Surplus",
+          "amount": 63900,
+          "currency": "USD",
+          "measure": "ongoing_surplus",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Ongoing Surplus",
+              "column": "FY2022"
+            }
+          ]
+        }
+      ]
+    },
+    "one_time": {
+      "measures": [
+        {
+          "label": "Personnel/Supplies/Services",
+          "amount": -108200,
+          "currency": "USD",
+          "measure": "one_time_personnel_supplies_services",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Personnel/Supplies/Services",
+              "column": "FY2022"
+            }
+          ],
+          "note": "Negative source-presented one-time amount."
+        },
+        {
+          "label": "Contingency",
+          "amount": 2518500,
+          "currency": "USD",
+          "measure": "one_time_contingency",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Contingency",
+              "column": "FY2022"
+            }
+          ]
+        },
+        {
+          "label": "Other - Transfers Out",
+          "amount": 13845800,
+          "currency": "USD",
+          "measure": "one_time_transfers_out",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Other - Transfers Out",
+              "column": "FY2022"
+            }
+          ]
+        },
+        {
+          "label": "Total One-Time Change",
+          "amount": 16256100,
+          "currency": "USD",
+          "measure": "total_one_time_change",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2022-adopted-budget",
+              "page": 26,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Change",
+              "column": "FY2022"
+            }
+          ],
+          "note": "The source presents this as a positive change amount that is subtracted when reconciling ending fund balance."
+        }
+      ]
+    },
+    "ending_fund_balance": {
+      "amount": 74698400,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2022-adopted-budget",
+          "page": 26,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Ending Fund Balance",
+          "column": "FY2022"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 22666900,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "definition": "Minimum required fund balance presented in the General Fund Five-Year Forecast.",
+        "accounting_treatment": "Compared with ending fund balance to determine balance above the required reserve.",
+        "policy_context": "The budget describes the required reserve as including at least two months of budgeted personnel, supplies and services for the General Fund, Ground Ambulance and HURF. The Emergency Reserve is represented in One-Time Contingency and is excluded from Minimum Required Fund Balance.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 26,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Required Reserve",
+            "column": "FY2022"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-required-reserve",
+        "label": "Balance Above Required Reserve",
+        "amount": 52031500,
+        "measure": "balance_above_required_reserve",
+        "scope": "general_fund",
+        "definition": "Ending fund balance above the forecast Required Reserve.",
+        "accounting_treatment": "Ending Fund Balance minus Required Reserve.",
+        "policy_context": "This forecast measure is distinct from the Fund Balance Summary's separately presented Fund Balance Reserve.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2022-adopted-budget",
+            "page": 26,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Balance Above Required Reserve",
+            "column": "FY2022"
+          }
+        ]
+      }
+    ],
+    "note": "The General Fund forecast Required Reserve of $22,666,900 is distinct from the Fund Balance Summary's $25,185,400 Fund Balance Reserve. These measures are not collapsed."
+  },
+  "source_ids": [
+    "surprise-fy2022-adopted-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2022-adopted-budget",
+      "title": "FY2022 Adopted Budget Book",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget_book",
+      "url": "https://surpriseaz.gov/annual-budget-capital-improvements-plan",
+      "supports": [
+        "headline",
+        "prior_year_comparison",
+        "uses",
+        "sources_and_fund_balance",
+        "general_fund"
+      ]
+    }
+  ],
+  "notes": [
+    "Budgeted Expenditures/Expenses excludes interfund transfers for the headline state-form comparison.",
+    "Total Uses includes Transfers Out and is therefore larger than the expenditure budget headline.",
+    "The Summary of Sources and Uses and state budget form present different accounting layers. Their totals are preserved separately.",
+    "The General Fund Five-Year Forecast Required Reserve is distinct from the Fund Balance Summary Fund Balance Reserve."
+  ]
+}

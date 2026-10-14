@@ -1,0 +1,52 @@
+{{- $headline := .headline -}}
+{{- $comparison := .comparison -}}
+    <section
+      class="budget-year-overview"
+      aria-labelledby="budget-year-overview-heading"
+    >
+
+      <div class="budget-year-overview__amount">
+
+        <span id="budget-year-overview-heading">
+          Adopted all-funds budget
+        </span>
+
+        <strong>
+          ${{ $headline.amount | lang.FormatNumber 0 }}
+        </strong>
+
+      </div>
+
+      {{- with $comparison -}}
+      {{- $comparisonClass := "neutral" -}}
+      {{- if gt $comparison.percent_change 0 -}}
+        {{- $comparisonClass = "positive" -}}
+      {{- else if lt $comparison.percent_change 0 -}}
+        {{- $comparisonClass = "negative" -}}
+      {{- end -}}
+
+      <div class="budget-year-overview__comparison budget-year-overview__comparison--{{ $comparisonClass }}">
+
+        <span>
+          Change from {{ $comparison.fiscal_year }}
+        </span>
+
+        <strong>
+          {{- if gt $comparison.percent_change 0 }}+{{ end -}}
+          {{ $comparison.percent_change | lang.FormatNumber 1 }}%
+        </strong>
+
+        <small>
+          {{- if gt $comparison.dollar_change 0 -}}
+            +${{ $comparison.dollar_change | lang.FormatNumber 0 }}
+          {{- else if lt $comparison.dollar_change 0 -}}
+            -${{ math.Abs $comparison.dollar_change | lang.FormatNumber 0 }}
+          {{- else -}}
+            $0
+          {{- end -}}
+        </small>
+
+      </div>
+      {{- end -}}
+
+    </section>

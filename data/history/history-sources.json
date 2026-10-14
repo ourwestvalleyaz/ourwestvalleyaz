@@ -231,6 +231,139 @@
       "title": "History",
       "issuing_agency": "City of Litchfield Park",
       "official_url": "https://www.litchfieldpark.gov/101/History"
+    },
+    {
+      "source_id": "surprise-city-history-project",
+      "city_id": "surprise",
+      "title": "Surprise History Project",
+      "issuing_agency": "City of Surprise",
+      "official_url": "https://surpriseaz.gov/surprise-history-project"
+    },
+    {
+      "source_id": "surprise-city-facts-history",
+      "city_id": "surprise",
+      "title": "City Facts & History",
+      "issuing_agency": "City of Surprise",
+      "official_url": "https://surpriseaz.gov/city-facts-history"
+    },
+    {
+      "source_id": "surprise-city-historian",
+      "city_id": "surprise",
+      "title": "City Historian",
+      "issuing_agency": "City of Surprise",
+      "official_url": "https://surpriseaz.gov/city-historian"
+    },
+    {
+      "source_id": "surprise-palmer-dissertation-2012",
+      "city_id": "surprise",
+      "title": "Re-imagining Surprise: The Evolution of a Twenty-First Century Boomburb, 1938-2010",
+      "issuing_agency": "Arizona State University",
+      "official_url": "https://files.core.ac.uk/download/pdf/79565034.pdf"
+    },
+    {
+      "source_id": "surprise-eric-agricultural-community-study",
+      "city_id": "surprise",
+      "title": "Federal education research concerning Dysart-area agricultural and migrant communities",
+      "issuing_agency": "ERIC / U.S. Department of Education",
+      "official_url": "https://files.eric.ed.gov/fulltext/ED321946.pdf"
+    },
+    {
+      "source_id": "surprise-arizona-commerce-historical-profile",
+      "city_id": "surprise",
+      "title": "Historical community profile for Surprise",
+      "issuing_agency": "Arizona Department of Commerce",
+      "official_url": "https://azmemory.azlibrary.gov/nodes/view/161283"
+    },
+    {
+      "source_id": "surprise-census-2010-arizona",
+      "city_id": "surprise",
+      "title": "Arizona: 2010 Census of Population and Housing",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/library/publications/decennial/2010/cph-2/cph-2-4.pdf"
+    },
+    {
+      "source_id": "surprise-census-2000-2010-fastest-growing",
+      "city_id": "surprise",
+      "title": "Population Distribution and Change: 2000 to 2010",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www2.census.gov/library/publications/cen2010/briefs/c2010br-01.pdf"
+    },
+    {
+      "source_id": "surprise-census-quickfacts",
+      "city_id": "surprise",
+      "title": "QuickFacts: Surprise city, Arizona",
+      "issuing_agency": "U.S. Census Bureau",
+      "official_url": "https://www.census.gov/quickfacts/fact/table/surprisecityarizona/POP010210"
+    },
+    {
+      "source_id": "surprise-mlb-stadium",
+      "city_id": "surprise",
+      "title": "Surprise Stadium",
+      "issuing_agency": "Major League Baseball",
+      "official_url": "https://www.mlb.com/spring-training/ballparks/surprise-stadium"
+    },
+    {
+      "source_id": "surprise-mlb-mark-coronado",
+      "city_id": "surprise",
+      "title": "Rangers, Royals mourn loss of Mark Coronado",
+      "issuing_agency": "Major League Baseball",
+      "official_url": "https://www.mlb.com/news/rangers-royals-mourn-death-of-mark-coronado-c236768320"
+    },
+    {
+      "source_id": "surprise-adot-loop-303-2011",
+      "city_id": "surprise",
+      "title": "Turnin' dirt on the Loop 303 in Surprise",
+      "issuing_agency": "Arizona Department of Transportation",
+      "official_url": "https://azdot.gov/blog-article/turnin-dirt-loop-303-surprise"
+    },
+    {
+      "source_id": "surprise-adot-loop-303-future",
+      "city_id": "surprise",
+      "title": "The future of Loop 303",
+      "issuing_agency": "Arizona Department of Transportation",
+      "official_url": "https://azdot.gov/adot-blog/future-loop-303"
+    },
+    {
+      "source_id": "surprise-marley-park-cfd-fy2026",
+      "city_id": "surprise",
+      "title": "Marley Park Community Facilities District FY2026 Budget",
+      "issuing_agency": "City of Surprise / Marley Park Community Facilities District",
+      "official_url": "https://content.civicplus.com/api/assets/az-surprise/07a0e688-8ceb-4cfc-a1f5-817a9812eb7e"
+    },
+    {
+      "source_id": "surprise-shafer-city-budget",
+      "city_id": "surprise",
+      "title": "City of Surprise Budget - Mayor Joan H. Shafer biography",
+      "issuing_agency": "City of Surprise",
+      "official_url": "https://content.civicplus.com/api/assets/7c913e04-e062-40e7-86f5-4d9cfbd387ee"
+    },
+    {
+      "source_id": "surprise-sun-city-grand-1997",
+      "city_id": "surprise",
+      "title": "Contemporary newspaper coverage of Sun City Grand and Surprise growth",
+      "issuing_agency": "Daily News-Sun archive / Del Webb Sun Cities Museum",
+      "official_url": "https://delwebbsuncitiesmuseum.org/wp-content/uploads/2024/03/FILING%20CABINET%20SCW%20N-Z/REAL%20ESTATE%20SCW.pdf"
+    },
+    {
+      "source_id": "surprise-marley-park-dmb",
+      "city_id": "surprise",
+      "title": "Marley Park",
+      "issuing_agency": "DMB Development",
+      "official_url": "https://dmbdevelopment.com/portfolio/marley-park/"
+    },
+    {
+      "source_id": "surprise-heritage-district-ordinance",
+      "city_id": "surprise",
+      "title": "Surprise Heritage District ordinance text",
+      "issuing_agency": "City of Surprise",
+      "official_url": "https://content.civicplus.com/api/assets/fa278093-11ac-43ce-83a9-76cbd910a2d2"
+    },
+    {
+      "source_id": "surprise-villanueva-league-2013",
+      "city_id": "surprise",
+      "title": "City of Surprise remembers Councilmember Roy Villanueva",
+      "issuing_agency": "League of Arizona Cities and Towns",
+      "official_url": "https://www.leagueaz.org/connection/2013/0713/index.cfm?a=villanueva"
     }
   ]
 }

@@ -1,0 +1,375 @@
+{
+  "schema_version": "municipal-budget-v1",
+  "city_id": "surprise",
+  "fiscal_year": "FY2023",
+  "status": "adopted",
+  "headline": {
+    "amount": 667815300,
+    "currency": "USD",
+    "measure": "adopted_expenditure_budget",
+    "scope": "all_funds",
+    "label": "Adopted expenditure budget",
+    "evidence": [
+      {
+        "source_id": "surprise-fy2023-adopted-budget",
+        "page": 21,
+        "section": "Budget Overview",
+        "table": "Budget Summary",
+        "note": "City states the FY2023 adopted expenditure budget is $667,815,300."
+      }
+    ]
+  },
+  "prior_year_comparison": {
+    "fiscal_year": "FY2022",
+    "amount": 437829400,
+    "measure": "adopted_adjusted_budgeted_expenditures_expenses",
+    "scope": "all_funds",
+    "dollar_change": 229985900,
+    "percent_change": 52.529,
+    "summary": "FY2023 budgeted expenditures/expenses compared with FY2022 adopted/adjusted budgeted expenditures/expenses. The state form compares $437,829,400 with $667,815,300."
+  },
+  "uses": {
+    "measures": [
+      {
+        "amount": 305734800,
+        "currency": "USD",
+        "measure": "operating_expenses",
+        "scope": "all_funds",
+        "label": "Total Operating Expenses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 188342200,
+        "currency": "USD",
+        "measure": "capital",
+        "scope": "all_funds",
+        "label": "Capital",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 13991300,
+        "currency": "USD",
+        "measure": "debt",
+        "scope": "all_funds",
+        "label": "Debt",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 159747000,
+        "currency": "USD",
+        "measure": "contingency",
+        "scope": "all_funds",
+        "label": "Contingency",
+        "note": "Citywide Summary of Sources and Uses contingency. It is distinct from General Fund forecast contingency concepts.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 66740700,
+        "currency": "USD",
+        "measure": "transfers_out",
+        "scope": "all_funds",
+        "label": "Transfers Out",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 734556000,
+        "currency": "USD",
+        "measure": "total_uses",
+        "scope": "all_funds",
+        "label": "Total Uses",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          },
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 21,
+            "section": "Budget Overview"
+          }
+        ]
+      }
+    ],
+    "note": "Operating expenses, capital, debt and contingency equal the adopted expenditure budget. Transfers Out are then added to reach Total Uses."
+  },
+  "sources_and_fund_balance": {
+    "measures": [
+      {
+        "amount": 409169600,
+        "currency": "USD",
+        "measure": "revenue",
+        "scope": "all_funds",
+        "label": "Revenue",
+        "note": "Exact Summary of Sources and Uses amount. The narrative rounds this to $409.17 million.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 66740700,
+        "currency": "USD",
+        "measure": "transfers_in",
+        "scope": "all_funds",
+        "label": "Transfers In",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 475910300,
+        "currency": "USD",
+        "measure": "total_sources",
+        "scope": "all_funds",
+        "label": "Total Sources",
+        "note": "Summary of Sources and Uses measure, revenue plus transfers in.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 31,
+            "table": "Summary of Sources and Uses"
+          }
+        ]
+      },
+      {
+        "amount": 258645700,
+        "currency": "USD",
+        "measure": "fund_balance_used",
+        "scope": "all_funds",
+        "label": "Fund Balance",
+        "note": "Difference between Total Uses and Summary Total Sources. The City narrative rounds this to $258.65 million. Fund balance is not recurring revenue.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 43,
+            "section": "Citywide Sources Summary"
+          }
+        ]
+      },
+      {
+        "amount": 722946800,
+        "currency": "USD",
+        "measure": "total_financial_resources_available",
+        "scope": "all_funds",
+        "label": "Total Financial Resources Available",
+        "note": "Arizona state-form accounting layer. This is distinct from $475,910,300 Summary Total Sources.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 341,
+            "section": "Summary Schedule of Estimated Revenues and Expenditures/Expenses"
+          }
+        ]
+      }
+    ],
+    "note": "Beginning/fund balance is kept separate from recurring revenue. State-form resources and Summary of Sources and Uses are separate accounting layers."
+  },
+  "general_fund": {
+    "beginning_fund_balance": {
+      "amount": 92081300,
+      "currency": "USD",
+      "measure": "beginning_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2023-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Beginning Fund Balance",
+          "column": "FY2023"
+        }
+      ]
+    },
+    "ongoing": {
+      "measures": [
+        {
+          "amount": 175014800,
+          "currency": "USD",
+          "measure": "total_ongoing_sources",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2023-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Sources",
+              "column": "FY2023"
+            }
+          ]
+        },
+        {
+          "amount": 172281000,
+          "currency": "USD",
+          "measure": "total_ongoing_uses",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2023-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total Ongoing Uses",
+              "column": "FY2023"
+            }
+          ]
+        },
+        {
+          "amount": 2733800,
+          "currency": "USD",
+          "measure": "ongoing_surplus",
+          "scope": "general_fund",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2023-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Ongoing Surplus/(Shortfall)",
+              "column": "FY2023"
+            }
+          ]
+        }
+      ]
+    },
+    "one_time": {
+      "measures": [
+        {
+          "amount": 17736700,
+          "currency": "USD",
+          "measure": "total_one_time_impact",
+          "scope": "general_fund",
+          "label": "Total One-Time Impact",
+          "note": "Source presents this as a positive amount and subtracts it in the ending fund-balance equation F = (A+D-E).",
+          "evidence": [
+            {
+              "source_id": "surprise-fy2023-adopted-budget",
+              "page": 30,
+              "section": "General Fund Five-Year Forecast",
+              "row": "Total One-Time Impact",
+              "column": "FY2023"
+            }
+          ]
+        }
+      ],
+      "note": "FY2023 source terminology is Total One-Time Impact, rather than Total One-Time Change."
+    },
+    "ending_fund_balance": {
+      "amount": 77078400,
+      "currency": "USD",
+      "measure": "ending_fund_balance",
+      "scope": "general_fund",
+      "evidence": [
+        {
+          "source_id": "surprise-fy2023-adopted-budget",
+          "page": 30,
+          "section": "General Fund Five-Year Forecast",
+          "row": "Ending Fund Balance",
+          "column": "FY2023"
+        }
+      ]
+    },
+    "reserves": [
+      {
+        "id": "required-reserve",
+        "label": "Required Reserve",
+        "amount": 43210100,
+        "measure": "required_reserve",
+        "scope": "general_fund",
+        "definition": "Minimum required fund balance presented in the General Fund Five-Year Forecast.",
+        "accounting_treatment": "Compared with ending fund balance to determine Balance Above Required Reserve.",
+        "policy_context": "The FY2023 forecast describes the required reserve as including a reserve equal to three months of budgeted personnel, supplies and services for the General Fund, Ground Ambulance Fund, Highway User Revenue Fund, and Sports and Tourism Fund.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Required Reserve",
+            "column": "FY2023"
+          }
+        ]
+      },
+      {
+        "id": "balance-above-required-reserve",
+        "label": "Balance Above Required Reserve",
+        "amount": 33868300,
+        "measure": "balance_above_required_reserve",
+        "scope": "general_fund",
+        "definition": "Ending fund balance above the forecast Required Reserve.",
+        "accounting_treatment": "Ending Fund Balance minus Required Reserve.",
+        "policy_context": "This forecast measure is retained as its own reserve comparison and is not treated as a citywide contingency or other reserve presentation.",
+        "evidence": [
+          {
+            "source_id": "surprise-fy2023-adopted-budget",
+            "page": 30,
+            "section": "General Fund Five-Year Forecast",
+            "row": "Balance Above Required Reserve",
+            "column": "FY2023"
+          }
+        ]
+      }
+    ],
+    "note": "FY2023 contains distinct contingency concepts across accounting layers. The citywide $159,747,000 contingency, General Fund ongoing-use contingency, and General Fund one-time contingency/emergency-reserve presentation are not collapsed into one measure."
+  },
+  "source_ids": [
+    "surprise-fy2023-adopted-budget"
+  ],
+  "sources": [
+    {
+      "id": "surprise-fy2023-adopted-budget",
+      "title": "FY2023 Adopted Budget Book",
+      "publisher": "City of Surprise",
+      "document_type": "adopted_budget_book",
+      "url": "https://surpriseaz.gov/annual-budget-capital-improvements-plan",
+      "supports": [
+        "headline",
+        "prior_year_comparison",
+        "uses",
+        "sources_and_fund_balance",
+        "general_fund"
+      ],
+      "note": "Primary comprehensive FY2023 budget publication. Retained PDF SHA256: 7a91e92caa251c69e619c73e647fa1aee8249f23ed1bfafc4109a5c3031e0d4f"
+    }
+  ],
+  "notes": [
+    "The adopted expenditure budget of $667,815,300 is distinct from Total Uses of $734,556,000.",
+    "Summary Total Sources of $475,910,300 are distinct from state-form Total Financial Resources Available of $722,946,800.",
+    "Fund balance is separate from recurring revenue.",
+    "FY2023 uses Total One-Time Impact terminology and a three-month General Fund reserve policy context."
+  ]
+}

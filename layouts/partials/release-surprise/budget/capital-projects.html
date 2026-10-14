@@ -1,0 +1,131 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{ with $budget.capital }}
+      {{ with .projects }}
+
+        {{ $capitalPresentation := $budget.capital.presentation | default "capital_improvement_plan" }}
+        {{ $itemizedOutlay := eq $capitalPresentation "itemized_capital_outlay" }}
+        {{ $budgetedExpenditures := eq $capitalPresentation "budgeted_expenditures_expenses" }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="major-capital-projects"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Capital projects</p>
+            {{ if $itemizedOutlay }}
+              <h2 id="major-capital-projects">Capital outlay by item</h2>
+            {{ else if $budgetedExpenditures }}
+              <h2 id="major-capital-projects">Capital projects and funds</h2>
+            {{ else }}
+              <h2 id="major-capital-projects">Major capital projects</h2>
+            {{ end }}
+          </div>
+
+          {{ with $budget.capital.selection_definition }}
+            <p class="budget-year-section__intro">{{ . }}</p>
+          {{ end }}
+
+          <div class="budget-year-table-wrap">
+            <table class="budget-year-table">
+              {{ if $itemizedOutlay }}
+                <caption>
+                  Itemized {{ $budget.fiscal_year }} Capital Projects Funds
+                  budgeted capital outlay
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Capital-outlay item</th>
+                    <th scope="col">{{ $budget.fiscal_year }} budgeted amount</th>
+                  </tr>
+                </thead>
+              {{ else if $budgetedExpenditures }}
+                <caption>
+                  Selected capital projects and funds:
+                  {{ $budget.fiscal_year }} budgeted expenditures/expenses
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Project or fund</th>
+                    <th scope="col">{{ $budget.fiscal_year }} budgeted amount</th>
+                  </tr>
+                </thead>
+              {{ else }}
+                <caption>
+                  Selected projects in the adopted {{ $budget.fiscal_year }}
+                  Capital Improvement Plan
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Project</th>
+                    <th scope="col">{{ $budget.fiscal_year }} funding</th>
+                    <th scope="col">Carryover</th>
+                    <th scope="col">Total project</th>
+                  </tr>
+                </thead>
+              {{ end }}
+              <tbody>
+
+                {{ range . }}
+                  <tr>
+                    <th scope="row">
+                      {{ .name }}
+                      <span class="budget-year-project__meta">
+                        {{ if $itemizedOutlay }}
+                          {{ .project_type }}
+                        {{ else if $budgetedExpenditures }}
+                          {{ .project_type }}
+                        {{ else }}
+                          {{ .project_number }} · {{ .project_type }}
+                        {{ end }}
+                      </span>
+                    </th>
+                    <td>
+                      ${{ .new_appropriation | lang.FormatNumber 0 }}
+                    </td>
+                    {{ if and (not $itemizedOutlay) (not $budgetedExpenditures) }}
+                      <td>
+                        {{ if isset . "carryover" }}
+                          ${{ .carryover | lang.FormatNumber 0 }}
+                        {{ else }}
+                          —
+                        {{ end }}
+                      </td>
+                      <td>
+                        {{ if isset . "total" }}
+                          ${{ .total | lang.FormatNumber 0 }}
+                        {{ else }}
+                          —
+                        {{ end }}
+                      </td>
+                    {{ end }}
+                  </tr>
+                {{ end }}
+
+              </tbody>
+            </table>
+          </div>
+
+          <p class="budget-year-note">
+            {{ if $itemizedOutlay }}
+              These amounts are fiscal-year budgeted capital outlay.
+              The source does not establish carryover, lifetime project
+              cost, or construction completion for these entries.
+            {{ else if $budgetedExpenditures }}
+              These amounts are fiscal-year budgeted expenditures/expenses.
+              They do not establish actual spending, lifetime project cost,
+              or construction completion. Amounts for different fiscal years
+              should not be added together as a project lifetime total.
+            {{ else }}
+              Funding shown here is budget authority in the adopted capital
+              plan. It does not by itself establish expenditure, purchase,
+              construction completion, or deployment.
+            {{ end }}
+          </p>
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+

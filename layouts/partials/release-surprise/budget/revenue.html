@@ -1,0 +1,43 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{ with $budget.revenue }}
+      {{ with .measures }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="revenue"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Revenue</p>
+            <h2 id="revenue">Revenue measures</h2>
+          </div>
+
+          <p class="budget-year-section__intro">
+            These figures use the accounting labels reported by the City.
+            Different revenue measures are shown separately rather than
+            treated as interchangeable.
+          </p>
+
+          <dl class="budget-year-measures">
+
+            {{ range . }}
+              <div>
+                <dt>{{ .label }}</dt>
+                <dd>
+                  ${{ .amount | lang.FormatNumber 0 }}
+                </dd>
+
+                {{ with .note }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </div>
+            {{ end }}
+
+          </dl>
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+

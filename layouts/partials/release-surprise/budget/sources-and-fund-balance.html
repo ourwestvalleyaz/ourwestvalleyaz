@@ -1,0 +1,54 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+
+{{ with $budget.sources_and_fund_balance }}
+  {{ with .measures }}
+
+    <section
+      class="budget-year-section"
+      aria-labelledby="sources-and-fund-balance"
+    >
+
+      <div class="budget-year-section__heading">
+        <p class="eyebrow">Funding</p>
+        <h2 id="sources-and-fund-balance">Sources and fund balance</h2>
+      </div>
+
+      <p class="budget-year-section__intro">
+        These figures use the accounting measures reported by the City.
+        Revenue, transfers, fund balance and other financing measures are
+        kept separate rather than treated as interchangeable.
+      </p>
+
+      <dl class="budget-year-measures">
+
+        {{ range . }}
+          <div>
+            <dt>
+              {{ with .label }}
+                {{ . }}
+              {{ else }}
+                {{ .measure | humanize }}
+              {{ end }}
+            </dt>
+
+            <dd>
+              ${{ .amount | lang.FormatNumber 0 }}
+            </dd>
+
+            {{ with .note }}
+              <p>{{ . }}</p>
+            {{ end }}
+          </div>
+        {{ end }}
+
+      </dl>
+
+      {{ with $budget.sources_and_fund_balance.note }}
+        <p class="budget-year-note">{{ . }}</p>
+      {{ end }}
+
+    </section>
+
+  {{ end }}
+{{ end }}

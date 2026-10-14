@@ -1,0 +1,64 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{ with $budget.spending_by_purpose }}
+      {{ with .categories }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="spending-by-purpose"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Budget composition</p>
+            <h2 id="spending-by-purpose">Where the budget goes</h2>
+          </div>
+
+          <div class="budget-year-table-wrap">
+            <table class="budget-year-table">
+
+              <caption>
+                {{ $fiscalYear }} spending presentation
+              </caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Share</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {{ range . }}
+                  <tr>
+                    <th scope="row">{{ .label }}</th>
+                    <td>
+                      ${{ .amount | lang.FormatNumber 0 }}
+                    </td>
+                    <td>
+                      {{ with .display_percent }}
+                        {{ . | lang.FormatNumber 0 }}%
+                      {{ else }}
+                        <span aria-label="Not reported">Not reported</span>
+                      {{ end }}
+                    </td>
+                  </tr>
+                {{ end }}
+              </tbody>
+
+            </table>
+          </div>
+
+          {{ with $budget.spending_by_purpose.rounding_note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+          {{ with $budget.spending_by_purpose.accounting_note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+

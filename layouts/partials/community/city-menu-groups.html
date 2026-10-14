@@ -1,0 +1,28 @@
+{{- $groups := partial "community/city-status-groups.html" . -}}
+<div class="communities-menu__panel communities-menu__panel--grouped">
+  {{- range $group := (slice
+    (dict "label" "Available" "items" $groups.available)
+    (dict "label" "In progress" "items" $groups.in_progress)
+    (dict "label" "Coming soon" "items" $groups.coming_soon)
+  ) -}}
+  <div class="communities-menu__section">
+    <span class="communities-menu__section-label">{{ $group.label }}</span>
+    {{- range $city := $group.items -}}
+      {{- if $city.published -}}
+        {{- $page := site.GetPage (printf "/communities/%s" $city.slug) -}}
+        {{- if not $page -}}
+          {{- errorf "Published city page missing" -}}
+        {{- end -}}
+        <a href="{{ $page.RelPermalink }}"
+          {{ if hasPrefix $.RelPermalink $page.RelPermalink }}aria-current="page"{{ end }}>
+          {{ $city.name }}
+        </a>
+      {{- else -}}
+        <span class="communities-menu__pending communities-menu__pending--plain">
+          <span class="communities-menu__city">{{ $city.name }}</span>
+        </span>
+      {{- end -}}
+    {{- end -}}
+  </div>
+  {{- end -}}
+</div>
