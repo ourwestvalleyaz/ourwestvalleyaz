@@ -1,0 +1,158 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+
+{{ with $budget.general_fund }}
+  {{- $generalFund := . -}}
+
+  <section
+    class="budget-year-section"
+    aria-labelledby="general-fund"
+  >
+
+    <div class="budget-year-section__heading">
+      <p class="eyebrow">General Fund</p>
+      <h2 id="general-fund">General Fund</h2>
+    </div>
+
+    <p class="budget-year-section__intro">
+      The General Fund is shown separately from the citywide budget.
+      Ongoing activity, one-time activity, fund balance and reserves are
+      kept distinct where the adopted budget reports them separately.
+    </p>
+
+    {{ with $generalFund.beginning_fund_balance }}
+      <dl class="budget-year-measures">
+        <div>
+          <dt>
+            {{ with .label }}
+              {{ . }}
+            {{ else }}
+              Beginning fund balance
+            {{ end }}
+          </dt>
+          <dd>${{ .amount | lang.FormatNumber 0 }}</dd>
+          {{ with .note }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </dl>
+    {{ end }}
+
+    {{ with $generalFund.ongoing }}
+      {{ with .measures }}
+        <h3>Ongoing activity</h3>
+
+        <dl class="budget-year-measures">
+          {{ range . }}
+            <div>
+              <dt>
+                {{ if eq .measure "total_ongoing_uses" }}
+                  Total Ongoing Uses
+                {{ else }}
+                  {{ with .label }}
+                    {{ . }}
+                  {{ else }}
+                    {{ .measure | humanize }}
+                  {{ end }}
+                {{ end }}
+              </dt>
+              <dd>${{ .amount | lang.FormatNumber 0 }}</dd>
+              {{ with .note }}
+                <p>{{ . }}</p>
+              {{ end }}
+            </div>
+          {{ end }}
+        </dl>
+      {{ end }}
+
+      {{ with .note }}
+        <p class="budget-year-note">{{ . }}</p>
+      {{ end }}
+    {{ end }}
+
+    {{ with $generalFund.one_time }}
+      {{ with .measures }}
+        <h3>One-time activity</h3>
+
+        <dl class="budget-year-measures">
+          {{ range . }}
+            <div>
+              <dt>
+                {{ with .label }}
+                  {{ . }}
+                {{ else }}
+                  {{ .measure | humanize }}
+                {{ end }}
+              </dt>
+              <dd>${{ .amount | lang.FormatNumber 0 }}</dd>
+              {{ with .note }}
+                <p>{{ . }}</p>
+              {{ end }}
+            </div>
+          {{ end }}
+        </dl>
+      {{ end }}
+
+      {{ with .note }}
+        <p class="budget-year-note">{{ . }}</p>
+      {{ end }}
+    {{ end }}
+
+    {{ with $generalFund.ending_fund_balance }}
+      <dl class="budget-year-measures">
+        <div>
+          <dt>
+            {{ with .label }}
+              {{ . }}
+            {{ else }}
+              Ending fund balance
+            {{ end }}
+          </dt>
+          <dd>${{ .amount | lang.FormatNumber 0 }}</dd>
+          {{ with .note }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </dl>
+    {{ end }}
+
+    {{ with $generalFund.reserves }}
+      <h3>Reserves</h3>
+
+      <dl class="budget-year-measures">
+        {{ range . }}
+          <div>
+            <dt>{{ .label }}</dt>
+
+            {{ if isset . "amount" }}
+              <dd>${{ .amount | lang.FormatNumber 0 }}</dd>
+            {{ end }}
+
+            {{ with .definition }}
+              <p>{{ . }}</p>
+            {{ end }}
+
+            {{ if or .accounting_treatment .policy_context }}
+              <details class="budget-year-accounting-details">
+                <summary>Accounting details</summary>
+
+                {{ with .accounting_treatment }}
+                  <p>{{ . }}</p>
+                {{ end }}
+
+                {{ with .policy_context }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </details>
+            {{ end }}
+          </div>
+        {{ end }}
+      </dl>
+    {{ end }}
+
+    {{ with $generalFund.note }}
+      <p class="budget-year-note">{{ . }}</p>
+    {{ end }}
+
+  </section>
+{{ end }}

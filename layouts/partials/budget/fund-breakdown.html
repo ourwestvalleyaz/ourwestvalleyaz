@@ -1,0 +1,46 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{ with $budget.fund_breakdown }}
+
+      <section
+        class="budget-year-section"
+        aria-labelledby="fund-breakdown"
+      >
+
+        <div class="budget-year-section__heading">
+          <p class="eyebrow">Fund accounting</p>
+          <h2 id="fund-breakdown">Budget by fund</h2>
+        </div>
+
+        <div class="budget-year-table-wrap">
+          <table class="budget-year-table">
+
+            <caption>
+              {{ $fiscalYear }} adopted fund groups
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Fund group</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {{ range . }}
+                <tr>
+                  <th scope="row">{{ .label }}</th>
+                  <td>
+                    ${{ .amount | lang.FormatNumber 0 }}
+                  </td>
+                </tr>
+              {{ end }}
+            </tbody>
+
+          </table>
+        </div>
+
+      </section>
+
+    {{ end }}
+

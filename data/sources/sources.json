@@ -542,14 +542,6 @@
       "availability_status": "needs_review"
     },
     {
-      "source_id": "avondale-prop-418-sample-ballot",
-      "title": "Avondale Proposition 418 Sample Ballot Language",
-      "organization": "City of Avondale",
-      "type": "official",
-      "url": "https://engage.zencity.io/avondale-az/en-US/projects/sample-ballot",
-      "notes": "Published sample ballot language describing the proposed $55 million public safety bond, eligible project categories, repayment through secondary property taxes, and 25-year maximum principal repayment period."
-    },
-    {
       "source_id": "avondale-public-meeting-live-stream",
       "city_id": "avondale",
       "issuing_agency": "City of Avondale",
@@ -2007,6 +1999,24 @@
       "issuing_agency": "City of Surprise",
       "document_type": "official meeting calendar",
       "official_url": "https://surpriseaz.gov/city-calendar"
+    },
+    {
+      "source_id": "avondale-public-records-request-26-1207",
+      "city_id": "avondale",
+      "issuing_agency": "City of Avondale",
+      "title": "City of Avondale Public Records Request 26-1207",
+      "document_type": "public_records_request",
+      "last_verified": "2026-10-14",
+      "availability_status": "reference_only",
+      "notes": "Public records concerning Flock Safety license plate readers, drone technology, contracts, and purchase orders. Records released October 2026 under request 26-1207. This entry identifies the records request only. Supporting documents are not hosted by OWVAZ."
+    },
+    {
+      "source_id": "avondale-prop-418-sample-ballot",
+      "title": "Avondale Proposition 418 Sample Ballot Language",
+      "organization": "City of Avondale",
+      "type": "official",
+      "url": "https://elections.maricopa.gov/asset/jcr:6a617e9f-e616-43bb-82f0-7686234beecd/City%20of%20Avondale%20Publicity%20Pamphlet%202026%20General%20Election.pdf",
+      "notes": "Published sample ballot language describing the proposed $55 million public safety bond, eligible project categories, repayment through secondary property taxes, and 25-year maximum principal repayment period."
     }
   ]
 }

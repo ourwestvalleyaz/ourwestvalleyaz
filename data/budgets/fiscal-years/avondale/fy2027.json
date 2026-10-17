@@ -191,7 +191,8 @@
   "source_ids": [
     "avondale-fy2027-final-budget",
     "avondale-fy2027-budget-in-brief",
-    "avondale-council-agenda-2026-04-06"
+    "avondale-council-agenda-2026-04-06",
+    "avondale-public-records-request-26-1207"
   ],
   "sources": [
     {
@@ -287,5 +288,42 @@
         "avondale-council-agenda-2026-04-06"
       ]
     }
-  }
+  },
+  "notable_spending": [
+    {
+      "title": "2024 Flock Safety purchase order",
+      "amount": 49965,
+      "measure": "purchase_order_amount",
+      "scope": "City of Avondale Flock Safety procurement",
+      "description": "2024 purchase order, not a verified payment. City of Avondale, public-records request 26-1207, *Avondale PO - 22401388_N.pdf*, PDF p. 1, released October 2026."
+    },
+    {
+      "title": "2025 Flock Safety purchase order",
+      "amount": 48960,
+      "measure": "purchase_order_amount",
+      "scope": "City of Avondale Flock Safety procurement",
+      "description": "2025 purchase order, not a verified payment. City of Avondale, public-records request 26-1207, *Avondale PO - 22600642_B.pdf*, PDF p. 1, released October 2026."
+    },
+    {
+      "title": "2026 Flock Safety renewal purchase order",
+      "amount": 48960,
+      "measure": "purchase_order_amount",
+      "scope": "City of Avondale Flock Safety procurement",
+      "description": "Renewal purchase order, not a verified payment. City of Avondale, public-records request 26-1207, *Avondale PO - 22700768_N.pdf*, PDF p. 1, released October 2026."
+    },
+    {
+      "title": "2026 Flock Safety expansion purchase order",
+      "amount": 303490,
+      "measure": "purchase_order_amount",
+      "scope": "City of Avondale Flock Safety procurement",
+      "description": "Procurement total comprises $180,000 in ALPR equipment, $100,000 in drone-response equipment/services, and $23,490 in sales tax. The corresponding invoice is not a second purchase. City of Avondale, public-records request 26-1207, *Avondale PO - 22700912_N.pdf*, PDF p. 1, released October 2026. City of Avondale, public-records request 26-1207, *Flock SAFETY INV-91027.pdf*, PDF pp. 1–3, released October 2026."
+    },
+    {
+      "title": "Flock Safety amended net annual recurring rate",
+      "amount": 475000,
+      "measure": "contract_annual_recurring_rate",
+      "scope": "City of Avondale Flock Safety procurement",
+      "description": "Contractual annual rate, not proof of payment in FY2027. The amendment identifies $45,000 existing and $430,000 new annual recurring charges. Do not add this figure to the expansion purchase order as a separate payment. City of Avondale, public-records request 26-1207, *24-004C - First Amendment - Flock.pdf*, PDF p. 8, released October 2026."
+    }
+  ]
 }

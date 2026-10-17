@@ -1,6 +1,8 @@
 {{- $sourceIDs := .source_ids | default (slice) -}}
 {{- $sourceGroups := .source_groups | default (slice) -}}
 {{- $context := .context | default "Page" -}}
+{{- $heading := .heading | default "Official Sources" -}}
+{{- $toggleLabel := .toggle_label | default "View official sources" -}}
 {{- $intro := .intro | default "These government sources support the information on this page. OWVAZ preserves an original source address even if the government later moves or removes the document." -}}
 {{- $headingID := .heading_id | default "official-sources-heading" -}}
 {{- $collapsed := true -}}
@@ -21,12 +23,12 @@
   >
 
     <h2 id="{{ $headingID }}">
-      Official Sources{{ if $collapsed }} ({{ len $sourceIDs }}){{ end }}
+      {{ if and (eq (len $sourceIDs) 1) (eq $heading "Official Sources") }}Official Source{{ else }}{{ $heading }}{{ if and $collapsed (gt (len $sourceIDs) 1) }} ({{ len $sourceIDs }}){{ end }}{{ end }}
     </h2>
 
     {{- if $collapsed }}
     <details class="owvaz-sources-disclosure">
-      <summary class="official-sources__toggle home-coming-soon__details">View official sources</summary>
+      <summary class="official-sources__toggle home-coming-soon__details">{{ $toggleLabel }}</summary>
       <div class="owvaz-sources-disclosure__content">
     {{- end }}
 
@@ -79,19 +81,26 @@
 
                   <div class="owvaz-source__actions">
 
-                    {{- if ne $availability "unavailable" }}
+                    {{- if and (ne $availability "unavailable") ($source.official_url | default $source.url) }}
                       <a
-                        href="{{ $source.official_url }}"
+                        href="{{ $source.official_url | default $source.url }}"
                         rel="external"
                       >
                         View original source
                       </a>
-                    {{- else }}
+                    {{- else if eq $availability "unavailable" }}
                       <span class="owvaz-source__unavailable">
-                        Original source unavailable
+                        Original City link no longer available on the City's website
                       </span>
                     {{- end }}
-
+                      {{- if eq $availability "unavailable" }}
+                      {{- with ($source.official_url | default $source.url) }}
+                      <p class="owvaz-source__original-broken-url" style="overflow-wrap: anywhere;">
+                      Original City URL (preserved, currently unavailable):
+                      <a href="{{ . }}" rel="external nofollow">{{ . }}</a>
+                      </p>
+                      {{- end }}
+                      {{- end }}
                     {{- with $source.replacement_url }}
                       <a
                         href="{{ . }}"
@@ -106,7 +115,7 @@
                   {{- if eq $availability "unavailable" }}
 
                     <p class="owvaz-source__availability">
-                      Original source was unavailable when last checked
+                      Original City link was unavailable when checked
                       {{- with $source.availability_checked }}
                         on
                         <time datetime="{{ . }}">
@@ -170,19 +179,26 @@
 
             <div class="owvaz-source__actions">
 
-              {{- if ne $availability "unavailable" }}
+              {{- if and (ne $availability "unavailable") ($source.official_url | default $source.url) }}
                 <a
-                  href="{{ $source.official_url }}"
+                  href="{{ $source.official_url | default $source.url }}"
                   rel="external"
                 >
                   View original source
                 </a>
-              {{- else }}
+              {{- else if eq $availability "unavailable" }}
                 <span class="owvaz-source__unavailable">
-                  Original source unavailable
+                  Original City link no longer available on the City's website
                 </span>
               {{- end }}
-
+                {{- if eq $availability "unavailable" }}
+                {{- with ($source.official_url | default $source.url) }}
+                <p class="owvaz-source__original-broken-url" style="overflow-wrap: anywhere;">
+                Original City URL (preserved, currently unavailable):
+                <a href="{{ . }}" rel="external nofollow">{{ . }}</a>
+                </p>
+                {{- end }}
+                {{- end }}
               {{- with $source.replacement_url }}
                 <a
                   href="{{ . }}"
@@ -197,7 +213,7 @@
             {{- if eq $availability "unavailable" }}
 
               <p class="owvaz-source__availability">
-                Original source was unavailable when last checked
+                Original City link was unavailable when checked
                 {{- with $source.availability_checked }}
                   on
                   <time datetime="{{ . }}">

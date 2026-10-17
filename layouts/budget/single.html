@@ -57,7 +57,35 @@
   -}}
 {{- end -}}
 
+{{/*
+  Normalize the small renderer-facing budget headline contract.
+
+  municipal-budget-v1 uses:
+    headline.amount
+    prior_year_comparison.amount
+
+  Legacy records use:
+    adopted_budget.amount
+    prior_year_comparison.adopted_budget
+
+  Keep the full canonical headline object so optional metadata
+  such as measure, scope, currency, label, note, and evidence
+  remains available to shared presentation components.
+*/}}
+
+{{- $headline := $budget.adopted_budget -}}
 {{- $comparison := $budget.prior_year_comparison -}}
+
+{{- if eq $budget.schema_version "municipal-budget-v1" -}}
+  {{- $headline = $budget.headline -}}
+{{- else -}}
+  {{- with $comparison -}}
+    {{- $comparison = merge
+      (dict "amount" .adopted_budget)
+      .
+    -}}
+  {{- end -}}
+{{- end -}}
 
 {{- $cityName := $cityID | title -}}
 {{- $cityMatches := where hugo.Data.cities.cities.cities "id" $cityID -}}
@@ -176,6 +204,18 @@
     }}
   {{ end }}
 
+  {{ with $budget.notable_spending }}
+    {{ if gt (len .) 0 }}
+      {{ $stickySections = $stickySections | append
+          (dict
+            "id" "notable-spending"
+            "label" "Procurement"
+            "name" "Procurement and contracts"
+          )
+      }}
+    {{ end }}
+  {{ end }}
+
   {{ with $budget.sources }}
     {{ if gt (len .) 0 }}
       {{ $stickySections = $stickySections | append
@@ -203,507 +243,56 @@
       </a>
     </nav>
 
-    <section
-      class="budget-year-overview"
-      aria-labelledby="budget-year-overview-heading"
-    >
-
-      <div class="budget-year-overview__amount">
-
-        <span id="budget-year-overview-heading">
-          Adopted all-funds budget
-        </span>
-
-        <strong>
-          ${{ $budget.adopted_budget.amount | lang.FormatNumber 0 }}
-        </strong>
-
-      </div>
-
-      {{- with $comparison -}}
-      {{- $comparisonClass := "neutral" -}}
-      {{- if gt $comparison.percent_change 0 -}}
-        {{- $comparisonClass = "positive" -}}
-      {{- else if lt $comparison.percent_change 0 -}}
-        {{- $comparisonClass = "negative" -}}
-      {{- end -}}
-
-      <div class="budget-year-overview__comparison budget-year-overview__comparison--{{ $comparisonClass }}">
-
-        <span>
-          Change from {{ $comparison.fiscal_year }}
-        </span>
-
-        <strong>
-          {{- if gt $comparison.percent_change 0 }}+{{ end -}}
-          {{ $comparison.percent_change | lang.FormatNumber 1 }}%
-        </strong>
-
-        <small>
-          {{- if gt $comparison.dollar_change 0 -}}
-            +${{ $comparison.dollar_change | lang.FormatNumber 0 }}
-          {{- else if lt $comparison.dollar_change 0 -}}
-            -${{ math.Abs $comparison.dollar_change | lang.FormatNumber 0 }}
-          {{- else -}}
-            $0
-          {{- end -}}
-        </small>
-
-      </div>
-      {{- end -}}
-
-    </section>
-
-    {{- with $comparison -}}
-    <section class="budget-year-section" aria-labelledby="what-changed">
-
-      <div class="budget-year-section__heading">
-        <p class="eyebrow">Year over year</p>
-        <h2 id="what-changed">What changed</h2>
-      </div>
-
-      {{ with $comparison.summary }}
-        <p class="budget-year-section__intro">{{ . }}</p>
-      {{ else }}
-        <p class="budget-year-section__intro">
-          The {{ $fiscalYear }} adopted all-funds budget was
-          ${{ $budget.adopted_budget.amount | lang.FormatNumber 0 }},
-          compared with
-          ${{ $comparison.adopted_budget | lang.FormatNumber 0 }}
-          in {{ $comparison.fiscal_year }}.
-        </p>
-      {{ end }}
-
-      <dl class="budget-year-facts">
-
-        <div>
-          <dt>{{ $comparison.fiscal_year }} comparison amount</dt>
-          <dd>
-            ${{ $comparison.adopted_budget | lang.FormatNumber 0 }}
-          </dd>
-        </div>
-
-        <div>
-          <dt>Dollar change</dt>
-          <dd>
-            {{- if gt $comparison.dollar_change 0 -}}
-              +${{ $comparison.dollar_change | lang.FormatNumber 0 }}
-            {{- else if lt $comparison.dollar_change 0 -}}
-              -${{ math.Abs $comparison.dollar_change | lang.FormatNumber 0 }}
-            {{- else -}}
-              $0
-            {{- end -}}
-          </dd>
-        </div>
-
-        <div>
-          <dt>Percent change</dt>
-          <dd>
-            {{- if gt $comparison.percent_change 0 }}+{{ end -}}
-            {{ $comparison.percent_change | lang.FormatNumber 1 }}%
-          </dd>
-        </div>
-
-      </dl>
-
-    </section>
-
-    {{- end -}}
-
-    {{ with $budget.spending_by_purpose }}
-      {{ with .categories }}
-
-        <section
-          class="budget-year-section"
-          aria-labelledby="spending-by-purpose"
-        >
-
-          <div class="budget-year-section__heading">
-            <p class="eyebrow">Budget composition</p>
-            <h2 id="spending-by-purpose">Where the budget goes</h2>
-          </div>
-
-          <div class="budget-year-table-wrap">
-            <table class="budget-year-table">
-
-              <caption>
-                {{ $fiscalYear }} spending presentation
-              </caption>
-
-              <thead>
-                <tr>
-                  <th scope="col">Category</th>
-                  <th scope="col">Amount</th>
-                  <th scope="col">Share</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {{ range . }}
-                  <tr>
-                    <th scope="row">{{ .label }}</th>
-                    <td>
-                      ${{ .amount | lang.FormatNumber 0 }}
-                    </td>
-                    <td>
-                      {{ with .display_percent }}
-                        {{ . | lang.FormatNumber 0 }}%
-                      {{ else }}
-                        <span aria-label="Not reported">Not reported</span>
-                      {{ end }}
-                    </td>
-                  </tr>
-                {{ end }}
-              </tbody>
-
-            </table>
-          </div>
-
-          {{ with $budget.spending_by_purpose.rounding_note }}
-            <p class="budget-year-note">{{ . }}</p>
-          {{ end }}
-
-          {{ with $budget.spending_by_purpose.accounting_note }}
-            <p class="budget-year-note">{{ . }}</p>
-          {{ end }}
-
-        </section>
-
-      {{ end }}
-    {{ end }}
-
-    {{ with $budget.fund_breakdown }}
-
-      <section
-        class="budget-year-section"
-        aria-labelledby="fund-breakdown"
-      >
-
-        <div class="budget-year-section__heading">
-          <p class="eyebrow">Fund accounting</p>
-          <h2 id="fund-breakdown">Budget by fund</h2>
-        </div>
-
-        <div class="budget-year-table-wrap">
-          <table class="budget-year-table">
-
-            <caption>
-              {{ $fiscalYear }} adopted fund groups
-            </caption>
-
-            <thead>
-              <tr>
-                <th scope="col">Fund group</th>
-                <th scope="col">Amount</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {{ range . }}
-                <tr>
-                  <th scope="row">{{ .label }}</th>
-                  <td>
-                    ${{ .amount | lang.FormatNumber 0 }}
-                  </td>
-                </tr>
-              {{ end }}
-            </tbody>
-
-          </table>
-        </div>
-
-      </section>
-
-    {{ end }}
-
-    {{ with $budget.revenue }}
-      {{ with .measures }}
-
-        <section
-          class="budget-year-section"
-          aria-labelledby="revenue"
-        >
-
-          <div class="budget-year-section__heading">
-            <p class="eyebrow">Revenue</p>
-            <h2 id="revenue">Revenue measures</h2>
-          </div>
-
-          <p class="budget-year-section__intro">
-            These figures use the accounting labels reported by the City.
-            Different revenue measures are shown separately rather than
-            treated as interchangeable.
-          </p>
-
-          <dl class="budget-year-measures">
-
-            {{ range . }}
-              <div>
-                <dt>{{ .label }}</dt>
-                <dd>
-                  ${{ .amount | lang.FormatNumber 0 }}
-                </dd>
-
-                {{ with .note }}
-                  <p>{{ . }}</p>
-                {{ end }}
-              </div>
-            {{ end }}
-
-          </dl>
-
-        </section>
-
-      {{ end }}
-    {{ end }}
-
-    {{ with $budget.property_tax }}
-
-      <section
-        class="budget-year-section"
-        aria-labelledby="property-tax"
-      >
-
-        <div class="budget-year-section__heading">
-          <p class="eyebrow">Property tax</p>
-          <h2 id="property-tax">Property tax</h2>
-        </div>
-
-        <dl class="budget-year-measures">
-
-          {{ with .primary_levy }}
-            <div>
-              <dt>Primary levy</dt>
-              <dd>${{ . | lang.FormatNumber 0 }}</dd>
-            </div>
-          {{ end }}
-
-          {{ with .secondary_levy }}
-            <div>
-              <dt>Secondary levy</dt>
-              <dd>${{ . | lang.FormatNumber 0 }}</dd>
-            </div>
-          {{ end }}
-
-          {{ with .total_levy }}
-            <div>
-              <dt>Total levy</dt>
-              <dd>${{ . | lang.FormatNumber 0 }}</dd>
-            </div>
-          {{ end }}
-
-          {{ with .primary_rate }}
-            <div>
-              <dt>Primary rate</dt>
-              <dd>{{ . | lang.FormatNumber 4 }}</dd>
-            </div>
-          {{ end }}
-
-          {{ with .secondary_rate }}
-            <div>
-              <dt>Secondary rate</dt>
-              <dd>{{ . | lang.FormatNumber 4 }}</dd>
-            </div>
-          {{ end }}
-
-          {{ with .combined_rate }}
-            <div>
-              <dt>Combined rate</dt>
-              <dd>{{ . | lang.FormatNumber 4 }}</dd>
-            </div>
-          {{ end }}
-
-        </dl>
-
-        {{ with .rate_basis }}
-          <p class="budget-year-note">
-            Rate basis: {{ . }}
-          </p>
-        {{ end }}
-
-        {{ with .note }}
-          <p class="budget-year-note">{{ . }}</p>
-        {{ end }}
-
-      </section>
-
-    {{ end }}
-
-    {{ with $budget.capital }}
-      {{ with .measures }}
-
-        <section
-          class="budget-year-section"
-          aria-labelledby="capital"
-        >
-
-          <div class="budget-year-section__heading">
-            <p class="eyebrow">Capital</p>
-            <h2 id="capital">Capital measures</h2>
-          </div>
-
-          <p class="budget-year-section__intro">
-            Capital figures can describe different accounting measures.
-            OWVAZ keeps those measures separate instead of combining them.
-          </p>
-
-          <dl class="budget-year-measures">
-
-            {{ range . }}
-              <div>
-                <dt>{{ .label }}</dt>
-                <dd>
-                  ${{ .amount | lang.FormatNumber 0 }}
-                </dd>
-
-                {{ with .note }}
-                  <p>{{ . }}</p>
-                {{ end }}
-              </div>
-            {{ end }}
-
-          </dl>
-
-          {{ with $budget.capital.accounting_note }}
-            <p class="budget-year-note">{{ . }}</p>
-          {{ end }}
-
-          {{ with $budget.capital.note }}
-            <p class="budget-year-note">{{ . }}</p>
-          {{ end }}
-
-        </section>
-
-      {{ end }}
-    {{ end }}
-
-    {{ with $budget.capital }}
-      {{ with .projects }}
-
-        {{ $itemizedOutlay := eq $budget.capital.presentation "itemized_capital_outlay" }}
-        {{ $tollesonBudgeted := and (eq $budget.city_id "tolleson") (not $itemizedOutlay) }}
-
-        <section
-          class="budget-year-section"
-          aria-labelledby="major-capital-projects"
-        >
-
-          <div class="budget-year-section__heading">
-            <p class="eyebrow">Capital projects</p>
-            {{ if $itemizedOutlay }}
-              <h2 id="major-capital-projects">Capital outlay by item</h2>
-            {{ else if $tollesonBudgeted }}
-              <h2 id="major-capital-projects">Capital projects and funds</h2>
-            {{ else }}
-              <h2 id="major-capital-projects">Major capital projects</h2>
-            {{ end }}
-          </div>
-
-          {{ with $budget.capital.selection_definition }}
-            <p class="budget-year-section__intro">{{ . }}</p>
-          {{ end }}
-
-          <div class="budget-year-table-wrap">
-            <table class="budget-year-table">
-              {{ if $itemizedOutlay }}
-                <caption>
-                  Itemized {{ $budget.fiscal_year }} Capital Projects Funds
-                  budgeted capital outlay
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Capital-outlay item</th>
-                    <th scope="col">{{ $budget.fiscal_year }} budgeted amount</th>
-                  </tr>
-                </thead>
-              {{ else if $tollesonBudgeted }}
-                <caption>
-                  Selected capital projects and funds:
-                  {{ $budget.fiscal_year }} budgeted expenditures/expenses
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Project or fund</th>
-                    <th scope="col">{{ $budget.fiscal_year }} budgeted amount</th>
-                  </tr>
-                </thead>
-              {{ else }}
-                <caption>
-                  Selected projects in the adopted {{ $budget.fiscal_year }}
-                  Capital Improvement Plan
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Project</th>
-                    <th scope="col">{{ $budget.fiscal_year }} funding</th>
-                    <th scope="col">Carryover</th>
-                    <th scope="col">Total project</th>
-                  </tr>
-                </thead>
-              {{ end }}
-              <tbody>
-
-                {{ range . }}
-                  <tr>
-                    <th scope="row">
-                      {{ .name }}
-                      <span class="budget-year-project__meta">
-                        {{ if $itemizedOutlay }}
-                          {{ .project_type }}
-                        {{ else if $tollesonBudgeted }}
-                          {{ .project_type }}
-                        {{ else }}
-                          {{ .project_number }} · {{ .project_type }}
-                        {{ end }}
-                      </span>
-                    </th>
-                    <td>
-                      ${{ .new_appropriation | lang.FormatNumber 0 }}
-                    </td>
-                    {{ if and (not $itemizedOutlay) (not $tollesonBudgeted) }}
-                      <td>
-                        {{ if isset . "carryover" }}
-                          ${{ .carryover | lang.FormatNumber 0 }}
-                        {{ else }}
-                          —
-                        {{ end }}
-                      </td>
-                      <td>
-                        {{ if isset . "total" }}
-                          ${{ .total | lang.FormatNumber 0 }}
-                        {{ else }}
-                          —
-                        {{ end }}
-                      </td>
-                    {{ end }}
-                  </tr>
-                {{ end }}
-
-              </tbody>
-            </table>
-          </div>
-
-          <p class="budget-year-note">
-            {{ if $itemizedOutlay }}
-              These amounts are fiscal-year budgeted capital outlay.
-              The source does not establish carryover, lifetime project
-              cost, or construction completion for these entries.
-            {{ else if $tollesonBudgeted }}
-              These amounts are fiscal-year budgeted expenditures/expenses.
-              They do not establish actual spending, lifetime project cost,
-              or construction completion. Amounts for different fiscal years
-              should not be added together as a project lifetime total.
-            {{ else }}
-              Funding shown here is budget authority in the adopted capital
-              plan. It does not by itself establish expenditure, purchase,
-              construction completion, or deployment.
-            {{ end }}
-          </p>
-
-        </section>
-
-      {{ end }}
-    {{ end }}
+    {{ partial "budget/overview.html" (dict
+      "headline" $headline
+      "comparison" $comparison
+    ) }}
+
+    {{ partial "budget/comparison.html" (dict
+      "headline" $headline
+      "comparison" $comparison
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "budget/spending-by-purpose.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "budget/fund-breakdown.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "budget/sources-and-fund-balance.html" (dict
+  "budget" $budget
+  "fiscal_year" $fiscalYear
+) }}
+
+{{ partial "budget/revenue.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "budget/general-fund.html" (dict
+  "budget" $budget
+  "fiscal_year" $fiscalYear
+) }}
+
+{{ partial "budget/property-tax.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "budget/capital.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
+
+    {{ partial "budget/capital-projects.html" (dict
+      "budget" $budget
+      "fiscal_year" $fiscalYear
+    ) }}
 
     <!-- OWVAZ: budget adoption governance -->
     {{ with $budget.adoption }}
@@ -786,6 +375,99 @@
         </section>
 
       {{ end }}
+    {{ end }}
+
+    {{ with $budget.notable_spending }}
+    <section id="notable-spending"
+             class="budget-year-section"
+             aria-labelledby="notable-spending-heading">
+
+      <div class="budget-year-section__heading">
+        <p class="eyebrow">Public-records research</p>
+        <h2 id="notable-spending-heading">
+          Flock Safety procurement and contract costs
+        </h2>
+      </div>
+
+      <p class="budget-year-section__intro">
+        Public records obtained from Avondale document purchase orders
+        and contract pricing for Flock Safety license plate readers
+        and drone technology.
+      </p>
+
+      <h3>Purchase orders</h3>
+
+      <div class="budget-year-table-wrap">
+        <table class="budget-year-table">
+          <caption>Historical Flock Safety purchase orders</caption>
+          <thead>
+            <tr>
+              <th scope="col">Purchase order</th>
+              <th scope="col">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range . }}
+              {{ if eq .measure "purchase_order_amount" }}
+              <tr>
+                <th scope="row">{{ .title }}</th>
+                <td>${{ .amount | lang.FormatNumber 0 }}</td>
+              </tr>
+              {{ end }}
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        The $303,490 expansion order includes $180,000 in ALPR equipment,
+        $100,000 in drone-response equipment and services, and
+        $23,490 in sales tax.
+      </p>
+
+      <h3>Annual recurring contract pricing</h3>
+
+      {{ range . }}
+        {{ if eq .measure "contract_annual_recurring_rate" }}
+          <p>
+            The amended Flock agreement identifies a
+            <strong>{{ printf "$%s" (lang.FormatNumberCustom 0 .amount) }}</strong>
+            net annual recurring contractual rate.
+          </p>
+        {{ end }}
+      {{ end }}
+
+      <p>
+        These records cover procurement commitments and contractual
+        pricing across multiple years. They are not additional
+        FY2027 appropriations or verified payments. The expansion
+        purchase order and matching invoice are not separate purchases.
+      </p>
+
+      <p>
+        For equipment quantities, data retention, and deployment
+        questions, see the
+        <a href="/communities/avondale/issues/police-surveillance-technology/">
+          Avondale police surveillance research
+        </a>.
+      </p>
+
+      <details class="owvaz-sources-disclosure">
+        <summary>Document references and source notes</summary>
+        <p>
+          City of Avondale, public-records request 26-1207,
+          released October 2026. Original PDF filenames and
+          page references are listed below. The source documents
+          are not hosted by OWVAZ.
+        </p>
+        {{ range . }}
+          <div>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description | markdownify }}</p>
+          </div>
+        {{ end }}
+      </details>
+    </section>
     {{ end }}
 
     {{ partial "sources/official-sources.html"

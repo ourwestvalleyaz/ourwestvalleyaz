@@ -1,0 +1,50 @@
+{{- $budget := .budget -}}
+{{- $fiscalYear := .fiscal_year -}}
+    {{ with $budget.capital }}
+      {{ with .measures }}
+
+        <section
+          class="budget-year-section"
+          aria-labelledby="capital"
+        >
+
+          <div class="budget-year-section__heading">
+            <p class="eyebrow">Capital</p>
+            <h2 id="capital">Capital measures</h2>
+          </div>
+
+          <p class="budget-year-section__intro">
+            Capital figures can describe different accounting measures.
+            OWVAZ keeps those measures separate instead of combining them.
+          </p>
+
+          <dl class="budget-year-measures">
+
+            {{ range . }}
+              <div>
+                <dt>{{ .label }}</dt>
+                <dd>
+                  ${{ .amount | lang.FormatNumber 0 }}
+                </dd>
+
+                {{ with .note }}
+                  <p>{{ . }}</p>
+                {{ end }}
+              </div>
+            {{ end }}
+
+          </dl>
+
+          {{ with $budget.capital.accounting_note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+          {{ with $budget.capital.note }}
+            <p class="budget-year-note">{{ . }}</p>
+          {{ end }}
+
+        </section>
+
+      {{ end }}
+    {{ end }}
+

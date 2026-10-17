@@ -1,0 +1,33 @@
+{{- $original := int (.Get "original") -}}
+{{- $standard := int (.Get "standard") -}}
+{{- $longrange := int (.Get "longrange") -}}
+{{- $total := add $original $standard $longrange -}}
+<div class="budget-year-table-wrap">
+  <table class="budget-year-table">
+    <caption>Contracted ALPR equipment</caption>
+    <thead>
+      <tr>
+        <th scope="col">Equipment</th>
+        <th scope="col">Units</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Original Falcon readers</th>
+        <td>{{ $original }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Additional standard readers</th>
+        <td>{{ $standard }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Additional long-range readers</th>
+        <td>{{ $longrange }}</td>
+      </tr>
+      <tr>
+        <th scope="row"><strong>Total covered by the agreements</strong></th>
+        <td><strong>{{ $total }}</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
